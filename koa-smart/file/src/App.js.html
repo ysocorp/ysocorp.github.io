@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <base data-ice="baseUrl" href="../../">
+  <title data-ice="title">src/App.js | koa-smart</title>
+  <link type="text/css" rel="stylesheet" href="css/style.css">
+  <link type="text/css" rel="stylesheet" href="css/prettify-tomorrow.css">
+  <script src="script/prettify/prettify.js"></script>
+  <script src="script/manual.js"></script>
+<meta name="description" content="A framework base on Koajs2 with Decorator, Params checker and a base of modules (cors, bodyparser, compress, I18n, etc&#x2026;) to let you develop smart api easily"><meta property="twitter:card" content="summary"><meta property="twitter:title" content="koa-smart"><meta property="twitter:description" content="A framework base on Koajs2 with Decorator, Params checker and a base of modules (cors, bodyparser, compress, I18n, etc&#x2026;) to let you develop smart api easily"></head>
+<body class="layout-container" data-ice="rootContainer">
+
+<header>
+  <a href="./">Home</a>
+  
+  <a href="identifiers.html">Reference</a>
+  <a href="source.html">Source</a>
+  
+  <div class="search-box">
+  <span>
+    <img src="./image/search.png">
+    <span class="search-input-edge"></span><input class="search-input"><span class="search-input-edge"></span>
+  </span>
+    <ul class="search-result"></ul>
+  </div>
+<a style="position:relative; top:3px;" href="https://github.com/ysocorp/koa-smart"><img width="20px" src="./image/github.png"></a></header>
+
+<nav class="navigation" data-ice="nav"><div>
+  <ul>
+    
+  <li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/App.js~App.html">App</a></span></span></li>
+<li data-ice="doc"><a data-ice="dirPath" class="nav-dir-path" href="identifiers.html#middlewares">middlewares</a><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-addDefaultBody">addDefaultBody</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-handleError">handleError</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-logger">logger</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-notFound">notFound</a></span></span></li>
+<li data-ice="doc"><a data-ice="dirPath" class="nav-dir-path" href="identifiers.html#routes">routes</a><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/routes/Route.js~Route.html">Route</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/routes/RouteDecorators.js~RouteDecorators.html">RouteDecorators</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-typedef">T</span><span data-ice="name"><span><a href="typedef/index.html#static-typedef-MiddlewareFunction">MiddlewareFunction</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-typedef">T</span><span data-ice="name"><span><a href="typedef/index.html#static-typedef-Params">Params</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-typedef">T</span><span data-ice="name"><span><a href="typedef/index.html#static-typedef-PostParamsFilter">PostParamsFilter</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-external">E</span><span data-ice="name"><span><a href="http://koajs.com/#api">KoaContext</a></span></span></li>
+<li data-ice="doc"><a data-ice="dirPath" class="nav-dir-path" href="identifiers.html#utils">utils</a><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/utils/ErrorApp.js~ErrorApp.html">ErrorApp</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-capitalize">capitalize</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-dateYYYYMMDD">dateYYYYMMDD</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-deepCopy">deepCopy</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-isArray">isArray</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-isEmpty">isEmpty</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-isObject">isObject</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-jsonDecode">jsonDecode</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-jsonEncode">jsonEncode</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-notEmpty">notEmpty</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-nullIfEmpty">nullIfEmpty</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-objValToArray">objValToArray</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-random">random</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-timeout">timeout</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-toLowerCase">toLowerCase</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-toNumber">toNumber</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-trim">trim</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-ucFirst">ucFirst</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-isDateBetween">isDateBetween</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-regex">regex</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-test">test</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-trasform">trasform</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-lodash">lodash</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-wait">wait</a></span></span></li>
+</ul>
+</div>
+</nav>
+
+<div class="content" data-ice="content"><h1 data-ice="title">src/App.js</h1>
+<pre class="source-code line-number raw-source-code"><code class="prettyprint linenums" data-ice="content">import { join as pathJoin } from &apos;path&apos;;
+import { readdirSync } from &apos;fs&apos;;
+import Koa from &apos;koa&apos;;
+import locale from &apos;koa-locale&apos;;
+
+import Route from &apos;./routes/Route&apos;;
+import notFound from &apos;./middlewares/notFound&apos;;
+
+import { objValToArray } from &apos;./utils/utils&apos;;
+
+
+export default class App {
+
+  /**
+   * @access private
+   */
+  routeParam = null;
+  /**
+   * @access private
+   */
+  routes = {};
+
+  constructor(opt) {
+    const {
+      routeParam = {},
+      port = process.env.PORT || 3000,
+    } = opt;
+    this.routeParam = routeParam;
+    /**
+     * @access private
+     */
+    this.port = port;
+    /**
+     * @access private
+     */
+    this.app = new Koa();
+
+    locale(this.app)
+  }
+
+  _getAllRoutes(path, prefix) {
+    this.routes[prefix] = this.routes[prefix] || {};
+
+    readdirSync(path)
+      .filter(file =&gt; file.endsWith(&apos;.js&apos;) || file.endsWith(&apos;.ts&apos;))
+      .forEach((file) =&gt; {
+        const RouteClass = require(pathJoin(path, file)).default;
+        if (RouteClass &amp;&amp; RouteClass.prototype instanceof Route) {
+          const route = new RouteClass({
+            prefix,
+            app: this.app,
+            routes: this.routes[prefix],
+            ...this.routeParam,
+          });
+          this.routes[prefix][route.constructor.name] = route;
+        }
+      });
+    return objValToArray(this.routes[prefix]);
+  }
+
+  /**
+   * @access public
+   * @desc adds the provided functions to the list of Koa middlewares to be executed for all routes.
+   * @param {function} middlewares an array of Koa-compliant middlewares
+   */
+  addMiddlewares(middlewares) {
+    middlewares.forEach(e =&gt; this.addMiddleware(e));
+  }
+
+  /**
+   * @access public
+   * @desc adds the provided function to the list of Koa middlewares to be executed for all routes.
+   * @param {function[]} middleware an array of middlewares
+   */
+  addMiddleware(middleware) {
+    this.app.use(middleware);
+  }
+
+  /**
+   * @access public
+   * @desc &quot;mounts&quot; a folder, scanning it for route files, then adding the discovered routes to the app.
+   * @param {string} pathFolder the path of the folder to mount
+   * @param {string} [prefix=&apos;/&apos;] an optional prefix to prepend to all of the folder&apos;s routes
+   */
+  mountFolder(pathFolder, prefix = &apos;/&apos;) {
+    const routes = this._getAllRoutes(pathFolder, prefix);
+    for (const route of routes) {
+      route.mount();
+      this.app.use(route.koaRouter.middleware());
+    }
+  }
+
+  /**
+   * @access public
+   * @desc Launches the app and starts listening on the configured port.
+   */
+  async start() {
+    this.app.use(notFound());
+    return this.app.listen(this.port);
+  }
+}
+</code></pre>
+
+</div>
+
+<footer class="footer">
+  Generated by <a href="https://esdoc.org">ESDoc<span data-ice="esdocVersion">(1.0.4)</span><img src="./image/esdoc-logo-mini-black.png"></a>
+</footer>
+
+<script src="script/search_index.js"></script>
+<script src="script/search.js"></script>
+<script src="script/pretty-print.js"></script>
+<script src="script/inherited-summary.js"></script>
+<script src="script/test-summary.js"></script>
+<script src="script/inner-link.js"></script>
+<script src="script/patch-for-local.js"></script>
+</body>
+</html>

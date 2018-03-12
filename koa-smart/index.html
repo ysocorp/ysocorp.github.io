@@ -1,0 +1,594 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <base data-ice="baseUrl">
+  <title data-ice="title">Home | koa-smart</title>
+  <link type="text/css" rel="stylesheet" href="css/style.css">
+  <link type="text/css" rel="stylesheet" href="css/prettify-tomorrow.css">
+  <script src="script/prettify/prettify.js"></script>
+  <script src="script/manual.js"></script>
+<meta name="description" content="A framework base on Koajs2 with Decorator, Params checker and a base of modules (cors, bodyparser, compress, I18n, etc&#x2026;) to let you develop smart api easily"><meta property="twitter:card" content="summary"><meta property="twitter:title" content="koa-smart"><meta property="twitter:description" content="A framework base on Koajs2 with Decorator, Params checker and a base of modules (cors, bodyparser, compress, I18n, etc&#x2026;) to let you develop smart api easily"></head>
+<body class="layout-container" data-ice="rootContainer">
+
+<header>
+  <a href="./">Home</a>
+  
+  <a href="identifiers.html">Reference</a>
+  <a href="source.html">Source</a>
+  
+  <div class="search-box">
+  <span>
+    <img src="./image/search.png">
+    <span class="search-input-edge"></span><input class="search-input"><span class="search-input-edge"></span>
+  </span>
+    <ul class="search-result"></ul>
+  </div>
+<a style="position:relative; top:3px;" href="https://github.com/ysocorp/koa-smart"><img width="20px" src="./image/github.png"></a></header>
+
+<nav class="navigation" data-ice="nav"><div>
+  <ul>
+    
+  <li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/App.js~App.html">App</a></span></span></li>
+<li data-ice="doc"><a data-ice="dirPath" class="nav-dir-path" href="identifiers.html#middlewares">middlewares</a><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-addDefaultBody">addDefaultBody</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-handleError">handleError</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-logger">logger</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-notFound">notFound</a></span></span></li>
+<li data-ice="doc"><a data-ice="dirPath" class="nav-dir-path" href="identifiers.html#routes">routes</a><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/routes/Route.js~Route.html">Route</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/routes/RouteDecorators.js~RouteDecorators.html">RouteDecorators</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-typedef">T</span><span data-ice="name"><span><a href="typedef/index.html#static-typedef-MiddlewareFunction">MiddlewareFunction</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-typedef">T</span><span data-ice="name"><span><a href="typedef/index.html#static-typedef-Params">Params</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-typedef">T</span><span data-ice="name"><span><a href="typedef/index.html#static-typedef-PostParamsFilter">PostParamsFilter</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-external">E</span><span data-ice="name"><span><a href="http://koajs.com/#api">KoaContext</a></span></span></li>
+<li data-ice="doc"><a data-ice="dirPath" class="nav-dir-path" href="identifiers.html#utils">utils</a><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/utils/ErrorApp.js~ErrorApp.html">ErrorApp</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-capitalize">capitalize</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-dateYYYYMMDD">dateYYYYMMDD</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-deepCopy">deepCopy</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-isArray">isArray</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-isEmpty">isEmpty</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-isObject">isObject</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-jsonDecode">jsonDecode</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-jsonEncode">jsonEncode</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-notEmpty">notEmpty</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-nullIfEmpty">nullIfEmpty</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-objValToArray">objValToArray</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-random">random</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-timeout">timeout</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-toLowerCase">toLowerCase</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-toNumber">toNumber</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-trim">trim</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-ucFirst">ucFirst</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-isDateBetween">isDateBetween</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-regex">regex</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-test">test</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-trasform">trasform</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-lodash">lodash</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-wait">wait</a></span></span></li>
+</ul>
+</div>
+</nav>
+
+<div class="content" data-ice="content"><div data-ice="index" class="github-markdown"><h1 id="-strong-koasmart--strong--is-a-framework-based-on--strong-koajs2--strong---which-allows-you-to-develop-restful-apis-with----strong-class--strong----strong-decorator--strong----strong-params-checker--strong-"><strong>KoaSmart</strong> is a framework based on <strong>Koajs2</strong>, which allows you to develop RESTful APIs with : <strong>Class</strong>, <strong>Decorator</strong>, <strong>Params checker</strong></h1><p><a href="http://travis-ci.org/ysocorp/koa-smart"><img src="https://secure.travis-ci.org/ysocorp/koa-smart.png?branch=master" alt="Build Status" title="Test"></a>
+<a href="https://npmjs.org/package/koa-smart" title="View this project on NPM"><img src="http://badge.fury.io/js/koa-smart.png" alt="NPM version"></a></p>
+<p>A framework based on <a href="https://github.com/koajs/koa">Koajs2</a> with <strong>Decorator</strong>, <strong>Params checker</strong> and a <strong>base of modules</strong> (<a href="https://www.npmjs.com/package/kcors"><code>cors</code></a>, <a href="https://github.com/koajs/bodyparser"><code>bodyparser</code></a>, <a href="https://github.com/koajs/compress"><code>compress</code></a>, <a href="https://github.com/koa-modules/i18n"><code>I18n</code></a>, etc... ) to allow you to develop a smart api easily </p>
+<pre><code class="lang-sh"><code class="source-code prettyprint">  export default class RouteUsers extends Route {
+
+    // get route: http://localhost:3000/users/get/:id
+    @Route.Get({
+      path: &apos;get/:id&apos;
+    })
+    async get(ctx) {
+      const user = await this.models.users.findById(ctx.params.id);
+      this.assert(user, 404, ctx.state.__(&apos;User not found&apos;));
+      this.sendOk(ctx, user);
+    }
+
+    // post route: http://localhost:3000/users/add
+    @Route.Post({
+      accesses: [Route.accesses.public],
+      params: { // params to allow: all other params will be rejected
+        email: true, // return an 400 if the body doesn&apos;t contain email key
+        name: false,
+      },
+    })
+    async add(ctx) {
+      const body = this.body(ctx); // or ctx.request.body
+      // body can contain only an object with email and name field
+      const user = await this.models.user.create(body);
+      this.sendCreated(ctx, user);
+    }
+
+  }</code>
+</code></pre>
+<h2 id="summary">Summary</h2><ul>
+<li>What&apos;s in this framework ?</li>
+<li><a href="#install">Install</a></li>
+<li><a href="#router-with-decorator">Router with decorator</a></li>
+<li><a href="#params-checker-of-post-body">Params checker of POST body</a></li>
+<li><a href="#get-started">Get Started</a><ul>
+<li><a href="#full-example">Full example</a></li>
+</ul>
+</li>
+<li><a href="#add-treatment-on-route">Add treatment on route</a></li>
+</ul>
+<h2 id="what-is-in-this-framework--">What is in this framework ?</h2><p><strong>This framework gives you the tools to use a set of modules: </strong></p>
+<ul>
+<li><strong>For routing</strong><ul>
+<li><a href="https://github.com/koajs/koa"><code>koajs 2</code></a> as the main, underlying framework</li>
+<li><a href="https://www.npmjs.com/package/kcors"><code>kcors</code></a> is used to handle cross-domain requests</li>
+<li><a href="https://github.com/ysocorp/koa2-ratelimit"><code>koa2-ratelimit</code></a> To limit bruteforce requests</li>
+<li><a href="https://www.npmjs.com/package/koa-helmet"><code>koa-helmet</code></a> helps you secure your api</li>
+<li><a href="https://github.com/koajs/bodyparser"><code>koa-bodyparser</code></a> to parse request bodies</li>
+<li><a href="https://github.com/koajs/compress"><code>koa-compress</code></a> to compress the response</li>
+<li><a href="https://github.com/koa-modules/i18n"><code>koa-i18n</code></a> for Internationalization (I18n)</li>
+</ul>
+</li>
+<li><a href="https://babeljs.io/docs/plugins/transform-decorators/"><code>@Decorators</code></a> to ensure a better project structure</li>
+<li><a href="https://github.com/moment/moment"><code>moment</code></a> Parse, validate, manipulate, and display dates in javascript.</li>
+<li><a href="https://github.com/lodash/lodash"><code>lodash</code></a> A modern JavaScript utility library delivering modularity, performance, &amp; extras</li>
+<li><a href="https://github.com/auth0/node-jsonwebtoken"><code>jsonwebtoken</code></a> an implementation of <a href="https://tools.ietf.org/html/rfc7519">JSON Web Tokens JWT</a></li>
+</ul>
+<h2 id="install">Install</h2><p><code>npm install koa-smart</code></p>
+<h2 id="router-with-decorator">Router with decorator</h2><p><strong>All routes have to extend the <code>Route</code> class in order to be mount</strong></p>
+<ul>
+<li><p><strong>Prefix of routes</strong></p>
+<p>  If you have a route class with the name <code>RouteMyApi</code>, all the routes inside said class will be <strong>preceded</strong> by <strong><code>/my-api/</code></strong></p>
+<ul>
+<li><p>How does it work ?
+  1) the <code>Route</code> word is removed
+  2) uppercase letters are replaced with &apos;-&apos;. (essentially converting camelCase into camel-case)
+  <strong>e.g.</strong>: this will add a get route =&gt; <a href="http://localhost:3000/my-api/hello">http://localhost:3000/my-api/hello</a></p>
+<pre><code class="lang-sh"><code class="source-code prettyprint">export default class RouteMyApi extends Route {
+
+    @Route.Get({})
+    async hello(ctx) {
+        this.sendOk(ctx, ctx.state.__(&apos;hello&apos;));
+    }
+
+}</code>
+</code></pre>
+</li>
+<li><p>Change prefix of all routes in the class: <a href="http://localhost:3000/my-prefix/hello">http://localhost:3000/my-prefix/hello</a></p>
+<pre><code class="lang-sh"><code class="source-code prettyprint">@Route.Route({
+    routeBase: &apos;my-prefix&apos;,
+})
+export default class RouteMyApi extends Route {
+
+    @Route.Get({})
+    async hello(ctx) {
+        this.sendOk(ctx, ctx.state.__(&apos;hello&apos;));
+    }
+
+}</code>
+</code></pre>
+</li>
+</ul>
+</li>
+<li><p><strong>Get route</strong> <a href="http://localhost:3000/my-api/hello">http://localhost:3000/my-api/hello</a></p>
+<pre><code class="lang-sh"><code class="source-code prettyprint">  @Route.Get({})
+  async hello(ctx) {
+    this.sendOk(ctx, null, ctx.state.__(&apos;hello&apos;));
+  }</code>
+</code></pre>
+</li>
+<li><p><strong>Change path</strong> <a href="http://localhost:3000/my-api/myroute/15">http://localhost:3000/my-api/myroute/15</a></p>
+<pre><code class="lang-sh"><code class="source-code prettyprint">  @Route.Get({
+    path: &apos;/myroute/:id&apos;
+  })
+  async hello(ctx) {
+    this.sendOk(ctx, ctx.state.__(&apos;hello&apos;) + ctx.params.id);
+  }</code>
+</code></pre>
+</li>
+<li><p><strong>Post route</strong> <a href="http://localhost:3000/my-api/user-post">http://localhost:3000/my-api/user-post</a></p>
+<pre><code class="lang-sh"><code class="source-code prettyprint">  @Route.Post({
+      params: { // params to allow: all other params will be rejected
+          email: true, // return a 400 error if the body doesn&apos;t contain email key
+          name: false, // optional parameter
+      },
+  })
+  async userPost(ctx) {
+    const body = this.body(ctx);
+    // body can contain only an object with email and name field
+    const user = await this.models.user.create(body);
+    this.sendCreated(ctx, user);
+  }</code>
+</code></pre>
+</li>
+<li><p><strong>Disable route</strong></p>
+<ul>
+<li><p><strong>Disable all routes in a class</strong></p>
+<p>to disable all routes in a class you should add <code>disable</code> in the content of your decorator class</p>
+<pre><code class="lang-sh"><code class="source-code prettyprint">@Route.Route({
+  disable: true,
+})
+export default class RouteMyApi extends Route {
+  // All routes in this class will not be mounted
+}</code>
+</code></pre>
+</li>
+<li><p><strong>Disable a specific route</strong></p>
+<p>to disable a specific route you can add <code>disable</code> in the content of your decorator</p>
+<pre><code class="lang-sh"><code class="source-code prettyprint">@Route.Get({
+  disable: true, // this route will not be mounted
+})
+async hello(ctx) {
+this.sendOk(ctx, null, ctx.state.__(&apos;hello&apos;));
+}</code>
+</code></pre>
+</li>
+</ul>
+</li>
+<li><p><strong>RateLimit</strong> : For more infos, see the <a href="https://github.com/ysocorp/koa2-ratelimit"><code>koa2-ratelimit</code></a> module</p>
+<ul>
+<li><p><strong>Configure</strong></p>
+<pre><code class="lang-sh"><code class="source-code prettyprint">import { App } from &apos;koa-smart&apos;;
+import { RateLimit, RateLimitStores } from &apos;koa-smart/middlewares&apos;;
+
+const app = new App({ port: 3000 });
+
+// Set Default Option
+const store = new RateLimitStores.Memory() OR new RateLimitStores.Sequelize(sequelizeInstance)
+RateLimit.defaultOptions({
+    message: &apos;Too many requests, get out!&apos;,
+    store: store, // By default it will create MemoryStore
+});
+
+// limit 100 accesses per min on your API 
+app.addMiddlewares([
+  // ...
+  RateLimit.middleware({ interval: { min: 1 }, max: 100 }), 
+  // ...
+]);</code>
+</code></pre>
+</li>
+<li><p><strong>RateLimit On Decorator</strong></p>
+<p>Single RateLimit</p>
+<pre><code class="lang-sh"><code class="source-code prettyprint">@Route.Get({ // allow only 100 requests per day to /view
+    rateLimit: { interval: { day: 1 }, max: 100 },
+})
+async view(ctx) {
+  this.sendOk(ctx, null, ctx.state.__(&apos;hello&apos;));
+}</code>
+</code></pre>
+<p>Multiple RateLimit</p>
+<pre><code class="lang-sh"><code class="source-code prettyprint">// Multiple RateLimit
+@Route.Get({
+    rateLimit: [
+        { interval: { day: 1 }, max: 100 }, // allow only 100 requests per day
+        { interval: { min: 2 }, max: 40 }, // allow only 40 requests in 2 minutes
+    ],
+})
+async hello(ctx) {
+  this.sendOk(ctx, null, ctx.state.__(&apos;hello&apos;));
+}</code>
+</code></pre>
+</li>
+</ul>
+</li>
+<li><p><strong>middlewares of an Class</strong></p>
+<pre><code class="lang-sh"><code class="source-code prettyprint">@Route.Route({
+    middlewares: [ // Array of middlewares
+      async (ctx, next) =&gt; {
+        console.log(&apos;I will be call before all route in this class&apos;);
+        await next();
+      },
+    ],
+})
+class RouteMiddlewares extends Route {
+    async view(ctx, next) {
+      console.log(&apos;I will be call after middlewares of class&apos;);
+      this.sendOk(ctx, null, ctx.state.__(&apos;hello&apos;));
+    }
+}</code>
+</code></pre>
+</li>
+<li><p><strong>middlewares of a specific route</strong></p>
+<pre><code class="lang-sh"><code class="source-code prettyprint">@Route.Get({
+    middlewares: [ // Array of middlewares
+      async (ctx, next) =&gt; {
+        console.log(&apos;I will be call before the route but after middlewares of class&apos;);
+        await next();
+      },
+    ],
+})
+async view(ctx, next) {
+    console.log(&apos;I will be call after middlewares of the class and route&apos;);
+    this.sendOk(ctx, null, ctx.state.__(&apos;hello&apos;));
+}</code>
+</code></pre>
+</li>
+</ul>
+<h2 id="params-checker-of-post-body">Params checker of POST body</h2><ul>
+<li><strong>all other fields which aren&apos;t in the params object will be rejected</strong></li>
+<li><p>simplified writing</p>
+<pre><code class="lang-sh"><code class="source-code prettyprint">  params: [&apos;email&apos;, &apos;name&apos;]
+  // is equal to
+  params: {
+    email: false,
+    name: false,
+  }
+  // is equal to
+  params: {
+    email: {
+      __force: false,
+    },
+    name: false,
+  }</code>
+</code></pre>
+</li>
+<li><p><strong>more option:</strong></p>
+<ul>
+<li><code>__force</code> [boolean] tells whether a field is required or not</li>
+<li><code>__func</code> an <code>Array&lt;Function&gt;</code> to be executed on the field one by one in order to validate / transform it</li>
+<li><p>Eg:</p>
+<pre><code class="lang-sh"><code class="source-code prettyprint">  params: {
+    name: {
+      __force: false,
+      __func: [
+          utils.trim,
+          utilsParam.test(utils.notEmpty), // return 400 if empty
+          utils.capitalize,
+          (elem, route, { ctx, body, keyBody }) =&gt; {
+            return elem.trim();
+          },
+          // do whatever you want...
+      ],
+    },
+  },</code>
+</code></pre>
+</li>
+</ul>
+</li>
+<li><p><strong>Eg: object nested inside another object:</strong></p>
+<pre><code class="lang-sh"><code class="source-code prettyprint">  params: {
+    user: {
+      __force: true,
+      name: {
+        __force: true,
+        __func: [utils.trim],
+      },
+      password: true,
+      address: {
+        __force: true,
+        country: true,
+        street: true,
+      }
+    },
+    date: false,
+  },</code>
+</code></pre>
+</li>
+</ul>
+<h2 id="get-started---a-href--https---github-com-ysocorp-koa-smart-light-example--quick-start-boilerplate--a--">Get Started (<a href="https://github.com/ysocorp/koa-smart-light-example">quick-start boilerplate</a>)</h2><p>in order to get started quickly, look at <a href="https://github.com/ysocorp/koa-smart-light-example">this boilerplate</a>, or follow the following instructions:</p>
+<ul>
+<li><p>import the app and your middlewares</p>
+<pre><code class="lang-sh"><code class="source-code prettyprint">import { join } from &apos;path&apos;;
+// import the app
+import { App } from &apos;koa-smart&apos;;
+// import middlewares koa-smart give you OR others
+import {
+  bodyParser, 
+  compress,
+  cors,
+  handleError,
+  RateLimit,
+  ...
+} from &apos;koa-smart/middlewares&apos;;</code>
+</code></pre>
+</li>
+<li><p>create an app listening on port 3000</p>
+<pre><code class="lang-sh"><code class="source-code prettyprint">const myApp = new App({
+  port: 3000,
+});</code>
+</code></pre>
+</li>
+<li><p>add your middlewares</p>
+<pre><code class="lang-sh"><code class="source-code prettyprint">myApp.addMiddlewares([
+  cors({ credentials: true }),
+  helmet(),
+  bodyParser(),
+  handleError(),
+  RateLimit.middleware({ interval: { min: 1 }, max: 100 }),
+  ...
+]);</code>
+</code></pre>
+</li>
+<li><p>add your routes
+mount a folder with a prefix (all file who extends from <code>Route</code> will be added and mounted)</p>
+<pre><code class="lang-sh"><code class="source-code prettyprint">    myApp.mountFolder(join(__dirname, &apos;routes&apos;), &apos;/&apos;);</code>
+</code></pre>
+</li>
+<li><p>Start your app</p>
+<pre><code class="lang-sh"><code class="source-code prettyprint">myApp.start();</code>
+</code></pre>
+</li>
+</ul>
+<h3 id="full-example">Full example</h3><ul>
+<li><p>Basic one</p>
+<pre><code class="lang-sh"><code class="source-code prettyprint">import { join } from &apos;path&apos;;
+// import the app
+import { App } from &apos;koa-smart&apos;;
+// import middlewares koa-smart give you OR others
+import { 
+  i18n,
+  bodyParser, 
+  compress,
+  cors,
+  helmet,
+  addDefaultBody,
+  handleError,
+  logger,
+  RateLimit,
+} from &apos;koa-smart/middlewares&apos;;
+
+const myApp = new App({
+  port: 3000,
+});
+
+myApp.addMiddlewares([
+  cors({ credentials: true }),
+  helmet(),
+  bodyParser(),
+  i18n(myApp.app, {
+    directory: join(__dirname, &apos;locales&apos;),
+    locales: [&apos;en&apos;, &apos;fr&apos;],
+    modes: [&apos;query&apos;, &apos;subdomain&apos;, &apos;cookie&apos;, &apos;header&apos;, &apos;tld&apos;],
+  }),
+  handleError(),
+  logger(),
+  addDefaultBody(),
+  compress({}),
+  RateLimit.middleware({ interval: { min: 1 }, max: 100 }),
+]);
+
+// mount a folder with an prefix (all file who extends from `Route` will be add and mount)
+myApp.mountFolder(join(__dirname, &apos;routes&apos;), &apos;/&apos;);
+
+// start the app
+myApp.start();</code>
+</code></pre>
+</li>
+<li><p>Other example who Extends class App</p>
+<pre><code class="lang-sh"><code class="source-code prettyprint">import { join } from &apos;path&apos;;
+// import the app
+import { App } from &apos;koa-smart&apos;;
+// import middlewares koa-smart give you OR others
+import { 
+  i18n,
+  bodyParser, 
+  compress,
+  cors,
+  helmet,
+  addDefaultBody,
+  handleError,
+  logger,
+  RateLimit,
+} from &apos;koa-smart/middlewares&apos;;
+
+// create an class who extends from App class
+export default class MyApp extends App {
+  constructor() {
+    super({ port: 3000 });
+  }
+
+  async start() {
+    // add your Middlewares
+    super.addMiddlewares([
+      cors({ credentials: true }),
+      helmet(),
+      bodyParser(),
+      i18n(this.app, {
+        directory: join(__dirname, &apos;locales&apos;),
+        locales: [&apos;en&apos;, &apos;fr&apos;],
+        modes: [&apos;query&apos;, &apos;subdomain&apos;, &apos;cookie&apos;, &apos;header&apos;, &apos;tld&apos;],
+      }),
+      handleError(),
+      logger(),
+      addDefaultBody(),
+      compress({}),
+      RateLimit.middleware({ interval: { min: 1 }, max: 100 }),
+    ]);
+
+    // mount a folder with an prefix (all file who extends from `Route` will be add and mount)
+    super.mountFolder(join(__dirname, &apos;routes&apos;));
+    return super.start();
+  }
+}
+
+// start the app
+const myApp = new MyApp();
+myApp.start();</code>
+</code></pre>
+</li>
+</ul>
+<h2 id="add-treatment-on-route">Add treatment on route</h2><p>  <strong>you can add you own treatment and attribute to the route.</strong></p>
+<p>  In this example we will see how you can manage <strong>accesses</strong> to your route in 2 steps  </p>
+<ol>
+<li><p>Extends <code>Route</code> Class and overload  <code>beforeRoute</code> methode </p>
+<pre><code class="lang-sh"><code class="source-code prettyprint">export default class MyRoute extends Route {
+static accesses = {
+ public: -1,
+ connected: 100,
+ admin: GROUPS.ADMIN_ID,
+ client: GROUPS.CLIENT_ID,
+ // whatever ...
+};
+
+// overload beforeRoute
+async beforeRoute(ctx, infos, next) {
+ // infos.options content all the param give to the route
+
+ if (this.mlCanAccessRoute(ctx, infos.options)) { // test if you can access
+   this.throw(StatusCode.forbidden, ctx.state.__(&apos;Forbidden access&apos;)); 
+ }
+ // call the super methode
+ await super.beforeRoute(ctx, infos, next);
+}
+
+mlCanAccessRoute(ctx, { accesses }) {
+ if (accesses &amp;&amp; Array.isArray(accesses)) {
+   const { user } = ctx.state;
+   return accesses.includes(Route.accesses.public) ||
+     (!!user &amp;&amp; (
+       accesses.includes(Route.accesses.connected) ||
+       user.usergroup_id === Route.accesses.admin ||
+       accesses.includes(user.usergroup_id)
+     ));
+ }
+ return false;
+}
+}</code>
+</code></pre>
+</li>
+<li><p>Create an route with access </p>
+<pre><code class="lang-sh"><code class="source-code prettyprint">export default class RouteMyApi extends MyRoute {
+constructor(params) {
+ super({ ...params });
+}
+
+@Route.Get({ accesses: [MyRoute.accesses.public] })
+async publicRoute(ctx) {
+ this.sendOk(ctx, ctx.i18n.__(&apos;I can be call by any one&apos;));
+}
+
+@Route.Get({ accesses: [MyRoute.accesses.client] })
+async clientRoute(ctx) {
+ this.sendOk(ctx, ctx.i18n.__(&apos;I can be call by only client user&apos;));
+}
+
+@Route.Get({ accesses: [MyRoute.accesses.admin] })
+async adminRoute(ctx) {
+ this.sendOk(ctx, ctx.state.__(&apos;I can be call by only admin user&apos;));
+}
+
+@Route.Get({ accesses: [MyRoute.accesses.client, MyRoute.accesses.admin] })
+async adminRoute(ctx) {
+ this.sendOk(ctx, ctx.state.__(&apos;I can be call by client and admin user&apos;));
+}
+
+@Route.Get({ accesses: [MyRoute.accesses.connected] })
+async adminRoute(ctx) {
+ this.sendOk(ctx, ctx.state.__(&apos;I can be call by all connected users&apos;));
+}
+}</code>
+</code></pre>
+</li>
+</ol>
+<h2 id="license">License</h2><p>  MIT &#xA9; <a href="http://ysocorp.com/">YSO Corp</a></p>
+</div>
+</div>
+
+<footer class="footer">
+  Generated by <a href="https://esdoc.org">ESDoc<span data-ice="esdocVersion">(1.0.4)</span><img src="./image/esdoc-logo-mini-black.png"></a>
+</footer>
+
+<script src="script/search_index.js"></script>
+<script src="script/search.js"></script>
+<script src="script/pretty-print.js"></script>
+<script src="script/inherited-summary.js"></script>
+<script src="script/test-summary.js"></script>
+<script src="script/inner-link.js"></script>
+<script src="script/patch-for-local.js"></script>
+</body>
+</html>

@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <base data-ice="baseUrl" href="../../../">
+  <title data-ice="title">src/utils/utils.js | koa-smart</title>
+  <link type="text/css" rel="stylesheet" href="css/style.css">
+  <link type="text/css" rel="stylesheet" href="css/prettify-tomorrow.css">
+  <script src="script/prettify/prettify.js"></script>
+  <script src="script/manual.js"></script>
+<meta name="description" content="A framework base on Koajs2 with Decorator, Params checker and a base of modules (cors, bodyparser, compress, I18n, etc&#x2026;) to let you develop smart api easily"><meta property="twitter:card" content="summary"><meta property="twitter:title" content="koa-smart"><meta property="twitter:description" content="A framework base on Koajs2 with Decorator, Params checker and a base of modules (cors, bodyparser, compress, I18n, etc&#x2026;) to let you develop smart api easily"></head>
+<body class="layout-container" data-ice="rootContainer">
+
+<header>
+  <a href="./">Home</a>
+  
+  <a href="identifiers.html">Reference</a>
+  <a href="source.html">Source</a>
+  
+  <div class="search-box">
+  <span>
+    <img src="./image/search.png">
+    <span class="search-input-edge"></span><input class="search-input"><span class="search-input-edge"></span>
+  </span>
+    <ul class="search-result"></ul>
+  </div>
+<a style="position:relative; top:3px;" href="https://github.com/ysocorp/koa-smart"><img width="20px" src="./image/github.png"></a></header>
+
+<nav class="navigation" data-ice="nav"><div>
+  <ul>
+    
+  <li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/App.js~App.html">App</a></span></span></li>
+<li data-ice="doc"><a data-ice="dirPath" class="nav-dir-path" href="identifiers.html#middlewares">middlewares</a><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-addDefaultBody">addDefaultBody</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-handleError">handleError</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-logger">logger</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-notFound">notFound</a></span></span></li>
+<li data-ice="doc"><a data-ice="dirPath" class="nav-dir-path" href="identifiers.html#routes">routes</a><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/routes/Route.js~Route.html">Route</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/routes/RouteDecorators.js~RouteDecorators.html">RouteDecorators</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-typedef">T</span><span data-ice="name"><span><a href="typedef/index.html#static-typedef-MiddlewareFunction">MiddlewareFunction</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-typedef">T</span><span data-ice="name"><span><a href="typedef/index.html#static-typedef-Params">Params</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-typedef">T</span><span data-ice="name"><span><a href="typedef/index.html#static-typedef-PostParamsFilter">PostParamsFilter</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-external">E</span><span data-ice="name"><span><a href="http://koajs.com/#api">KoaContext</a></span></span></li>
+<li data-ice="doc"><a data-ice="dirPath" class="nav-dir-path" href="identifiers.html#utils">utils</a><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/utils/ErrorApp.js~ErrorApp.html">ErrorApp</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-capitalize">capitalize</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-dateYYYYMMDD">dateYYYYMMDD</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-deepCopy">deepCopy</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-isArray">isArray</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-isEmpty">isEmpty</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-isObject">isObject</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-jsonDecode">jsonDecode</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-jsonEncode">jsonEncode</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-notEmpty">notEmpty</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-nullIfEmpty">nullIfEmpty</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-objValToArray">objValToArray</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-random">random</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-timeout">timeout</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-toLowerCase">toLowerCase</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-toNumber">toNumber</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-trim">trim</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-ucFirst">ucFirst</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-isDateBetween">isDateBetween</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-regex">regex</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-test">test</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-trasform">trasform</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-lodash">lodash</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-wait">wait</a></span></span></li>
+</ul>
+</div>
+</nav>
+
+<div class="content" data-ice="content"><h1 data-ice="title">src/utils/utils.js</h1>
+<pre class="source-code line-number raw-source-code"><code class="prettyprint linenums" data-ice="content">import moment from &apos;moment&apos;;
+import Lodash from &apos;lodash&apos;;
+
+export const lodash = Lodash;
+
+export function random(from, to, fixed) {
+  return ((Math.random() * (to - from)) + from).toFixed(fixed) * 1;
+}
+
+export function ucFirst(str) {
+  return str ? str.charAt(0).toUpperCase() + str.slice(1) : str;
+}
+export function capitalize(str) { return ucFirst(str); }
+
+export function dateYYYYMMDD(date) {
+  if (!date) { return undefined; }
+  return moment(date).format(&apos;YYYY-MM-DD&apos;);
+}
+
+export function isArray(array) {
+  return Array.isArray(array);
+}
+
+export function trim(elem) {
+  if (elem.trim) {
+    return elem.trim();
+  }
+  return null;
+}
+
+export async function timeout(ms) {
+  return new Promise(resolve =&gt; setTimeout(resolve, ms));
+}
+export const wait = timeout;
+
+export function isObject(obj, force = true) {
+  if (force) {
+    return !isArray(obj) &amp;&amp; isObject(obj, false);
+  }
+  return typeof obj === &apos;object&apos;;
+}
+
+export function toLowerCase(str) {
+  return str.toLowerCase();
+}
+
+export function isEmpty(data) {
+  if (data === null || data === undefined) {
+    return true;
+  }
+  if (typeof data === &apos;string&apos;) {
+    return data === &apos;&apos;;
+  } else if (Array.isArray(data)) {
+    return data.length === 0;
+  } else if (typeof data === &apos;object&apos;) {
+    for (const key in data) {
+      if (data.hasOwnProperty(key)) {
+        return false;
+      }
+    }
+    return true;
+  }
+  return null;
+}
+
+export function notEmpty(elem) {
+  return !isEmpty(elem);
+}
+
+export function nullIfEmpty(elem) {
+  //TODO test if object, string or array
+  return isEmpty(elem) ? null : elem;
+}
+
+export function jsonEncode(json) {
+  return JSON.stringify(json).catch(() =&gt; null);
+}
+
+export function jsonDecode(string) {
+  return JSON.parse(string).catch(() =&gt; null);
+}
+
+export function toNumber(elem) {
+  return Number(elem);
+}
+
+export function deepCopy(obj) {
+  return Lodash.cloneDeep(obj);
+}
+
+export function objValToArray(obj) {
+  return Object.keys(obj).map((k) =&gt; obj[k]);
+}
+</code></pre>
+
+</div>
+
+<footer class="footer">
+  Generated by <a href="https://esdoc.org">ESDoc<span data-ice="esdocVersion">(1.0.4)</span><img src="./image/esdoc-logo-mini-black.png"></a>
+</footer>
+
+<script src="script/search_index.js"></script>
+<script src="script/search.js"></script>
+<script src="script/pretty-print.js"></script>
+<script src="script/inherited-summary.js"></script>
+<script src="script/test-summary.js"></script>
+<script src="script/inner-link.js"></script>
+<script src="script/patch-for-local.js"></script>
+</body>
+</html>

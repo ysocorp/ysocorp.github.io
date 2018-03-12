@@ -1,0 +1,4022 @@
+[
+  {
+    "__docId__": 1,
+    "kind": "external",
+    "name": "Infinity",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Infinity",
+    "memberof": "src/.external-ecmascript.js",
+    "static": true,
+    "longname": "src/.external-ecmascript.js~Infinity",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 2,
+    "kind": "external",
+    "name": "NaN",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/NaN",
+    "memberof": "src/.external-ecmascript.js",
+    "static": true,
+    "longname": "src/.external-ecmascript.js~NaN",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 3,
+    "kind": "external",
+    "name": "undefined",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined",
+    "memberof": "src/.external-ecmascript.js",
+    "static": true,
+    "longname": "src/.external-ecmascript.js~undefined",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 4,
+    "kind": "external",
+    "name": "null",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/null",
+    "memberof": "src/.external-ecmascript.js",
+    "static": true,
+    "longname": "src/.external-ecmascript.js~null",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 5,
+    "kind": "external",
+    "name": "Object",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object",
+    "memberof": "src/.external-ecmascript.js",
+    "static": true,
+    "longname": "src/.external-ecmascript.js~Object",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 6,
+    "kind": "external",
+    "name": "object",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object",
+    "memberof": "src/.external-ecmascript.js",
+    "static": true,
+    "longname": "src/.external-ecmascript.js~object",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 7,
+    "kind": "external",
+    "name": "Function",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function",
+    "memberof": "src/.external-ecmascript.js",
+    "static": true,
+    "longname": "src/.external-ecmascript.js~Function",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 8,
+    "kind": "external",
+    "name": "function",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function",
+    "memberof": "src/.external-ecmascript.js",
+    "static": true,
+    "longname": "src/.external-ecmascript.js~function",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 9,
+    "kind": "external",
+    "name": "Boolean",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean",
+    "memberof": "src/.external-ecmascript.js",
+    "static": true,
+    "longname": "src/.external-ecmascript.js~Boolean",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 10,
+    "kind": "external",
+    "name": "boolean",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean",
+    "memberof": "src/.external-ecmascript.js",
+    "static": true,
+    "longname": "src/.external-ecmascript.js~boolean",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 11,
+    "kind": "external",
+    "name": "Symbol",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Symbol",
+    "memberof": "src/.external-ecmascript.js",
+    "static": true,
+    "longname": "src/.external-ecmascript.js~Symbol",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 12,
+    "kind": "external",
+    "name": "Error",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Error",
+    "memberof": "src/.external-ecmascript.js",
+    "static": true,
+    "longname": "src/.external-ecmascript.js~Error",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 13,
+    "kind": "external",
+    "name": "EvalError",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/EvalError",
+    "memberof": "src/.external-ecmascript.js",
+    "static": true,
+    "longname": "src/.external-ecmascript.js~EvalError",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 14,
+    "kind": "external",
+    "name": "InternalError",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/InternalError",
+    "memberof": "src/.external-ecmascript.js",
+    "static": true,
+    "longname": "src/.external-ecmascript.js~InternalError",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 15,
+    "kind": "external",
+    "name": "RangeError",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/RangeError",
+    "memberof": "src/.external-ecmascript.js",
+    "static": true,
+    "longname": "src/.external-ecmascript.js~RangeError",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 16,
+    "kind": "external",
+    "name": "ReferenceError",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/ReferenceError",
+    "memberof": "src/.external-ecmascript.js",
+    "static": true,
+    "longname": "src/.external-ecmascript.js~ReferenceError",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 17,
+    "kind": "external",
+    "name": "SyntaxError",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/SyntaxError",
+    "memberof": "src/.external-ecmascript.js",
+    "static": true,
+    "longname": "src/.external-ecmascript.js~SyntaxError",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 18,
+    "kind": "external",
+    "name": "TypeError",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/TypeError",
+    "memberof": "src/.external-ecmascript.js",
+    "static": true,
+    "longname": "src/.external-ecmascript.js~TypeError",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 19,
+    "kind": "external",
+    "name": "URIError",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/URIError",
+    "memberof": "src/.external-ecmascript.js",
+    "static": true,
+    "longname": "src/.external-ecmascript.js~URIError",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 20,
+    "kind": "external",
+    "name": "Number",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number",
+    "memberof": "src/.external-ecmascript.js",
+    "static": true,
+    "longname": "src/.external-ecmascript.js~Number",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 21,
+    "kind": "external",
+    "name": "number",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number",
+    "memberof": "src/.external-ecmascript.js",
+    "static": true,
+    "longname": "src/.external-ecmascript.js~number",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 22,
+    "kind": "external",
+    "name": "Date",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date",
+    "memberof": "src/.external-ecmascript.js",
+    "static": true,
+    "longname": "src/.external-ecmascript.js~Date",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 23,
+    "kind": "external",
+    "name": "String",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String",
+    "memberof": "src/.external-ecmascript.js",
+    "static": true,
+    "longname": "src/.external-ecmascript.js~String",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 24,
+    "kind": "external",
+    "name": "string",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String",
+    "memberof": "src/.external-ecmascript.js",
+    "static": true,
+    "longname": "src/.external-ecmascript.js~string",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 25,
+    "kind": "external",
+    "name": "RegExp",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp",
+    "memberof": "src/.external-ecmascript.js",
+    "static": true,
+    "longname": "src/.external-ecmascript.js~RegExp",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 26,
+    "kind": "external",
+    "name": "Array",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array",
+    "memberof": "src/.external-ecmascript.js",
+    "static": true,
+    "longname": "src/.external-ecmascript.js~Array",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 27,
+    "kind": "external",
+    "name": "Int8Array",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Int8Array",
+    "memberof": "src/.external-ecmascript.js",
+    "static": true,
+    "longname": "src/.external-ecmascript.js~Int8Array",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 28,
+    "kind": "external",
+    "name": "Uint8Array",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Uint8Array",
+    "memberof": "src/.external-ecmascript.js",
+    "static": true,
+    "longname": "src/.external-ecmascript.js~Uint8Array",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 29,
+    "kind": "external",
+    "name": "Uint8ClampedArray",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Uint8ClampedArray",
+    "memberof": "src/.external-ecmascript.js",
+    "static": true,
+    "longname": "src/.external-ecmascript.js~Uint8ClampedArray",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 30,
+    "kind": "external",
+    "name": "Int16Array",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Int16Array",
+    "memberof": "src/.external-ecmascript.js",
+    "static": true,
+    "longname": "src/.external-ecmascript.js~Int16Array",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 31,
+    "kind": "external",
+    "name": "Uint16Array",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Uint16Array",
+    "memberof": "src/.external-ecmascript.js",
+    "static": true,
+    "longname": "src/.external-ecmascript.js~Uint16Array",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 32,
+    "kind": "external",
+    "name": "Int32Array",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Int32Array",
+    "memberof": "src/.external-ecmascript.js",
+    "static": true,
+    "longname": "src/.external-ecmascript.js~Int32Array",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 33,
+    "kind": "external",
+    "name": "Uint32Array",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Uint32Array",
+    "memberof": "src/.external-ecmascript.js",
+    "static": true,
+    "longname": "src/.external-ecmascript.js~Uint32Array",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 34,
+    "kind": "external",
+    "name": "Float32Array",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Float32Array",
+    "memberof": "src/.external-ecmascript.js",
+    "static": true,
+    "longname": "src/.external-ecmascript.js~Float32Array",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 35,
+    "kind": "external",
+    "name": "Float64Array",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Float64Array",
+    "memberof": "src/.external-ecmascript.js",
+    "static": true,
+    "longname": "src/.external-ecmascript.js~Float64Array",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 36,
+    "kind": "external",
+    "name": "Map",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Map",
+    "memberof": "src/.external-ecmascript.js",
+    "static": true,
+    "longname": "src/.external-ecmascript.js~Map",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 37,
+    "kind": "external",
+    "name": "Set",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Set",
+    "memberof": "src/.external-ecmascript.js",
+    "static": true,
+    "longname": "src/.external-ecmascript.js~Set",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 38,
+    "kind": "external",
+    "name": "WeakMap",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/WeakMap",
+    "memberof": "src/.external-ecmascript.js",
+    "static": true,
+    "longname": "src/.external-ecmascript.js~WeakMap",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 39,
+    "kind": "external",
+    "name": "WeakSet",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/WeakSet",
+    "memberof": "src/.external-ecmascript.js",
+    "static": true,
+    "longname": "src/.external-ecmascript.js~WeakSet",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 40,
+    "kind": "external",
+    "name": "ArrayBuffer",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/ArrayBuffer",
+    "memberof": "src/.external-ecmascript.js",
+    "static": true,
+    "longname": "src/.external-ecmascript.js~ArrayBuffer",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 41,
+    "kind": "external",
+    "name": "DataView",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/DataView",
+    "memberof": "src/.external-ecmascript.js",
+    "static": true,
+    "longname": "src/.external-ecmascript.js~DataView",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 42,
+    "kind": "external",
+    "name": "JSON",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/JSON",
+    "memberof": "src/.external-ecmascript.js",
+    "static": true,
+    "longname": "src/.external-ecmascript.js~JSON",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 43,
+    "kind": "external",
+    "name": "Promise",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise",
+    "memberof": "src/.external-ecmascript.js",
+    "static": true,
+    "longname": "src/.external-ecmascript.js~Promise",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 44,
+    "kind": "external",
+    "name": "Generator",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Generator",
+    "memberof": "src/.external-ecmascript.js",
+    "static": true,
+    "longname": "src/.external-ecmascript.js~Generator",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 45,
+    "kind": "external",
+    "name": "GeneratorFunction",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/GeneratorFunction",
+    "memberof": "src/.external-ecmascript.js",
+    "static": true,
+    "longname": "src/.external-ecmascript.js~GeneratorFunction",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 46,
+    "kind": "external",
+    "name": "Reflect",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Reflect",
+    "memberof": "src/.external-ecmascript.js",
+    "static": true,
+    "longname": "src/.external-ecmascript.js~Reflect",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 47,
+    "kind": "external",
+    "name": "Proxy",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Proxy",
+    "memberof": "src/.external-ecmascript.js",
+    "static": true,
+    "longname": "src/.external-ecmascript.js~Proxy",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 48,
+    "kind": "file",
+    "name": "src/App.js",
+    "content": "import { join as pathJoin } from 'path';\nimport { readdirSync } from 'fs';\nimport Koa from 'koa';\nimport locale from 'koa-locale';\n\nimport Route from './routes/Route';\nimport notFound from './middlewares/notFound';\n\nimport { objValToArray } from './utils/utils';\n\n\nexport default class App {\n\n  /**\n   * @access private\n   */\n  routeParam = null;\n  /**\n   * @access private\n   */\n  routes = {};\n\n  constructor(opt) {\n    const {\n      routeParam = {},\n      port = process.env.PORT || 3000,\n    } = opt;\n    this.routeParam = routeParam;\n    /**\n     * @access private\n     */\n    this.port = port;\n    /**\n     * @access private\n     */\n    this.app = new Koa();\n\n    locale(this.app)\n  }\n\n  _getAllRoutes(path, prefix) {\n    this.routes[prefix] = this.routes[prefix] || {};\n\n    readdirSync(path)\n      .filter(file => file.endsWith('.js') || file.endsWith('.ts'))\n      .forEach((file) => {\n        const RouteClass = require(pathJoin(path, file)).default;\n        if (RouteClass && RouteClass.prototype instanceof Route) {\n          const route = new RouteClass({\n            prefix,\n            app: this.app,\n            routes: this.routes[prefix],\n            ...this.routeParam,\n          });\n          this.routes[prefix][route.constructor.name] = route;\n        }\n      });\n    return objValToArray(this.routes[prefix]);\n  }\n\n  /**\n   * @access public\n   * @desc adds the provided functions to the list of Koa middlewares to be executed for all routes.\n   * @param {function} middlewares an array of Koa-compliant middlewares\n   */\n  addMiddlewares(middlewares) {\n    middlewares.forEach(e => this.addMiddleware(e));\n  }\n\n  /**\n   * @access public\n   * @desc adds the provided function to the list of Koa middlewares to be executed for all routes.\n   * @param {function[]} middleware an array of middlewares\n   */\n  addMiddleware(middleware) {\n    this.app.use(middleware);\n  }\n\n  /**\n   * @access public\n   * @desc \"mounts\" a folder, scanning it for route files, then adding the discovered routes to the app.\n   * @param {string} pathFolder the path of the folder to mount\n   * @param {string} [prefix='/'] an optional prefix to prepend to all of the folder's routes\n   */\n  mountFolder(pathFolder, prefix = '/') {\n    const routes = this._getAllRoutes(pathFolder, prefix);\n    for (const route of routes) {\n      route.mount();\n      this.app.use(route.koaRouter.middleware());\n    }\n  }\n\n  /**\n   * @access public\n   * @desc Launches the app and starts listening on the configured port.\n   */\n  async start() {\n    this.app.use(notFound());\n    return this.app.listen(this.port);\n  }\n}\n",
+    "static": true,
+    "longname": "/home/elkaim_r/Project/koa-smart/src/App.js",
+    "access": "public",
+    "description": null,
+    "lineNumber": 1
+  },
+  {
+    "__docId__": 49,
+    "kind": "class",
+    "name": "App",
+    "memberof": "src/App.js",
+    "static": true,
+    "longname": "src/App.js~App",
+    "access": "public",
+    "export": true,
+    "importPath": "koa-smart/src/App.js",
+    "importStyle": "App",
+    "description": null,
+    "lineNumber": 12,
+    "undocument": true,
+    "interface": false
+  },
+  {
+    "__docId__": 50,
+    "kind": "member",
+    "name": "routeParam",
+    "memberof": "src/App.js~App",
+    "static": false,
+    "longname": "src/App.js~App#routeParam",
+    "access": "private",
+    "description": "",
+    "lineNumber": 17,
+    "type": {
+      "types": [
+        "*"
+      ]
+    }
+  },
+  {
+    "__docId__": 51,
+    "kind": "member",
+    "name": "routes",
+    "memberof": "src/App.js~App",
+    "static": false,
+    "longname": "src/App.js~App#routes",
+    "access": "private",
+    "description": "",
+    "lineNumber": 21,
+    "type": {
+      "types": [
+        "*"
+      ]
+    }
+  },
+  {
+    "__docId__": 52,
+    "kind": "constructor",
+    "name": "constructor",
+    "memberof": "src/App.js~App",
+    "generator": false,
+    "async": false,
+    "static": false,
+    "longname": "src/App.js~App#constructor",
+    "access": "public",
+    "description": null,
+    "lineNumber": 23,
+    "undocument": true
+  },
+  {
+    "__docId__": 54,
+    "kind": "member",
+    "name": "port",
+    "memberof": "src/App.js~App",
+    "static": false,
+    "longname": "src/App.js~App#port",
+    "access": "private",
+    "description": "",
+    "lineNumber": 32,
+    "type": {
+      "types": [
+        "*"
+      ]
+    }
+  },
+  {
+    "__docId__": 55,
+    "kind": "member",
+    "name": "app",
+    "memberof": "src/App.js~App",
+    "static": false,
+    "longname": "src/App.js~App#app",
+    "access": "private",
+    "description": "",
+    "lineNumber": 36,
+    "type": {
+      "types": [
+        "*"
+      ]
+    }
+  },
+  {
+    "__docId__": 56,
+    "kind": "method",
+    "name": "_getAllRoutes",
+    "memberof": "src/App.js~App",
+    "generator": false,
+    "async": false,
+    "static": false,
+    "longname": "src/App.js~App#_getAllRoutes",
+    "access": "private",
+    "description": null,
+    "lineNumber": 41,
+    "undocument": true,
+    "params": [
+      {
+        "name": "path",
+        "types": [
+          "*"
+        ]
+      },
+      {
+        "name": "prefix",
+        "types": [
+          "*"
+        ]
+      }
+    ],
+    "return": {
+      "types": [
+        "*"
+      ]
+    }
+  },
+  {
+    "__docId__": 57,
+    "kind": "method",
+    "name": "addMiddlewares",
+    "memberof": "src/App.js~App",
+    "generator": false,
+    "async": false,
+    "static": false,
+    "longname": "src/App.js~App#addMiddlewares",
+    "access": "public",
+    "description": "adds the provided functions to the list of Koa middlewares to be executed for all routes.",
+    "lineNumber": 66,
+    "params": [
+      {
+        "nullable": null,
+        "types": [
+          "function"
+        ],
+        "spread": false,
+        "optional": false,
+        "name": "middlewares",
+        "description": "an array of Koa-compliant middlewares"
+      }
+    ],
+    "return": null
+  },
+  {
+    "__docId__": 58,
+    "kind": "method",
+    "name": "addMiddleware",
+    "memberof": "src/App.js~App",
+    "generator": false,
+    "async": false,
+    "static": false,
+    "longname": "src/App.js~App#addMiddleware",
+    "access": "public",
+    "description": "adds the provided function to the list of Koa middlewares to be executed for all routes.",
+    "lineNumber": 75,
+    "params": [
+      {
+        "nullable": null,
+        "types": [
+          "function[]"
+        ],
+        "spread": false,
+        "optional": false,
+        "name": "middleware",
+        "description": "an array of middlewares"
+      }
+    ],
+    "return": null
+  },
+  {
+    "__docId__": 59,
+    "kind": "method",
+    "name": "mountFolder",
+    "memberof": "src/App.js~App",
+    "generator": false,
+    "async": false,
+    "static": false,
+    "longname": "src/App.js~App#mountFolder",
+    "access": "public",
+    "description": "\"mounts\" a folder, scanning it for route files, then adding the discovered routes to the app.",
+    "lineNumber": 85,
+    "params": [
+      {
+        "nullable": null,
+        "types": [
+          "string"
+        ],
+        "spread": false,
+        "optional": false,
+        "name": "pathFolder",
+        "description": "the path of the folder to mount"
+      },
+      {
+        "nullable": null,
+        "types": [
+          "string"
+        ],
+        "spread": false,
+        "optional": true,
+        "defaultValue": "'/'",
+        "defaultRaw": "'/'",
+        "name": "prefix",
+        "description": "an optional prefix to prepend to all of the folder's routes"
+      }
+    ],
+    "return": null
+  },
+  {
+    "__docId__": 60,
+    "kind": "method",
+    "name": "start",
+    "memberof": "src/App.js~App",
+    "generator": false,
+    "async": true,
+    "static": false,
+    "longname": "src/App.js~App#start",
+    "access": "public",
+    "description": "Launches the app and starts listening on the configured port.",
+    "lineNumber": 97,
+    "params": [],
+    "return": {
+      "types": [
+        "*"
+      ]
+    }
+  },
+  {
+    "__docId__": 61,
+    "kind": "file",
+    "name": "src/index.js",
+    "content": "import Route from './routes/Route';\nimport App from './App';\nimport ErrorApp from './utils/ErrorApp';\nimport StatusCode from './utils/StatusCode';\n\nmodule.exports = {\n  App,\n  Route,\n  ErrorApp,\n  StatusCode,\n};\n",
+    "static": true,
+    "longname": "/home/elkaim_r/Project/koa-smart/src/index.js",
+    "access": "public",
+    "description": null,
+    "lineNumber": 1
+  },
+  {
+    "__docId__": 62,
+    "kind": "file",
+    "name": "src/middlewares/addDefaultBody.js",
+    "content": "let options = {\n    body: {},\n}\n\nasync function addDefaultBody(ctx, next) {\n  ctx.body = ctx.body || options.body;\n  await next();\n}\n\nexport default (body = {}) => {\n  options.body = body;\n  return addDefaultBody;\n};\n",
+    "static": true,
+    "longname": "/home/elkaim_r/Project/koa-smart/src/middlewares/addDefaultBody.js",
+    "access": "public",
+    "description": null,
+    "lineNumber": 1
+  },
+  {
+    "__docId__": 63,
+    "kind": "variable",
+    "name": "options",
+    "memberof": "src/middlewares/addDefaultBody.js",
+    "static": true,
+    "longname": "src/middlewares/addDefaultBody.js~options",
+    "access": "public",
+    "export": false,
+    "importPath": "koa-smart/src/middlewares/addDefaultBody.js",
+    "importStyle": null,
+    "description": null,
+    "lineNumber": 1,
+    "undocument": true,
+    "type": {
+      "types": [
+        "{\"body\": *}"
+      ]
+    },
+    "ignore": true
+  },
+  {
+    "__docId__": 64,
+    "kind": "function",
+    "name": "addDefaultBody",
+    "memberof": "src/middlewares/addDefaultBody.js",
+    "generator": false,
+    "async": true,
+    "static": true,
+    "longname": "src/middlewares/addDefaultBody.js~addDefaultBody",
+    "access": "public",
+    "export": false,
+    "importPath": "koa-smart/src/middlewares/addDefaultBody.js",
+    "importStyle": null,
+    "description": null,
+    "lineNumber": 5,
+    "undocument": true,
+    "params": [
+      {
+        "name": "ctx",
+        "types": [
+          "*"
+        ]
+      },
+      {
+        "name": "next",
+        "types": [
+          "*"
+        ]
+      }
+    ],
+    "return": null,
+    "ignore": true
+  },
+  {
+    "__docId__": 65,
+    "kind": "function",
+    "name": "addDefaultBody",
+    "memberof": "src/middlewares/addDefaultBody.js",
+    "generator": false,
+    "async": false,
+    "static": true,
+    "longname": "src/middlewares/addDefaultBody.js~addDefaultBody",
+    "access": "public",
+    "export": true,
+    "importPath": "koa-smart/src/middlewares/addDefaultBody.js",
+    "importStyle": "addDefaultBody",
+    "description": null,
+    "lineNumber": 10,
+    "undocument": true,
+    "params": [
+      {
+        "name": "body",
+        "optional": true,
+        "types": [
+          "{}"
+        ],
+        "defaultRaw": {},
+        "defaultValue": "{}"
+      }
+    ],
+    "return": {
+      "types": [
+        "*"
+      ]
+    }
+  },
+  {
+    "__docId__": 66,
+    "kind": "file",
+    "name": "src/middlewares/handleError.js",
+    "content": "const __ = string => string;\n\nlet options = {\n  logAll: false,\n  logErrorUnknown: false,\n  logErrorSequelize: false,\n  logErrorApp: false,\n}\n\nfunction displayLog(error, type) {\n  if (options.logAll || options[type]) {\n    console.error(error);\n  }\n}\n\nfunction getMessageTranslate(ctx, msg, toTranslate) {\n  if (toTranslate) {\n    if (ctx.i18n && ctx.i18n.__) {\n      return ctx.i18n.__(msg);\n    } else if (ctx.state && ctx.state.__) {\n      return ctx.state.__(msg);\n    }\n  }\n  return msg;\n}\n\nasync function handleError(ctx, next) {\n  try {\n    await next();\n  } catch (err) {\n    const arraySequelize = ['SequelizeValidationError', 'SequelizeUniqueConstraintError'];\n\n    if (err.constructor.name === 'ErrorApp') { // expected error\n      ctx.status = err.status;\n      ctx.body = { message: getMessageTranslate(ctx, err.message, err.toTranslate) };\n      displayLog(err, 'logErrorApp');\n    } else if (arraySequelize.includes(err.name)) { // sequilize expected error by validattor or other\n      ctx.status = 400;\n      ctx.body = { message: getMessageTranslate(ctx, err.message.split(':').pop(), true) };\n      displayLog(err, 'logErrorSequelize');\n    } else { // unexpected error\n      ctx.status = 500;\n      ctx.body = { message: getMessageTranslate(ctx, __('Please contact the support'), true) };\n      displayLog(err, 'logErrorUnknown');\n    }\n  }\n}\n\nexport default (opt = {}) => {\n  options = {\n    ...options,\n    ...opt,\n  }\n  return handleError;\n};\n",
+    "static": true,
+    "longname": "/home/elkaim_r/Project/koa-smart/src/middlewares/handleError.js",
+    "access": "public",
+    "description": null,
+    "lineNumber": 1
+  },
+  {
+    "__docId__": 67,
+    "kind": "function",
+    "name": "__",
+    "memberof": "src/middlewares/handleError.js",
+    "generator": false,
+    "async": false,
+    "static": true,
+    "longname": "src/middlewares/handleError.js~__",
+    "access": "private",
+    "export": false,
+    "importPath": "koa-smart/src/middlewares/handleError.js",
+    "importStyle": null,
+    "description": null,
+    "lineNumber": 1,
+    "undocument": true,
+    "params": [
+      {
+        "name": "string",
+        "types": [
+          "*"
+        ]
+      }
+    ],
+    "return": null,
+    "ignore": true
+  },
+  {
+    "__docId__": 68,
+    "kind": "variable",
+    "name": "options",
+    "memberof": "src/middlewares/handleError.js",
+    "static": true,
+    "longname": "src/middlewares/handleError.js~options",
+    "access": "public",
+    "export": false,
+    "importPath": "koa-smart/src/middlewares/handleError.js",
+    "importStyle": null,
+    "description": null,
+    "lineNumber": 3,
+    "undocument": true,
+    "type": {
+      "types": [
+        "{\"logAll\": *, \"logErrorUnknown\": *, \"logErrorSequelize\": *, \"logErrorApp\": *}"
+      ]
+    },
+    "ignore": true
+  },
+  {
+    "__docId__": 69,
+    "kind": "function",
+    "name": "displayLog",
+    "memberof": "src/middlewares/handleError.js",
+    "generator": false,
+    "async": false,
+    "static": true,
+    "longname": "src/middlewares/handleError.js~displayLog",
+    "access": "public",
+    "export": false,
+    "importPath": "koa-smart/src/middlewares/handleError.js",
+    "importStyle": null,
+    "description": null,
+    "lineNumber": 10,
+    "undocument": true,
+    "params": [
+      {
+        "name": "error",
+        "types": [
+          "*"
+        ]
+      },
+      {
+        "name": "type",
+        "types": [
+          "*"
+        ]
+      }
+    ],
+    "return": null,
+    "ignore": true
+  },
+  {
+    "__docId__": 70,
+    "kind": "function",
+    "name": "getMessageTranslate",
+    "memberof": "src/middlewares/handleError.js",
+    "generator": false,
+    "async": false,
+    "static": true,
+    "longname": "src/middlewares/handleError.js~getMessageTranslate",
+    "access": "public",
+    "export": false,
+    "importPath": "koa-smart/src/middlewares/handleError.js",
+    "importStyle": null,
+    "description": null,
+    "lineNumber": 16,
+    "undocument": true,
+    "params": [
+      {
+        "name": "ctx",
+        "types": [
+          "*"
+        ]
+      },
+      {
+        "name": "msg",
+        "types": [
+          "*"
+        ]
+      },
+      {
+        "name": "toTranslate",
+        "types": [
+          "*"
+        ]
+      }
+    ],
+    "return": {
+      "types": [
+        "*"
+      ]
+    },
+    "ignore": true
+  },
+  {
+    "__docId__": 71,
+    "kind": "function",
+    "name": "handleError",
+    "memberof": "src/middlewares/handleError.js",
+    "generator": false,
+    "async": true,
+    "static": true,
+    "longname": "src/middlewares/handleError.js~handleError",
+    "access": "public",
+    "export": false,
+    "importPath": "koa-smart/src/middlewares/handleError.js",
+    "importStyle": null,
+    "description": null,
+    "lineNumber": 27,
+    "undocument": true,
+    "params": [
+      {
+        "name": "ctx",
+        "types": [
+          "*"
+        ]
+      },
+      {
+        "name": "next",
+        "types": [
+          "*"
+        ]
+      }
+    ],
+    "return": null,
+    "ignore": true
+  },
+  {
+    "__docId__": 72,
+    "kind": "function",
+    "name": "handleError",
+    "memberof": "src/middlewares/handleError.js",
+    "generator": false,
+    "async": false,
+    "static": true,
+    "longname": "src/middlewares/handleError.js~handleError",
+    "access": "public",
+    "export": true,
+    "importPath": "koa-smart/src/middlewares/handleError.js",
+    "importStyle": "handleError",
+    "description": null,
+    "lineNumber": 49,
+    "undocument": true,
+    "params": [
+      {
+        "name": "opt",
+        "optional": true,
+        "types": [
+          "{}"
+        ],
+        "defaultRaw": {},
+        "defaultValue": "{}"
+      }
+    ],
+    "return": {
+      "types": [
+        "*"
+      ]
+    }
+  },
+  {
+    "__docId__": 73,
+    "kind": "file",
+    "name": "src/middlewares/index.js",
+    "content": "import compress from 'koa-compress';\nimport helmet from 'koa-helmet';\nimport bodyParser from 'koa-bodyparser';\nimport cors from 'kcors';\nimport { RateLimit, Stores as RateLimitStores } from 'koa2-ratelimit';\nimport i18n from 'koa-i18n';\n\nimport addDefaultBody from './addDefaultBody';\nimport handleError from './handleError';\nimport logger from './logger';\n\nmodule.exports = {\n  cors,\n  helmet,\n  bodyParser,\n  compress,\n  i18n,\n  addDefaultBody,\n  handleError,\n  logger,\n  RateLimit,\n  RateLimitStores,\n};\n",
+    "static": true,
+    "longname": "/home/elkaim_r/Project/koa-smart/src/middlewares/index.js",
+    "access": "public",
+    "description": null,
+    "lineNumber": 1
+  },
+  {
+    "__docId__": 74,
+    "kind": "file",
+    "name": "src/middlewares/logger.js",
+    "content": "import chalk from 'chalk';\nimport moment from 'moment';\n\nfunction dateFormat(date) {\n  return moment(date).format('YYYY/MM/DD, h:mm:ss a')\n}\n\nfunction getColor(status) {\n  if (status < 400) {\n    return 'green';\n  } else if (status < 500) {\n    return 'gray';\n  }\n  return 'red'\n}\n\nasync function logger(ctx, next) {\n  const start = new Date();\n  let status = 500;\n  try {\n    console.log(`${chalk.blue(dateFormat(start))} - ${chalk.bold(ctx.method)} ${chalk.blue.bold(ctx.url)} START`);\n    await next();\n    status = ctx.status;\n  } catch (err) {\n    let msg = err;\n\n    const arraySequelize = ['SequelizeValidationError', 'SequelizeUniqueConstraintError'];\n    if (err.constructor.name === 'ErrorApp') {\n      msg = `${err.status}: ${err.message}`;\n      status = err.status;\n    } if (arraySequelize.includes(err.name)) {\n      msg = `${err.name}: ${err.message}`;\n      status = 400;\n    }\n    console.log(chalk.red('[ERROR]'), `${chalk.red.bold(ctx.method)} ${ctx.url}`, msg);\n    throw err;\n  } finally {\n    const ms = new Date() - start;\n    const fColor = chalk[getColor(status)];\n    console.log(`${fColor(dateFormat(new Date()))} - ${fColor.bold(status)} ${chalk.bold(ctx.method)} ${ctx.url} - ${fColor(ms + ' ms')}`);\n  }\n}\n\nexport default () => logger;\n",
+    "static": true,
+    "longname": "/home/elkaim_r/Project/koa-smart/src/middlewares/logger.js",
+    "access": "public",
+    "description": null,
+    "lineNumber": 1
+  },
+  {
+    "__docId__": 75,
+    "kind": "function",
+    "name": "dateFormat",
+    "memberof": "src/middlewares/logger.js",
+    "generator": false,
+    "async": false,
+    "static": true,
+    "longname": "src/middlewares/logger.js~dateFormat",
+    "access": "public",
+    "export": false,
+    "importPath": "koa-smart/src/middlewares/logger.js",
+    "importStyle": null,
+    "description": null,
+    "lineNumber": 4,
+    "undocument": true,
+    "params": [
+      {
+        "name": "date",
+        "types": [
+          "*"
+        ]
+      }
+    ],
+    "return": {
+      "types": [
+        "*"
+      ]
+    },
+    "ignore": true
+  },
+  {
+    "__docId__": 76,
+    "kind": "function",
+    "name": "getColor",
+    "memberof": "src/middlewares/logger.js",
+    "generator": false,
+    "async": false,
+    "static": true,
+    "longname": "src/middlewares/logger.js~getColor",
+    "access": "public",
+    "export": false,
+    "importPath": "koa-smart/src/middlewares/logger.js",
+    "importStyle": null,
+    "description": null,
+    "lineNumber": 8,
+    "undocument": true,
+    "params": [
+      {
+        "name": "status",
+        "types": [
+          "*"
+        ]
+      }
+    ],
+    "return": {
+      "types": [
+        "string"
+      ]
+    },
+    "ignore": true
+  },
+  {
+    "__docId__": 77,
+    "kind": "function",
+    "name": "logger",
+    "memberof": "src/middlewares/logger.js",
+    "generator": false,
+    "async": true,
+    "static": true,
+    "longname": "src/middlewares/logger.js~logger",
+    "access": "public",
+    "export": false,
+    "importPath": "koa-smart/src/middlewares/logger.js",
+    "importStyle": null,
+    "description": null,
+    "lineNumber": 17,
+    "undocument": true,
+    "params": [
+      {
+        "name": "ctx",
+        "types": [
+          "*"
+        ]
+      },
+      {
+        "name": "next",
+        "types": [
+          "*"
+        ]
+      }
+    ],
+    "return": null,
+    "ignore": true
+  },
+  {
+    "__docId__": 78,
+    "kind": "function",
+    "name": "logger",
+    "memberof": "src/middlewares/logger.js",
+    "generator": false,
+    "async": false,
+    "static": true,
+    "longname": "src/middlewares/logger.js~logger",
+    "access": "public",
+    "export": true,
+    "importPath": "koa-smart/src/middlewares/logger.js",
+    "importStyle": "logger",
+    "description": null,
+    "lineNumber": 44,
+    "undocument": true,
+    "params": [],
+    "return": null
+  },
+  {
+    "__docId__": 79,
+    "kind": "file",
+    "name": "src/middlewares/notFound.js",
+    "content": "async function notFound(ctx) {\n  ctx.status = 404;\n  ctx.body = {\n    message: ctx.state.__ ? ctx.state.__('Not found') : 'Not found',\n  };\n}\n\nexport default () => notFound;\n",
+    "static": true,
+    "longname": "/home/elkaim_r/Project/koa-smart/src/middlewares/notFound.js",
+    "access": "public",
+    "description": null,
+    "lineNumber": 1
+  },
+  {
+    "__docId__": 80,
+    "kind": "function",
+    "name": "notFound",
+    "memberof": "src/middlewares/notFound.js",
+    "generator": false,
+    "async": true,
+    "static": true,
+    "longname": "src/middlewares/notFound.js~notFound",
+    "access": "public",
+    "export": false,
+    "importPath": "koa-smart/src/middlewares/notFound.js",
+    "importStyle": null,
+    "description": null,
+    "lineNumber": 1,
+    "undocument": true,
+    "params": [
+      {
+        "name": "ctx",
+        "types": [
+          "*"
+        ]
+      }
+    ],
+    "return": null,
+    "ignore": true
+  },
+  {
+    "__docId__": 81,
+    "kind": "function",
+    "name": "notFound",
+    "memberof": "src/middlewares/notFound.js",
+    "generator": false,
+    "async": false,
+    "static": true,
+    "longname": "src/middlewares/notFound.js~notFound",
+    "access": "public",
+    "export": true,
+    "importPath": "koa-smart/src/middlewares/notFound.js",
+    "importStyle": "notFound",
+    "description": null,
+    "lineNumber": 8,
+    "undocument": true,
+    "params": [],
+    "return": null
+  },
+  {
+    "__docId__": 82,
+    "kind": "file",
+    "name": "src/routes/Route.js",
+    "content": "import KoaRouter from 'koa-router';\nimport chalk from 'chalk';\nimport { RateLimit } from 'koa2-ratelimit';\n\nimport ErrorApp from '../utils/ErrorApp';\nimport StatusCode from '../utils/StatusCode';\nimport { isArray, isObject, deepCopy } from '../utils/utils';\nimport RouteDecorators from './RouteDecorators';\n\n\nexport default class Route {\n  static displayLog = true;\n  static StatusCode = StatusCode;\n\n  /**\n   * @typedef {Object} Params\n   * @property {Object.<string, boolean | PostParamsFilter>} params the params describing the route's middlewares,\n   *                                                                with the key being the param's name,\n   *                                                                and the value describes the way it should be handled.\n   *                                                                (only applicable for requests containing a body)\n   * @property {string} path the path at which the route will be available.\n   * @property {string} routeBase a prefix which will be preppended to the route's path\n   * @property {boolean} disabled if set to true, the route will be ignored\n   * @property {function[]} middlewares an array of Koa Middlewares, which will be mounted for the given route\n   */\n\n  /**\n   * @typedef {Object} PostParamsFilter\n   * @property {MiddlewareFunction[]} __func an array of functions which provides \"middleware\" functions that will be applied to the corresponding parameter one by one.\n   * @property {boolean} __force whether the parameter is required or not.\n   */\n\n  /**\n   * @typedef {function} MiddlewareFunction\n   * @param {*} elem the element the function will act upon\n   * @param {Route} [route] the element's current route\n   * @param {{ctx: KoaContext, body:Object, keyBody:string}} [context] the element's context\n   * @return {*} transformedParam the parameter, after being manipulated by the function\n   */\n\n  /**\n   * @external {KoaContext} http://koajs.com/#api\n   */\n\n  constructor({ app, prefix, routes, models, model, disable }) {\n    this.app = app;\n    this.prefix = prefix;\n    this.allRoutesInstance = routes;\n    this.models = models;\n    this.disable = disable != null ? disable : this.disable;\n    this.middlewares = this.middlewares || [];\n    if (this.models && model) {\n      this.model = this.models[model];\n    }\n    this.koaRouter = new KoaRouter();\n    this.privateKeyInParamsRoute = ['__force', '__func'];\n    // This Variable are set by RouteDecorators\n    this.routes;\n    this.routeBase;\n  }\n\n\n /**\n  * @access public\n  * @desc mounts the tagged function as a GET route.\n  * @param {Params} params the route's parameters\n  */\n  static Get = RouteDecorators.Get;\n\n /**\n  * @access public\n  * @desc mounts the tagged function as a POST route.\n  * @param {Params} params the route's parameters\n  */\n  static Post = RouteDecorators.Post;\n\n /**\n  * @access public\n  * @desc mounts the tagged function as a PUT route.\n  * @param {Params} params the route's parameters\n  */\n  static Put = RouteDecorators.Put;\n\n /**\n  * @access public\n  * @desc mounts the tagged function as a PATCH route.\n  * @param {Params} params the route's parameters\n  */\n  static Patch = RouteDecorators.Patch;\n\n /**\n  * @access public\n  * @desc mounts the tagged function as a DELETE route.\n  * @param {Params} params the route's parameters\n  */\n  static Delete = RouteDecorators.Delete;\n\n /**\n  * @access public\n  * @desc mounts the tagged function as route, allowing the user to configure the HTTP methods it answers to.\n  * @param {Params} params the route's parameters\n  */\n  static Route = RouteDecorators.Route;\n\n  log(str, ...args) {\n    if (Route.displayLog) {\n      console.log(str, ...args);\n    }\n  }\n\n  mount() {\n    if (this.disable !== true) {\n      for (const type in this.routes) { // eslint-disable-line\n        for (const route of this.routes[type]) {\n          const routePath = `/${this.prefix}/${this.routeBase}/${route.path}`.replace(/[/]{2,10}/g, '/');\n          route.options.routePath = routePath;\n          route.options.type = type;\n          if (!route.options.disable) {\n            this.log(chalk.green.bold('[Mount route]'), `\\t${type}\\t`, routePath);\n            this.koaRouter[type](routePath, ...this._use(route));\n          } else {\n            this.log(chalk.yellow.bold('[Disable Mount route]\\t'), type, routePath);\n          }\n        }\n      }\n    } else {\n      this.log(chalk.yellow.bold(`Routes \"${this.routeBase}\" of class ${this.constructor.name} are't add`));\n    }\n  }\n\n  // ************************************ MIDDLEWARE *********************************\n  _use(infos) {\n    const { options = {} } = infos;\n    const { middlewares = [] } = options;\n\n    const middlewaresToAdd = [this._beforeRoute(infos)];\n    middlewaresToAdd.push(...this.middlewares); // add middlewares of the class\n    middlewaresToAdd.push(...middlewares); // add middlewares of the specific route\n    this.addRateLimit(middlewaresToAdd, infos);\n    middlewaresToAdd.push(infos.call.bind(this));\n\n    return middlewaresToAdd;\n  }\n\n  // RateLimit\n  getRateLimit(option, routePath, type) {\n    option.interval = RateLimit.RateLimit.timeToMs(option.interval);\n    return RateLimit.middleware({\n      prefixKey: `${type}|${routePath}|${option.interval}`,\n      ...option,\n    });\n  }\n  addRateLimit(middlewares, { options }) {\n    const { rateLimit, routePath, type } = options;\n\n    if (rateLimit) {\n      if (Array.isArray(rateLimit)) {\n        for (const elem of rateLimit) {\n          middlewares.push(this.getRateLimit(elem, routePath, type));\n        }\n      } else {\n        middlewares.push(this.getRateLimit(rateLimit, routePath, type));\n      }\n    }\n  }\n\n  // beforeRoute\n  _beforeRoute(infos) {\n    return async (ctx, next) => await this.beforeRoute(ctx, infos, next);\n  }\n  async beforeRoute(ctx, { options }, next) {\n    this._mlParams(ctx, options);\n    if (next) {\n      await next();\n    }\n  }\n\n  // test params\n  _mlParams(ctx, { params }) {\n    ctx.request.bodyOrig = deepCopy(ctx.request.body);\n    ctx.request.body = this._mlTestParams(ctx, ctx.request.body, params);\n  }\n\n  _mlParamsExecFunc(ctx, body, keyBody, param) {\n    if (body && body[keyBody]) {\n      const { __func } = param;\n      if (__func && Array.isArray(__func)) {\n        for (const func of __func) {\n          body[keyBody] = func(body[keyBody], this, { ctx, body, keyBody });\n        }\n      }\n    }\n  }\n\n  _mlTestParams(ctx, body, paramsTest) {\n    const bodyVerif = {};\n    const paramsConvert = this._paramsNormalize(paramsTest);\n    for (const key in paramsConvert) {\n      const param = paramsConvert[key];\n\n      const bodyElem = body ? body[key] : undefined;\n      // test param\n      if (param.__force && (bodyElem === undefined || bodyElem === null)) {\n        this.throw(400, `${ctx.state.__ ? ctx.state.__('param required:') : 'param required:'} ${key}`);\n      }\n      this._mlParamsExecFunc(ctx, body, key, param);\n\n\n      if (this._paramsHasSubElement(param)) {\n        if (body && isObject(body)) {\n          const tmp = this._mlTestParams(ctx, body[key], param);\n          if (body[key]) {\n            bodyVerif[key] = tmp;\n          }\n        } else {\n          const tmp = this._mlTestParams(ctx, undefined, param);\n          if (body && isObject(body) && body[key] !== undefined) {\n            bodyVerif[key] = tmp;\n          }\n        }\n      } else if (body && isObject(body) && body[key] !== undefined) {\n        bodyVerif[key] = body[key];\n      }\n    }\n    return bodyVerif;\n  }\n\n  _paramsNormalize(paramsTest) {\n    let paramsConvert = {};\n    // convert array to object\n    if (isArray(paramsTest)) {\n      for (const elem of paramsTest) {\n        if (isObject(elem, false)) {\n          paramsConvert = Object.assign(paramsConvert, elem);\n        } else {\n          paramsConvert[elem] = false;\n        }\n      }\n    } else {\n      paramsConvert = paramsTest;\n    }\n\n    // normalize objects\n    for (const key in paramsConvert) {\n      const elem = paramsConvert[key];\n      if (!this.privateKeyInParamsRoute.includes(key)) {\n        if (isObject(elem) || isArray(elem)) {\n          paramsConvert[key] = this._paramsNormalize(elem);\n        } else if (elem === false || elem === true) {\n          paramsConvert[key] = { __force: elem };\n        }\n      }\n    }\n    return paramsConvert;\n  }\n\n  _paramsHasSubElement(paramsTest) {\n    for (const key in paramsTest) {\n      if (!this.privateKeyInParamsRoute.includes(key)) {\n        return true;\n      }\n    }\n    return false;\n  }\n\n  // ************************************ !MIDDLEWARE *********************************\n\n  body(ctx, original = false) {\n    return original ? ctx.request.bodyOrig : ctx.request.body;\n  }\n\n  bodyGet(ctx) {\n    return ctx.request.query || {};\n  }\n\n  paramsGet(ctx) { return this.bodyGet(ctx); }\n\n  /**\n   * @access public\n   * @desc sets the response's body (with a message + data field) and status .\n   * @param {KoaContext} ctx koa's context object\n   * @param {number} [status] the HTTP status code to end the request with\n   * @param {*} [data] the data to be yielded by the requests\n   * @param {string} [message] the message to be yielded by the request\n   */\n  send(ctx, status = 200, data, message) {\n    ctx.body = ctx.body || {}; // add default body\n    ctx.status = status;\n    // Do not remove this test because if status = 204 || 304, node will remove body\n    // see _hasBody on\n    // https://github.com/nodejs/node/blob/master/lib/_http_server.js#L235-L250\n    if (ctx.body) {\n      if (data != null) {\n        ctx.body.data = data;\n      }\n      if (message != null) {\n        ctx.body.message = message;\n      }\n      ctx.body.date = Date.now();\n    }\n  }\n\n  /**\n   * @access public\n   * @desc same as {@link send}, but automatically sets the status to 200 OK\n   * @param {KoaContext} ctx koa's context object\n   * @param {*} [data] the data to be yielded by the requests\n   * @param {string} [message] the message to be yielded by the request\n   */\n  sendOk(ctx, data, message) {\n    return this.send(ctx, Route.StatusCode.ok, data, message);\n  }\n\n  /**\n   * @access public\n   * @desc same as {@link send}, but automatically sets the status to 201 CREATED\n   * @param {KoaContext} ctx koa's context object\n   * @param {*} [data] the data to be yielded by the requests\n   * @param {string} [message] the message to be yielded by the request\n   */\n  sendCreated(ctx, data, message) {\n    return this.send(ctx, Route.StatusCode.created, data, message);\n  }\n\n  /**\n   * @access public\n   * @desc replies with an empty body, yielding 204 NO CONTENT as the status\n   * @param {KoaContext} ctx koa's context object\n   */\n  sendNoContent(ctx) {\n    return this.send(ctx, Route.StatusCode.noContent);\n  }\n\n  /**\n   * @access public\n   * @desc same as {@link send}, but automatically sets the status to 400 BAD REQUEST\n   * @param {KoaContext} ctx koa's context object\n   * @param {*} [data] the data to be yielded by the requests\n   * @param {string} [message] the message to be yielded by the request\n   */\n  sendBadRequest(ctx, data, message) {\n    return this.send(ctx, Route.StatusCode.badRequest, data, message);\n  }\n\n  /**\n   * @access public\n   * @desc same as {@link send}, but automatically sets the status to 401 UNAUTHORIZED\n   * @param {KoaContext} ctx koa's context object\n   * @param {*} [data] the data to be yielded by the requests\n   * @param {string} [message] the message to be yielded by the request\n   */\n  sendUnauthorized(ctx, data, message) {\n    return this.send(ctx, Route.StatusCode.unauthorized, data, message);\n  }\n\n  /**\n   * @access public\n   * @desc same as {@link send}, but automatically sets the status to 403 FORBIDDEN\n   * @param {KoaContext} ctx koa's context object\n   * @param {*} [data] the data to be yielded by the requests\n   * @param {string} [message] the message to be yielded by the request\n   */\n  sendForbidden(ctx, data, message) {\n    return this.send(ctx, Route.StatusCode.forbidden, data, message);\n  }\n\n  /**\n   * @access public\n   * @desc same as {@link send}, but automatically sets the status to 404 NOT FOUND\n   * @param {KoaContext} ctx koa's context object\n   * @param {*} [data] the data to be yielded by the requests\n   * @param {string} [message] the message to be yielded by the request\n   */\n  sendNotFound(ctx, data, message) {\n    return this.send(ctx, Route.StatusCode.notFound, data, message);\n  }\n\n  /**\n   * @access public\n   * @desc same as {@link send}, but automatically sets the status to 500 INTERNAL SERVER ERROR\n   * @param {KoaContext} ctx koa's context object\n   * @param {*} [data] the data to be yielded by the requests\n   * @param {string} [message] the message to be yielded by the request\n   */\n  sendInternalServerError(ctx, data, message) {\n    return this.send(ctx, Route.StatusCode.internalServerError, data, message);\n  }\n\n  /**\n   * @access public\n   * @desc throws a formated error to be caught.\n   * @param {number} status the error's HTTP status StatusCode\n   * @param {string} message  a message describing the error\n   * @param {boolean} translate indicates whether the message should be translated or not\n   * @throws {ErrorApp} thrown error.\n   */\n  throw(status, message, translate = false) {\n    throw new ErrorApp(status, message, translate);\n  }\n\n  assert(condition, status, message, translate = false) {\n    if (!condition) {\n      this.throw(status, message, translate);\n    }\n  }\n}\n",
+    "static": true,
+    "longname": "/home/elkaim_r/Project/koa-smart/src/routes/Route.js",
+    "access": "public",
+    "description": null,
+    "lineNumber": 1
+  },
+  {
+    "__docId__": 83,
+    "kind": "class",
+    "name": "Route",
+    "memberof": "src/routes/Route.js",
+    "static": true,
+    "longname": "src/routes/Route.js~Route",
+    "access": "public",
+    "export": true,
+    "importPath": "koa-smart/src/routes/Route.js",
+    "importStyle": "Route",
+    "description": null,
+    "lineNumber": 11,
+    "undocument": true,
+    "interface": false
+  },
+  {
+    "__docId__": 84,
+    "kind": "member",
+    "name": "displayLog",
+    "memberof": "src/routes/Route.js~Route",
+    "static": true,
+    "longname": "src/routes/Route.js~Route.displayLog",
+    "access": "public",
+    "description": null,
+    "lineNumber": 12,
+    "undocument": true,
+    "type": {
+      "types": [
+        "*"
+      ]
+    }
+  },
+  {
+    "__docId__": 85,
+    "kind": "member",
+    "name": "StatusCode",
+    "memberof": "src/routes/Route.js~Route",
+    "static": true,
+    "longname": "src/routes/Route.js~Route.StatusCode",
+    "access": "public",
+    "description": null,
+    "lineNumber": 13,
+    "undocument": true,
+    "type": {
+      "types": [
+        "*"
+      ]
+    }
+  },
+  {
+    "__docId__": 86,
+    "kind": "typedef",
+    "name": "Params",
+    "memberof": "src/routes/Route.js~Route",
+    "static": true,
+    "longname": "src/routes/Route.js~Route.Params",
+    "access": "public",
+    "description": "",
+    "properties": [
+      {
+        "nullable": null,
+        "types": [
+          "Object.<string, boolean | PostParamsFilter>"
+        ],
+        "spread": false,
+        "optional": false,
+        "name": "params",
+        "description": "the params describing the route's middlewares,\n                                                               with the key being the param's name,\n                                                               and the value describes the way it should be handled.\n                                                               (only applicable for requests containing a body)"
+      },
+      {
+        "nullable": null,
+        "types": [
+          "string"
+        ],
+        "spread": false,
+        "optional": false,
+        "name": "path",
+        "description": "the path at which the route will be available."
+      },
+      {
+        "nullable": null,
+        "types": [
+          "string"
+        ],
+        "spread": false,
+        "optional": false,
+        "name": "routeBase",
+        "description": "a prefix which will be preppended to the route's path"
+      },
+      {
+        "nullable": null,
+        "types": [
+          "boolean"
+        ],
+        "spread": false,
+        "optional": false,
+        "name": "disabled",
+        "description": "if set to true, the route will be ignored"
+      },
+      {
+        "nullable": null,
+        "types": [
+          "function[]"
+        ],
+        "spread": false,
+        "optional": false,
+        "name": "middlewares",
+        "description": "an array of Koa Middlewares, which will be mounted for the given route"
+      }
+    ],
+    "type": {
+      "types": [
+        "Object"
+      ],
+      "optional": false,
+      "name": "Params"
+    }
+  },
+  {
+    "__docId__": 87,
+    "kind": "typedef",
+    "name": "PostParamsFilter",
+    "memberof": "src/routes/Route.js~Route",
+    "static": true,
+    "longname": "src/routes/Route.js~Route.PostParamsFilter",
+    "access": "public",
+    "description": "",
+    "properties": [
+      {
+        "nullable": null,
+        "types": [
+          "MiddlewareFunction[]"
+        ],
+        "spread": false,
+        "optional": false,
+        "name": "__func",
+        "description": "an array of functions which provides \"middleware\" functions that will be applied to the corresponding parameter one by one."
+      },
+      {
+        "nullable": null,
+        "types": [
+          "boolean"
+        ],
+        "spread": false,
+        "optional": false,
+        "name": "__force",
+        "description": "whether the parameter is required or not."
+      }
+    ],
+    "type": {
+      "types": [
+        "Object"
+      ],
+      "optional": false,
+      "name": "PostParamsFilter"
+    }
+  },
+  {
+    "__docId__": 88,
+    "kind": "typedef",
+    "name": "MiddlewareFunction",
+    "memberof": "src/routes/Route.js~Route",
+    "static": true,
+    "longname": "src/routes/Route.js~Route.MiddlewareFunction",
+    "access": "public",
+    "description": "",
+    "params": [
+      {
+        "nullable": null,
+        "types": [
+          "*"
+        ],
+        "spread": false,
+        "optional": false,
+        "name": "elem",
+        "description": "the element the function will act upon"
+      },
+      {
+        "nullable": null,
+        "types": [
+          "Route"
+        ],
+        "spread": false,
+        "optional": true,
+        "name": "route",
+        "description": "the element's current route"
+      },
+      {
+        "nullable": null,
+        "types": [
+          "{ctx: KoaContext, body:Object, keyBody:string}"
+        ],
+        "spread": false,
+        "optional": true,
+        "name": "context",
+        "description": "the element's context"
+      }
+    ],
+    "return": {
+      "nullable": null,
+      "types": [
+        "*"
+      ],
+      "spread": false,
+      "description": "transformedParam the parameter, after being manipulated by the function"
+    },
+    "type": {
+      "types": [
+        "function"
+      ],
+      "optional": false,
+      "name": "MiddlewareFunction"
+    }
+  },
+  {
+    "__docId__": 89,
+    "kind": "external",
+    "name": "KoaContext",
+    "externalLink": "http://koajs.com/#api",
+    "memberof": "src/routes/Route.js",
+    "static": false,
+    "longname": "src/routes/Route.js~KoaContext",
+    "access": "public",
+    "description": "",
+    "lineNumber": 45
+  },
+  {
+    "__docId__": 90,
+    "kind": "member",
+    "name": "app",
+    "memberof": "src/routes/Route.js~Route",
+    "static": false,
+    "longname": "src/routes/Route.js~Route#app",
+    "access": "public",
+    "description": null,
+    "lineNumber": 46,
+    "undocument": true,
+    "type": {
+      "types": [
+        "*"
+      ]
+    }
+  },
+  {
+    "__docId__": 91,
+    "kind": "member",
+    "name": "prefix",
+    "memberof": "src/routes/Route.js~Route",
+    "static": false,
+    "longname": "src/routes/Route.js~Route#prefix",
+    "access": "public",
+    "description": null,
+    "lineNumber": 47,
+    "undocument": true,
+    "type": {
+      "types": [
+        "*"
+      ]
+    }
+  },
+  {
+    "__docId__": 92,
+    "kind": "member",
+    "name": "allRoutesInstance",
+    "memberof": "src/routes/Route.js~Route",
+    "static": false,
+    "longname": "src/routes/Route.js~Route#allRoutesInstance",
+    "access": "public",
+    "description": null,
+    "lineNumber": 48,
+    "undocument": true,
+    "type": {
+      "types": [
+        "*"
+      ]
+    }
+  },
+  {
+    "__docId__": 93,
+    "kind": "member",
+    "name": "models",
+    "memberof": "src/routes/Route.js~Route",
+    "static": false,
+    "longname": "src/routes/Route.js~Route#models",
+    "access": "public",
+    "description": null,
+    "lineNumber": 49,
+    "undocument": true,
+    "type": {
+      "types": [
+        "*"
+      ]
+    }
+  },
+  {
+    "__docId__": 94,
+    "kind": "member",
+    "name": "disable",
+    "memberof": "src/routes/Route.js~Route",
+    "static": false,
+    "longname": "src/routes/Route.js~Route#disable",
+    "access": "public",
+    "description": null,
+    "lineNumber": 50,
+    "undocument": true,
+    "type": {
+      "types": [
+        "*"
+      ]
+    }
+  },
+  {
+    "__docId__": 95,
+    "kind": "member",
+    "name": "middlewares",
+    "memberof": "src/routes/Route.js~Route",
+    "static": false,
+    "longname": "src/routes/Route.js~Route#middlewares",
+    "access": "public",
+    "description": null,
+    "lineNumber": 51,
+    "undocument": true,
+    "type": {
+      "types": [
+        "*"
+      ]
+    }
+  },
+  {
+    "__docId__": 96,
+    "kind": "member",
+    "name": "model",
+    "memberof": "src/routes/Route.js~Route",
+    "static": false,
+    "longname": "src/routes/Route.js~Route#model",
+    "access": "public",
+    "description": null,
+    "lineNumber": 53,
+    "undocument": true,
+    "type": {
+      "types": [
+        "*"
+      ]
+    }
+  },
+  {
+    "__docId__": 97,
+    "kind": "member",
+    "name": "koaRouter",
+    "memberof": "src/routes/Route.js~Route",
+    "static": false,
+    "longname": "src/routes/Route.js~Route#koaRouter",
+    "access": "public",
+    "description": null,
+    "lineNumber": 55,
+    "undocument": true,
+    "type": {
+      "types": [
+        "*"
+      ]
+    }
+  },
+  {
+    "__docId__": 98,
+    "kind": "member",
+    "name": "privateKeyInParamsRoute",
+    "memberof": "src/routes/Route.js~Route",
+    "static": false,
+    "longname": "src/routes/Route.js~Route#privateKeyInParamsRoute",
+    "access": "public",
+    "description": null,
+    "lineNumber": 56,
+    "undocument": true,
+    "type": {
+      "types": [
+        "string[]"
+      ]
+    }
+  },
+  {
+    "__docId__": 99,
+    "kind": "member",
+    "name": "Get",
+    "memberof": "src/routes/Route.js~Route",
+    "static": true,
+    "longname": "src/routes/Route.js~Route.Get",
+    "access": "public",
+    "description": "mounts the tagged function as a GET route.",
+    "lineNumber": 68,
+    "params": [
+      {
+        "nullable": null,
+        "types": [
+          "Params"
+        ],
+        "spread": false,
+        "optional": false,
+        "name": "params",
+        "description": "the route's parameters"
+      }
+    ],
+    "type": {
+      "types": [
+        "*"
+      ]
+    }
+  },
+  {
+    "__docId__": 100,
+    "kind": "member",
+    "name": "Post",
+    "memberof": "src/routes/Route.js~Route",
+    "static": true,
+    "longname": "src/routes/Route.js~Route.Post",
+    "access": "public",
+    "description": "mounts the tagged function as a POST route.",
+    "lineNumber": 75,
+    "params": [
+      {
+        "nullable": null,
+        "types": [
+          "Params"
+        ],
+        "spread": false,
+        "optional": false,
+        "name": "params",
+        "description": "the route's parameters"
+      }
+    ],
+    "type": {
+      "types": [
+        "*"
+      ]
+    }
+  },
+  {
+    "__docId__": 101,
+    "kind": "member",
+    "name": "Put",
+    "memberof": "src/routes/Route.js~Route",
+    "static": true,
+    "longname": "src/routes/Route.js~Route.Put",
+    "access": "public",
+    "description": "mounts the tagged function as a PUT route.",
+    "lineNumber": 82,
+    "params": [
+      {
+        "nullable": null,
+        "types": [
+          "Params"
+        ],
+        "spread": false,
+        "optional": false,
+        "name": "params",
+        "description": "the route's parameters"
+      }
+    ],
+    "type": {
+      "types": [
+        "*"
+      ]
+    }
+  },
+  {
+    "__docId__": 102,
+    "kind": "member",
+    "name": "Patch",
+    "memberof": "src/routes/Route.js~Route",
+    "static": true,
+    "longname": "src/routes/Route.js~Route.Patch",
+    "access": "public",
+    "description": "mounts the tagged function as a PATCH route.",
+    "lineNumber": 89,
+    "params": [
+      {
+        "nullable": null,
+        "types": [
+          "Params"
+        ],
+        "spread": false,
+        "optional": false,
+        "name": "params",
+        "description": "the route's parameters"
+      }
+    ],
+    "type": {
+      "types": [
+        "*"
+      ]
+    }
+  },
+  {
+    "__docId__": 103,
+    "kind": "member",
+    "name": "Delete",
+    "memberof": "src/routes/Route.js~Route",
+    "static": true,
+    "longname": "src/routes/Route.js~Route.Delete",
+    "access": "public",
+    "description": "mounts the tagged function as a DELETE route.",
+    "lineNumber": 96,
+    "params": [
+      {
+        "nullable": null,
+        "types": [
+          "Params"
+        ],
+        "spread": false,
+        "optional": false,
+        "name": "params",
+        "description": "the route's parameters"
+      }
+    ],
+    "type": {
+      "types": [
+        "*"
+      ]
+    }
+  },
+  {
+    "__docId__": 104,
+    "kind": "member",
+    "name": "Route",
+    "memberof": "src/routes/Route.js~Route",
+    "static": true,
+    "longname": "src/routes/Route.js~Route.Route",
+    "access": "public",
+    "description": "mounts the tagged function as route, allowing the user to configure the HTTP methods it answers to.",
+    "lineNumber": 103,
+    "params": [
+      {
+        "nullable": null,
+        "types": [
+          "Params"
+        ],
+        "spread": false,
+        "optional": false,
+        "name": "params",
+        "description": "the route's parameters"
+      }
+    ],
+    "type": {
+      "types": [
+        "*"
+      ]
+    }
+  },
+  {
+    "__docId__": 105,
+    "kind": "method",
+    "name": "log",
+    "memberof": "src/routes/Route.js~Route",
+    "generator": false,
+    "async": false,
+    "static": false,
+    "longname": "src/routes/Route.js~Route#log",
+    "access": "public",
+    "description": null,
+    "lineNumber": 105,
+    "undocument": true,
+    "params": [
+      {
+        "name": "str",
+        "types": [
+          "*"
+        ]
+      },
+      {
+        "name": "args",
+        "types": [
+          "...*"
+        ],
+        "spread": true
+      }
+    ],
+    "return": null
+  },
+  {
+    "__docId__": 106,
+    "kind": "method",
+    "name": "mount",
+    "memberof": "src/routes/Route.js~Route",
+    "generator": false,
+    "async": false,
+    "static": false,
+    "longname": "src/routes/Route.js~Route#mount",
+    "access": "public",
+    "description": null,
+    "lineNumber": 111,
+    "undocument": true,
+    "params": [],
+    "return": null
+  },
+  {
+    "__docId__": 107,
+    "kind": "method",
+    "name": "_use",
+    "memberof": "src/routes/Route.js~Route",
+    "generator": false,
+    "async": false,
+    "static": false,
+    "longname": "src/routes/Route.js~Route#_use",
+    "access": "private",
+    "description": null,
+    "lineNumber": 132,
+    "undocument": true,
+    "params": [
+      {
+        "name": "infos",
+        "types": [
+          "*"
+        ]
+      }
+    ],
+    "return": {
+      "types": [
+        "*"
+      ]
+    }
+  },
+  {
+    "__docId__": 108,
+    "kind": "method",
+    "name": "getRateLimit",
+    "memberof": "src/routes/Route.js~Route",
+    "generator": false,
+    "async": false,
+    "static": false,
+    "longname": "src/routes/Route.js~Route#getRateLimit",
+    "access": "public",
+    "description": null,
+    "lineNumber": 146,
+    "undocument": true,
+    "params": [
+      {
+        "name": "option",
+        "types": [
+          "*"
+        ]
+      },
+      {
+        "name": "routePath",
+        "types": [
+          "*"
+        ]
+      },
+      {
+        "name": "type",
+        "types": [
+          "*"
+        ]
+      }
+    ],
+    "return": {
+      "types": [
+        "*"
+      ]
+    }
+  },
+  {
+    "__docId__": 109,
+    "kind": "method",
+    "name": "addRateLimit",
+    "memberof": "src/routes/Route.js~Route",
+    "generator": false,
+    "async": false,
+    "static": false,
+    "longname": "src/routes/Route.js~Route#addRateLimit",
+    "access": "public",
+    "description": null,
+    "lineNumber": 153,
+    "undocument": true,
+    "params": [
+      {
+        "name": "middlewares",
+        "types": [
+          "*"
+        ]
+      },
+      {
+        "name": "objectPattern1",
+        "types": [
+          "{\"options\": *}"
+        ],
+        "defaultRaw": {
+          "options": null
+        },
+        "defaultValue": "{\"options\":null}"
+      }
+    ],
+    "return": null
+  },
+  {
+    "__docId__": 110,
+    "kind": "method",
+    "name": "_beforeRoute",
+    "memberof": "src/routes/Route.js~Route",
+    "generator": false,
+    "async": false,
+    "static": false,
+    "longname": "src/routes/Route.js~Route#_beforeRoute",
+    "access": "private",
+    "description": null,
+    "lineNumber": 168,
+    "undocument": true,
+    "params": [
+      {
+        "name": "infos",
+        "types": [
+          "*"
+        ]
+      }
+    ],
+    "return": {
+      "types": [
+        "*"
+      ]
+    }
+  },
+  {
+    "__docId__": 111,
+    "kind": "method",
+    "name": "beforeRoute",
+    "memberof": "src/routes/Route.js~Route",
+    "generator": false,
+    "async": true,
+    "static": false,
+    "longname": "src/routes/Route.js~Route#beforeRoute",
+    "access": "public",
+    "description": null,
+    "lineNumber": 171,
+    "undocument": true,
+    "params": [
+      {
+        "name": "ctx",
+        "types": [
+          "*"
+        ]
+      },
+      {
+        "name": "objectPattern1",
+        "types": [
+          "{\"options\": *}"
+        ],
+        "defaultRaw": {
+          "options": null
+        },
+        "defaultValue": "{\"options\":null}"
+      },
+      {
+        "name": "next",
+        "types": [
+          "*"
+        ]
+      }
+    ],
+    "return": null
+  },
+  {
+    "__docId__": 112,
+    "kind": "method",
+    "name": "_mlParams",
+    "memberof": "src/routes/Route.js~Route",
+    "generator": false,
+    "async": false,
+    "static": false,
+    "longname": "src/routes/Route.js~Route#_mlParams",
+    "access": "private",
+    "description": null,
+    "lineNumber": 179,
+    "undocument": true,
+    "params": [
+      {
+        "name": "ctx",
+        "types": [
+          "*"
+        ]
+      },
+      {
+        "name": "objectPattern1",
+        "types": [
+          "{\"params\": *}"
+        ],
+        "defaultRaw": {
+          "params": null
+        },
+        "defaultValue": "{\"params\":null}"
+      }
+    ],
+    "return": null
+  },
+  {
+    "__docId__": 113,
+    "kind": "method",
+    "name": "_mlParamsExecFunc",
+    "memberof": "src/routes/Route.js~Route",
+    "generator": false,
+    "async": false,
+    "static": false,
+    "longname": "src/routes/Route.js~Route#_mlParamsExecFunc",
+    "access": "private",
+    "description": null,
+    "lineNumber": 184,
+    "undocument": true,
+    "params": [
+      {
+        "name": "ctx",
+        "types": [
+          "*"
+        ]
+      },
+      {
+        "name": "body",
+        "types": [
+          "*"
+        ]
+      },
+      {
+        "name": "keyBody",
+        "types": [
+          "*"
+        ]
+      },
+      {
+        "name": "param",
+        "types": [
+          "*"
+        ]
+      }
+    ],
+    "return": null
+  },
+  {
+    "__docId__": 114,
+    "kind": "method",
+    "name": "_mlTestParams",
+    "memberof": "src/routes/Route.js~Route",
+    "generator": false,
+    "async": false,
+    "static": false,
+    "longname": "src/routes/Route.js~Route#_mlTestParams",
+    "access": "private",
+    "description": null,
+    "lineNumber": 195,
+    "undocument": true,
+    "params": [
+      {
+        "name": "ctx",
+        "types": [
+          "*"
+        ]
+      },
+      {
+        "name": "body",
+        "types": [
+          "*"
+        ]
+      },
+      {
+        "name": "paramsTest",
+        "types": [
+          "*"
+        ]
+      }
+    ],
+    "return": {
+      "types": [
+        "*"
+      ]
+    }
+  },
+  {
+    "__docId__": 115,
+    "kind": "method",
+    "name": "_paramsNormalize",
+    "memberof": "src/routes/Route.js~Route",
+    "generator": false,
+    "async": false,
+    "static": false,
+    "longname": "src/routes/Route.js~Route#_paramsNormalize",
+    "access": "private",
+    "description": null,
+    "lineNumber": 228,
+    "undocument": true,
+    "params": [
+      {
+        "name": "paramsTest",
+        "types": [
+          "*"
+        ]
+      }
+    ],
+    "return": {
+      "types": [
+        "*"
+      ]
+    }
+  },
+  {
+    "__docId__": 116,
+    "kind": "method",
+    "name": "_paramsHasSubElement",
+    "memberof": "src/routes/Route.js~Route",
+    "generator": false,
+    "async": false,
+    "static": false,
+    "longname": "src/routes/Route.js~Route#_paramsHasSubElement",
+    "access": "private",
+    "description": null,
+    "lineNumber": 257,
+    "undocument": true,
+    "params": [
+      {
+        "name": "paramsTest",
+        "types": [
+          "*"
+        ]
+      }
+    ],
+    "return": {
+      "types": [
+        "boolean"
+      ]
+    }
+  },
+  {
+    "__docId__": 117,
+    "kind": "method",
+    "name": "body",
+    "memberof": "src/routes/Route.js~Route",
+    "generator": false,
+    "async": false,
+    "static": false,
+    "longname": "src/routes/Route.js~Route#body",
+    "access": "public",
+    "description": null,
+    "lineNumber": 268,
+    "undocument": true,
+    "params": [
+      {
+        "name": "ctx",
+        "types": [
+          "*"
+        ]
+      },
+      {
+        "name": "original",
+        "optional": true,
+        "types": [
+          "boolean"
+        ],
+        "defaultRaw": false,
+        "defaultValue": "false"
+      }
+    ],
+    "return": {
+      "types": [
+        "*"
+      ]
+    }
+  },
+  {
+    "__docId__": 118,
+    "kind": "method",
+    "name": "bodyGet",
+    "memberof": "src/routes/Route.js~Route",
+    "generator": false,
+    "async": false,
+    "static": false,
+    "longname": "src/routes/Route.js~Route#bodyGet",
+    "access": "public",
+    "description": null,
+    "lineNumber": 272,
+    "undocument": true,
+    "params": [
+      {
+        "name": "ctx",
+        "types": [
+          "*"
+        ]
+      }
+    ],
+    "return": {
+      "types": [
+        "*"
+      ]
+    }
+  },
+  {
+    "__docId__": 119,
+    "kind": "method",
+    "name": "paramsGet",
+    "memberof": "src/routes/Route.js~Route",
+    "generator": false,
+    "async": false,
+    "static": false,
+    "longname": "src/routes/Route.js~Route#paramsGet",
+    "access": "public",
+    "description": null,
+    "lineNumber": 276,
+    "undocument": true,
+    "params": [
+      {
+        "name": "ctx",
+        "types": [
+          "*"
+        ]
+      }
+    ],
+    "return": {
+      "types": [
+        "*"
+      ]
+    }
+  },
+  {
+    "__docId__": 120,
+    "kind": "method",
+    "name": "send",
+    "memberof": "src/routes/Route.js~Route",
+    "generator": false,
+    "async": false,
+    "static": false,
+    "longname": "src/routes/Route.js~Route#send",
+    "access": "public",
+    "description": "sets the response's body (with a message + data field) and status .",
+    "lineNumber": 286,
+    "params": [
+      {
+        "nullable": null,
+        "types": [
+          "KoaContext"
+        ],
+        "spread": false,
+        "optional": false,
+        "name": "ctx",
+        "description": "koa's context object"
+      },
+      {
+        "nullable": null,
+        "types": [
+          "number"
+        ],
+        "spread": false,
+        "optional": true,
+        "name": "status",
+        "description": "the HTTP status code to end the request with"
+      },
+      {
+        "nullable": null,
+        "types": [
+          "*"
+        ],
+        "spread": false,
+        "optional": true,
+        "name": "data",
+        "description": "the data to be yielded by the requests"
+      },
+      {
+        "nullable": null,
+        "types": [
+          "string"
+        ],
+        "spread": false,
+        "optional": true,
+        "name": "message",
+        "description": "the message to be yielded by the request"
+      }
+    ],
+    "return": null
+  },
+  {
+    "__docId__": 121,
+    "kind": "method",
+    "name": "sendOk",
+    "memberof": "src/routes/Route.js~Route",
+    "generator": false,
+    "async": false,
+    "static": false,
+    "longname": "src/routes/Route.js~Route#sendOk",
+    "access": "public",
+    "description": "same as {@link send}, but automatically sets the status to 200 OK",
+    "lineNumber": 310,
+    "params": [
+      {
+        "nullable": null,
+        "types": [
+          "KoaContext"
+        ],
+        "spread": false,
+        "optional": false,
+        "name": "ctx",
+        "description": "koa's context object"
+      },
+      {
+        "nullable": null,
+        "types": [
+          "*"
+        ],
+        "spread": false,
+        "optional": true,
+        "name": "data",
+        "description": "the data to be yielded by the requests"
+      },
+      {
+        "nullable": null,
+        "types": [
+          "string"
+        ],
+        "spread": false,
+        "optional": true,
+        "name": "message",
+        "description": "the message to be yielded by the request"
+      }
+    ],
+    "return": {
+      "types": [
+        "*"
+      ]
+    }
+  },
+  {
+    "__docId__": 122,
+    "kind": "method",
+    "name": "sendCreated",
+    "memberof": "src/routes/Route.js~Route",
+    "generator": false,
+    "async": false,
+    "static": false,
+    "longname": "src/routes/Route.js~Route#sendCreated",
+    "access": "public",
+    "description": "same as {@link send}, but automatically sets the status to 201 CREATED",
+    "lineNumber": 321,
+    "params": [
+      {
+        "nullable": null,
+        "types": [
+          "KoaContext"
+        ],
+        "spread": false,
+        "optional": false,
+        "name": "ctx",
+        "description": "koa's context object"
+      },
+      {
+        "nullable": null,
+        "types": [
+          "*"
+        ],
+        "spread": false,
+        "optional": true,
+        "name": "data",
+        "description": "the data to be yielded by the requests"
+      },
+      {
+        "nullable": null,
+        "types": [
+          "string"
+        ],
+        "spread": false,
+        "optional": true,
+        "name": "message",
+        "description": "the message to be yielded by the request"
+      }
+    ],
+    "return": {
+      "types": [
+        "*"
+      ]
+    }
+  },
+  {
+    "__docId__": 123,
+    "kind": "method",
+    "name": "sendNoContent",
+    "memberof": "src/routes/Route.js~Route",
+    "generator": false,
+    "async": false,
+    "static": false,
+    "longname": "src/routes/Route.js~Route#sendNoContent",
+    "access": "public",
+    "description": "replies with an empty body, yielding 204 NO CONTENT as the status",
+    "lineNumber": 330,
+    "params": [
+      {
+        "nullable": null,
+        "types": [
+          "KoaContext"
+        ],
+        "spread": false,
+        "optional": false,
+        "name": "ctx",
+        "description": "koa's context object"
+      }
+    ],
+    "return": {
+      "types": [
+        "*"
+      ]
+    }
+  },
+  {
+    "__docId__": 124,
+    "kind": "method",
+    "name": "sendBadRequest",
+    "memberof": "src/routes/Route.js~Route",
+    "generator": false,
+    "async": false,
+    "static": false,
+    "longname": "src/routes/Route.js~Route#sendBadRequest",
+    "access": "public",
+    "description": "same as {@link send}, but automatically sets the status to 400 BAD REQUEST",
+    "lineNumber": 341,
+    "params": [
+      {
+        "nullable": null,
+        "types": [
+          "KoaContext"
+        ],
+        "spread": false,
+        "optional": false,
+        "name": "ctx",
+        "description": "koa's context object"
+      },
+      {
+        "nullable": null,
+        "types": [
+          "*"
+        ],
+        "spread": false,
+        "optional": true,
+        "name": "data",
+        "description": "the data to be yielded by the requests"
+      },
+      {
+        "nullable": null,
+        "types": [
+          "string"
+        ],
+        "spread": false,
+        "optional": true,
+        "name": "message",
+        "description": "the message to be yielded by the request"
+      }
+    ],
+    "return": {
+      "types": [
+        "*"
+      ]
+    }
+  },
+  {
+    "__docId__": 125,
+    "kind": "method",
+    "name": "sendUnauthorized",
+    "memberof": "src/routes/Route.js~Route",
+    "generator": false,
+    "async": false,
+    "static": false,
+    "longname": "src/routes/Route.js~Route#sendUnauthorized",
+    "access": "public",
+    "description": "same as {@link send}, but automatically sets the status to 401 UNAUTHORIZED",
+    "lineNumber": 352,
+    "params": [
+      {
+        "nullable": null,
+        "types": [
+          "KoaContext"
+        ],
+        "spread": false,
+        "optional": false,
+        "name": "ctx",
+        "description": "koa's context object"
+      },
+      {
+        "nullable": null,
+        "types": [
+          "*"
+        ],
+        "spread": false,
+        "optional": true,
+        "name": "data",
+        "description": "the data to be yielded by the requests"
+      },
+      {
+        "nullable": null,
+        "types": [
+          "string"
+        ],
+        "spread": false,
+        "optional": true,
+        "name": "message",
+        "description": "the message to be yielded by the request"
+      }
+    ],
+    "return": {
+      "types": [
+        "*"
+      ]
+    }
+  },
+  {
+    "__docId__": 126,
+    "kind": "method",
+    "name": "sendForbidden",
+    "memberof": "src/routes/Route.js~Route",
+    "generator": false,
+    "async": false,
+    "static": false,
+    "longname": "src/routes/Route.js~Route#sendForbidden",
+    "access": "public",
+    "description": "same as {@link send}, but automatically sets the status to 403 FORBIDDEN",
+    "lineNumber": 363,
+    "params": [
+      {
+        "nullable": null,
+        "types": [
+          "KoaContext"
+        ],
+        "spread": false,
+        "optional": false,
+        "name": "ctx",
+        "description": "koa's context object"
+      },
+      {
+        "nullable": null,
+        "types": [
+          "*"
+        ],
+        "spread": false,
+        "optional": true,
+        "name": "data",
+        "description": "the data to be yielded by the requests"
+      },
+      {
+        "nullable": null,
+        "types": [
+          "string"
+        ],
+        "spread": false,
+        "optional": true,
+        "name": "message",
+        "description": "the message to be yielded by the request"
+      }
+    ],
+    "return": {
+      "types": [
+        "*"
+      ]
+    }
+  },
+  {
+    "__docId__": 127,
+    "kind": "method",
+    "name": "sendNotFound",
+    "memberof": "src/routes/Route.js~Route",
+    "generator": false,
+    "async": false,
+    "static": false,
+    "longname": "src/routes/Route.js~Route#sendNotFound",
+    "access": "public",
+    "description": "same as {@link send}, but automatically sets the status to 404 NOT FOUND",
+    "lineNumber": 374,
+    "params": [
+      {
+        "nullable": null,
+        "types": [
+          "KoaContext"
+        ],
+        "spread": false,
+        "optional": false,
+        "name": "ctx",
+        "description": "koa's context object"
+      },
+      {
+        "nullable": null,
+        "types": [
+          "*"
+        ],
+        "spread": false,
+        "optional": true,
+        "name": "data",
+        "description": "the data to be yielded by the requests"
+      },
+      {
+        "nullable": null,
+        "types": [
+          "string"
+        ],
+        "spread": false,
+        "optional": true,
+        "name": "message",
+        "description": "the message to be yielded by the request"
+      }
+    ],
+    "return": {
+      "types": [
+        "*"
+      ]
+    }
+  },
+  {
+    "__docId__": 128,
+    "kind": "method",
+    "name": "sendInternalServerError",
+    "memberof": "src/routes/Route.js~Route",
+    "generator": false,
+    "async": false,
+    "static": false,
+    "longname": "src/routes/Route.js~Route#sendInternalServerError",
+    "access": "public",
+    "description": "same as {@link send}, but automatically sets the status to 500 INTERNAL SERVER ERROR",
+    "lineNumber": 385,
+    "params": [
+      {
+        "nullable": null,
+        "types": [
+          "KoaContext"
+        ],
+        "spread": false,
+        "optional": false,
+        "name": "ctx",
+        "description": "koa's context object"
+      },
+      {
+        "nullable": null,
+        "types": [
+          "*"
+        ],
+        "spread": false,
+        "optional": true,
+        "name": "data",
+        "description": "the data to be yielded by the requests"
+      },
+      {
+        "nullable": null,
+        "types": [
+          "string"
+        ],
+        "spread": false,
+        "optional": true,
+        "name": "message",
+        "description": "the message to be yielded by the request"
+      }
+    ],
+    "return": {
+      "types": [
+        "*"
+      ]
+    }
+  },
+  {
+    "__docId__": 129,
+    "kind": "method",
+    "name": "throw",
+    "memberof": "src/routes/Route.js~Route",
+    "generator": false,
+    "async": false,
+    "static": false,
+    "longname": "src/routes/Route.js~Route#throw",
+    "access": "public",
+    "description": "throws a formated error to be caught.",
+    "lineNumber": 397,
+    "params": [
+      {
+        "nullable": null,
+        "types": [
+          "number"
+        ],
+        "spread": false,
+        "optional": false,
+        "name": "status",
+        "description": "the error's HTTP status StatusCode"
+      },
+      {
+        "nullable": null,
+        "types": [
+          "string"
+        ],
+        "spread": false,
+        "optional": false,
+        "name": "message",
+        "description": "a message describing the error"
+      },
+      {
+        "nullable": null,
+        "types": [
+          "boolean"
+        ],
+        "spread": false,
+        "optional": false,
+        "name": "translate",
+        "description": "indicates whether the message should be translated or not"
+      }
+    ],
+    "throws": [
+      {
+        "types": [
+          "ErrorApp"
+        ],
+        "description": "thrown error."
+      }
+    ],
+    "return": null
+  },
+  {
+    "__docId__": 130,
+    "kind": "method",
+    "name": "assert",
+    "memberof": "src/routes/Route.js~Route",
+    "generator": false,
+    "async": false,
+    "static": false,
+    "longname": "src/routes/Route.js~Route#assert",
+    "access": "public",
+    "description": null,
+    "lineNumber": 401,
+    "undocument": true,
+    "params": [
+      {
+        "name": "condition",
+        "types": [
+          "*"
+        ]
+      },
+      {
+        "name": "status",
+        "types": [
+          "*"
+        ]
+      },
+      {
+        "name": "message",
+        "types": [
+          "*"
+        ]
+      },
+      {
+        "name": "translate",
+        "optional": true,
+        "types": [
+          "boolean"
+        ],
+        "defaultRaw": false,
+        "defaultValue": "false"
+      }
+    ],
+    "return": null
+  },
+  {
+    "__docId__": 131,
+    "kind": "file",
+    "name": "src/routes/RouteDecorators.js",
+    "content": "\n\nexport default class RouteDecorators {\n  // replace A-Z to lowercase and add - ex myFunc => my-func\n  static _getRouteFromMethode(str) {\n    return str.replace(/([A-Z])/g, (str, letter, index) => {\n      return index === 0 ? `${letter.toLowerCase()}` : `-${letter.toLowerCase()}`;\n    });\n  }\n\n  static _initData(target) {\n    target.routes = target.routes || {\n      get: [],\n      post: [],\n      delete: [],\n      patch: [],\n      put: [],\n    };\n    if (target.routeBase === undefined) {\n      target.routeBase = target.constructor.name.replace('Route', '');\n      target.routeBase = RouteDecorators._getRouteFromMethode(target.routeBase);\n    }\n  }\n\n  static Route({ routeBase, disable = false, middlewares = null }) {\n    return (target, key, descriptor) => { // eslint-disable-line no-unused-vars\n      if (routeBase != null) { // null or undefined\n        target.prototype.routeBase = routeBase;\n      }\n      if (disable != null) {\n        target.prototype.disable = disable;\n      }\n      if (Array.isArray(middlewares)) {\n        target.prototype.middlewares = middlewares;\n      }\n      RouteDecorators._initData(target);\n    };\n  }\n\n  static _addRoute(type, options = {}) {\n    return (target, functionName, descriptor) => {\n      RouteDecorators._initData(target);\n      options = {\n        path: undefined,\n        accesses: [],\n        params: {},\n        routeBase: target.routeBase,\n        ...options,\n      };\n      Object.defineProperty(target, functionName, descriptor);\n\n      const routeName = options.path === undefined ?\n        RouteDecorators._getRouteFromMethode(functionName) : options.path;\n\n      target.routeBase = options.routeBase;\n      target.routes[type].push({\n        path: routeName,\n        options,\n        call: target[functionName],\n      });\n    };\n  }\n\n  static Get(params) {\n    return (target, key, descriptor) => {\n      const fuc = RouteDecorators._addRoute('get', params);\n      fuc(target, key, descriptor);\n    };\n  }\n  static Post(params) {\n    return (target, key, descriptor) => {\n      const fuc = RouteDecorators._addRoute('post', params);\n      fuc(target, key, descriptor);\n    };\n  }\n  static Patch(params) {\n    return (target, key, descriptor) => {\n      const fuc = RouteDecorators._addRoute('patch', params);\n      fuc(target, key, descriptor);\n    };\n  }\n  static Put(params) {\n    return (target, key, descriptor) => {\n      const fuc = RouteDecorators._addRoute('put', params);\n      fuc(target, key, descriptor);\n    };\n  }\n  static Delete(params) {\n    return (target, key, descriptor) => {\n      const fuc = RouteDecorators._addRoute('delete', params);\n      fuc(target, key, descriptor);\n    };\n  }\n}\n",
+    "static": true,
+    "longname": "/home/elkaim_r/Project/koa-smart/src/routes/RouteDecorators.js",
+    "access": "public",
+    "description": null,
+    "lineNumber": 1
+  },
+  {
+    "__docId__": 132,
+    "kind": "class",
+    "name": "RouteDecorators",
+    "memberof": "src/routes/RouteDecorators.js",
+    "static": true,
+    "longname": "src/routes/RouteDecorators.js~RouteDecorators",
+    "access": "public",
+    "export": true,
+    "importPath": "koa-smart/src/routes/RouteDecorators.js",
+    "importStyle": "RouteDecorators",
+    "description": null,
+    "lineNumber": 3,
+    "undocument": true,
+    "interface": false
+  },
+  {
+    "__docId__": 133,
+    "kind": "method",
+    "name": "_getRouteFromMethode",
+    "memberof": "src/routes/RouteDecorators.js~RouteDecorators",
+    "generator": false,
+    "async": false,
+    "static": true,
+    "longname": "src/routes/RouteDecorators.js~RouteDecorators._getRouteFromMethode",
+    "access": "private",
+    "description": null,
+    "lineNumber": 5,
+    "undocument": true,
+    "params": [
+      {
+        "name": "str",
+        "types": [
+          "*"
+        ]
+      }
+    ],
+    "return": {
+      "types": [
+        "*"
+      ]
+    }
+  },
+  {
+    "__docId__": 134,
+    "kind": "method",
+    "name": "_initData",
+    "memberof": "src/routes/RouteDecorators.js~RouteDecorators",
+    "generator": false,
+    "async": false,
+    "static": true,
+    "longname": "src/routes/RouteDecorators.js~RouteDecorators._initData",
+    "access": "private",
+    "description": null,
+    "lineNumber": 11,
+    "undocument": true,
+    "params": [
+      {
+        "name": "target",
+        "types": [
+          "*"
+        ]
+      }
+    ],
+    "return": null
+  },
+  {
+    "__docId__": 135,
+    "kind": "method",
+    "name": "Route",
+    "memberof": "src/routes/RouteDecorators.js~RouteDecorators",
+    "generator": false,
+    "async": false,
+    "static": true,
+    "longname": "src/routes/RouteDecorators.js~RouteDecorators.Route",
+    "access": "public",
+    "description": null,
+    "lineNumber": 25,
+    "undocument": true,
+    "params": [
+      {
+        "name": "objectPattern",
+        "types": [
+          "{\"routeBase\": *, \"disable\": *, \"middlewares\": *}"
+        ],
+        "defaultRaw": {
+          "routeBase": null,
+          "disable": null,
+          "middlewares": null
+        },
+        "defaultValue": "{\"routeBase\":null,\"disable\":null,\"middlewares\":null}"
+      }
+    ],
+    "return": {
+      "types": [
+        "*"
+      ]
+    }
+  },
+  {
+    "__docId__": 136,
+    "kind": "method",
+    "name": "_addRoute",
+    "memberof": "src/routes/RouteDecorators.js~RouteDecorators",
+    "generator": false,
+    "async": false,
+    "static": true,
+    "longname": "src/routes/RouteDecorators.js~RouteDecorators._addRoute",
+    "access": "private",
+    "description": null,
+    "lineNumber": 40,
+    "undocument": true,
+    "params": [
+      {
+        "name": "type",
+        "types": [
+          "*"
+        ]
+      },
+      {
+        "name": "options",
+        "optional": true,
+        "types": [
+          "{}"
+        ],
+        "defaultRaw": {},
+        "defaultValue": "{}"
+      }
+    ],
+    "return": {
+      "types": [
+        "*"
+      ]
+    }
+  },
+  {
+    "__docId__": 137,
+    "kind": "method",
+    "name": "Get",
+    "memberof": "src/routes/RouteDecorators.js~RouteDecorators",
+    "generator": false,
+    "async": false,
+    "static": true,
+    "longname": "src/routes/RouteDecorators.js~RouteDecorators.Get",
+    "access": "public",
+    "description": null,
+    "lineNumber": 64,
+    "undocument": true,
+    "params": [
+      {
+        "name": "params",
+        "types": [
+          "*"
+        ]
+      }
+    ],
+    "return": {
+      "types": [
+        "*"
+      ]
+    }
+  },
+  {
+    "__docId__": 138,
+    "kind": "method",
+    "name": "Post",
+    "memberof": "src/routes/RouteDecorators.js~RouteDecorators",
+    "generator": false,
+    "async": false,
+    "static": true,
+    "longname": "src/routes/RouteDecorators.js~RouteDecorators.Post",
+    "access": "public",
+    "description": null,
+    "lineNumber": 70,
+    "undocument": true,
+    "params": [
+      {
+        "name": "params",
+        "types": [
+          "*"
+        ]
+      }
+    ],
+    "return": {
+      "types": [
+        "*"
+      ]
+    }
+  },
+  {
+    "__docId__": 139,
+    "kind": "method",
+    "name": "Patch",
+    "memberof": "src/routes/RouteDecorators.js~RouteDecorators",
+    "generator": false,
+    "async": false,
+    "static": true,
+    "longname": "src/routes/RouteDecorators.js~RouteDecorators.Patch",
+    "access": "public",
+    "description": null,
+    "lineNumber": 76,
+    "undocument": true,
+    "params": [
+      {
+        "name": "params",
+        "types": [
+          "*"
+        ]
+      }
+    ],
+    "return": {
+      "types": [
+        "*"
+      ]
+    }
+  },
+  {
+    "__docId__": 140,
+    "kind": "method",
+    "name": "Put",
+    "memberof": "src/routes/RouteDecorators.js~RouteDecorators",
+    "generator": false,
+    "async": false,
+    "static": true,
+    "longname": "src/routes/RouteDecorators.js~RouteDecorators.Put",
+    "access": "public",
+    "description": null,
+    "lineNumber": 82,
+    "undocument": true,
+    "params": [
+      {
+        "name": "params",
+        "types": [
+          "*"
+        ]
+      }
+    ],
+    "return": {
+      "types": [
+        "*"
+      ]
+    }
+  },
+  {
+    "__docId__": 141,
+    "kind": "method",
+    "name": "Delete",
+    "memberof": "src/routes/RouteDecorators.js~RouteDecorators",
+    "generator": false,
+    "async": false,
+    "static": true,
+    "longname": "src/routes/RouteDecorators.js~RouteDecorators.Delete",
+    "access": "public",
+    "description": null,
+    "lineNumber": 88,
+    "undocument": true,
+    "params": [
+      {
+        "name": "params",
+        "types": [
+          "*"
+        ]
+      }
+    ],
+    "return": {
+      "types": [
+        "*"
+      ]
+    }
+  },
+  {
+    "__docId__": 142,
+    "kind": "file",
+    "name": "src/utils/ErrorApp.js",
+    "content": "export default class ErrorApp extends Error {\n  constructor(status, message, toTranslate = false) {\n    super ();\n\n    /**\n     * @type {number}\n     */\n    this.status = status;\n\n    /**\n     * @type {string}\n     */\n    this.message = message;\n\n    /**\n     * @type {boolean}\n     */\n    this.toTranslate = toTranslate;\n\n    this.constructor = ErrorApp;\n  }\n}\n\nErrorApp.prototype = Error.prototype;\n",
+    "static": true,
+    "longname": "/home/elkaim_r/Project/koa-smart/src/utils/ErrorApp.js",
+    "access": "public",
+    "description": null,
+    "lineNumber": 1
+  },
+  {
+    "__docId__": 143,
+    "kind": "class",
+    "name": "ErrorApp",
+    "memberof": "src/utils/ErrorApp.js",
+    "static": true,
+    "longname": "src/utils/ErrorApp.js~ErrorApp",
+    "access": "public",
+    "export": true,
+    "importPath": "koa-smart/src/utils/ErrorApp.js",
+    "importStyle": "ErrorApp",
+    "description": null,
+    "lineNumber": 1,
+    "undocument": true,
+    "interface": false,
+    "extends": [
+      "Error"
+    ]
+  },
+  {
+    "__docId__": 144,
+    "kind": "constructor",
+    "name": "constructor",
+    "memberof": "src/utils/ErrorApp.js~ErrorApp",
+    "generator": false,
+    "async": false,
+    "static": false,
+    "longname": "src/utils/ErrorApp.js~ErrorApp#constructor",
+    "access": "public",
+    "description": null,
+    "lineNumber": 2,
+    "undocument": true
+  },
+  {
+    "__docId__": 145,
+    "kind": "member",
+    "name": "status",
+    "memberof": "src/utils/ErrorApp.js~ErrorApp",
+    "static": false,
+    "longname": "src/utils/ErrorApp.js~ErrorApp#status",
+    "access": "public",
+    "description": "",
+    "lineNumber": 8,
+    "type": {
+      "nullable": null,
+      "types": [
+        "number"
+      ],
+      "spread": false,
+      "description": null
+    }
+  },
+  {
+    "__docId__": 146,
+    "kind": "member",
+    "name": "message",
+    "memberof": "src/utils/ErrorApp.js~ErrorApp",
+    "static": false,
+    "longname": "src/utils/ErrorApp.js~ErrorApp#message",
+    "access": "public",
+    "description": "",
+    "lineNumber": 13,
+    "type": {
+      "nullable": null,
+      "types": [
+        "string"
+      ],
+      "spread": false,
+      "description": null
+    }
+  },
+  {
+    "__docId__": 147,
+    "kind": "member",
+    "name": "toTranslate",
+    "memberof": "src/utils/ErrorApp.js~ErrorApp",
+    "static": false,
+    "longname": "src/utils/ErrorApp.js~ErrorApp#toTranslate",
+    "access": "public",
+    "description": "",
+    "lineNumber": 18,
+    "type": {
+      "nullable": null,
+      "types": [
+        "boolean"
+      ],
+      "spread": false,
+      "description": null
+    }
+  },
+  {
+    "__docId__": 149,
+    "kind": "file",
+    "name": "src/utils/StatusCode.js",
+    "content": "export default {\n  ok: 200,\n  created: 201,\n  noContent: 204,\n  badRequest: 400,\n  unauthorized: 401,\n  forbidden: 403,\n  notFound: 404,\n  internalServerError: 500,\n};",
+    "static": true,
+    "longname": "/home/elkaim_r/Project/koa-smart/src/utils/StatusCode.js",
+    "access": "public",
+    "description": null,
+    "lineNumber": 1
+  },
+  {
+    "__docId__": 150,
+    "kind": "file",
+    "name": "src/utils/index.js",
+    "content": "import moment from 'moment';\nimport lodash from 'lodash';\nimport jsonwebtoken from 'jsonwebtoken';\n\nimport * as utils from './utils';\nimport * as utilsParam from './utils.param';\n\nmodule.exports = {\n  jsonwebtoken,\n  moment,\n  lodash,\n  utils,\n  utilsParam,\n};\n",
+    "static": true,
+    "longname": "/home/elkaim_r/Project/koa-smart/src/utils/index.js",
+    "access": "public",
+    "description": null,
+    "lineNumber": 1
+  },
+  {
+    "__docId__": 151,
+    "kind": "file",
+    "name": "src/utils/utils.js",
+    "content": "import moment from 'moment';\nimport Lodash from 'lodash';\n\nexport const lodash = Lodash;\n\nexport function random(from, to, fixed) {\n  return ((Math.random() * (to - from)) + from).toFixed(fixed) * 1;\n}\n\nexport function ucFirst(str) {\n  return str ? str.charAt(0).toUpperCase() + str.slice(1) : str;\n}\nexport function capitalize(str) { return ucFirst(str); }\n\nexport function dateYYYYMMDD(date) {\n  if (!date) { return undefined; }\n  return moment(date).format('YYYY-MM-DD');\n}\n\nexport function isArray(array) {\n  return Array.isArray(array);\n}\n\nexport function trim(elem) {\n  if (elem.trim) {\n    return elem.trim();\n  }\n  return null;\n}\n\nexport async function timeout(ms) {\n  return new Promise(resolve => setTimeout(resolve, ms));\n}\nexport const wait = timeout;\n\nexport function isObject(obj, force = true) {\n  if (force) {\n    return !isArray(obj) && isObject(obj, false);\n  }\n  return typeof obj === 'object';\n}\n\nexport function toLowerCase(str) {\n  return str.toLowerCase();\n}\n\nexport function isEmpty(data) {\n  if (data === null || data === undefined) {\n    return true;\n  }\n  if (typeof data === 'string') {\n    return data === '';\n  } else if (Array.isArray(data)) {\n    return data.length === 0;\n  } else if (typeof data === 'object') {\n    for (const key in data) {\n      if (data.hasOwnProperty(key)) {\n        return false;\n      }\n    }\n    return true;\n  }\n  return null;\n}\n\nexport function notEmpty(elem) {\n  return !isEmpty(elem);\n}\n\nexport function nullIfEmpty(elem) {\n  //TODO test if object, string or array\n  return isEmpty(elem) ? null : elem;\n}\n\nexport function jsonEncode(json) {\n  return JSON.stringify(json).catch(() => null);\n}\n\nexport function jsonDecode(string) {\n  return JSON.parse(string).catch(() => null);\n}\n\nexport function toNumber(elem) {\n  return Number(elem);\n}\n\nexport function deepCopy(obj) {\n  return Lodash.cloneDeep(obj);\n}\n\nexport function objValToArray(obj) {\n  return Object.keys(obj).map((k) => obj[k]);\n}\n",
+    "static": true,
+    "longname": "/home/elkaim_r/Project/koa-smart/src/utils/utils.js",
+    "access": "public",
+    "description": null,
+    "lineNumber": 1
+  },
+  {
+    "__docId__": 152,
+    "kind": "variable",
+    "name": "lodash",
+    "memberof": "src/utils/utils.js",
+    "static": true,
+    "longname": "src/utils/utils.js~lodash",
+    "access": "public",
+    "export": true,
+    "importPath": "koa-smart/src/utils/utils.js",
+    "importStyle": "{lodash}",
+    "description": null,
+    "lineNumber": 4,
+    "undocument": true,
+    "type": {
+      "types": [
+        "*"
+      ]
+    }
+  },
+  {
+    "__docId__": 153,
+    "kind": "function",
+    "name": "random",
+    "memberof": "src/utils/utils.js",
+    "generator": false,
+    "async": false,
+    "static": true,
+    "longname": "src/utils/utils.js~random",
+    "access": "public",
+    "export": true,
+    "importPath": "koa-smart/src/utils/utils.js",
+    "importStyle": "{random}",
+    "description": null,
+    "lineNumber": 6,
+    "undocument": true,
+    "params": [
+      {
+        "name": "from",
+        "types": [
+          "*"
+        ]
+      },
+      {
+        "name": "to",
+        "types": [
+          "*"
+        ]
+      },
+      {
+        "name": "fixed",
+        "types": [
+          "*"
+        ]
+      }
+    ],
+    "return": {
+      "types": [
+        "*"
+      ]
+    }
+  },
+  {
+    "__docId__": 154,
+    "kind": "function",
+    "name": "ucFirst",
+    "memberof": "src/utils/utils.js",
+    "generator": false,
+    "async": false,
+    "static": true,
+    "longname": "src/utils/utils.js~ucFirst",
+    "access": "public",
+    "export": true,
+    "importPath": "koa-smart/src/utils/utils.js",
+    "importStyle": "{ucFirst}",
+    "description": null,
+    "lineNumber": 10,
+    "undocument": true,
+    "params": [
+      {
+        "name": "str",
+        "types": [
+          "*"
+        ]
+      }
+    ],
+    "return": {
+      "types": [
+        "*"
+      ]
+    }
+  },
+  {
+    "__docId__": 155,
+    "kind": "function",
+    "name": "capitalize",
+    "memberof": "src/utils/utils.js",
+    "generator": false,
+    "async": false,
+    "static": true,
+    "longname": "src/utils/utils.js~capitalize",
+    "access": "public",
+    "export": true,
+    "importPath": "koa-smart/src/utils/utils.js",
+    "importStyle": "{capitalize}",
+    "description": null,
+    "lineNumber": 13,
+    "undocument": true,
+    "params": [
+      {
+        "name": "str",
+        "types": [
+          "*"
+        ]
+      }
+    ],
+    "return": {
+      "types": [
+        "*"
+      ]
+    }
+  },
+  {
+    "__docId__": 156,
+    "kind": "function",
+    "name": "dateYYYYMMDD",
+    "memberof": "src/utils/utils.js",
+    "generator": false,
+    "async": false,
+    "static": true,
+    "longname": "src/utils/utils.js~dateYYYYMMDD",
+    "access": "public",
+    "export": true,
+    "importPath": "koa-smart/src/utils/utils.js",
+    "importStyle": "{dateYYYYMMDD}",
+    "description": null,
+    "lineNumber": 15,
+    "undocument": true,
+    "params": [
+      {
+        "name": "date",
+        "types": [
+          "*"
+        ]
+      }
+    ],
+    "return": {
+      "types": [
+        "*"
+      ]
+    }
+  },
+  {
+    "__docId__": 157,
+    "kind": "function",
+    "name": "isArray",
+    "memberof": "src/utils/utils.js",
+    "generator": false,
+    "async": false,
+    "static": true,
+    "longname": "src/utils/utils.js~isArray",
+    "access": "public",
+    "export": true,
+    "importPath": "koa-smart/src/utils/utils.js",
+    "importStyle": "{isArray}",
+    "description": null,
+    "lineNumber": 20,
+    "undocument": true,
+    "params": [
+      {
+        "name": "array",
+        "types": [
+          "*"
+        ]
+      }
+    ],
+    "return": {
+      "types": [
+        "*"
+      ]
+    }
+  },
+  {
+    "__docId__": 158,
+    "kind": "function",
+    "name": "trim",
+    "memberof": "src/utils/utils.js",
+    "generator": false,
+    "async": false,
+    "static": true,
+    "longname": "src/utils/utils.js~trim",
+    "access": "public",
+    "export": true,
+    "importPath": "koa-smart/src/utils/utils.js",
+    "importStyle": "{trim}",
+    "description": null,
+    "lineNumber": 24,
+    "undocument": true,
+    "params": [
+      {
+        "name": "elem",
+        "types": [
+          "*"
+        ]
+      }
+    ],
+    "return": {
+      "types": [
+        "*"
+      ]
+    }
+  },
+  {
+    "__docId__": 159,
+    "kind": "function",
+    "name": "timeout",
+    "memberof": "src/utils/utils.js",
+    "generator": false,
+    "async": true,
+    "static": true,
+    "longname": "src/utils/utils.js~timeout",
+    "access": "public",
+    "export": true,
+    "importPath": "koa-smart/src/utils/utils.js",
+    "importStyle": "{timeout}",
+    "description": null,
+    "lineNumber": 31,
+    "undocument": true,
+    "params": [
+      {
+        "name": "ms",
+        "types": [
+          "*"
+        ]
+      }
+    ],
+    "return": {
+      "types": [
+        "*"
+      ]
+    }
+  },
+  {
+    "__docId__": 160,
+    "kind": "variable",
+    "name": "wait",
+    "memberof": "src/utils/utils.js",
+    "static": true,
+    "longname": "src/utils/utils.js~wait",
+    "access": "public",
+    "export": true,
+    "importPath": "koa-smart/src/utils/utils.js",
+    "importStyle": "{wait}",
+    "description": null,
+    "lineNumber": 34,
+    "undocument": true,
+    "type": {
+      "types": [
+        "*"
+      ]
+    }
+  },
+  {
+    "__docId__": 161,
+    "kind": "function",
+    "name": "isObject",
+    "memberof": "src/utils/utils.js",
+    "generator": false,
+    "async": false,
+    "static": true,
+    "longname": "src/utils/utils.js~isObject",
+    "access": "public",
+    "export": true,
+    "importPath": "koa-smart/src/utils/utils.js",
+    "importStyle": "{isObject}",
+    "description": null,
+    "lineNumber": 36,
+    "undocument": true,
+    "params": [
+      {
+        "name": "obj",
+        "types": [
+          "*"
+        ]
+      },
+      {
+        "name": "force",
+        "optional": true,
+        "types": [
+          "boolean"
+        ],
+        "defaultRaw": true,
+        "defaultValue": "true"
+      }
+    ],
+    "return": {
+      "types": [
+        "*"
+      ]
+    }
+  },
+  {
+    "__docId__": 162,
+    "kind": "function",
+    "name": "toLowerCase",
+    "memberof": "src/utils/utils.js",
+    "generator": false,
+    "async": false,
+    "static": true,
+    "longname": "src/utils/utils.js~toLowerCase",
+    "access": "public",
+    "export": true,
+    "importPath": "koa-smart/src/utils/utils.js",
+    "importStyle": "{toLowerCase}",
+    "description": null,
+    "lineNumber": 43,
+    "undocument": true,
+    "params": [
+      {
+        "name": "str",
+        "types": [
+          "*"
+        ]
+      }
+    ],
+    "return": {
+      "types": [
+        "*"
+      ]
+    }
+  },
+  {
+    "__docId__": 163,
+    "kind": "function",
+    "name": "isEmpty",
+    "memberof": "src/utils/utils.js",
+    "generator": false,
+    "async": false,
+    "static": true,
+    "longname": "src/utils/utils.js~isEmpty",
+    "access": "public",
+    "export": true,
+    "importPath": "koa-smart/src/utils/utils.js",
+    "importStyle": "{isEmpty}",
+    "description": null,
+    "lineNumber": 47,
+    "undocument": true,
+    "params": [
+      {
+        "name": "data",
+        "types": [
+          "*"
+        ]
+      }
+    ],
+    "return": {
+      "types": [
+        "*"
+      ]
+    }
+  },
+  {
+    "__docId__": 164,
+    "kind": "function",
+    "name": "notEmpty",
+    "memberof": "src/utils/utils.js",
+    "generator": false,
+    "async": false,
+    "static": true,
+    "longname": "src/utils/utils.js~notEmpty",
+    "access": "public",
+    "export": true,
+    "importPath": "koa-smart/src/utils/utils.js",
+    "importStyle": "{notEmpty}",
+    "description": null,
+    "lineNumber": 66,
+    "undocument": true,
+    "params": [
+      {
+        "name": "elem",
+        "types": [
+          "*"
+        ]
+      }
+    ],
+    "return": {
+      "types": [
+        "*"
+      ]
+    }
+  },
+  {
+    "__docId__": 165,
+    "kind": "function",
+    "name": "nullIfEmpty",
+    "memberof": "src/utils/utils.js",
+    "generator": false,
+    "async": false,
+    "static": true,
+    "longname": "src/utils/utils.js~nullIfEmpty",
+    "access": "public",
+    "export": true,
+    "importPath": "koa-smart/src/utils/utils.js",
+    "importStyle": "{nullIfEmpty}",
+    "description": null,
+    "lineNumber": 70,
+    "undocument": true,
+    "params": [
+      {
+        "name": "elem",
+        "types": [
+          "*"
+        ]
+      }
+    ],
+    "return": {
+      "types": [
+        "*"
+      ]
+    }
+  },
+  {
+    "__docId__": 166,
+    "kind": "function",
+    "name": "jsonEncode",
+    "memberof": "src/utils/utils.js",
+    "generator": false,
+    "async": false,
+    "static": true,
+    "longname": "src/utils/utils.js~jsonEncode",
+    "access": "public",
+    "export": true,
+    "importPath": "koa-smart/src/utils/utils.js",
+    "importStyle": "{jsonEncode}",
+    "description": null,
+    "lineNumber": 75,
+    "undocument": true,
+    "params": [
+      {
+        "name": "json",
+        "types": [
+          "*"
+        ]
+      }
+    ],
+    "return": {
+      "types": [
+        "*"
+      ]
+    }
+  },
+  {
+    "__docId__": 167,
+    "kind": "function",
+    "name": "jsonDecode",
+    "memberof": "src/utils/utils.js",
+    "generator": false,
+    "async": false,
+    "static": true,
+    "longname": "src/utils/utils.js~jsonDecode",
+    "access": "public",
+    "export": true,
+    "importPath": "koa-smart/src/utils/utils.js",
+    "importStyle": "{jsonDecode}",
+    "description": null,
+    "lineNumber": 79,
+    "undocument": true,
+    "params": [
+      {
+        "name": "string",
+        "types": [
+          "*"
+        ]
+      }
+    ],
+    "return": {
+      "types": [
+        "*"
+      ]
+    }
+  },
+  {
+    "__docId__": 168,
+    "kind": "function",
+    "name": "toNumber",
+    "memberof": "src/utils/utils.js",
+    "generator": false,
+    "async": false,
+    "static": true,
+    "longname": "src/utils/utils.js~toNumber",
+    "access": "public",
+    "export": true,
+    "importPath": "koa-smart/src/utils/utils.js",
+    "importStyle": "{toNumber}",
+    "description": null,
+    "lineNumber": 83,
+    "undocument": true,
+    "params": [
+      {
+        "name": "elem",
+        "types": [
+          "*"
+        ]
+      }
+    ],
+    "return": {
+      "types": [
+        "*"
+      ]
+    }
+  },
+  {
+    "__docId__": 169,
+    "kind": "function",
+    "name": "deepCopy",
+    "memberof": "src/utils/utils.js",
+    "generator": false,
+    "async": false,
+    "static": true,
+    "longname": "src/utils/utils.js~deepCopy",
+    "access": "public",
+    "export": true,
+    "importPath": "koa-smart/src/utils/utils.js",
+    "importStyle": "{deepCopy}",
+    "description": null,
+    "lineNumber": 87,
+    "undocument": true,
+    "params": [
+      {
+        "name": "obj",
+        "types": [
+          "*"
+        ]
+      }
+    ],
+    "return": {
+      "types": [
+        "*"
+      ]
+    }
+  },
+  {
+    "__docId__": 170,
+    "kind": "function",
+    "name": "objValToArray",
+    "memberof": "src/utils/utils.js",
+    "generator": false,
+    "async": false,
+    "static": true,
+    "longname": "src/utils/utils.js~objValToArray",
+    "access": "public",
+    "export": true,
+    "importPath": "koa-smart/src/utils/utils.js",
+    "importStyle": "{objValToArray}",
+    "description": null,
+    "lineNumber": 91,
+    "undocument": true,
+    "params": [
+      {
+        "name": "obj",
+        "types": [
+          "*"
+        ]
+      }
+    ],
+    "return": {
+      "types": [
+        "*"
+      ]
+    }
+  },
+  {
+    "__docId__": 171,
+    "kind": "file",
+    "name": "src/utils/utils.param.js",
+    "content": "\nimport StatusCode from './StatusCode';\n\nexport function test(func, errMsg) {\n  return (elem, route, { ctx, keyBody }) => {\n    if (!func(elem)) {\n      route.throw(StatusCode.badRequest, errMsg || `${ctx.state.__('invalide param:')} ${keyBody}`);\n    }\n    return elem;\n  };\n}\n\nexport function trasform(func) {\n  return elem => func(elem);\n}\n\nexport function regex(reg) {\n  return (elem) => {\n    if (reg instanceof RegExp) {\n      return elem.match(reg);\n    }\n    return false;\n  };\n}\n\nexport function isDateBetween(d1, d2) {\n  return (d) => {\n    if (d1.getTime() <= d.getTime() && d2.getTime() >= d.getTime()) {\n      return true;\n    }\n    if (d2.getTime() <= d.getTime() && d1.getTime() >= d.getTime()) {\n      return true;\n    }\n    return false;\n  };\n}\n",
+    "static": true,
+    "longname": "/home/elkaim_r/Project/koa-smart/src/utils/utils.param.js",
+    "access": "public",
+    "description": null,
+    "lineNumber": 1
+  },
+  {
+    "__docId__": 172,
+    "kind": "function",
+    "name": "test",
+    "memberof": "src/utils/utils.param.js",
+    "generator": false,
+    "async": false,
+    "static": true,
+    "longname": "src/utils/utils.param.js~test",
+    "access": "public",
+    "export": true,
+    "importPath": "koa-smart/src/utils/utils.param.js",
+    "importStyle": "{test}",
+    "description": null,
+    "lineNumber": 4,
+    "undocument": true,
+    "params": [
+      {
+        "name": "func",
+        "types": [
+          "*"
+        ]
+      },
+      {
+        "name": "errMsg",
+        "types": [
+          "*"
+        ]
+      }
+    ],
+    "return": {
+      "types": [
+        "*"
+      ]
+    }
+  },
+  {
+    "__docId__": 173,
+    "kind": "function",
+    "name": "trasform",
+    "memberof": "src/utils/utils.param.js",
+    "generator": false,
+    "async": false,
+    "static": true,
+    "longname": "src/utils/utils.param.js~trasform",
+    "access": "public",
+    "export": true,
+    "importPath": "koa-smart/src/utils/utils.param.js",
+    "importStyle": "{trasform}",
+    "description": null,
+    "lineNumber": 13,
+    "undocument": true,
+    "params": [
+      {
+        "name": "func",
+        "types": [
+          "*"
+        ]
+      }
+    ],
+    "return": {
+      "types": [
+        "*"
+      ]
+    }
+  },
+  {
+    "__docId__": 174,
+    "kind": "function",
+    "name": "regex",
+    "memberof": "src/utils/utils.param.js",
+    "generator": false,
+    "async": false,
+    "static": true,
+    "longname": "src/utils/utils.param.js~regex",
+    "access": "public",
+    "export": true,
+    "importPath": "koa-smart/src/utils/utils.param.js",
+    "importStyle": "{regex}",
+    "description": null,
+    "lineNumber": 17,
+    "undocument": true,
+    "params": [
+      {
+        "name": "reg",
+        "types": [
+          "*"
+        ]
+      }
+    ],
+    "return": {
+      "types": [
+        "*"
+      ]
+    }
+  },
+  {
+    "__docId__": 175,
+    "kind": "function",
+    "name": "isDateBetween",
+    "memberof": "src/utils/utils.param.js",
+    "generator": false,
+    "async": false,
+    "static": true,
+    "longname": "src/utils/utils.param.js~isDateBetween",
+    "access": "public",
+    "export": true,
+    "importPath": "koa-smart/src/utils/utils.param.js",
+    "importStyle": "{isDateBetween}",
+    "description": null,
+    "lineNumber": 26,
+    "undocument": true,
+    "params": [
+      {
+        "name": "d1",
+        "types": [
+          "*"
+        ]
+      },
+      {
+        "name": "d2",
+        "types": [
+          "*"
+        ]
+      }
+    ],
+    "return": {
+      "types": [
+        "*"
+      ]
+    }
+  },
+  {
+    "kind": "index",
+    "content": "# **KoaSmart** is a framework based on **Koajs2**, which allows you to develop RESTful APIs with : **Class**, **Decorator**, **Params checker**\n\n[![Build Status](https://secure.travis-ci.org/ysocorp/koa-smart.png?branch=master \"Test\")](http://travis-ci.org/ysocorp/koa-smart)\n[![NPM version](http://badge.fury.io/js/koa-smart.png)](https://npmjs.org/package/koa-smart \"View this project on NPM\")\n\nA framework based on [Koajs2](https://github.com/koajs/koa) with **Decorator**, **Params checker** and a **base of modules** ([`cors`](https://www.npmjs.com/package/kcors), [`bodyparser`](https://github.com/koajs/bodyparser), [`compress`](https://github.com/koajs/compress), [`I18n`](https://github.com/koa-modules/i18n), etc... ) to allow you to develop a smart api easily \n```sh\n  export default class RouteUsers extends Route {\n\n    // get route: http://localhost:3000/users/get/:id\n    @Route.Get({\n      path: 'get/:id'\n    })\n    async get(ctx) {\n      const user = await this.models.users.findById(ctx.params.id);\n      this.assert(user, 404, ctx.state.__('User not found'));\n      this.sendOk(ctx, user);\n    }\n\n    // post route: http://localhost:3000/users/add\n    @Route.Post({\n      accesses: [Route.accesses.public],\n      params: { // params to allow: all other params will be rejected\n        email: true, // return an 400 if the body doesn't contain email key\n        name: false,\n      },\n    })\n    async add(ctx) {\n      const body = this.body(ctx); // or ctx.request.body\n      // body can contain only an object with email and name field\n      const user = await this.models.user.create(body);\n      this.sendCreated(ctx, user);\n    }\n\n  }\n```\n\n## Summary\n* What's in this framework ?\n* [Install](#install)\n* [Router with decorator](#router-with-decorator)\n* [Params checker of POST body](#params-checker-of-post-body)\n* [Get Started](#get-started)\n    * [Full example](#full-example)\n* [Add treatment on route](#add-treatment-on-route)\n\n## What is in this framework ?\n\n**This framework gives you the tools to use a set of modules: **\n\n* **For routing**\n    * [`koajs 2`](https://github.com/koajs/koa) as the main, underlying framework\n    * [`kcors`](https://www.npmjs.com/package/kcors) is used to handle cross-domain requests\n    * [`koa2-ratelimit`](https://github.com/ysocorp/koa2-ratelimit) To limit bruteforce requests\n    * [`koa-helmet`](https://www.npmjs.com/package/koa-helmet) helps you secure your api\n    * [`koa-bodyparser`](https://github.com/koajs/bodyparser) to parse request bodies\n    * [`koa-compress`](https://github.com/koajs/compress) to compress the response\n    * [`koa-i18n`](https://github.com/koa-modules/i18n) for Internationalization (I18n)\n* [`@Decorators`](https://babeljs.io/docs/plugins/transform-decorators/) to ensure a better project structure\n* [`moment`](https://github.com/moment/moment) Parse, validate, manipulate, and display dates in javascript.\n* [`lodash`](https://github.com/lodash/lodash) A modern JavaScript utility library delivering modularity, performance, & extras\n* [`jsonwebtoken`](https://github.com/auth0/node-jsonwebtoken) an implementation of [JSON Web Tokens JWT](https://tools.ietf.org/html/rfc7519)\n\n\n## Install\n`npm install koa-smart`\n\n## Router with decorator\n\n**All routes have to extend the `Route` class in order to be mount**\n\n* **Prefix of routes**\n\n    If you have a route class with the name `RouteMyApi`, all the routes inside said class will be **preceded** by **`/my-api/`**\n\n    * How does it work ?\n        1) the `Route` word is removed\n        2) uppercase letters are replaced with '-'. (essentially converting camelCase into camel-case)\n        **e.g.**: this will add a get route => http://localhost:3000/my-api/hello\n\n      ```sh\n      export default class RouteMyApi extends Route {\n\n          @Route.Get({})\n          async hello(ctx) {\n              this.sendOk(ctx, ctx.state.__('hello'));\n          }\n\n      }\n      ```\n\n    * Change prefix of all routes in the class: http://localhost:3000/my-prefix/hello\n      ```sh\n      @Route.Route({\n          routeBase: 'my-prefix',\n      })\n      export default class RouteMyApi extends Route {\n\n          @Route.Get({})\n          async hello(ctx) {\n              this.sendOk(ctx, ctx.state.__('hello'));\n          }\n\n      }\n      ```\n\n* **Get route** http://localhost:3000/my-api/hello\n\n  ```sh\n    @Route.Get({})\n    async hello(ctx) {\n      this.sendOk(ctx, null, ctx.state.__('hello'));\n    }\n  ```\n* **Change path** http://localhost:3000/my-api/myroute/15\n\n  ```sh\n    @Route.Get({\n      path: '/myroute/:id'\n    })\n    async hello(ctx) {\n      this.sendOk(ctx, ctx.state.__('hello') + ctx.params.id);\n    }\n  ```\n\n* **Post route** http://localhost:3000/my-api/user-post\n  ```sh\n    @Route.Post({\n        params: { // params to allow: all other params will be rejected\n            email: true, // return a 400 error if the body doesn't contain email key\n            name: false, // optional parameter\n        },\n    })\n    async userPost(ctx) {\n      const body = this.body(ctx);\n      // body can contain only an object with email and name field\n      const user = await this.models.user.create(body);\n      this.sendCreated(ctx, user);\n    }\n  ```\n\n* **Disable route**\n    * **Disable all routes in a class**\n\n    to disable all routes in a class you should add `disable` in the content of your decorator class\n    \n    ```sh\n    @Route.Route({\n        disable: true,\n    })\n    export default class RouteMyApi extends Route {\n        // All routes in this class will not be mounted\n    }\n    ```\n  \n    * **Disable a specific route**\n\n    to disable a specific route you can add `disable` in the content of your decorator\n    \n    ```sh\n    @Route.Get({\n        disable: true, // this route will not be mounted\n    })\n    async hello(ctx) {\n      this.sendOk(ctx, null, ctx.state.__('hello'));\n    }\n    ```\n\n* **RateLimit** : For more infos, see the [`koa2-ratelimit`](https://github.com/ysocorp/koa2-ratelimit) module\n\n  * **Configure**\n\n    ```sh\n    import { App } from 'koa-smart';\n    import { RateLimit, RateLimitStores } from 'koa-smart/middlewares';\n\n    const app = new App({ port: 3000 });\n\n    // Set Default Option\n    const store = new RateLimitStores.Memory() OR new RateLimitStores.Sequelize(sequelizeInstance)\n    RateLimit.defaultOptions({\n        message: 'Too many requests, get out!',\n        store: store, // By default it will create MemoryStore\n    });\n\n    // limit 100 accesses per min on your API \n    app.addMiddlewares([\n      // ...\n      RateLimit.middleware({ interval: { min: 1 }, max: 100 }), \n      // ...\n    ]);\n    ```\n\n  * **RateLimit On Decorator**\n\n    Single RateLimit\n\n    ```sh\n    @Route.Get({ // allow only 100 requests per day to /view\n        rateLimit: { interval: { day: 1 }, max: 100 },\n    })\n    async view(ctx) {\n      this.sendOk(ctx, null, ctx.state.__('hello'));\n    }\n    ```\n\n    Multiple RateLimit\n\n    ```sh\n    // Multiple RateLimit\n    @Route.Get({\n        rateLimit: [\n            { interval: { day: 1 }, max: 100 }, // allow only 100 requests per day\n            { interval: { min: 2 }, max: 40 }, // allow only 40 requests in 2 minutes\n        ],\n    })\n    async hello(ctx) {\n      this.sendOk(ctx, null, ctx.state.__('hello'));\n    }\n    ```\n\n* **middlewares of an Class**\n\n  ```sh\n  @Route.Route({\n      middlewares: [ // Array of middlewares\n        async (ctx, next) => {\n          console.log('I will be call before all route in this class');\n          await next();\n        },\n      ],\n  })\n  class RouteMiddlewares extends Route {\n      async view(ctx, next) {\n        console.log('I will be call after middlewares of class');\n        this.sendOk(ctx, null, ctx.state.__('hello'));\n      }\n  }\n  ```\n\n* **middlewares of a specific route**\n\n  ```sh\n  @Route.Get({\n      middlewares: [ // Array of middlewares\n        async (ctx, next) => {\n          console.log('I will be call before the route but after middlewares of class');\n          await next();\n        },\n      ],\n  })\n  async view(ctx, next) {\n      console.log('I will be call after middlewares of the class and route');\n      this.sendOk(ctx, null, ctx.state.__('hello'));\n  }\n  ```\n\n## Params checker of POST body\n\n* **all other fields which aren't in the params object will be rejected**\n* simplified writing\n\n  ```sh\n    params: ['email', 'name']\n    // is equal to\n    params: {\n      email: false,\n      name: false,\n    }\n    // is equal to\n    params: {\n      email: {\n        __force: false,\n      },\n      name: false,\n    }\n  ```\n* **more option:**\n    * `__force` [boolean] tells whether a field is required or not\n    * `__func` an `Array<Function>` to be executed on the field one by one in order to validate / transform it\n    * Eg:\n\n        ```sh\n        params: {\n          name: {\n            __force: false,\n            __func: [\n                utils.trim,\n                utilsParam.test(utils.notEmpty), // return 400 if empty\n                utils.capitalize,\n                (elem, route, { ctx, body, keyBody }) => {\n                  return elem.trim();\n                },\n                // do whatever you want...\n            ],\n          },\n        },\n        ```\n* **Eg: object nested inside another object:**\n\n    ```sh\n    params: {\n      user: {\n        __force: true,\n        name: {\n          __force: true,\n          __func: [utils.trim],\n        },\n        password: true,\n        address: {\n          __force: true,\n          country: true,\n          street: true,\n        }\n      },\n      date: false,\n    },\n    ```\n\n## Get Started ([quick-start boilerplate](https://github.com/ysocorp/koa-smart-light-example))\n\nin order to get started quickly, look at [this boilerplate](https://github.com/ysocorp/koa-smart-light-example), or follow the following instructions:\n\n  * import the app and your middlewares\n\n    ```sh\n    import { join } from 'path';\n    // import the app\n    import { App } from 'koa-smart';\n    // import middlewares koa-smart give you OR others\n    import {\n      bodyParser, \n      compress,\n      cors,\n      handleError,\n      RateLimit,\n      ...\n    } from 'koa-smart/middlewares';\n    ```\n\n  * create an app listening on port 3000\n\n    ```sh\n    const myApp = new App({\n      port: 3000,\n    });\n    ```\n  \n  * add your middlewares\n\n    ```sh\n    myApp.addMiddlewares([\n      cors({ credentials: true }),\n      helmet(),\n      bodyParser(),\n      handleError(),\n      RateLimit.middleware({ interval: { min: 1 }, max: 100 }),\n      ...\n    ]);\n    ```\n  \n  * add your routes\n    mount a folder with a prefix (all file who extends from `Route` will be added and mounted)\n\n    ```sh\n        myApp.mountFolder(join(__dirname, 'routes'), '/');\n    ```\n\n  * Start your app\n\n    ```sh\n    myApp.start();\n    ```\n  \n### Full example\n\n  * Basic one\n\n    ```sh\n    import { join } from 'path';\n    // import the app\n    import { App } from 'koa-smart';\n    // import middlewares koa-smart give you OR others\n    import { \n      i18n,\n      bodyParser, \n      compress,\n      cors,\n      helmet,\n      addDefaultBody,\n      handleError,\n      logger,\n      RateLimit,\n    } from 'koa-smart/middlewares';\n\n    const myApp = new App({\n      port: 3000,\n    });\n\n    myApp.addMiddlewares([\n      cors({ credentials: true }),\n      helmet(),\n      bodyParser(),\n      i18n(myApp.app, {\n        directory: join(__dirname, 'locales'),\n        locales: ['en', 'fr'],\n        modes: ['query', 'subdomain', 'cookie', 'header', 'tld'],\n      }),\n      handleError(),\n      logger(),\n      addDefaultBody(),\n      compress({}),\n      RateLimit.middleware({ interval: { min: 1 }, max: 100 }),\n    ]);\n        \n    // mount a folder with an prefix (all file who extends from `Route` will be add and mount)\n    myApp.mountFolder(join(__dirname, 'routes'), '/');\n\n    // start the app\n    myApp.start();\n    ```\n  \n  * Other example who Extends class App\n\n    ```sh\n    import { join } from 'path';\n    // import the app\n    import { App } from 'koa-smart';\n    // import middlewares koa-smart give you OR others\n    import { \n      i18n,\n      bodyParser, \n      compress,\n      cors,\n      helmet,\n      addDefaultBody,\n      handleError,\n      logger,\n      RateLimit,\n    } from 'koa-smart/middlewares';\n\n    // create an class who extends from App class\n    export default class MyApp extends App {\n      constructor() {\n        super({ port: 3000 });\n      }\n\n      async start() {\n        // add your Middlewares\n        super.addMiddlewares([\n          cors({ credentials: true }),\n          helmet(),\n          bodyParser(),\n          i18n(this.app, {\n            directory: join(__dirname, 'locales'),\n            locales: ['en', 'fr'],\n            modes: ['query', 'subdomain', 'cookie', 'header', 'tld'],\n          }),\n          handleError(),\n          logger(),\n          addDefaultBody(),\n          compress({}),\n          RateLimit.middleware({ interval: { min: 1 }, max: 100 }),\n        ]);\n\n        // mount a folder with an prefix (all file who extends from `Route` will be add and mount)\n        super.mountFolder(join(__dirname, 'routes'));\n        return super.start();\n      }\n    }\n\n    // start the app\n    const myApp = new MyApp();\n    myApp.start();\n    ```\n\n## Add treatment on route\n  **you can add you own treatment and attribute to the route.**\n\n  In this example we will see how you can manage **accesses** to your route in 2 steps  \n\n  1. Extends `Route` Class and overload  `beforeRoute` methode \n\n  ```sh\n  export default class MyRoute extends Route {\n    static accesses = {\n      public: -1,\n      connected: 100,\n      admin: GROUPS.ADMIN_ID,\n      client: GROUPS.CLIENT_ID,\n      // whatever ...\n    };\n\n    // overload beforeRoute\n    async beforeRoute(ctx, infos, next) {\n      // infos.options content all the param give to the route\n\n      if (this.mlCanAccessRoute(ctx, infos.options)) { // test if you can access\n        this.throw(StatusCode.forbidden, ctx.state.__('Forbidden access')); \n      }\n      // call the super methode\n      await super.beforeRoute(ctx, infos, next);\n    }\n\n    mlCanAccessRoute(ctx, { accesses }) {\n      if (accesses && Array.isArray(accesses)) {\n        const { user } = ctx.state;\n        return accesses.includes(Route.accesses.public) ||\n          (!!user && (\n            accesses.includes(Route.accesses.connected) ||\n            user.usergroup_id === Route.accesses.admin ||\n            accesses.includes(user.usergroup_id)\n          ));\n      }\n      return false;\n    }\n  }\n\n  ```\n\n  2. Create an route with access \n\n  ```sh\n  export default class RouteMyApi extends MyRoute {\n    constructor(params) {\n      super({ ...params });\n    }\n\n    @Route.Get({ accesses: [MyRoute.accesses.public] })\n    async publicRoute(ctx) {\n      this.sendOk(ctx, ctx.i18n.__('I can be call by any one'));\n    }\n\n    @Route.Get({ accesses: [MyRoute.accesses.client] })\n    async clientRoute(ctx) {\n      this.sendOk(ctx, ctx.i18n.__('I can be call by only client user'));\n    }\n\n    @Route.Get({ accesses: [MyRoute.accesses.admin] })\n    async adminRoute(ctx) {\n      this.sendOk(ctx, ctx.state.__('I can be call by only admin user'));\n    }\n\n    @Route.Get({ accesses: [MyRoute.accesses.client, MyRoute.accesses.admin] })\n    async adminRoute(ctx) {\n      this.sendOk(ctx, ctx.state.__('I can be call by client and admin user'));\n    }\n\n    @Route.Get({ accesses: [MyRoute.accesses.connected] })\n    async adminRoute(ctx) {\n      this.sendOk(ctx, ctx.state.__('I can be call by all connected users'));\n    }\n  }\n  ```\n\n## License\n\n  MIT © [YSO Corp](http://ysocorp.com/)\n",
+    "longname": "/home/elkaim_r/Project/koa-smart/README.md",
+    "name": "./README.md",
+    "static": true,
+    "access": "public"
+  },
+  {
+    "kind": "packageJSON",
+    "content": "{\n  \"name\": \"koa-smart\",\n  \"version\": \"1.2.0\",\n  \"people\": {\n    \"name\": \"YSO CORP\",\n    \"email\": \"contact@ysocorp.com\",\n    \"url\": \"http://ysocorp.com\"\n  },\n  \"description\": \"A framework base on Koajs2 with Decorator, Params checker and a base of modules (cors, bodyparser, compress, I18n, etc…) to let you develop smart api easily\",\n  \"license\": \"MIT\",\n  \"main\": \"index.js\",\n  \"engines\": {\n    \"node\": \">=7.10.1\"\n  },\n  \"repository\": {\n    \"type\": \"git\",\n    \"url\": \"https://github.com/ysocorp/koa-smart\"\n  },\n  \"scripts\": {\n    \"test\": \"npm run build-prod && cross-env NODE_ENV=test mocha --opts mocha.opts\",\n    \"build-prod\": \"rimraf dist && cross-env NODE_ENV=production babel src --out-dir dist\",\n    \"lint\": \"eslint src test\"\n  },\n  \"dependencies\": {\n    \"babel-runtime\": \"^6.26.0\",\n    \"chalk\": \"^2.3.2\",\n    \"jsonwebtoken\": \"^8.2.0\",\n    \"kcors\": \"^2.2.0\",\n    \"koa\": \"^2.5.0\",\n    \"koa-bodyparser\": \"^4.2.0\",\n    \"koa-compress\": \"^2.0.0\",\n    \"koa-helmet\": \"^3.3.0\",\n    \"koa-i18n\": \"^2.1.0\",\n    \"koa-locale\": \"^1.3.0\",\n    \"koa-router\": \"^7.4.0\",\n    \"koa2-ratelimit\": \"^0.5.0\",\n    \"lodash\": \"^4.17.5\",\n    \"moment\": \"^2.21.0\",\n    \"node-gettext\": \"^2.0.0\"\n  },\n  \"devDependencies\": {\n    \"babel-cli\": \"^6.26.0\",\n    \"babel-eslint\": \"^8.2.2\",\n    \"babel-plugin-transform-class-properties\": \"^6.23.0\",\n    \"babel-plugin-transform-decorators-legacy\": \"^1.3.4\",\n    \"babel-plugin-transform-runtime\": \"^6.15.0\",\n    \"babel-preset-env\": \"^1.6.1\",\n    \"babel-preset-stage-3\": \"^6.17.0\",\n    \"nodemon\": \"^1.17.1\",\n    \"mocha\": \"^5.0.4\",\n    \"expect\": \"^22.4.0\",\n    \"eslint\": \"^4.18.2\",\n    \"esdoc-standard-plugin\": \"^1.0.0\",\n    \"esdoc-ecmascript-proposal-plugin\": \"^1.0.0\",\n    \"esdoc\": \"^1.0.4\",\n    \"cross-env\": \"^5.1.4\",\n    \"rimraf\": \"^2.6.2\",\n    \"supertest\": \"^3.0.0\"\n  },\n  \"keywords\": [\n    \"koa-smart\",\n    \"koa-boilerplate\",\n    \"koajs-boilerplate\",\n    \"koa2-boilerplate\",\n    \"boilerplate\",\n    \"koa-decorator\",\n    \"koa2-decorator\",\n    \"koajs-2-decorator\",\n    \"koajs\",\n    \"koa-es6\",\n    \"koa-es7\",\n    \"koajs-2\",\n    \"restfull\",\n    \"api\",\n    \"class\",\n    \"decorator\",\n    \"koa-essential\",\n    \"koa-router\",\n    \"framework\",\n    \"router\"\n  ]\n}\n",
+    "longname": "/home/elkaim_r/Project/koa-smart/package.json",
+    "name": "package.json",
+    "static": true,
+    "access": "public"
+  }
+]
