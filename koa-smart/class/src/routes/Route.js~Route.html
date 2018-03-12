@@ -34,11 +34,14 @@
 <li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-handleError">handleError</a></span></span></li>
 <li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-logger">logger</a></span></span></li>
 <li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-notFound">notFound</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-typedef">T</span><span data-ice="name"><span><a href="typedef/index.html#static-typedef-OptionErrors">OptionErrors</a></span></span></li>
 <li data-ice="doc"><a data-ice="dirPath" class="nav-dir-path" href="identifiers.html#routes">routes</a><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/routes/Route.js~Route.html">Route</a></span></span></li>
 <li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/routes/RouteDecorators.js~RouteDecorators.html">RouteDecorators</a></span></span></li>
-<li data-ice="doc"><span data-ice="kind" class="kind-typedef">T</span><span data-ice="name"><span><a href="typedef/index.html#static-typedef-MiddlewareFunction">MiddlewareFunction</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-typedef">T</span><span data-ice="name"><span><a href="typedef/index.html#static-typedef-ParamMiddlewareFunction">ParamMiddlewareFunction</a></span></span></li>
 <li data-ice="doc"><span data-ice="kind" class="kind-typedef">T</span><span data-ice="name"><span><a href="typedef/index.html#static-typedef-Params">Params</a></span></span></li>
 <li data-ice="doc"><span data-ice="kind" class="kind-typedef">T</span><span data-ice="name"><span><a href="typedef/index.html#static-typedef-PostParamsFilter">PostParamsFilter</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-typedef">T</span><span data-ice="name"><span><a href="typedef/index.html#static-typedef-RouteParams">RouteParams</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-external">E</span><span data-ice="name"><span><a href="http://koajs.com/#application">Koa</a></span></span></li>
 <li data-ice="doc"><span data-ice="kind" class="kind-external">E</span><span data-ice="name"><span><a href="http://koajs.com/#api">KoaContext</a></span></span></li>
 <li data-ice="doc"><a data-ice="dirPath" class="nav-dir-path" href="identifiers.html#utils">utils</a><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/utils/ErrorApp.js~ErrorApp.html">ErrorApp</a></span></span></li>
 <li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-capitalize">capitalize</a></span></span></li>
@@ -276,7 +279,7 @@
       <div>
         
         
-        <div data-ice="description"><p>mounts the tagged function as route, allowing the user to configure the HTTP methods it answers to.</p>
+        <div data-ice="description"><p>used to set some parameters on an entire class.The supported parameters are middlewares, disable, and routeBase.</p>
 </div>
       </div>
     </td>
@@ -345,7 +348,41 @@
 </table>
 </div>
 
-
+<div data-ice="constructorSummary"><h2>Constructor Summary</h2><table class="summary" data-ice="summary">
+  <thead><tr><td data-ice="title" colspan="3">Public Constructor</td></tr></thead>
+  <tbody>
+  
+  <tr data-ice="target">
+    <td>
+      <span class="access" data-ice="access">public</span>
+      
+      
+      
+      <span class="override" data-ice="override"></span>
+    </td>
+    <td>
+      <div>
+        <p>
+          
+          
+          
+          <span class="code" data-ice="name"><span><a href="class/src/routes/Route.js~Route.html#instance-constructor-constructor">constructor</a></span></span><span class="code" data-ice="signature">(params: <span><a href="typedef/index.html#static-typedef-RouteParams">RouteParams</a></span>)</span>
+        </p>
+      </div>
+      <div>
+        
+        
+        
+      </div>
+    </td>
+    <td>
+      
+      
+    </td>
+  </tr>
+</tbody>
+</table>
+</div>
 <div data-ice="memberSummary"><h2>Member Summary</h2><table class="summary" data-ice="summary">
   <thead><tr><td data-ice="title" colspan="3">Public Members</td></tr></thead>
   <tbody>
@@ -651,13 +688,14 @@
           
           
           
-          <span class="code" data-ice="name"><span><a href="class/src/routes/Route.js~Route.html#instance-method-assert">assert</a></span></span><span class="code" data-ice="signature">(condition: <span>*</span>, status: <span>*</span>, message: <span>*</span>, translate: <span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean">boolean</a></span>)</span>
+          <span class="code" data-ice="name"><span><a href="class/src/routes/Route.js~Route.html#instance-method-assert">assert</a></span></span><span class="code" data-ice="signature">(condition: <span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean">boolean</a></span>, status: <span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number">number</a></span>, message: <span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">string</a></span>, translate: <span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean">boolean</a></span>)</span>
         </p>
       </div>
       <div>
         
         
-        
+        <div data-ice="description"><p>checks a condition.</p>
+</div>
       </div>
     </td>
     <td>
@@ -679,13 +717,14 @@
           
           <span data-ice="async">async</span>
           
-          <span class="code" data-ice="name"><span><a href="class/src/routes/Route.js~Route.html#instance-method-beforeRoute">beforeRoute</a></span></span><span class="code" data-ice="signature">(ctx: <span>*</span>, objectPattern1: {&quot;options&quot;: <span>*</span>}, next: <span>*</span>)</span>
+          <span class="code" data-ice="name"><span><a href="class/src/routes/Route.js~Route.html#instance-method-beforeRoute">beforeRoute</a></span></span><span class="code" data-ice="signature">(ctx: <span><a href="http://koajs.com/#api">KoaContext</a></span>, params: <span><a href="typedef/index.html#static-typedef-Params">Params</a></span>, next: <span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function">function</a></span>)</span>
         </p>
       </div>
       <div>
         
         
-        
+        <div data-ice="description"><p>a member that can be overriden, which will always be executed before the route is accessed</p>
+</div>
       </div>
     </td>
     <td>
@@ -708,34 +747,6 @@
           
           
           <span class="code" data-ice="name"><span><a href="class/src/routes/Route.js~Route.html#instance-method-body">body</a></span></span><span class="code" data-ice="signature">(ctx: <span>*</span>, original: <span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean">boolean</a></span>): <span>*</span></span>
-        </p>
-      </div>
-      <div>
-        
-        
-        
-      </div>
-    </td>
-    <td>
-      
-      
-    </td>
-  </tr>
-<tr data-ice="target">
-    <td>
-      <span class="access" data-ice="access">public</span>
-      
-      
-      
-      <span class="override" data-ice="override"></span>
-    </td>
-    <td>
-      <div>
-        <p>
-          
-          
-          
-          <span class="code" data-ice="name"><span><a href="class/src/routes/Route.js~Route.html#instance-method-bodyGet">bodyGet</a></span></span><span class="code" data-ice="signature">(ctx: <span>*</span>): <span>*</span></span>
         </p>
       </div>
       <div>
@@ -825,7 +836,8 @@
       <div>
         
         
-        
+        <div data-ice="description"><p>Register the route and makes it callable once the API is launched.</p>
+</div>
       </div>
     </td>
     <td>
@@ -847,13 +859,14 @@
           
           
           
-          <span class="code" data-ice="name"><span><a href="class/src/routes/Route.js~Route.html#instance-method-paramsGet">paramsGet</a></span></span><span class="code" data-ice="signature">(ctx: <span>*</span>): <span>*</span></span>
+          <span class="code" data-ice="name"><span><a href="class/src/routes/Route.js~Route.html#instance-method-paramsGet">paramsGet</a></span></span><span class="code" data-ice="signature">(ctx: <span><a href="http://koajs.com/#api">KoaContext</a></span>): <span>*</span></span>
         </p>
       </div>
       <div>
         
         
-        
+        <div data-ice="description"><p>retrieves the query params in a GET request</p>
+</div>
       </div>
     </td>
     <td>
@@ -1353,6 +1366,34 @@
       
     </td>
   </tr>
+<tr data-ice="target">
+    <td>
+      <span class="access" data-ice="access">private</span>
+      
+      
+      
+      <span class="override" data-ice="override"></span>
+    </td>
+    <td>
+      <div>
+        <p>
+          
+          
+          
+          <span class="code" data-ice="name"><span><a href="class/src/routes/Route.js~Route.html#instance-method-bodyGet">bodyGet</a></span></span><span class="code" data-ice="signature">(ctx: <span>*</span>): <span>*</span></span>
+        </p>
+      </div>
+      <div>
+        
+        
+        
+      </div>
+    </td>
+    <td>
+      
+      
+    </td>
+  </tr>
 </tbody>
 </table>
 </div>
@@ -1373,7 +1414,7 @@
     <span class="right-info">
       
       
-      <span data-ice="source"><span><a href="file/src/routes/Route.js.html#lineNumber96">source</a></span></span>
+      <span data-ice="source"><span><a href="file/src/routes/Route.js.html#lineNumber115">source</a></span></span>
     </span>
   </h3>
 
@@ -1417,7 +1458,7 @@
     <span class="right-info">
       
       
-      <span data-ice="source"><span><a href="file/src/routes/Route.js.html#lineNumber68">source</a></span></span>
+      <span data-ice="source"><span><a href="file/src/routes/Route.js.html#lineNumber87">source</a></span></span>
     </span>
   </h3>
 
@@ -1461,7 +1502,7 @@
     <span class="right-info">
       
       
-      <span data-ice="source"><span><a href="file/src/routes/Route.js.html#lineNumber89">source</a></span></span>
+      <span data-ice="source"><span><a href="file/src/routes/Route.js.html#lineNumber108">source</a></span></span>
     </span>
   </h3>
 
@@ -1505,7 +1546,7 @@
     <span class="right-info">
       
       
-      <span data-ice="source"><span><a href="file/src/routes/Route.js.html#lineNumber75">source</a></span></span>
+      <span data-ice="source"><span><a href="file/src/routes/Route.js.html#lineNumber94">source</a></span></span>
     </span>
   </h3>
 
@@ -1549,7 +1590,7 @@
     <span class="right-info">
       
       
-      <span data-ice="source"><span><a href="file/src/routes/Route.js.html#lineNumber82">source</a></span></span>
+      <span data-ice="source"><span><a href="file/src/routes/Route.js.html#lineNumber101">source</a></span></span>
     </span>
   </h3>
 
@@ -1593,14 +1634,14 @@
     <span class="right-info">
       
       
-      <span data-ice="source"><span><a href="file/src/routes/Route.js.html#lineNumber103">source</a></span></span>
+      <span data-ice="source"><span><a href="file/src/routes/Route.js.html#lineNumber122">source</a></span></span>
     </span>
   </h3>
 
   
   
   
-  <div data-ice="description"><p>mounts the tagged function as route, allowing the user to configure the HTTP methods it answers to.</p>
+  <div data-ice="description"><p>used to set some parameters on an entire class.The supported parameters are middlewares, disable, and routeBase.</p>
 </div>
 
   
@@ -1713,7 +1754,69 @@
 </div>
 </div>
 
+<div data-ice="constructorDetails"><h2 data-ice="title">Public Constructors</h2>
 
+<div class="detail" data-ice="detail">
+  <h3 data-ice="anchor" id="instance-constructor-constructor">
+    <span class="access" data-ice="access">public</span>
+    
+    
+    
+    
+    
+    <span class="code" data-ice="name">constructor</span><span class="code" data-ice="signature">(params: <span><a href="typedef/index.html#static-typedef-RouteParams">RouteParams</a></span>)</span>
+    <span class="right-info">
+      
+      
+      <span data-ice="source"><span><a href="file/src/routes/Route.js.html#lineNumber64">source</a></span></span>
+    </span>
+  </h3>
+
+  
+  
+  
+  
+
+  
+
+  <div data-ice="properties"><div data-ice="properties">
+  <h4 data-ice="title">Params:</h4>
+  <table class="params">
+    <thead>
+    <tr><td>Name</td><td>Type</td><td>Attribute</td><td>Description</td></tr>
+    </thead>
+    <tbody>
+    
+    <tr data-ice="property" data-depth="0">
+      <td data-ice="name" class="code" data-depth="0">params</td>
+      <td data-ice="type" class="code"><span><a href="typedef/index.html#static-typedef-RouteParams">RouteParams</a></span></td>
+      <td data-ice="appendix"></td>
+      <td data-ice="description"><p>the route&apos;s parameters</p>
+</td>
+    </tr>
+</tbody>
+  </table>
+</div>
+</div>
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+  
+</div>
+</div>
 <div data-ice="memberDetails"><h2 data-ice="title">Public Members</h2>
 
 <div class="detail" data-ice="detail">
@@ -1728,7 +1831,7 @@
     <span class="right-info">
       
       
-      <span data-ice="source"><span><a href="file/src/routes/Route.js.html#lineNumber48">source</a></span></span>
+      <span data-ice="source"><span><a href="file/src/routes/Route.js.html#lineNumber67">source</a></span></span>
     </span>
   </h3>
 
@@ -1771,7 +1874,7 @@
     <span class="right-info">
       
       
-      <span data-ice="source"><span><a href="file/src/routes/Route.js.html#lineNumber46">source</a></span></span>
+      <span data-ice="source"><span><a href="file/src/routes/Route.js.html#lineNumber65">source</a></span></span>
     </span>
   </h3>
 
@@ -1814,7 +1917,7 @@
     <span class="right-info">
       
       
-      <span data-ice="source"><span><a href="file/src/routes/Route.js.html#lineNumber50">source</a></span></span>
+      <span data-ice="source"><span><a href="file/src/routes/Route.js.html#lineNumber69">source</a></span></span>
     </span>
   </h3>
 
@@ -1857,7 +1960,7 @@
     <span class="right-info">
       
       
-      <span data-ice="source"><span><a href="file/src/routes/Route.js.html#lineNumber55">source</a></span></span>
+      <span data-ice="source"><span><a href="file/src/routes/Route.js.html#lineNumber74">source</a></span></span>
     </span>
   </h3>
 
@@ -1900,7 +2003,7 @@
     <span class="right-info">
       
       
-      <span data-ice="source"><span><a href="file/src/routes/Route.js.html#lineNumber51">source</a></span></span>
+      <span data-ice="source"><span><a href="file/src/routes/Route.js.html#lineNumber70">source</a></span></span>
     </span>
   </h3>
 
@@ -1943,7 +2046,7 @@
     <span class="right-info">
       
       
-      <span data-ice="source"><span><a href="file/src/routes/Route.js.html#lineNumber53">source</a></span></span>
+      <span data-ice="source"><span><a href="file/src/routes/Route.js.html#lineNumber72">source</a></span></span>
     </span>
   </h3>
 
@@ -1986,7 +2089,7 @@
     <span class="right-info">
       
       
-      <span data-ice="source"><span><a href="file/src/routes/Route.js.html#lineNumber49">source</a></span></span>
+      <span data-ice="source"><span><a href="file/src/routes/Route.js.html#lineNumber68">source</a></span></span>
     </span>
   </h3>
 
@@ -2029,7 +2132,7 @@
     <span class="right-info">
       
       
-      <span data-ice="source"><span><a href="file/src/routes/Route.js.html#lineNumber47">source</a></span></span>
+      <span data-ice="source"><span><a href="file/src/routes/Route.js.html#lineNumber66">source</a></span></span>
     </span>
   </h3>
 
@@ -2072,7 +2175,7 @@
     <span class="right-info">
       
       
-      <span data-ice="source"><span><a href="file/src/routes/Route.js.html#lineNumber56">source</a></span></span>
+      <span data-ice="source"><span><a href="file/src/routes/Route.js.html#lineNumber75">source</a></span></span>
     </span>
   </h3>
 
@@ -2118,7 +2221,7 @@
     <span class="right-info">
       
       
-      <span data-ice="source"><span><a href="file/src/routes/Route.js.html#lineNumber153">source</a></span></span>
+      <span data-ice="source"><span><a href="file/src/routes/Route.js.html#lineNumber178">source</a></span></span>
     </span>
   </h3>
 
@@ -2179,18 +2282,19 @@
     
     
     
-    <span class="code" data-ice="name">assert</span><span class="code" data-ice="signature">(condition: <span>*</span>, status: <span>*</span>, message: <span>*</span>, translate: <span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean">boolean</a></span>)</span>
+    <span class="code" data-ice="name">assert</span><span class="code" data-ice="signature">(condition: <span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean">boolean</a></span>, status: <span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number">number</a></span>, message: <span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">string</a></span>, translate: <span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean">boolean</a></span>)</span>
     <span class="right-info">
       
       
-      <span data-ice="source"><span><a href="file/src/routes/Route.js.html#lineNumber401">source</a></span></span>
+      <span data-ice="source"><span><a href="file/src/routes/Route.js.html#lineNumber450">source</a></span></span>
     </span>
   </h3>
 
   
   
   
-  
+  <div data-ice="description"><p>checks a condition. If it evaluates to false, throws a formated error to be caught.</p>
+</div>
 
   
 
@@ -2204,28 +2308,31 @@
     
     <tr data-ice="property" data-depth="0">
       <td data-ice="name" class="code" data-depth="0">condition</td>
-      <td data-ice="type" class="code"><span>*</span></td>
+      <td data-ice="type" class="code"><span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean">boolean</a></span></td>
       <td data-ice="appendix"></td>
-      <td data-ice="description"></td>
+      <td data-ice="description"><p>if set to false; assert will fail and throw.</p>
+</td>
     </tr>
 <tr data-ice="property" data-depth="0">
       <td data-ice="name" class="code" data-depth="0">status</td>
-      <td data-ice="type" class="code"><span>*</span></td>
+      <td data-ice="type" class="code"><span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number">number</a></span></td>
       <td data-ice="appendix"></td>
-      <td data-ice="description"></td>
+      <td data-ice="description"><p>the error&apos;s HTTP status StatusCode</p>
+</td>
     </tr>
 <tr data-ice="property" data-depth="0">
       <td data-ice="name" class="code" data-depth="0">message</td>
-      <td data-ice="type" class="code"><span>*</span></td>
+      <td data-ice="type" class="code"><span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">string</a></span></td>
       <td data-ice="appendix"></td>
-      <td data-ice="description"></td>
+      <td data-ice="description"><p>a message describing the error</p>
+</td>
     </tr>
 <tr data-ice="property" data-depth="0">
       <td data-ice="name" class="code" data-depth="0">translate</td>
       <td data-ice="type" class="code"><span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean">boolean</a></span></td>
-      <td data-ice="appendix"><ul><li>optional</li>
-<li>default: false</li></ul></td>
-      <td data-ice="description"></td>
+      <td data-ice="appendix"></td>
+      <td data-ice="description"><p>indicates whether the message should be translated or not</p>
+</td>
     </tr>
 </tbody>
   </table>
@@ -2238,7 +2345,19 @@
 
   
 
-  
+  <div data-ice="throwWrap">
+    <h4>Throw:</h4>
+    <table>
+      <tbody>
+      
+      <tr class="throw" data-ice="throw">
+        <td><p data-ice="throwName"><span><a href="class/src/utils/ErrorApp.js~ErrorApp.html">ErrorApp</a></span></p></td>
+        <td data-ice="throwDesc"><p>thrown error, should the assert fail.</p>
+</td>
+      </tr>
+</tbody>
+    </table>
+  </div>
 
   
 
@@ -2257,18 +2376,19 @@
     
     <span data-ice="async">async</span>
     
-    <span class="code" data-ice="name">beforeRoute</span><span class="code" data-ice="signature">(ctx: <span>*</span>, objectPattern1: {&quot;options&quot;: <span>*</span>}, next: <span>*</span>)</span>
+    <span class="code" data-ice="name">beforeRoute</span><span class="code" data-ice="signature">(ctx: <span><a href="http://koajs.com/#api">KoaContext</a></span>, params: <span><a href="typedef/index.html#static-typedef-Params">Params</a></span>, next: <span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function">function</a></span>)</span>
     <span class="right-info">
       
       
-      <span data-ice="source"><span><a href="file/src/routes/Route.js.html#lineNumber171">source</a></span></span>
+      <span data-ice="source"><span><a href="file/src/routes/Route.js.html#lineNumber203">source</a></span></span>
     </span>
   </h3>
 
   
   
   
-  
+  <div data-ice="description"><p>a member that can be overriden, which will always be executed before the route is accessed</p>
+</div>
 
   
 
@@ -2282,21 +2402,24 @@
     
     <tr data-ice="property" data-depth="0">
       <td data-ice="name" class="code" data-depth="0">ctx</td>
-      <td data-ice="type" class="code"><span>*</span></td>
+      <td data-ice="type" class="code"><span><a href="http://koajs.com/#api">KoaContext</a></span></td>
       <td data-ice="appendix"></td>
-      <td data-ice="description"></td>
+      <td data-ice="description"><p>Koa&apos;s context object</p>
+</td>
     </tr>
 <tr data-ice="property" data-depth="0">
-      <td data-ice="name" class="code" data-depth="0">objectPattern1</td>
-      <td data-ice="type" class="code">{&quot;options&quot;: <span>*</span>}</td>
-      <td data-ice="appendix"><ul><li>default: {&quot;options&quot;:null}</li></ul></td>
-      <td data-ice="description"></td>
+      <td data-ice="name" class="code" data-depth="0">params</td>
+      <td data-ice="type" class="code"><span><a href="typedef/index.html#static-typedef-Params">Params</a></span></td>
+      <td data-ice="appendix"></td>
+      <td data-ice="description"><p>an object containing all route parameters</p>
+</td>
     </tr>
 <tr data-ice="property" data-depth="0">
       <td data-ice="name" class="code" data-depth="0">next</td>
-      <td data-ice="type" class="code"><span>*</span></td>
+      <td data-ice="type" class="code"><span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function">function</a></span></td>
       <td data-ice="appendix"></td>
-      <td data-ice="description"></td>
+      <td data-ice="description"><p>the next middleware in the chain</p>
+</td>
     </tr>
 </tbody>
   </table>
@@ -2332,7 +2455,7 @@
     <span class="right-info">
       
       
-      <span data-ice="source"><span><a href="file/src/routes/Route.js.html#lineNumber268">source</a></span></span>
+      <span data-ice="source"><span><a href="file/src/routes/Route.js.html#lineNumber300">source</a></span></span>
     </span>
   </h3>
 
@@ -2399,77 +2522,6 @@
   
 </div>
 <div class="detail" data-ice="detail">
-  <h3 data-ice="anchor" id="instance-method-bodyGet">
-    <span class="access" data-ice="access">public</span>
-    
-    
-    
-    
-    
-    <span class="code" data-ice="name">bodyGet</span><span class="code" data-ice="signature">(ctx: <span>*</span>): <span>*</span></span>
-    <span class="right-info">
-      
-      
-      <span data-ice="source"><span><a href="file/src/routes/Route.js.html#lineNumber272">source</a></span></span>
-    </span>
-  </h3>
-
-  
-  
-  
-  
-
-  
-
-  <div data-ice="properties"><div data-ice="properties">
-  <h4 data-ice="title">Params:</h4>
-  <table class="params">
-    <thead>
-    <tr><td>Name</td><td>Type</td><td>Attribute</td><td>Description</td></tr>
-    </thead>
-    <tbody>
-    
-    <tr data-ice="property" data-depth="0">
-      <td data-ice="name" class="code" data-depth="0">ctx</td>
-      <td data-ice="type" class="code"><span>*</span></td>
-      <td data-ice="appendix"></td>
-      <td data-ice="description"></td>
-    </tr>
-</tbody>
-  </table>
-</div>
-</div>
-
-  <div class="return-params" data-ice="returnParams">
-    <h4>Return:</h4>
-    <table>
-      <tbody>
-        <tr>
-          <td class="return-type code" data-ice="returnType"><span>*</span></td>
-          
-        </tr>
-      </tbody>
-    </table>
-    <div data-ice="returnProperties">
-</div>
-  </div>
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-  
-</div>
-<div class="detail" data-ice="detail">
   <h3 data-ice="anchor" id="instance-method-getRateLimit">
     <span class="access" data-ice="access">public</span>
     
@@ -2481,7 +2533,7 @@
     <span class="right-info">
       
       
-      <span data-ice="source"><span><a href="file/src/routes/Route.js.html#lineNumber146">source</a></span></span>
+      <span data-ice="source"><span><a href="file/src/routes/Route.js.html#lineNumber170">source</a></span></span>
     </span>
   </h3>
 
@@ -2564,7 +2616,7 @@
     <span class="right-info">
       
       
-      <span data-ice="source"><span><a href="file/src/routes/Route.js.html#lineNumber105">source</a></span></span>
+      <span data-ice="source"><span><a href="file/src/routes/Route.js.html#lineNumber124">source</a></span></span>
     </span>
   </h3>
 
@@ -2629,14 +2681,16 @@
     <span class="right-info">
       
       
-      <span data-ice="source"><span><a href="file/src/routes/Route.js.html#lineNumber111">source</a></span></span>
+      <span data-ice="source"><span><a href="file/src/routes/Route.js.html#lineNumber135">source</a></span></span>
     </span>
   </h3>
 
   
   
   
-  
+  <div data-ice="description"><p>Register the route and makes it callable once the API is launched.
+      you will usually not need to call this method yourself.</p>
+</div>
 
   
 
@@ -2668,18 +2722,19 @@
     
     
     
-    <span class="code" data-ice="name">paramsGet</span><span class="code" data-ice="signature">(ctx: <span>*</span>): <span>*</span></span>
+    <span class="code" data-ice="name">paramsGet</span><span class="code" data-ice="signature">(ctx: <span><a href="http://koajs.com/#api">KoaContext</a></span>): <span>*</span></span>
     <span class="right-info">
       
       
-      <span data-ice="source"><span><a href="file/src/routes/Route.js.html#lineNumber276">source</a></span></span>
+      <span data-ice="source"><span><a href="file/src/routes/Route.js.html#lineNumber316">source</a></span></span>
     </span>
   </h3>
 
   
   
   
-  
+  <div data-ice="description"><p>retrieves the query params in a GET request</p>
+</div>
 
   
 
@@ -2693,9 +2748,10 @@
     
     <tr data-ice="property" data-depth="0">
       <td data-ice="name" class="code" data-depth="0">ctx</td>
-      <td data-ice="type" class="code"><span>*</span></td>
+      <td data-ice="type" class="code"><span><a href="http://koajs.com/#api">KoaContext</a></span></td>
       <td data-ice="appendix"></td>
-      <td data-ice="description"></td>
+      <td data-ice="description"><p>koa&apos;s context object</p>
+</td>
     </tr>
 </tbody>
   </table>
@@ -2743,7 +2799,7 @@
     <span class="right-info">
       
       
-      <span data-ice="source"><span><a href="file/src/routes/Route.js.html#lineNumber286">source</a></span></span>
+      <span data-ice="source"><span><a href="file/src/routes/Route.js.html#lineNumber326">source</a></span></span>
     </span>
   </h3>
 
@@ -2825,7 +2881,7 @@
     <span class="right-info">
       
       
-      <span data-ice="source"><span><a href="file/src/routes/Route.js.html#lineNumber341">source</a></span></span>
+      <span data-ice="source"><span><a href="file/src/routes/Route.js.html#lineNumber381">source</a></span></span>
     </span>
   </h3>
 
@@ -2912,7 +2968,7 @@
     <span class="right-info">
       
       
-      <span data-ice="source"><span><a href="file/src/routes/Route.js.html#lineNumber321">source</a></span></span>
+      <span data-ice="source"><span><a href="file/src/routes/Route.js.html#lineNumber361">source</a></span></span>
     </span>
   </h3>
 
@@ -2999,7 +3055,7 @@
     <span class="right-info">
       
       
-      <span data-ice="source"><span><a href="file/src/routes/Route.js.html#lineNumber363">source</a></span></span>
+      <span data-ice="source"><span><a href="file/src/routes/Route.js.html#lineNumber403">source</a></span></span>
     </span>
   </h3>
 
@@ -3086,7 +3142,7 @@
     <span class="right-info">
       
       
-      <span data-ice="source"><span><a href="file/src/routes/Route.js.html#lineNumber385">source</a></span></span>
+      <span data-ice="source"><span><a href="file/src/routes/Route.js.html#lineNumber425">source</a></span></span>
     </span>
   </h3>
 
@@ -3173,7 +3229,7 @@
     <span class="right-info">
       
       
-      <span data-ice="source"><span><a href="file/src/routes/Route.js.html#lineNumber330">source</a></span></span>
+      <span data-ice="source"><span><a href="file/src/routes/Route.js.html#lineNumber370">source</a></span></span>
     </span>
   </h3>
 
@@ -3246,7 +3302,7 @@
     <span class="right-info">
       
       
-      <span data-ice="source"><span><a href="file/src/routes/Route.js.html#lineNumber374">source</a></span></span>
+      <span data-ice="source"><span><a href="file/src/routes/Route.js.html#lineNumber414">source</a></span></span>
     </span>
   </h3>
 
@@ -3333,7 +3389,7 @@
     <span class="right-info">
       
       
-      <span data-ice="source"><span><a href="file/src/routes/Route.js.html#lineNumber310">source</a></span></span>
+      <span data-ice="source"><span><a href="file/src/routes/Route.js.html#lineNumber350">source</a></span></span>
     </span>
   </h3>
 
@@ -3420,7 +3476,7 @@
     <span class="right-info">
       
       
-      <span data-ice="source"><span><a href="file/src/routes/Route.js.html#lineNumber352">source</a></span></span>
+      <span data-ice="source"><span><a href="file/src/routes/Route.js.html#lineNumber392">source</a></span></span>
     </span>
   </h3>
 
@@ -3507,7 +3563,7 @@
     <span class="right-info">
       
       
-      <span data-ice="source"><span><a href="file/src/routes/Route.js.html#lineNumber397">source</a></span></span>
+      <span data-ice="source"><span><a href="file/src/routes/Route.js.html#lineNumber437">source</a></span></span>
     </span>
   </h3>
 
@@ -3596,7 +3652,7 @@
     <span class="right-info">
       
       
-      <span data-ice="source"><span><a href="file/src/routes/Route.js.html#lineNumber168">source</a></span></span>
+      <span data-ice="source"><span><a href="file/src/routes/Route.js.html#lineNumber193">source</a></span></span>
     </span>
   </h3>
 
@@ -3667,7 +3723,7 @@
     <span class="right-info">
       
       
-      <span data-ice="source"><span><a href="file/src/routes/Route.js.html#lineNumber179">source</a></span></span>
+      <span data-ice="source"><span><a href="file/src/routes/Route.js.html#lineNumber211">source</a></span></span>
     </span>
   </h3>
 
@@ -3732,7 +3788,7 @@
     <span class="right-info">
       
       
-      <span data-ice="source"><span><a href="file/src/routes/Route.js.html#lineNumber184">source</a></span></span>
+      <span data-ice="source"><span><a href="file/src/routes/Route.js.html#lineNumber216">source</a></span></span>
     </span>
   </h3>
 
@@ -3809,7 +3865,7 @@
     <span class="right-info">
       
       
-      <span data-ice="source"><span><a href="file/src/routes/Route.js.html#lineNumber195">source</a></span></span>
+      <span data-ice="source"><span><a href="file/src/routes/Route.js.html#lineNumber227">source</a></span></span>
     </span>
   </h3>
 
@@ -3892,7 +3948,7 @@
     <span class="right-info">
       
       
-      <span data-ice="source"><span><a href="file/src/routes/Route.js.html#lineNumber257">source</a></span></span>
+      <span data-ice="source"><span><a href="file/src/routes/Route.js.html#lineNumber289">source</a></span></span>
     </span>
   </h3>
 
@@ -3963,7 +4019,7 @@
     <span class="right-info">
       
       
-      <span data-ice="source"><span><a href="file/src/routes/Route.js.html#lineNumber228">source</a></span></span>
+      <span data-ice="source"><span><a href="file/src/routes/Route.js.html#lineNumber260">source</a></span></span>
     </span>
   </h3>
 
@@ -4034,7 +4090,7 @@
     <span class="right-info">
       
       
-      <span data-ice="source"><span><a href="file/src/routes/Route.js.html#lineNumber132">source</a></span></span>
+      <span data-ice="source"><span><a href="file/src/routes/Route.js.html#lineNumber156">source</a></span></span>
     </span>
   </h3>
 
@@ -4055,6 +4111,77 @@
     
     <tr data-ice="property" data-depth="0">
       <td data-ice="name" class="code" data-depth="0">infos</td>
+      <td data-ice="type" class="code"><span>*</span></td>
+      <td data-ice="appendix"></td>
+      <td data-ice="description"></td>
+    </tr>
+</tbody>
+  </table>
+</div>
+</div>
+
+  <div class="return-params" data-ice="returnParams">
+    <h4>Return:</h4>
+    <table>
+      <tbody>
+        <tr>
+          <td class="return-type code" data-ice="returnType"><span>*</span></td>
+          
+        </tr>
+      </tbody>
+    </table>
+    <div data-ice="returnProperties">
+</div>
+  </div>
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+  
+</div>
+<div class="detail" data-ice="detail">
+  <h3 data-ice="anchor" id="instance-method-bodyGet">
+    <span class="access" data-ice="access">private</span>
+    
+    
+    
+    
+    
+    <span class="code" data-ice="name">bodyGet</span><span class="code" data-ice="signature">(ctx: <span>*</span>): <span>*</span></span>
+    <span class="right-info">
+      
+      
+      <span data-ice="source"><span><a href="file/src/routes/Route.js.html#lineNumber307">source</a></span></span>
+    </span>
+  </h3>
+
+  
+  
+  
+  
+
+  
+
+  <div data-ice="properties"><div data-ice="properties">
+  <h4 data-ice="title">Params:</h4>
+  <table class="params">
+    <thead>
+    <tr><td>Name</td><td>Type</td><td>Attribute</td><td>Description</td></tr>
+    </thead>
+    <tbody>
+    
+    <tr data-ice="property" data-depth="0">
+      <td data-ice="name" class="code" data-depth="0">ctx</td>
       <td data-ice="type" class="code"><span>*</span></td>
       <td data-ice="appendix"></td>
       <td data-ice="description"></td>

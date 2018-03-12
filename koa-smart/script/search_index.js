@@ -552,6 +552,12 @@ window.esdocSearchIndex = [
     "file"
   ],
   [
+    "src/middlewares/handleerror.js~optionerrors",
+    "typedef/index.html#static-typedef-OptionErrors",
+    "src/middlewares/handleError.js~OptionErrors",
+    "typedef"
+  ],
+  [
     "src/middlewares/index.js",
     "file/src/middlewares/index.js.html",
     "src/middlewares/index.js",
@@ -574,6 +580,12 @@ window.esdocSearchIndex = [
     "file/src/routes/Route.js.html",
     "src/routes/Route.js",
     "file"
+  ],
+  [
+    "src/routes/route.js~koa",
+    "http://koajs.com/#application",
+    "src/routes/Route.js~Koa",
+    "external"
   ],
   [
     "src/routes/route.js~koacontext",
@@ -663,6 +675,12 @@ window.esdocSearchIndex = [
     "src/routes/route.js~route#bodyget",
     "class/src/routes/Route.js~Route.html#instance-method-bodyGet",
     "src/routes/Route.js~Route#bodyGet",
+    "method"
+  ],
+  [
+    "src/routes/route.js~route#constructor",
+    "class/src/routes/Route.js~Route.html#instance-constructor-constructor",
+    "src/routes/Route.js~Route#constructor",
     "method"
   ],
   [
@@ -804,9 +822,9 @@ window.esdocSearchIndex = [
     "member"
   ],
   [
-    "src/routes/route.js~route.middlewarefunction",
-    "typedef/index.html#static-typedef-MiddlewareFunction",
-    "src/routes/Route.js~Route.MiddlewareFunction",
+    "src/routes/route.js~route.parammiddlewarefunction",
+    "typedef/index.html#static-typedef-ParamMiddlewareFunction",
+    "src/routes/Route.js~Route.ParamMiddlewareFunction",
     "typedef"
   ],
   [
@@ -844,6 +862,12 @@ window.esdocSearchIndex = [
     "class/src/routes/Route.js~Route.html#static-member-Route",
     "src/routes/Route.js~Route.Route",
     "member"
+  ],
+  [
+    "src/routes/route.js~route.routeparams",
+    "typedef/index.html#static-typedef-RouteParams",
+    "src/routes/Route.js~Route.RouteParams",
+    "typedef"
   ],
   [
     "src/routes/route.js~route.statuscode",

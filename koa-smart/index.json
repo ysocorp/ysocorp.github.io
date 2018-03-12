@@ -567,7 +567,7 @@
     "__docId__": 48,
     "kind": "file",
     "name": "src/App.js",
-    "content": "import { join as pathJoin } from 'path';\nimport { readdirSync } from 'fs';\nimport Koa from 'koa';\nimport locale from 'koa-locale';\n\nimport Route from './routes/Route';\nimport notFound from './middlewares/notFound';\n\nimport { objValToArray } from './utils/utils';\n\n\nexport default class App {\n\n  /**\n   * @access private\n   */\n  routeParam = null;\n  /**\n   * @access private\n   */\n  routes = {};\n\n  constructor(opt) {\n    const {\n      routeParam = {},\n      port = process.env.PORT || 3000,\n    } = opt;\n    this.routeParam = routeParam;\n    /**\n     * @access private\n     */\n    this.port = port;\n    /**\n     * @access private\n     */\n    this.app = new Koa();\n\n    locale(this.app)\n  }\n\n  _getAllRoutes(path, prefix) {\n    this.routes[prefix] = this.routes[prefix] || {};\n\n    readdirSync(path)\n      .filter(file => file.endsWith('.js') || file.endsWith('.ts'))\n      .forEach((file) => {\n        const RouteClass = require(pathJoin(path, file)).default;\n        if (RouteClass && RouteClass.prototype instanceof Route) {\n          const route = new RouteClass({\n            prefix,\n            app: this.app,\n            routes: this.routes[prefix],\n            ...this.routeParam,\n          });\n          this.routes[prefix][route.constructor.name] = route;\n        }\n      });\n    return objValToArray(this.routes[prefix]);\n  }\n\n  /**\n   * @access public\n   * @desc adds the provided functions to the list of Koa middlewares to be executed for all routes.\n   * @param {function} middlewares an array of Koa-compliant middlewares\n   */\n  addMiddlewares(middlewares) {\n    middlewares.forEach(e => this.addMiddleware(e));\n  }\n\n  /**\n   * @access public\n   * @desc adds the provided function to the list of Koa middlewares to be executed for all routes.\n   * @param {function[]} middleware an array of middlewares\n   */\n  addMiddleware(middleware) {\n    this.app.use(middleware);\n  }\n\n  /**\n   * @access public\n   * @desc \"mounts\" a folder, scanning it for route files, then adding the discovered routes to the app.\n   * @param {string} pathFolder the path of the folder to mount\n   * @param {string} [prefix='/'] an optional prefix to prepend to all of the folder's routes\n   */\n  mountFolder(pathFolder, prefix = '/') {\n    const routes = this._getAllRoutes(pathFolder, prefix);\n    for (const route of routes) {\n      route.mount();\n      this.app.use(route.koaRouter.middleware());\n    }\n  }\n\n  /**\n   * @access public\n   * @desc Launches the app and starts listening on the configured port.\n   */\n  async start() {\n    this.app.use(notFound());\n    return this.app.listen(this.port);\n  }\n}\n",
+    "content": "import { join as pathJoin } from 'path';\nimport { readdirSync } from 'fs';\nimport Koa from 'koa';\nimport locale from 'koa-locale';\n\nimport Route from './routes/Route';\nimport notFound from './middlewares/notFound';\n\nimport { objValToArray } from './utils/utils';\n\n\nexport default class App {\n\n   /**\n    * @access private\n    */\n  routeParam = null;\n  /**\n   * @access private\n   */\n  routes = {};\n\n  constructor(opt) {\n    const {\n      routeParam = {},\n      port = process.env.PORT || 3000,\n    } = opt;\n    this.routeParam = routeParam;\n    /**\n     * @access private\n     */\n    this.port = port;\n    /**\n     * @access private\n     */\n    this.app = new Koa();\n\n    locale(this.app)\n  }\n\n  _getAllRoutes(path, prefix) {\n    this.routes[prefix] = this.routes[prefix] || {};\n\n    readdirSync(path)\n      .filter(file => file.endsWith('.js') || file.endsWith('.ts'))\n      .forEach((file) => {\n        const RouteClass = require(pathJoin(path, file)).default;\n        if (RouteClass && RouteClass.prototype instanceof Route) {\n          const route = new RouteClass({\n            prefix,\n            app: this.app,\n            routes: this.routes[prefix],\n            ...this.routeParam,\n          });\n          this.routes[prefix][route.constructor.name] = route;\n        }\n      });\n    return objValToArray(this.routes[prefix]);\n  }\n\n  /**\n   * @access public\n   * @desc adds the provided functions to the list of Koa middlewares to be executed for all routes.\n   * @param {function} middlewares an array of Koa-compliant middlewares\n   */\n  addMiddlewares(middlewares) {\n    middlewares.forEach(e => this.addMiddleware(e));\n  }\n\n  /**\n   * @access public\n   * @desc adds the provided function to the list of Koa middlewares to be executed for all routes.\n   * @param {function[]} middleware an array of middlewares\n   */\n  addMiddleware(middleware) {\n    this.app.use(middleware);\n  }\n\n  /**\n   * @access public\n   * @desc \"mounts\" a folder, scanning it for route files, then adding the discovered routes to the app.\n   *       a route is a class which extends {@link Route}\n   * @param {string} pathFolder the path of the folder to mount\n   * @param {string} [prefix='/'] an optional prefix to prepend to all of the folder's routes\n   */\n  mountFolder(pathFolder, prefix = '/') {\n    const routes = this._getAllRoutes(pathFolder, prefix);\n    for (const route of routes) {\n      route.mount();\n      this.app.use(route.koaRouter.middleware());\n    }\n  }\n\n  /**\n   * @access public\n   * @desc Launches the app and starts listening on the configured port.\n   */\n  async start() {\n    this.app.use(notFound());\n    return this.app.listen(this.port);\n  }\n}\n",
     "static": true,
     "longname": "/home/elkaim_r/Project/koa-smart/src/App.js",
     "access": "public",
@@ -763,8 +763,8 @@
     "static": false,
     "longname": "src/App.js~App#mountFolder",
     "access": "public",
-    "description": "\"mounts\" a folder, scanning it for route files, then adding the discovered routes to the app.",
-    "lineNumber": 85,
+    "description": "\"mounts\" a folder, scanning it for route files, then adding the discovered routes to the app.\n      a route is a class which extends {@link Route}",
+    "lineNumber": 86,
     "params": [
       {
         "nullable": null,
@@ -802,7 +802,7 @@
     "longname": "src/App.js~App#start",
     "access": "public",
     "description": "Launches the app and starts listening on the configured port.",
-    "lineNumber": 97,
+    "lineNumber": 98,
     "params": [],
     "return": {
       "types": [
@@ -825,7 +825,7 @@
     "__docId__": 62,
     "kind": "file",
     "name": "src/middlewares/addDefaultBody.js",
-    "content": "let options = {\n    body: {},\n}\n\nasync function addDefaultBody(ctx, next) {\n  ctx.body = ctx.body || options.body;\n  await next();\n}\n\nexport default (body = {}) => {\n  options.body = body;\n  return addDefaultBody;\n};\n",
+    "content": "let options = {\n    body: {},\n}\n\n\nasync function addDefaultBody(ctx, next) {\n  ctx.body = ctx.body || options.body;\n  await next();\n}\n\n/**\n * @desc middleware setting a default starting body\n * @param {Object} body The default body to persist through the app\n * @return {KoaMiddleware}\n */\nexport default (body = {}) => {\n  options.body = body;\n  return addDefaultBody;\n};\n",
     "static": true,
     "longname": "/home/elkaim_r/Project/koa-smart/src/middlewares/addDefaultBody.js",
     "access": "public",
@@ -867,7 +867,7 @@
     "importPath": "koa-smart/src/middlewares/addDefaultBody.js",
     "importStyle": null,
     "description": null,
-    "lineNumber": 5,
+    "lineNumber": 6,
     "undocument": true,
     "params": [
       {
@@ -899,31 +899,34 @@
     "export": true,
     "importPath": "koa-smart/src/middlewares/addDefaultBody.js",
     "importStyle": "addDefaultBody",
-    "description": null,
-    "lineNumber": 10,
-    "undocument": true,
+    "description": "middleware setting a default starting body",
+    "lineNumber": 16,
     "params": [
       {
-        "name": "body",
-        "optional": true,
+        "nullable": null,
         "types": [
-          "{}"
+          "Object"
         ],
-        "defaultRaw": {},
-        "defaultValue": "{}"
+        "spread": false,
+        "optional": false,
+        "name": "body",
+        "description": "The default body to persist through the app"
       }
     ],
     "return": {
+      "nullable": null,
       "types": [
-        "*"
-      ]
+        "KoaMiddleware"
+      ],
+      "spread": false,
+      "description": ""
     }
   },
   {
     "__docId__": 66,
     "kind": "file",
     "name": "src/middlewares/handleError.js",
-    "content": "const __ = string => string;\n\nlet options = {\n  logAll: false,\n  logErrorUnknown: false,\n  logErrorSequelize: false,\n  logErrorApp: false,\n}\n\nfunction displayLog(error, type) {\n  if (options.logAll || options[type]) {\n    console.error(error);\n  }\n}\n\nfunction getMessageTranslate(ctx, msg, toTranslate) {\n  if (toTranslate) {\n    if (ctx.i18n && ctx.i18n.__) {\n      return ctx.i18n.__(msg);\n    } else if (ctx.state && ctx.state.__) {\n      return ctx.state.__(msg);\n    }\n  }\n  return msg;\n}\n\nasync function handleError(ctx, next) {\n  try {\n    await next();\n  } catch (err) {\n    const arraySequelize = ['SequelizeValidationError', 'SequelizeUniqueConstraintError'];\n\n    if (err.constructor.name === 'ErrorApp') { // expected error\n      ctx.status = err.status;\n      ctx.body = { message: getMessageTranslate(ctx, err.message, err.toTranslate) };\n      displayLog(err, 'logErrorApp');\n    } else if (arraySequelize.includes(err.name)) { // sequilize expected error by validattor or other\n      ctx.status = 400;\n      ctx.body = { message: getMessageTranslate(ctx, err.message.split(':').pop(), true) };\n      displayLog(err, 'logErrorSequelize');\n    } else { // unexpected error\n      ctx.status = 500;\n      ctx.body = { message: getMessageTranslate(ctx, __('Please contact the support'), true) };\n      displayLog(err, 'logErrorUnknown');\n    }\n  }\n}\n\nexport default (opt = {}) => {\n  options = {\n    ...options,\n    ...opt,\n  }\n  return handleError;\n};\n",
+    "content": "const __ = string => string;\n\n/**\n * @typedef OptionErrors\n * @property {boolean} [logAll = false] if set to true, all logs will be displayed regardless of their individual settings\n * @property {boolean} [logErrorUnknown = false] whether unknown errors should be displayed\n * @property {boolean} [logErrorSequelize = false] whether errors pertaining to the models should be logged\n * @property {boolean} [logErrorApp = false] whether errors coming from thrown {@link ErrorApp} should be logged\n */\nlet options = {\n  logAll: false,\n  logErrorUnknown: false,\n  logErrorSequelize: false,\n  logErrorApp: false,\n}\n\nfunction displayLog(error, type) {\n  if (options.logAll || options[type]) {\n    console.error(error);\n  }\n}\n\nfunction getMessageTranslate(ctx, msg, toTranslate) {\n  if (toTranslate) {\n    if (ctx.i18n && ctx.i18n.__) {\n      return ctx.i18n.__(msg);\n    } else if (ctx.state && ctx.state.__) {\n      return ctx.state.__(msg);\n    }\n  }\n  return msg;\n}\n\n\nasync function handleError(ctx, next) {\n  try {\n    await next();\n  } catch (err) {\n    const arraySequelize = ['SequelizeValidationError', 'SequelizeUniqueConstraintError'];\n\n    if (err.constructor.name === 'ErrorApp') { // expected error\n      ctx.status = err.status;\n      ctx.body = { message: getMessageTranslate(ctx, err.message, err.toTranslate) };\n      displayLog(err, 'logErrorApp');\n    } else if (arraySequelize.includes(err.name)) { // sequilize expected error by validattor or other\n      ctx.status = 400;\n      ctx.body = { message: getMessageTranslate(ctx, err.message.split(':').pop(), true) };\n      displayLog(err, 'logErrorSequelize');\n    } else { // unexpected error\n      ctx.status = 500;\n      ctx.body = { message: getMessageTranslate(ctx, __('Please contact the support'), true) };\n      displayLog(err, 'logErrorUnknown');\n    }\n  }\n}\n\n/**\n * @desc middleware handling various errors, turning them into readable messages\n * @param {OptionErrors} [opt = {}] option object to set which events should be logged\n */\nexport default (opt = {}) => {\n  options = {\n    ...options,\n    ...opt,\n  }\n  return handleError;\n};\n",
     "static": true,
     "longname": "/home/elkaim_r/Project/koa-smart/src/middlewares/handleError.js",
     "access": "public",
@@ -959,24 +962,71 @@
   },
   {
     "__docId__": 68,
-    "kind": "variable",
-    "name": "options",
+    "kind": "typedef",
+    "name": "OptionErrors",
     "memberof": "src/middlewares/handleError.js",
     "static": true,
-    "longname": "src/middlewares/handleError.js~options",
+    "longname": "src/middlewares/handleError.js~OptionErrors",
     "access": "public",
-    "export": false,
-    "importPath": "koa-smart/src/middlewares/handleError.js",
-    "importStyle": null,
-    "description": null,
-    "lineNumber": 3,
-    "undocument": true,
+    "description": "",
+    "lineNumber": 10,
+    "properties": [
+      {
+        "nullable": null,
+        "types": [
+          "boolean"
+        ],
+        "spread": false,
+        "optional": true,
+        "defaultValue": " false",
+        "defaultRaw": false,
+        "name": "logAll",
+        "description": "if set to true, all logs will be displayed regardless of their individual settings"
+      },
+      {
+        "nullable": null,
+        "types": [
+          "boolean"
+        ],
+        "spread": false,
+        "optional": true,
+        "defaultValue": " false",
+        "defaultRaw": false,
+        "name": "logErrorUnknown",
+        "description": "whether unknown errors should be displayed"
+      },
+      {
+        "nullable": null,
+        "types": [
+          "boolean"
+        ],
+        "spread": false,
+        "optional": true,
+        "defaultValue": " false",
+        "defaultRaw": false,
+        "name": "logErrorSequelize",
+        "description": "whether errors pertaining to the models should be logged"
+      },
+      {
+        "nullable": null,
+        "types": [
+          "boolean"
+        ],
+        "spread": false,
+        "optional": true,
+        "defaultValue": " false",
+        "defaultRaw": false,
+        "name": "logErrorApp",
+        "description": "whether errors coming from thrown {@link ErrorApp} should be logged"
+      }
+    ],
     "type": {
       "types": [
-        "{\"logAll\": *, \"logErrorUnknown\": *, \"logErrorSequelize\": *, \"logErrorApp\": *}"
-      ]
-    },
-    "ignore": true
+        "*"
+      ],
+      "optional": false,
+      "name": "OptionErrors"
+    }
   },
   {
     "__docId__": 69,
@@ -992,7 +1042,7 @@
     "importPath": "koa-smart/src/middlewares/handleError.js",
     "importStyle": null,
     "description": null,
-    "lineNumber": 10,
+    "lineNumber": 17,
     "undocument": true,
     "params": [
       {
@@ -1025,7 +1075,7 @@
     "importPath": "koa-smart/src/middlewares/handleError.js",
     "importStyle": null,
     "description": null,
-    "lineNumber": 16,
+    "lineNumber": 23,
     "undocument": true,
     "params": [
       {
@@ -1068,7 +1118,7 @@
     "importPath": "koa-smart/src/middlewares/handleError.js",
     "importStyle": null,
     "description": null,
-    "lineNumber": 27,
+    "lineNumber": 35,
     "undocument": true,
     "params": [
       {
@@ -1100,18 +1150,20 @@
     "export": true,
     "importPath": "koa-smart/src/middlewares/handleError.js",
     "importStyle": "handleError",
-    "description": null,
-    "lineNumber": 49,
-    "undocument": true,
+    "description": "middleware handling various errors, turning them into readable messages",
+    "lineNumber": 61,
     "params": [
       {
-        "name": "opt",
-        "optional": true,
+        "nullable": null,
         "types": [
-          "{}"
+          "OptionErrors"
         ],
+        "spread": false,
+        "optional": true,
+        "defaultValue": " {}",
         "defaultRaw": {},
-        "defaultValue": "{}"
+        "name": "opt",
+        "description": "option object to set which events should be logged"
       }
     ],
     "return": {
@@ -1135,7 +1187,7 @@
     "__docId__": 74,
     "kind": "file",
     "name": "src/middlewares/logger.js",
-    "content": "import chalk from 'chalk';\nimport moment from 'moment';\n\nfunction dateFormat(date) {\n  return moment(date).format('YYYY/MM/DD, h:mm:ss a')\n}\n\nfunction getColor(status) {\n  if (status < 400) {\n    return 'green';\n  } else if (status < 500) {\n    return 'gray';\n  }\n  return 'red'\n}\n\nasync function logger(ctx, next) {\n  const start = new Date();\n  let status = 500;\n  try {\n    console.log(`${chalk.blue(dateFormat(start))} - ${chalk.bold(ctx.method)} ${chalk.blue.bold(ctx.url)} START`);\n    await next();\n    status = ctx.status;\n  } catch (err) {\n    let msg = err;\n\n    const arraySequelize = ['SequelizeValidationError', 'SequelizeUniqueConstraintError'];\n    if (err.constructor.name === 'ErrorApp') {\n      msg = `${err.status}: ${err.message}`;\n      status = err.status;\n    } if (arraySequelize.includes(err.name)) {\n      msg = `${err.name}: ${err.message}`;\n      status = 400;\n    }\n    console.log(chalk.red('[ERROR]'), `${chalk.red.bold(ctx.method)} ${ctx.url}`, msg);\n    throw err;\n  } finally {\n    const ms = new Date() - start;\n    const fColor = chalk[getColor(status)];\n    console.log(`${fColor(dateFormat(new Date()))} - ${fColor.bold(status)} ${chalk.bold(ctx.method)} ${ctx.url} - ${fColor(ms + ' ms')}`);\n  }\n}\n\nexport default () => logger;\n",
+    "content": "import chalk from 'chalk';\nimport moment from 'moment';\n\nfunction dateFormat(date) {\n  return moment(date).format('YYYY/MM/DD, h:mm:ss a')\n}\n\nfunction getColor(status) {\n  if (status < 400) {\n    return 'green';\n  } else if (status < 500) {\n    return 'gray';\n  }\n  return 'red'\n}\n\nasync function logger(ctx, next) {\n  const start = new Date();\n  let status = 500;\n  try {\n    console.log(`${chalk.blue(dateFormat(start))} - ${chalk.bold(ctx.method)} ${chalk.blue.bold(ctx.url)} START`);\n    await next();\n    status = ctx.status;\n  } catch (err) {\n    let msg = err;\n\n    const arraySequelize = ['SequelizeValidationError', 'SequelizeUniqueConstraintError'];\n    if (err.constructor.name === 'ErrorApp') {\n      msg = `${err.status}: ${err.message}`;\n      status = err.status;\n    } if (arraySequelize.includes(err.name)) {\n      msg = `${err.name}: ${err.message}`;\n      status = 400;\n    }\n    console.log(chalk.red('[ERROR]'), `${chalk.red.bold(ctx.method)} ${ctx.url}`, msg);\n    throw err;\n  } finally {\n    const ms = new Date() - start;\n    const fColor = chalk[getColor(status)];\n    console.log(`${fColor(dateFormat(new Date()))} - ${fColor.bold(status)} ${chalk.bold(ctx.method)} ${ctx.url} - ${fColor(ms + ' ms')}`);\n  }\n}\n\n/**\n * @desc middleware handling logging each time a request is made\n */\nexport default () => logger;\n",
     "static": true,
     "longname": "/home/elkaim_r/Project/koa-smart/src/middlewares/logger.js",
     "access": "public",
@@ -1250,9 +1302,8 @@
     "export": true,
     "importPath": "koa-smart/src/middlewares/logger.js",
     "importStyle": "logger",
-    "description": null,
-    "lineNumber": 44,
-    "undocument": true,
+    "description": "middleware handling logging each time a request is made",
+    "lineNumber": 47,
     "params": [],
     "return": null
   },
@@ -1260,7 +1311,7 @@
     "__docId__": 79,
     "kind": "file",
     "name": "src/middlewares/notFound.js",
-    "content": "async function notFound(ctx) {\n  ctx.status = 404;\n  ctx.body = {\n    message: ctx.state.__ ? ctx.state.__('Not found') : 'Not found',\n  };\n}\n\nexport default () => notFound;\n",
+    "content": "\n\nasync function notFound(ctx) {\n  ctx.status = 404;\n  ctx.body = {\n    message: ctx.state.__ ? ctx.state.__('Not found') : 'Not found',\n  };\n}\n\n/**\n * @desc middleware preventingly setting the response's status to 404, in case no path is picked up\n */\nexport default () => notFound;\n",
     "static": true,
     "longname": "/home/elkaim_r/Project/koa-smart/src/middlewares/notFound.js",
     "access": "public",
@@ -1281,7 +1332,7 @@
     "importPath": "koa-smart/src/middlewares/notFound.js",
     "importStyle": null,
     "description": null,
-    "lineNumber": 1,
+    "lineNumber": 3,
     "undocument": true,
     "params": [
       {
@@ -1307,9 +1358,8 @@
     "export": true,
     "importPath": "koa-smart/src/middlewares/notFound.js",
     "importStyle": "notFound",
-    "description": null,
-    "lineNumber": 8,
-    "undocument": true,
+    "description": "middleware preventingly setting the response's status to 404, in case no path is picked up",
+    "lineNumber": 13,
     "params": [],
     "return": null
   },
@@ -1317,7 +1367,7 @@
     "__docId__": 82,
     "kind": "file",
     "name": "src/routes/Route.js",
-    "content": "import KoaRouter from 'koa-router';\nimport chalk from 'chalk';\nimport { RateLimit } from 'koa2-ratelimit';\n\nimport ErrorApp from '../utils/ErrorApp';\nimport StatusCode from '../utils/StatusCode';\nimport { isArray, isObject, deepCopy } from '../utils/utils';\nimport RouteDecorators from './RouteDecorators';\n\n\nexport default class Route {\n  static displayLog = true;\n  static StatusCode = StatusCode;\n\n  /**\n   * @typedef {Object} Params\n   * @property {Object.<string, boolean | PostParamsFilter>} params the params describing the route's middlewares,\n   *                                                                with the key being the param's name,\n   *                                                                and the value describes the way it should be handled.\n   *                                                                (only applicable for requests containing a body)\n   * @property {string} path the path at which the route will be available.\n   * @property {string} routeBase a prefix which will be preppended to the route's path\n   * @property {boolean} disabled if set to true, the route will be ignored\n   * @property {function[]} middlewares an array of Koa Middlewares, which will be mounted for the given route\n   */\n\n  /**\n   * @typedef {Object} PostParamsFilter\n   * @property {MiddlewareFunction[]} __func an array of functions which provides \"middleware\" functions that will be applied to the corresponding parameter one by one.\n   * @property {boolean} __force whether the parameter is required or not.\n   */\n\n  /**\n   * @typedef {function} MiddlewareFunction\n   * @param {*} elem the element the function will act upon\n   * @param {Route} [route] the element's current route\n   * @param {{ctx: KoaContext, body:Object, keyBody:string}} [context] the element's context\n   * @return {*} transformedParam the parameter, after being manipulated by the function\n   */\n\n  /**\n   * @external {KoaContext} http://koajs.com/#api\n   */\n\n  constructor({ app, prefix, routes, models, model, disable }) {\n    this.app = app;\n    this.prefix = prefix;\n    this.allRoutesInstance = routes;\n    this.models = models;\n    this.disable = disable != null ? disable : this.disable;\n    this.middlewares = this.middlewares || [];\n    if (this.models && model) {\n      this.model = this.models[model];\n    }\n    this.koaRouter = new KoaRouter();\n    this.privateKeyInParamsRoute = ['__force', '__func'];\n    // This Variable are set by RouteDecorators\n    this.routes;\n    this.routeBase;\n  }\n\n\n /**\n  * @access public\n  * @desc mounts the tagged function as a GET route.\n  * @param {Params} params the route's parameters\n  */\n  static Get = RouteDecorators.Get;\n\n /**\n  * @access public\n  * @desc mounts the tagged function as a POST route.\n  * @param {Params} params the route's parameters\n  */\n  static Post = RouteDecorators.Post;\n\n /**\n  * @access public\n  * @desc mounts the tagged function as a PUT route.\n  * @param {Params} params the route's parameters\n  */\n  static Put = RouteDecorators.Put;\n\n /**\n  * @access public\n  * @desc mounts the tagged function as a PATCH route.\n  * @param {Params} params the route's parameters\n  */\n  static Patch = RouteDecorators.Patch;\n\n /**\n  * @access public\n  * @desc mounts the tagged function as a DELETE route.\n  * @param {Params} params the route's parameters\n  */\n  static Delete = RouteDecorators.Delete;\n\n /**\n  * @access public\n  * @desc mounts the tagged function as route, allowing the user to configure the HTTP methods it answers to.\n  * @param {Params} params the route's parameters\n  */\n  static Route = RouteDecorators.Route;\n\n  log(str, ...args) {\n    if (Route.displayLog) {\n      console.log(str, ...args);\n    }\n  }\n\n  mount() {\n    if (this.disable !== true) {\n      for (const type in this.routes) { // eslint-disable-line\n        for (const route of this.routes[type]) {\n          const routePath = `/${this.prefix}/${this.routeBase}/${route.path}`.replace(/[/]{2,10}/g, '/');\n          route.options.routePath = routePath;\n          route.options.type = type;\n          if (!route.options.disable) {\n            this.log(chalk.green.bold('[Mount route]'), `\\t${type}\\t`, routePath);\n            this.koaRouter[type](routePath, ...this._use(route));\n          } else {\n            this.log(chalk.yellow.bold('[Disable Mount route]\\t'), type, routePath);\n          }\n        }\n      }\n    } else {\n      this.log(chalk.yellow.bold(`Routes \"${this.routeBase}\" of class ${this.constructor.name} are't add`));\n    }\n  }\n\n  // ************************************ MIDDLEWARE *********************************\n  _use(infos) {\n    const { options = {} } = infos;\n    const { middlewares = [] } = options;\n\n    const middlewaresToAdd = [this._beforeRoute(infos)];\n    middlewaresToAdd.push(...this.middlewares); // add middlewares of the class\n    middlewaresToAdd.push(...middlewares); // add middlewares of the specific route\n    this.addRateLimit(middlewaresToAdd, infos);\n    middlewaresToAdd.push(infos.call.bind(this));\n\n    return middlewaresToAdd;\n  }\n\n  // RateLimit\n  getRateLimit(option, routePath, type) {\n    option.interval = RateLimit.RateLimit.timeToMs(option.interval);\n    return RateLimit.middleware({\n      prefixKey: `${type}|${routePath}|${option.interval}`,\n      ...option,\n    });\n  }\n  addRateLimit(middlewares, { options }) {\n    const { rateLimit, routePath, type } = options;\n\n    if (rateLimit) {\n      if (Array.isArray(rateLimit)) {\n        for (const elem of rateLimit) {\n          middlewares.push(this.getRateLimit(elem, routePath, type));\n        }\n      } else {\n        middlewares.push(this.getRateLimit(rateLimit, routePath, type));\n      }\n    }\n  }\n\n  // beforeRoute\n  _beforeRoute(infos) {\n    return async (ctx, next) => await this.beforeRoute(ctx, infos, next);\n  }\n  async beforeRoute(ctx, { options }, next) {\n    this._mlParams(ctx, options);\n    if (next) {\n      await next();\n    }\n  }\n\n  // test params\n  _mlParams(ctx, { params }) {\n    ctx.request.bodyOrig = deepCopy(ctx.request.body);\n    ctx.request.body = this._mlTestParams(ctx, ctx.request.body, params);\n  }\n\n  _mlParamsExecFunc(ctx, body, keyBody, param) {\n    if (body && body[keyBody]) {\n      const { __func } = param;\n      if (__func && Array.isArray(__func)) {\n        for (const func of __func) {\n          body[keyBody] = func(body[keyBody], this, { ctx, body, keyBody });\n        }\n      }\n    }\n  }\n\n  _mlTestParams(ctx, body, paramsTest) {\n    const bodyVerif = {};\n    const paramsConvert = this._paramsNormalize(paramsTest);\n    for (const key in paramsConvert) {\n      const param = paramsConvert[key];\n\n      const bodyElem = body ? body[key] : undefined;\n      // test param\n      if (param.__force && (bodyElem === undefined || bodyElem === null)) {\n        this.throw(400, `${ctx.state.__ ? ctx.state.__('param required:') : 'param required:'} ${key}`);\n      }\n      this._mlParamsExecFunc(ctx, body, key, param);\n\n\n      if (this._paramsHasSubElement(param)) {\n        if (body && isObject(body)) {\n          const tmp = this._mlTestParams(ctx, body[key], param);\n          if (body[key]) {\n            bodyVerif[key] = tmp;\n          }\n        } else {\n          const tmp = this._mlTestParams(ctx, undefined, param);\n          if (body && isObject(body) && body[key] !== undefined) {\n            bodyVerif[key] = tmp;\n          }\n        }\n      } else if (body && isObject(body) && body[key] !== undefined) {\n        bodyVerif[key] = body[key];\n      }\n    }\n    return bodyVerif;\n  }\n\n  _paramsNormalize(paramsTest) {\n    let paramsConvert = {};\n    // convert array to object\n    if (isArray(paramsTest)) {\n      for (const elem of paramsTest) {\n        if (isObject(elem, false)) {\n          paramsConvert = Object.assign(paramsConvert, elem);\n        } else {\n          paramsConvert[elem] = false;\n        }\n      }\n    } else {\n      paramsConvert = paramsTest;\n    }\n\n    // normalize objects\n    for (const key in paramsConvert) {\n      const elem = paramsConvert[key];\n      if (!this.privateKeyInParamsRoute.includes(key)) {\n        if (isObject(elem) || isArray(elem)) {\n          paramsConvert[key] = this._paramsNormalize(elem);\n        } else if (elem === false || elem === true) {\n          paramsConvert[key] = { __force: elem };\n        }\n      }\n    }\n    return paramsConvert;\n  }\n\n  _paramsHasSubElement(paramsTest) {\n    for (const key in paramsTest) {\n      if (!this.privateKeyInParamsRoute.includes(key)) {\n        return true;\n      }\n    }\n    return false;\n  }\n\n  // ************************************ !MIDDLEWARE *********************************\n\n  body(ctx, original = false) {\n    return original ? ctx.request.bodyOrig : ctx.request.body;\n  }\n\n  bodyGet(ctx) {\n    return ctx.request.query || {};\n  }\n\n  paramsGet(ctx) { return this.bodyGet(ctx); }\n\n  /**\n   * @access public\n   * @desc sets the response's body (with a message + data field) and status .\n   * @param {KoaContext} ctx koa's context object\n   * @param {number} [status] the HTTP status code to end the request with\n   * @param {*} [data] the data to be yielded by the requests\n   * @param {string} [message] the message to be yielded by the request\n   */\n  send(ctx, status = 200, data, message) {\n    ctx.body = ctx.body || {}; // add default body\n    ctx.status = status;\n    // Do not remove this test because if status = 204 || 304, node will remove body\n    // see _hasBody on\n    // https://github.com/nodejs/node/blob/master/lib/_http_server.js#L235-L250\n    if (ctx.body) {\n      if (data != null) {\n        ctx.body.data = data;\n      }\n      if (message != null) {\n        ctx.body.message = message;\n      }\n      ctx.body.date = Date.now();\n    }\n  }\n\n  /**\n   * @access public\n   * @desc same as {@link send}, but automatically sets the status to 200 OK\n   * @param {KoaContext} ctx koa's context object\n   * @param {*} [data] the data to be yielded by the requests\n   * @param {string} [message] the message to be yielded by the request\n   */\n  sendOk(ctx, data, message) {\n    return this.send(ctx, Route.StatusCode.ok, data, message);\n  }\n\n  /**\n   * @access public\n   * @desc same as {@link send}, but automatically sets the status to 201 CREATED\n   * @param {KoaContext} ctx koa's context object\n   * @param {*} [data] the data to be yielded by the requests\n   * @param {string} [message] the message to be yielded by the request\n   */\n  sendCreated(ctx, data, message) {\n    return this.send(ctx, Route.StatusCode.created, data, message);\n  }\n\n  /**\n   * @access public\n   * @desc replies with an empty body, yielding 204 NO CONTENT as the status\n   * @param {KoaContext} ctx koa's context object\n   */\n  sendNoContent(ctx) {\n    return this.send(ctx, Route.StatusCode.noContent);\n  }\n\n  /**\n   * @access public\n   * @desc same as {@link send}, but automatically sets the status to 400 BAD REQUEST\n   * @param {KoaContext} ctx koa's context object\n   * @param {*} [data] the data to be yielded by the requests\n   * @param {string} [message] the message to be yielded by the request\n   */\n  sendBadRequest(ctx, data, message) {\n    return this.send(ctx, Route.StatusCode.badRequest, data, message);\n  }\n\n  /**\n   * @access public\n   * @desc same as {@link send}, but automatically sets the status to 401 UNAUTHORIZED\n   * @param {KoaContext} ctx koa's context object\n   * @param {*} [data] the data to be yielded by the requests\n   * @param {string} [message] the message to be yielded by the request\n   */\n  sendUnauthorized(ctx, data, message) {\n    return this.send(ctx, Route.StatusCode.unauthorized, data, message);\n  }\n\n  /**\n   * @access public\n   * @desc same as {@link send}, but automatically sets the status to 403 FORBIDDEN\n   * @param {KoaContext} ctx koa's context object\n   * @param {*} [data] the data to be yielded by the requests\n   * @param {string} [message] the message to be yielded by the request\n   */\n  sendForbidden(ctx, data, message) {\n    return this.send(ctx, Route.StatusCode.forbidden, data, message);\n  }\n\n  /**\n   * @access public\n   * @desc same as {@link send}, but automatically sets the status to 404 NOT FOUND\n   * @param {KoaContext} ctx koa's context object\n   * @param {*} [data] the data to be yielded by the requests\n   * @param {string} [message] the message to be yielded by the request\n   */\n  sendNotFound(ctx, data, message) {\n    return this.send(ctx, Route.StatusCode.notFound, data, message);\n  }\n\n  /**\n   * @access public\n   * @desc same as {@link send}, but automatically sets the status to 500 INTERNAL SERVER ERROR\n   * @param {KoaContext} ctx koa's context object\n   * @param {*} [data] the data to be yielded by the requests\n   * @param {string} [message] the message to be yielded by the request\n   */\n  sendInternalServerError(ctx, data, message) {\n    return this.send(ctx, Route.StatusCode.internalServerError, data, message);\n  }\n\n  /**\n   * @access public\n   * @desc throws a formated error to be caught.\n   * @param {number} status the error's HTTP status StatusCode\n   * @param {string} message  a message describing the error\n   * @param {boolean} translate indicates whether the message should be translated or not\n   * @throws {ErrorApp} thrown error.\n   */\n  throw(status, message, translate = false) {\n    throw new ErrorApp(status, message, translate);\n  }\n\n  assert(condition, status, message, translate = false) {\n    if (!condition) {\n      this.throw(status, message, translate);\n    }\n  }\n}\n",
+    "content": "import KoaRouter from 'koa-router';\nimport chalk from 'chalk';\nimport { RateLimit } from 'koa2-ratelimit';\n\nimport ErrorApp from '../utils/ErrorApp';\nimport StatusCode from '../utils/StatusCode';\nimport { isArray, isObject, deepCopy } from '../utils/utils';\nimport RouteDecorators from './RouteDecorators';\n\n\nexport default class Route {\n  static displayLog = true;\n  static StatusCode = StatusCode;\n\n  /**\n   * @typedef {Object} Params\n   * @property {Object.<string, boolean | PostParamsFilter>} params the params describing the route's middlewares,\n   *                                                                with the key being the param's name,\n   *                                                                and the value describes the way it should be handled.\n   *                                                                (only applicable for requests containing a body)\n   * @property {string} path the path at which the route will be available.\n   * @property {string} routeBase a prefix which will be preppended to the route's path\n   * @property {boolean} disabled if set to true, the route will be ignored\n   * @property {function[]} middlewares an array of Koa Middlewares, which will be mounted for the given route\n   * @property {Object} rateLimit a rateLimit object, which lets the user describe the max rate at which a user can access the route\n   */\n\n  /**\n   * @typedef {Object} PostParamsFilter\n   * @property {ParamMiddlewareFunction[]} __func an array of functions which provides \"middleware\" functions that will be applied to the corresponding parameter one by one.\n   * @property {boolean} __force whether the parameter is required or not.\n   */\n\n  /**\n   * @typedef {function} ParamMiddlewareFunction\n   * @param {*} elem the element the function will act upon\n   * @param {Route} [route] the element's current route\n   * @param {{ctx: KoaContext, body:Object, keyBody:string}} [context] the element's context\n   * @return {*} transformedParam the parameter, after being manipulated by the function\n   */\n\n  /**\n   * @typedef {Object} RouteParams\n   * @property {Koa} app the Koa application\n   * @property {string} prefix a prefix which will be preppended before every route's paths\n   * @property {Route[]} routes an array containing all the mounted Routes\n   * @property {Model[]} [models] an array containing all of the app's models\n   * @property {string} [model] the name of the route's own model\n   * @property {disable} [boolean] whether the route should be disabled\n   *\n   */\n\n  /**\n   * @external {KoaContext} http://koajs.com/#api\n   */\n\n   /**\n    *@external {Koa} http://koajs.com/#application\n    */\n\n   /**\n    * @param {RouteParams} params the route's parameters\n    */\n  constructor({ app, prefix, routes, models, model, disable }) {\n    this.app = app;\n    this.prefix = prefix;\n    this.allRoutesInstance = routes;\n    this.models = models;\n    this.disable = disable != null ? disable : this.disable;\n    this.middlewares = this.middlewares || [];\n    if (this.models && model) {\n      this.model = this.models[model];\n    }\n    this.koaRouter = new KoaRouter();\n    this.privateKeyInParamsRoute = ['__force', '__func'];\n    // This Variable are set by RouteDecorators\n    this.routes;\n    this.routeBase;\n  }\n\n\n /**\n  * @access public\n  * @desc mounts the tagged function as a GET route.\n  * @param {Params} params the route's parameters\n  */\n  static Get = RouteDecorators.Get;\n\n /**\n  * @access public\n  * @desc mounts the tagged function as a POST route.\n  * @param {Params} params the route's parameters\n  */\n  static Post = RouteDecorators.Post;\n\n /**\n  * @access public\n  * @desc mounts the tagged function as a PUT route.\n  * @param {Params} params the route's parameters\n  */\n  static Put = RouteDecorators.Put;\n\n /**\n  * @access public\n  * @desc mounts the tagged function as a PATCH route.\n  * @param {Params} params the route's parameters\n  */\n  static Patch = RouteDecorators.Patch;\n\n /**\n  * @access public\n  * @desc mounts the tagged function as a DELETE route.\n  * @param {Params} params the route's parameters\n  */\n  static Delete = RouteDecorators.Delete;\n\n /**\n  * @access public\n  * @desc used to set some parameters on an entire class.The supported parameters are middlewares, disable, and routeBase.\n  * @param {Params} params the route's parameters\n  */\n  static Route = RouteDecorators.Route;\n\n  log(str, ...args) {\n    if (Route.displayLog) {\n      console.log(str, ...args);\n    }\n  }\n\n  /**\n   * @access public\n   * @desc Register the route and makes it callable once the API is launched.\n   *       you will usually not need to call this method yourself.\n   */\n  mount() {\n    if (this.disable !== true) {\n      for (const type in this.routes) { // eslint-disable-line\n        for (const route of this.routes[type]) {\n          const routePath = `/${this.prefix}/${this.routeBase}/${route.path}`.replace(/[/]{2,10}/g, '/');\n          route.options.routePath = routePath;\n          route.options.type = type;\n          if (!route.options.disable) {\n            this.log(chalk.green.bold('[Mount route]'), `\\t${type}\\t`, routePath);\n            this.koaRouter[type](routePath, ...this._use(route));\n          } else {\n            this.log(chalk.yellow.bold('[Disable Mount route]\\t'), type, routePath);\n          }\n        }\n      }\n    } else {\n      this.log(chalk.yellow.bold(`Routes \"${this.routeBase}\" of class ${this.constructor.name} are't add`));\n    }\n  }\n\n  // ************************************ MIDDLEWARE *********************************\n  _use(infos) {\n    const { options = {} } = infos;\n    const { middlewares = [] } = options;\n\n    const middlewaresToAdd = [this._beforeRoute(infos)];\n    middlewaresToAdd.push(...this.middlewares); // add middlewares of the class\n    middlewaresToAdd.push(...middlewares); // add middlewares of the specific route\n    this.addRateLimit(middlewaresToAdd, infos);\n    middlewaresToAdd.push(infos.call.bind(this));\n\n    return middlewaresToAdd;\n  }\n\n  // RateLimit\n  getRateLimit(option, routePath, type) {\n    option.interval = RateLimit.RateLimit.timeToMs(option.interval);\n    return RateLimit.middleware({\n      prefixKey: `${type}|${routePath}|${option.interval}`,\n      ...option,\n    });\n  }\n\n  addRateLimit(middlewares, { options }) {\n    const { rateLimit, routePath, type } = options;\n\n    if (rateLimit) {\n      if (Array.isArray(rateLimit)) {\n        for (const elem of rateLimit) {\n          middlewares.push(this.getRateLimit(elem, routePath, type));\n        }\n      } else {\n        middlewares.push(this.getRateLimit(rateLimit, routePath, type));\n      }\n    }\n  }\n\n  // beforeRoute\n  _beforeRoute(infos) {\n    return async (ctx, next) => await this.beforeRoute(ctx, infos, next);\n  }\n\n  /**\n   * @desc a member that can be overriden, which will always be executed before the route is accessed\n   * @param {KoaContext} ctx Koa's context object\n   * @param {Params} params an object containing all route parameters\n   * @param {function} next the next middleware in the chain\n   */\n  async beforeRoute(ctx, { options }, next) {\n    this._mlParams(ctx, options);\n    if (next) {\n      await next();\n    }\n  }\n\n  // test params\n  _mlParams(ctx, { params }) {\n    ctx.request.bodyOrig = deepCopy(ctx.request.body);\n    ctx.request.body = this._mlTestParams(ctx, ctx.request.body, params);\n  }\n\n  _mlParamsExecFunc(ctx, body, keyBody, param) {\n    if (body && body[keyBody]) {\n      const { __func } = param;\n      if (__func && Array.isArray(__func)) {\n        for (const func of __func) {\n          body[keyBody] = func(body[keyBody], this, { ctx, body, keyBody });\n        }\n      }\n    }\n  }\n\n  _mlTestParams(ctx, body, paramsTest) {\n    const bodyVerif = {};\n    const paramsConvert = this._paramsNormalize(paramsTest);\n    for (const key in paramsConvert) {\n      const param = paramsConvert[key];\n\n      const bodyElem = body ? body[key] : undefined;\n      // test param\n      if (param.__force && (bodyElem === undefined || bodyElem === null)) {\n        this.throw(400, `${ctx.state.__ ? ctx.state.__('param required:') : 'param required:'} ${key}`);\n      }\n      this._mlParamsExecFunc(ctx, body, key, param);\n\n\n      if (this._paramsHasSubElement(param)) {\n        if (body && isObject(body)) {\n          const tmp = this._mlTestParams(ctx, body[key], param);\n          if (body[key]) {\n            bodyVerif[key] = tmp;\n          }\n        } else {\n          const tmp = this._mlTestParams(ctx, undefined, param);\n          if (body && isObject(body) && body[key] !== undefined) {\n            bodyVerif[key] = tmp;\n          }\n        }\n      } else if (body && isObject(body) && body[key] !== undefined) {\n        bodyVerif[key] = body[key];\n      }\n    }\n    return bodyVerif;\n  }\n\n  _paramsNormalize(paramsTest) {\n    let paramsConvert = {};\n    // convert array to object\n    if (isArray(paramsTest)) {\n      for (const elem of paramsTest) {\n        if (isObject(elem, false)) {\n          paramsConvert = Object.assign(paramsConvert, elem);\n        } else {\n          paramsConvert[elem] = false;\n        }\n      }\n    } else {\n      paramsConvert = paramsTest;\n    }\n\n    // normalize objects\n    for (const key in paramsConvert) {\n      const elem = paramsConvert[key];\n      if (!this.privateKeyInParamsRoute.includes(key)) {\n        if (isObject(elem) || isArray(elem)) {\n          paramsConvert[key] = this._paramsNormalize(elem);\n        } else if (elem === false || elem === true) {\n          paramsConvert[key] = { __force: elem };\n        }\n      }\n    }\n    return paramsConvert;\n  }\n\n  _paramsHasSubElement(paramsTest) {\n    for (const key in paramsTest) {\n      if (!this.privateKeyInParamsRoute.includes(key)) {\n        return true;\n      }\n    }\n    return false;\n  }\n\n  // ************************************ !MIDDLEWARE *********************************\n\n  body(ctx, original = false) {\n    return original ? ctx.request.bodyOrig : ctx.request.body;\n  }\n\n  /**\n   * @access private\n   */\n  bodyGet(ctx) {\n    return ctx.request.query || {};\n  }\n\n  /**\n   * @access public\n   * @desc retrieves the query params in a GET request\n   * @param {KoaContext} ctx koa's context object\n   */\n  paramsGet(ctx) { return this.bodyGet(ctx); }\n\n  /**\n   * @access public\n   * @desc sets the response's body (with a message + data field) and status .\n   * @param {KoaContext} ctx koa's context object\n   * @param {number} [status] the HTTP status code to end the request with\n   * @param {*} [data] the data to be yielded by the requests\n   * @param {string} [message] the message to be yielded by the request\n   */\n  send(ctx, status = 200, data, message) {\n    ctx.body = ctx.body || {}; // add default body\n    ctx.status = status;\n    // Do not remove this test because if status = 204 || 304, node will remove body\n    // see _hasBody on\n    // https://github.com/nodejs/node/blob/master/lib/_http_server.js#L235-L250\n    if (ctx.body) {\n      if (data != null) {\n        ctx.body.data = data;\n      }\n      if (message != null) {\n        ctx.body.message = message;\n      }\n      ctx.body.date = Date.now();\n    }\n  }\n\n  /**\n   * @access public\n   * @desc same as {@link send}, but automatically sets the status to 200 OK\n   * @param {KoaContext} ctx koa's context object\n   * @param {*} [data] the data to be yielded by the requests\n   * @param {string} [message] the message to be yielded by the request\n   */\n  sendOk(ctx, data, message) {\n    return this.send(ctx, Route.StatusCode.ok, data, message);\n  }\n\n  /**\n   * @access public\n   * @desc same as {@link send}, but automatically sets the status to 201 CREATED\n   * @param {KoaContext} ctx koa's context object\n   * @param {*} [data] the data to be yielded by the requests\n   * @param {string} [message] the message to be yielded by the request\n   */\n  sendCreated(ctx, data, message) {\n    return this.send(ctx, Route.StatusCode.created, data, message);\n  }\n\n  /**\n   * @access public\n   * @desc replies with an empty body, yielding 204 NO CONTENT as the status\n   * @param {KoaContext} ctx koa's context object\n   */\n  sendNoContent(ctx) {\n    return this.send(ctx, Route.StatusCode.noContent);\n  }\n\n  /**\n   * @access public\n   * @desc same as {@link send}, but automatically sets the status to 400 BAD REQUEST\n   * @param {KoaContext} ctx koa's context object\n   * @param {*} [data] the data to be yielded by the requests\n   * @param {string} [message] the message to be yielded by the request\n   */\n  sendBadRequest(ctx, data, message) {\n    return this.send(ctx, Route.StatusCode.badRequest, data, message);\n  }\n\n  /**\n   * @access public\n   * @desc same as {@link send}, but automatically sets the status to 401 UNAUTHORIZED\n   * @param {KoaContext} ctx koa's context object\n   * @param {*} [data] the data to be yielded by the requests\n   * @param {string} [message] the message to be yielded by the request\n   */\n  sendUnauthorized(ctx, data, message) {\n    return this.send(ctx, Route.StatusCode.unauthorized, data, message);\n  }\n\n  /**\n   * @access public\n   * @desc same as {@link send}, but automatically sets the status to 403 FORBIDDEN\n   * @param {KoaContext} ctx koa's context object\n   * @param {*} [data] the data to be yielded by the requests\n   * @param {string} [message] the message to be yielded by the request\n   */\n  sendForbidden(ctx, data, message) {\n    return this.send(ctx, Route.StatusCode.forbidden, data, message);\n  }\n\n  /**\n   * @access public\n   * @desc same as {@link send}, but automatically sets the status to 404 NOT FOUND\n   * @param {KoaContext} ctx koa's context object\n   * @param {*} [data] the data to be yielded by the requests\n   * @param {string} [message] the message to be yielded by the request\n   */\n  sendNotFound(ctx, data, message) {\n    return this.send(ctx, Route.StatusCode.notFound, data, message);\n  }\n\n  /**\n   * @access public\n   * @desc same as {@link send}, but automatically sets the status to 500 INTERNAL SERVER ERROR\n   * @param {KoaContext} ctx koa's context object\n   * @param {*} [data] the data to be yielded by the requests\n   * @param {string} [message] the message to be yielded by the request\n   */\n  sendInternalServerError(ctx, data, message) {\n    return this.send(ctx, Route.StatusCode.internalServerError, data, message);\n  }\n\n  /**\n   * @access public\n   * @desc throws a formated error to be caught.\n   * @param {number} status the error's HTTP status StatusCode\n   * @param {string} message  a message describing the error\n   * @param {boolean} translate indicates whether the message should be translated or not\n   * @throws {ErrorApp} thrown error.\n   */\n  throw(status, message, translate = false) {\n    throw new ErrorApp(status, message, translate);\n  }\n\n  /**\n   * @access public\n   * @desc checks a condition. If it evaluates to false, throws a formated error to be caught.\n   * @param {boolean} condition if set to false; assert will fail and throw.\n   * @param {number} status the error's HTTP status StatusCode\n   * @param {string} message  a message describing the error\n   * @param {boolean} translate indicates whether the message should be translated or not\n   * @throws {ErrorApp} thrown error, should the assert fail.\n   */\n  assert(condition, status, message, translate = false) {\n    if (!condition) {\n      this.throw(status, message, translate);\n    }\n  }\n}\n",
     "static": true,
     "longname": "/home/elkaim_r/Project/koa-smart/src/routes/Route.js",
     "access": "public",
@@ -1433,6 +1483,16 @@
         "optional": false,
         "name": "middlewares",
         "description": "an array of Koa Middlewares, which will be mounted for the given route"
+      },
+      {
+        "nullable": null,
+        "types": [
+          "Object"
+        ],
+        "spread": false,
+        "optional": false,
+        "name": "rateLimit",
+        "description": "a rateLimit object, which lets the user describe the max rate at which a user can access the route"
       }
     ],
     "type": {
@@ -1456,7 +1516,7 @@
       {
         "nullable": null,
         "types": [
-          "MiddlewareFunction[]"
+          "ParamMiddlewareFunction[]"
         ],
         "spread": false,
         "optional": false,
@@ -1485,10 +1545,10 @@
   {
     "__docId__": 88,
     "kind": "typedef",
-    "name": "MiddlewareFunction",
+    "name": "ParamMiddlewareFunction",
     "memberof": "src/routes/Route.js~Route",
     "static": true,
-    "longname": "src/routes/Route.js~Route.MiddlewareFunction",
+    "longname": "src/routes/Route.js~Route.ParamMiddlewareFunction",
     "access": "public",
     "description": "",
     "params": [
@@ -1536,23 +1596,137 @@
         "function"
       ],
       "optional": false,
-      "name": "MiddlewareFunction"
+      "name": "ParamMiddlewareFunction"
     }
   },
   {
     "__docId__": 89,
+    "kind": "typedef",
+    "name": "RouteParams",
+    "memberof": "src/routes/Route.js~Route",
+    "static": true,
+    "longname": "src/routes/Route.js~Route.RouteParams",
+    "access": "public",
+    "description": "",
+    "properties": [
+      {
+        "nullable": null,
+        "types": [
+          "Koa"
+        ],
+        "spread": false,
+        "optional": false,
+        "name": "app",
+        "description": "the Koa application"
+      },
+      {
+        "nullable": null,
+        "types": [
+          "string"
+        ],
+        "spread": false,
+        "optional": false,
+        "name": "prefix",
+        "description": "a prefix which will be preppended before every route's paths"
+      },
+      {
+        "nullable": null,
+        "types": [
+          "Route[]"
+        ],
+        "spread": false,
+        "optional": false,
+        "name": "routes",
+        "description": "an array containing all the mounted Routes"
+      },
+      {
+        "nullable": null,
+        "types": [
+          "Model[]"
+        ],
+        "spread": false,
+        "optional": true,
+        "name": "models",
+        "description": "an array containing all of the app's models"
+      },
+      {
+        "nullable": null,
+        "types": [
+          "string"
+        ],
+        "spread": false,
+        "optional": true,
+        "name": "model",
+        "description": "the name of the route's own model"
+      },
+      {
+        "nullable": null,
+        "types": [
+          "disable"
+        ],
+        "spread": false,
+        "optional": true,
+        "name": "boolean",
+        "description": "whether the route should be disabled"
+      }
+    ],
+    "type": {
+      "types": [
+        "Object"
+      ],
+      "optional": false,
+      "name": "RouteParams"
+    }
+  },
+  {
+    "__docId__": 90,
     "kind": "external",
     "name": "KoaContext",
     "externalLink": "http://koajs.com/#api",
     "memberof": "src/routes/Route.js",
-    "static": false,
+    "static": true,
     "longname": "src/routes/Route.js~KoaContext",
     "access": "public",
-    "description": "",
-    "lineNumber": 45
+    "description": ""
   },
   {
-    "__docId__": 90,
+    "__docId__": 91,
+    "kind": "external",
+    "name": "Koa",
+    "externalLink": "http://koajs.com/#application",
+    "memberof": "src/routes/Route.js",
+    "static": true,
+    "longname": "src/routes/Route.js~Koa",
+    "access": "public",
+    "description": ""
+  },
+  {
+    "__docId__": 92,
+    "kind": "constructor",
+    "name": "constructor",
+    "memberof": "src/routes/Route.js~Route",
+    "generator": false,
+    "async": false,
+    "static": false,
+    "longname": "src/routes/Route.js~Route#constructor",
+    "access": "public",
+    "description": "",
+    "lineNumber": 64,
+    "params": [
+      {
+        "nullable": null,
+        "types": [
+          "RouteParams"
+        ],
+        "spread": false,
+        "optional": false,
+        "name": "params",
+        "description": "the route's parameters"
+      }
+    ]
+  },
+  {
+    "__docId__": 93,
     "kind": "member",
     "name": "app",
     "memberof": "src/routes/Route.js~Route",
@@ -1560,58 +1734,7 @@
     "longname": "src/routes/Route.js~Route#app",
     "access": "public",
     "description": null,
-    "lineNumber": 46,
-    "undocument": true,
-    "type": {
-      "types": [
-        "*"
-      ]
-    }
-  },
-  {
-    "__docId__": 91,
-    "kind": "member",
-    "name": "prefix",
-    "memberof": "src/routes/Route.js~Route",
-    "static": false,
-    "longname": "src/routes/Route.js~Route#prefix",
-    "access": "public",
-    "description": null,
-    "lineNumber": 47,
-    "undocument": true,
-    "type": {
-      "types": [
-        "*"
-      ]
-    }
-  },
-  {
-    "__docId__": 92,
-    "kind": "member",
-    "name": "allRoutesInstance",
-    "memberof": "src/routes/Route.js~Route",
-    "static": false,
-    "longname": "src/routes/Route.js~Route#allRoutesInstance",
-    "access": "public",
-    "description": null,
-    "lineNumber": 48,
-    "undocument": true,
-    "type": {
-      "types": [
-        "*"
-      ]
-    }
-  },
-  {
-    "__docId__": 93,
-    "kind": "member",
-    "name": "models",
-    "memberof": "src/routes/Route.js~Route",
-    "static": false,
-    "longname": "src/routes/Route.js~Route#models",
-    "access": "public",
-    "description": null,
-    "lineNumber": 49,
+    "lineNumber": 65,
     "undocument": true,
     "type": {
       "types": [
@@ -1622,13 +1745,13 @@
   {
     "__docId__": 94,
     "kind": "member",
-    "name": "disable",
+    "name": "prefix",
     "memberof": "src/routes/Route.js~Route",
     "static": false,
-    "longname": "src/routes/Route.js~Route#disable",
+    "longname": "src/routes/Route.js~Route#prefix",
     "access": "public",
     "description": null,
-    "lineNumber": 50,
+    "lineNumber": 66,
     "undocument": true,
     "type": {
       "types": [
@@ -1639,13 +1762,13 @@
   {
     "__docId__": 95,
     "kind": "member",
-    "name": "middlewares",
+    "name": "allRoutesInstance",
     "memberof": "src/routes/Route.js~Route",
     "static": false,
-    "longname": "src/routes/Route.js~Route#middlewares",
+    "longname": "src/routes/Route.js~Route#allRoutesInstance",
     "access": "public",
     "description": null,
-    "lineNumber": 51,
+    "lineNumber": 67,
     "undocument": true,
     "type": {
       "types": [
@@ -1656,13 +1779,13 @@
   {
     "__docId__": 96,
     "kind": "member",
-    "name": "model",
+    "name": "models",
     "memberof": "src/routes/Route.js~Route",
     "static": false,
-    "longname": "src/routes/Route.js~Route#model",
+    "longname": "src/routes/Route.js~Route#models",
     "access": "public",
     "description": null,
-    "lineNumber": 53,
+    "lineNumber": 68,
     "undocument": true,
     "type": {
       "types": [
@@ -1673,13 +1796,13 @@
   {
     "__docId__": 97,
     "kind": "member",
-    "name": "koaRouter",
+    "name": "disable",
     "memberof": "src/routes/Route.js~Route",
     "static": false,
-    "longname": "src/routes/Route.js~Route#koaRouter",
+    "longname": "src/routes/Route.js~Route#disable",
     "access": "public",
     "description": null,
-    "lineNumber": 55,
+    "lineNumber": 69,
     "undocument": true,
     "type": {
       "types": [
@@ -1690,42 +1813,31 @@
   {
     "__docId__": 98,
     "kind": "member",
-    "name": "privateKeyInParamsRoute",
+    "name": "middlewares",
     "memberof": "src/routes/Route.js~Route",
     "static": false,
-    "longname": "src/routes/Route.js~Route#privateKeyInParamsRoute",
+    "longname": "src/routes/Route.js~Route#middlewares",
     "access": "public",
     "description": null,
-    "lineNumber": 56,
+    "lineNumber": 70,
     "undocument": true,
     "type": {
       "types": [
-        "string[]"
+        "*"
       ]
     }
   },
   {
     "__docId__": 99,
     "kind": "member",
-    "name": "Get",
+    "name": "model",
     "memberof": "src/routes/Route.js~Route",
-    "static": true,
-    "longname": "src/routes/Route.js~Route.Get",
+    "static": false,
+    "longname": "src/routes/Route.js~Route#model",
     "access": "public",
-    "description": "mounts the tagged function as a GET route.",
-    "lineNumber": 68,
-    "params": [
-      {
-        "nullable": null,
-        "types": [
-          "Params"
-        ],
-        "spread": false,
-        "optional": false,
-        "name": "params",
-        "description": "the route's parameters"
-      }
-    ],
+    "description": null,
+    "lineNumber": 72,
+    "undocument": true,
     "type": {
       "types": [
         "*"
@@ -1735,25 +1847,14 @@
   {
     "__docId__": 100,
     "kind": "member",
-    "name": "Post",
+    "name": "koaRouter",
     "memberof": "src/routes/Route.js~Route",
-    "static": true,
-    "longname": "src/routes/Route.js~Route.Post",
+    "static": false,
+    "longname": "src/routes/Route.js~Route#koaRouter",
     "access": "public",
-    "description": "mounts the tagged function as a POST route.",
-    "lineNumber": 75,
-    "params": [
-      {
-        "nullable": null,
-        "types": [
-          "Params"
-        ],
-        "spread": false,
-        "optional": false,
-        "name": "params",
-        "description": "the route's parameters"
-      }
-    ],
+    "description": null,
+    "lineNumber": 74,
+    "undocument": true,
     "type": {
       "types": [
         "*"
@@ -1763,41 +1864,30 @@
   {
     "__docId__": 101,
     "kind": "member",
-    "name": "Put",
+    "name": "privateKeyInParamsRoute",
     "memberof": "src/routes/Route.js~Route",
-    "static": true,
-    "longname": "src/routes/Route.js~Route.Put",
+    "static": false,
+    "longname": "src/routes/Route.js~Route#privateKeyInParamsRoute",
     "access": "public",
-    "description": "mounts the tagged function as a PUT route.",
-    "lineNumber": 82,
-    "params": [
-      {
-        "nullable": null,
-        "types": [
-          "Params"
-        ],
-        "spread": false,
-        "optional": false,
-        "name": "params",
-        "description": "the route's parameters"
-      }
-    ],
+    "description": null,
+    "lineNumber": 75,
+    "undocument": true,
     "type": {
       "types": [
-        "*"
+        "string[]"
       ]
     }
   },
   {
     "__docId__": 102,
     "kind": "member",
-    "name": "Patch",
+    "name": "Get",
     "memberof": "src/routes/Route.js~Route",
     "static": true,
-    "longname": "src/routes/Route.js~Route.Patch",
+    "longname": "src/routes/Route.js~Route.Get",
     "access": "public",
-    "description": "mounts the tagged function as a PATCH route.",
-    "lineNumber": 89,
+    "description": "mounts the tagged function as a GET route.",
+    "lineNumber": 87,
     "params": [
       {
         "nullable": null,
@@ -1819,13 +1909,13 @@
   {
     "__docId__": 103,
     "kind": "member",
-    "name": "Delete",
+    "name": "Post",
     "memberof": "src/routes/Route.js~Route",
     "static": true,
-    "longname": "src/routes/Route.js~Route.Delete",
+    "longname": "src/routes/Route.js~Route.Post",
     "access": "public",
-    "description": "mounts the tagged function as a DELETE route.",
-    "lineNumber": 96,
+    "description": "mounts the tagged function as a POST route.",
+    "lineNumber": 94,
     "params": [
       {
         "nullable": null,
@@ -1847,13 +1937,13 @@
   {
     "__docId__": 104,
     "kind": "member",
-    "name": "Route",
+    "name": "Put",
     "memberof": "src/routes/Route.js~Route",
     "static": true,
-    "longname": "src/routes/Route.js~Route.Route",
+    "longname": "src/routes/Route.js~Route.Put",
     "access": "public",
-    "description": "mounts the tagged function as route, allowing the user to configure the HTTP methods it answers to.",
-    "lineNumber": 103,
+    "description": "mounts the tagged function as a PUT route.",
+    "lineNumber": 101,
     "params": [
       {
         "nullable": null,
@@ -1874,6 +1964,90 @@
   },
   {
     "__docId__": 105,
+    "kind": "member",
+    "name": "Patch",
+    "memberof": "src/routes/Route.js~Route",
+    "static": true,
+    "longname": "src/routes/Route.js~Route.Patch",
+    "access": "public",
+    "description": "mounts the tagged function as a PATCH route.",
+    "lineNumber": 108,
+    "params": [
+      {
+        "nullable": null,
+        "types": [
+          "Params"
+        ],
+        "spread": false,
+        "optional": false,
+        "name": "params",
+        "description": "the route's parameters"
+      }
+    ],
+    "type": {
+      "types": [
+        "*"
+      ]
+    }
+  },
+  {
+    "__docId__": 106,
+    "kind": "member",
+    "name": "Delete",
+    "memberof": "src/routes/Route.js~Route",
+    "static": true,
+    "longname": "src/routes/Route.js~Route.Delete",
+    "access": "public",
+    "description": "mounts the tagged function as a DELETE route.",
+    "lineNumber": 115,
+    "params": [
+      {
+        "nullable": null,
+        "types": [
+          "Params"
+        ],
+        "spread": false,
+        "optional": false,
+        "name": "params",
+        "description": "the route's parameters"
+      }
+    ],
+    "type": {
+      "types": [
+        "*"
+      ]
+    }
+  },
+  {
+    "__docId__": 107,
+    "kind": "member",
+    "name": "Route",
+    "memberof": "src/routes/Route.js~Route",
+    "static": true,
+    "longname": "src/routes/Route.js~Route.Route",
+    "access": "public",
+    "description": "used to set some parameters on an entire class.The supported parameters are middlewares, disable, and routeBase.",
+    "lineNumber": 122,
+    "params": [
+      {
+        "nullable": null,
+        "types": [
+          "Params"
+        ],
+        "spread": false,
+        "optional": false,
+        "name": "params",
+        "description": "the route's parameters"
+      }
+    ],
+    "type": {
+      "types": [
+        "*"
+      ]
+    }
+  },
+  {
+    "__docId__": 108,
     "kind": "method",
     "name": "log",
     "memberof": "src/routes/Route.js~Route",
@@ -1883,7 +2057,7 @@
     "longname": "src/routes/Route.js~Route#log",
     "access": "public",
     "description": null,
-    "lineNumber": 105,
+    "lineNumber": 124,
     "undocument": true,
     "params": [
       {
@@ -1903,7 +2077,7 @@
     "return": null
   },
   {
-    "__docId__": 106,
+    "__docId__": 109,
     "kind": "method",
     "name": "mount",
     "memberof": "src/routes/Route.js~Route",
@@ -1912,14 +2086,13 @@
     "static": false,
     "longname": "src/routes/Route.js~Route#mount",
     "access": "public",
-    "description": null,
-    "lineNumber": 111,
-    "undocument": true,
+    "description": "Register the route and makes it callable once the API is launched.\n      you will usually not need to call this method yourself.",
+    "lineNumber": 135,
     "params": [],
     "return": null
   },
   {
-    "__docId__": 107,
+    "__docId__": 110,
     "kind": "method",
     "name": "_use",
     "memberof": "src/routes/Route.js~Route",
@@ -1929,7 +2102,7 @@
     "longname": "src/routes/Route.js~Route#_use",
     "access": "private",
     "description": null,
-    "lineNumber": 132,
+    "lineNumber": 156,
     "undocument": true,
     "params": [
       {
@@ -1946,7 +2119,7 @@
     }
   },
   {
-    "__docId__": 108,
+    "__docId__": 111,
     "kind": "method",
     "name": "getRateLimit",
     "memberof": "src/routes/Route.js~Route",
@@ -1956,7 +2129,7 @@
     "longname": "src/routes/Route.js~Route#getRateLimit",
     "access": "public",
     "description": null,
-    "lineNumber": 146,
+    "lineNumber": 170,
     "undocument": true,
     "params": [
       {
@@ -1985,7 +2158,7 @@
     }
   },
   {
-    "__docId__": 109,
+    "__docId__": 112,
     "kind": "method",
     "name": "addRateLimit",
     "memberof": "src/routes/Route.js~Route",
@@ -1995,7 +2168,7 @@
     "longname": "src/routes/Route.js~Route#addRateLimit",
     "access": "public",
     "description": null,
-    "lineNumber": 153,
+    "lineNumber": 178,
     "undocument": true,
     "params": [
       {
@@ -2018,7 +2191,7 @@
     "return": null
   },
   {
-    "__docId__": 110,
+    "__docId__": 113,
     "kind": "method",
     "name": "_beforeRoute",
     "memberof": "src/routes/Route.js~Route",
@@ -2028,7 +2201,7 @@
     "longname": "src/routes/Route.js~Route#_beforeRoute",
     "access": "private",
     "description": null,
-    "lineNumber": 168,
+    "lineNumber": 193,
     "undocument": true,
     "params": [
       {
@@ -2045,7 +2218,7 @@
     }
   },
   {
-    "__docId__": 111,
+    "__docId__": 114,
     "kind": "method",
     "name": "beforeRoute",
     "memberof": "src/routes/Route.js~Route",
@@ -2054,37 +2227,44 @@
     "static": false,
     "longname": "src/routes/Route.js~Route#beforeRoute",
     "access": "public",
-    "description": null,
-    "lineNumber": 171,
-    "undocument": true,
+    "description": "a member that can be overriden, which will always be executed before the route is accessed",
+    "lineNumber": 203,
     "params": [
       {
-        "name": "ctx",
+        "nullable": null,
         "types": [
-          "*"
-        ]
-      },
-      {
-        "name": "objectPattern1",
-        "types": [
-          "{\"options\": *}"
+          "KoaContext"
         ],
-        "defaultRaw": {
-          "options": null
-        },
-        "defaultValue": "{\"options\":null}"
+        "spread": false,
+        "optional": false,
+        "name": "ctx",
+        "description": "Koa's context object"
       },
       {
-        "name": "next",
+        "nullable": null,
         "types": [
-          "*"
-        ]
+          "Params"
+        ],
+        "spread": false,
+        "optional": false,
+        "name": "params",
+        "description": "an object containing all route parameters"
+      },
+      {
+        "nullable": null,
+        "types": [
+          "function"
+        ],
+        "spread": false,
+        "optional": false,
+        "name": "next",
+        "description": "the next middleware in the chain"
       }
     ],
     "return": null
   },
   {
-    "__docId__": 112,
+    "__docId__": 115,
     "kind": "method",
     "name": "_mlParams",
     "memberof": "src/routes/Route.js~Route",
@@ -2094,7 +2274,7 @@
     "longname": "src/routes/Route.js~Route#_mlParams",
     "access": "private",
     "description": null,
-    "lineNumber": 179,
+    "lineNumber": 211,
     "undocument": true,
     "params": [
       {
@@ -2117,7 +2297,7 @@
     "return": null
   },
   {
-    "__docId__": 113,
+    "__docId__": 116,
     "kind": "method",
     "name": "_mlParamsExecFunc",
     "memberof": "src/routes/Route.js~Route",
@@ -2127,7 +2307,7 @@
     "longname": "src/routes/Route.js~Route#_mlParamsExecFunc",
     "access": "private",
     "description": null,
-    "lineNumber": 184,
+    "lineNumber": 216,
     "undocument": true,
     "params": [
       {
@@ -2158,7 +2338,7 @@
     "return": null
   },
   {
-    "__docId__": 114,
+    "__docId__": 117,
     "kind": "method",
     "name": "_mlTestParams",
     "memberof": "src/routes/Route.js~Route",
@@ -2168,7 +2348,7 @@
     "longname": "src/routes/Route.js~Route#_mlTestParams",
     "access": "private",
     "description": null,
-    "lineNumber": 195,
+    "lineNumber": 227,
     "undocument": true,
     "params": [
       {
@@ -2197,7 +2377,7 @@
     }
   },
   {
-    "__docId__": 115,
+    "__docId__": 118,
     "kind": "method",
     "name": "_paramsNormalize",
     "memberof": "src/routes/Route.js~Route",
@@ -2207,7 +2387,7 @@
     "longname": "src/routes/Route.js~Route#_paramsNormalize",
     "access": "private",
     "description": null,
-    "lineNumber": 228,
+    "lineNumber": 260,
     "undocument": true,
     "params": [
       {
@@ -2224,7 +2404,7 @@
     }
   },
   {
-    "__docId__": 116,
+    "__docId__": 119,
     "kind": "method",
     "name": "_paramsHasSubElement",
     "memberof": "src/routes/Route.js~Route",
@@ -2234,7 +2414,7 @@
     "longname": "src/routes/Route.js~Route#_paramsHasSubElement",
     "access": "private",
     "description": null,
-    "lineNumber": 257,
+    "lineNumber": 289,
     "undocument": true,
     "params": [
       {
@@ -2251,7 +2431,7 @@
     }
   },
   {
-    "__docId__": 117,
+    "__docId__": 120,
     "kind": "method",
     "name": "body",
     "memberof": "src/routes/Route.js~Route",
@@ -2261,7 +2441,7 @@
     "longname": "src/routes/Route.js~Route#body",
     "access": "public",
     "description": null,
-    "lineNumber": 268,
+    "lineNumber": 300,
     "undocument": true,
     "params": [
       {
@@ -2287,7 +2467,7 @@
     }
   },
   {
-    "__docId__": 118,
+    "__docId__": 121,
     "kind": "method",
     "name": "bodyGet",
     "memberof": "src/routes/Route.js~Route",
@@ -2295,10 +2475,9 @@
     "async": false,
     "static": false,
     "longname": "src/routes/Route.js~Route#bodyGet",
-    "access": "public",
-    "description": null,
-    "lineNumber": 272,
-    "undocument": true,
+    "access": "private",
+    "description": "",
+    "lineNumber": 307,
     "params": [
       {
         "name": "ctx",
@@ -2314,7 +2493,7 @@
     }
   },
   {
-    "__docId__": 119,
+    "__docId__": 122,
     "kind": "method",
     "name": "paramsGet",
     "memberof": "src/routes/Route.js~Route",
@@ -2323,15 +2502,18 @@
     "static": false,
     "longname": "src/routes/Route.js~Route#paramsGet",
     "access": "public",
-    "description": null,
-    "lineNumber": 276,
-    "undocument": true,
+    "description": "retrieves the query params in a GET request",
+    "lineNumber": 316,
     "params": [
       {
-        "name": "ctx",
+        "nullable": null,
         "types": [
-          "*"
-        ]
+          "KoaContext"
+        ],
+        "spread": false,
+        "optional": false,
+        "name": "ctx",
+        "description": "koa's context object"
       }
     ],
     "return": {
@@ -2341,7 +2523,7 @@
     }
   },
   {
-    "__docId__": 120,
+    "__docId__": 123,
     "kind": "method",
     "name": "send",
     "memberof": "src/routes/Route.js~Route",
@@ -2351,7 +2533,7 @@
     "longname": "src/routes/Route.js~Route#send",
     "access": "public",
     "description": "sets the response's body (with a message + data field) and status .",
-    "lineNumber": 286,
+    "lineNumber": 326,
     "params": [
       {
         "nullable": null,
@@ -2397,7 +2579,7 @@
     "return": null
   },
   {
-    "__docId__": 121,
+    "__docId__": 124,
     "kind": "method",
     "name": "sendOk",
     "memberof": "src/routes/Route.js~Route",
@@ -2407,137 +2589,7 @@
     "longname": "src/routes/Route.js~Route#sendOk",
     "access": "public",
     "description": "same as {@link send}, but automatically sets the status to 200 OK",
-    "lineNumber": 310,
-    "params": [
-      {
-        "nullable": null,
-        "types": [
-          "KoaContext"
-        ],
-        "spread": false,
-        "optional": false,
-        "name": "ctx",
-        "description": "koa's context object"
-      },
-      {
-        "nullable": null,
-        "types": [
-          "*"
-        ],
-        "spread": false,
-        "optional": true,
-        "name": "data",
-        "description": "the data to be yielded by the requests"
-      },
-      {
-        "nullable": null,
-        "types": [
-          "string"
-        ],
-        "spread": false,
-        "optional": true,
-        "name": "message",
-        "description": "the message to be yielded by the request"
-      }
-    ],
-    "return": {
-      "types": [
-        "*"
-      ]
-    }
-  },
-  {
-    "__docId__": 122,
-    "kind": "method",
-    "name": "sendCreated",
-    "memberof": "src/routes/Route.js~Route",
-    "generator": false,
-    "async": false,
-    "static": false,
-    "longname": "src/routes/Route.js~Route#sendCreated",
-    "access": "public",
-    "description": "same as {@link send}, but automatically sets the status to 201 CREATED",
-    "lineNumber": 321,
-    "params": [
-      {
-        "nullable": null,
-        "types": [
-          "KoaContext"
-        ],
-        "spread": false,
-        "optional": false,
-        "name": "ctx",
-        "description": "koa's context object"
-      },
-      {
-        "nullable": null,
-        "types": [
-          "*"
-        ],
-        "spread": false,
-        "optional": true,
-        "name": "data",
-        "description": "the data to be yielded by the requests"
-      },
-      {
-        "nullable": null,
-        "types": [
-          "string"
-        ],
-        "spread": false,
-        "optional": true,
-        "name": "message",
-        "description": "the message to be yielded by the request"
-      }
-    ],
-    "return": {
-      "types": [
-        "*"
-      ]
-    }
-  },
-  {
-    "__docId__": 123,
-    "kind": "method",
-    "name": "sendNoContent",
-    "memberof": "src/routes/Route.js~Route",
-    "generator": false,
-    "async": false,
-    "static": false,
-    "longname": "src/routes/Route.js~Route#sendNoContent",
-    "access": "public",
-    "description": "replies with an empty body, yielding 204 NO CONTENT as the status",
-    "lineNumber": 330,
-    "params": [
-      {
-        "nullable": null,
-        "types": [
-          "KoaContext"
-        ],
-        "spread": false,
-        "optional": false,
-        "name": "ctx",
-        "description": "koa's context object"
-      }
-    ],
-    "return": {
-      "types": [
-        "*"
-      ]
-    }
-  },
-  {
-    "__docId__": 124,
-    "kind": "method",
-    "name": "sendBadRequest",
-    "memberof": "src/routes/Route.js~Route",
-    "generator": false,
-    "async": false,
-    "static": false,
-    "longname": "src/routes/Route.js~Route#sendBadRequest",
-    "access": "public",
-    "description": "same as {@link send}, but automatically sets the status to 400 BAD REQUEST",
-    "lineNumber": 341,
+    "lineNumber": 350,
     "params": [
       {
         "nullable": null,
@@ -2579,15 +2631,15 @@
   {
     "__docId__": 125,
     "kind": "method",
-    "name": "sendUnauthorized",
+    "name": "sendCreated",
     "memberof": "src/routes/Route.js~Route",
     "generator": false,
     "async": false,
     "static": false,
-    "longname": "src/routes/Route.js~Route#sendUnauthorized",
+    "longname": "src/routes/Route.js~Route#sendCreated",
     "access": "public",
-    "description": "same as {@link send}, but automatically sets the status to 401 UNAUTHORIZED",
-    "lineNumber": 352,
+    "description": "same as {@link send}, but automatically sets the status to 201 CREATED",
+    "lineNumber": 361,
     "params": [
       {
         "nullable": null,
@@ -2629,15 +2681,15 @@
   {
     "__docId__": 126,
     "kind": "method",
-    "name": "sendForbidden",
+    "name": "sendNoContent",
     "memberof": "src/routes/Route.js~Route",
     "generator": false,
     "async": false,
     "static": false,
-    "longname": "src/routes/Route.js~Route#sendForbidden",
+    "longname": "src/routes/Route.js~Route#sendNoContent",
     "access": "public",
-    "description": "same as {@link send}, but automatically sets the status to 403 FORBIDDEN",
-    "lineNumber": 363,
+    "description": "replies with an empty body, yielding 204 NO CONTENT as the status",
+    "lineNumber": 370,
     "params": [
       {
         "nullable": null,
@@ -2648,26 +2700,6 @@
         "optional": false,
         "name": "ctx",
         "description": "koa's context object"
-      },
-      {
-        "nullable": null,
-        "types": [
-          "*"
-        ],
-        "spread": false,
-        "optional": true,
-        "name": "data",
-        "description": "the data to be yielded by the requests"
-      },
-      {
-        "nullable": null,
-        "types": [
-          "string"
-        ],
-        "spread": false,
-        "optional": true,
-        "name": "message",
-        "description": "the message to be yielded by the request"
       }
     ],
     "return": {
@@ -2679,15 +2711,15 @@
   {
     "__docId__": 127,
     "kind": "method",
-    "name": "sendNotFound",
+    "name": "sendBadRequest",
     "memberof": "src/routes/Route.js~Route",
     "generator": false,
     "async": false,
     "static": false,
-    "longname": "src/routes/Route.js~Route#sendNotFound",
+    "longname": "src/routes/Route.js~Route#sendBadRequest",
     "access": "public",
-    "description": "same as {@link send}, but automatically sets the status to 404 NOT FOUND",
-    "lineNumber": 374,
+    "description": "same as {@link send}, but automatically sets the status to 400 BAD REQUEST",
+    "lineNumber": 381,
     "params": [
       {
         "nullable": null,
@@ -2729,15 +2761,15 @@
   {
     "__docId__": 128,
     "kind": "method",
-    "name": "sendInternalServerError",
+    "name": "sendUnauthorized",
     "memberof": "src/routes/Route.js~Route",
     "generator": false,
     "async": false,
     "static": false,
-    "longname": "src/routes/Route.js~Route#sendInternalServerError",
+    "longname": "src/routes/Route.js~Route#sendUnauthorized",
     "access": "public",
-    "description": "same as {@link send}, but automatically sets the status to 500 INTERNAL SERVER ERROR",
-    "lineNumber": 385,
+    "description": "same as {@link send}, but automatically sets the status to 401 UNAUTHORIZED",
+    "lineNumber": 392,
     "params": [
       {
         "nullable": null,
@@ -2779,6 +2811,156 @@
   {
     "__docId__": 129,
     "kind": "method",
+    "name": "sendForbidden",
+    "memberof": "src/routes/Route.js~Route",
+    "generator": false,
+    "async": false,
+    "static": false,
+    "longname": "src/routes/Route.js~Route#sendForbidden",
+    "access": "public",
+    "description": "same as {@link send}, but automatically sets the status to 403 FORBIDDEN",
+    "lineNumber": 403,
+    "params": [
+      {
+        "nullable": null,
+        "types": [
+          "KoaContext"
+        ],
+        "spread": false,
+        "optional": false,
+        "name": "ctx",
+        "description": "koa's context object"
+      },
+      {
+        "nullable": null,
+        "types": [
+          "*"
+        ],
+        "spread": false,
+        "optional": true,
+        "name": "data",
+        "description": "the data to be yielded by the requests"
+      },
+      {
+        "nullable": null,
+        "types": [
+          "string"
+        ],
+        "spread": false,
+        "optional": true,
+        "name": "message",
+        "description": "the message to be yielded by the request"
+      }
+    ],
+    "return": {
+      "types": [
+        "*"
+      ]
+    }
+  },
+  {
+    "__docId__": 130,
+    "kind": "method",
+    "name": "sendNotFound",
+    "memberof": "src/routes/Route.js~Route",
+    "generator": false,
+    "async": false,
+    "static": false,
+    "longname": "src/routes/Route.js~Route#sendNotFound",
+    "access": "public",
+    "description": "same as {@link send}, but automatically sets the status to 404 NOT FOUND",
+    "lineNumber": 414,
+    "params": [
+      {
+        "nullable": null,
+        "types": [
+          "KoaContext"
+        ],
+        "spread": false,
+        "optional": false,
+        "name": "ctx",
+        "description": "koa's context object"
+      },
+      {
+        "nullable": null,
+        "types": [
+          "*"
+        ],
+        "spread": false,
+        "optional": true,
+        "name": "data",
+        "description": "the data to be yielded by the requests"
+      },
+      {
+        "nullable": null,
+        "types": [
+          "string"
+        ],
+        "spread": false,
+        "optional": true,
+        "name": "message",
+        "description": "the message to be yielded by the request"
+      }
+    ],
+    "return": {
+      "types": [
+        "*"
+      ]
+    }
+  },
+  {
+    "__docId__": 131,
+    "kind": "method",
+    "name": "sendInternalServerError",
+    "memberof": "src/routes/Route.js~Route",
+    "generator": false,
+    "async": false,
+    "static": false,
+    "longname": "src/routes/Route.js~Route#sendInternalServerError",
+    "access": "public",
+    "description": "same as {@link send}, but automatically sets the status to 500 INTERNAL SERVER ERROR",
+    "lineNumber": 425,
+    "params": [
+      {
+        "nullable": null,
+        "types": [
+          "KoaContext"
+        ],
+        "spread": false,
+        "optional": false,
+        "name": "ctx",
+        "description": "koa's context object"
+      },
+      {
+        "nullable": null,
+        "types": [
+          "*"
+        ],
+        "spread": false,
+        "optional": true,
+        "name": "data",
+        "description": "the data to be yielded by the requests"
+      },
+      {
+        "nullable": null,
+        "types": [
+          "string"
+        ],
+        "spread": false,
+        "optional": true,
+        "name": "message",
+        "description": "the message to be yielded by the request"
+      }
+    ],
+    "return": {
+      "types": [
+        "*"
+      ]
+    }
+  },
+  {
+    "__docId__": 132,
+    "kind": "method",
     "name": "throw",
     "memberof": "src/routes/Route.js~Route",
     "generator": false,
@@ -2787,7 +2969,7 @@
     "longname": "src/routes/Route.js~Route#throw",
     "access": "public",
     "description": "throws a formated error to be caught.",
-    "lineNumber": 397,
+    "lineNumber": 437,
     "params": [
       {
         "nullable": null,
@@ -2831,7 +3013,7 @@
     "return": null
   },
   {
-    "__docId__": 130,
+    "__docId__": 133,
     "kind": "method",
     "name": "assert",
     "memberof": "src/routes/Route.js~Route",
@@ -2840,42 +3022,62 @@
     "static": false,
     "longname": "src/routes/Route.js~Route#assert",
     "access": "public",
-    "description": null,
-    "lineNumber": 401,
-    "undocument": true,
+    "description": "checks a condition. If it evaluates to false, throws a formated error to be caught.",
+    "lineNumber": 450,
     "params": [
       {
-        "name": "condition",
-        "types": [
-          "*"
-        ]
-      },
-      {
-        "name": "status",
-        "types": [
-          "*"
-        ]
-      },
-      {
-        "name": "message",
-        "types": [
-          "*"
-        ]
-      },
-      {
-        "name": "translate",
-        "optional": true,
+        "nullable": null,
         "types": [
           "boolean"
         ],
-        "defaultRaw": false,
-        "defaultValue": "false"
+        "spread": false,
+        "optional": false,
+        "name": "condition",
+        "description": "if set to false; assert will fail and throw."
+      },
+      {
+        "nullable": null,
+        "types": [
+          "number"
+        ],
+        "spread": false,
+        "optional": false,
+        "name": "status",
+        "description": "the error's HTTP status StatusCode"
+      },
+      {
+        "nullable": null,
+        "types": [
+          "string"
+        ],
+        "spread": false,
+        "optional": false,
+        "name": "message",
+        "description": "a message describing the error"
+      },
+      {
+        "nullable": null,
+        "types": [
+          "boolean"
+        ],
+        "spread": false,
+        "optional": false,
+        "name": "translate",
+        "description": "indicates whether the message should be translated or not"
+      }
+    ],
+    "throws": [
+      {
+        "types": [
+          "ErrorApp"
+        ],
+        "description": "thrown error, should the assert fail."
       }
     ],
     "return": null
   },
   {
-    "__docId__": 131,
+    "__docId__": 134,
     "kind": "file",
     "name": "src/routes/RouteDecorators.js",
     "content": "\n\nexport default class RouteDecorators {\n  // replace A-Z to lowercase and add - ex myFunc => my-func\n  static _getRouteFromMethode(str) {\n    return str.replace(/([A-Z])/g, (str, letter, index) => {\n      return index === 0 ? `${letter.toLowerCase()}` : `-${letter.toLowerCase()}`;\n    });\n  }\n\n  static _initData(target) {\n    target.routes = target.routes || {\n      get: [],\n      post: [],\n      delete: [],\n      patch: [],\n      put: [],\n    };\n    if (target.routeBase === undefined) {\n      target.routeBase = target.constructor.name.replace('Route', '');\n      target.routeBase = RouteDecorators._getRouteFromMethode(target.routeBase);\n    }\n  }\n\n  static Route({ routeBase, disable = false, middlewares = null }) {\n    return (target, key, descriptor) => { // eslint-disable-line no-unused-vars\n      if (routeBase != null) { // null or undefined\n        target.prototype.routeBase = routeBase;\n      }\n      if (disable != null) {\n        target.prototype.disable = disable;\n      }\n      if (Array.isArray(middlewares)) {\n        target.prototype.middlewares = middlewares;\n      }\n      RouteDecorators._initData(target);\n    };\n  }\n\n  static _addRoute(type, options = {}) {\n    return (target, functionName, descriptor) => {\n      RouteDecorators._initData(target);\n      options = {\n        path: undefined,\n        accesses: [],\n        params: {},\n        routeBase: target.routeBase,\n        ...options,\n      };\n      Object.defineProperty(target, functionName, descriptor);\n\n      const routeName = options.path === undefined ?\n        RouteDecorators._getRouteFromMethode(functionName) : options.path;\n\n      target.routeBase = options.routeBase;\n      target.routes[type].push({\n        path: routeName,\n        options,\n        call: target[functionName],\n      });\n    };\n  }\n\n  static Get(params) {\n    return (target, key, descriptor) => {\n      const fuc = RouteDecorators._addRoute('get', params);\n      fuc(target, key, descriptor);\n    };\n  }\n  static Post(params) {\n    return (target, key, descriptor) => {\n      const fuc = RouteDecorators._addRoute('post', params);\n      fuc(target, key, descriptor);\n    };\n  }\n  static Patch(params) {\n    return (target, key, descriptor) => {\n      const fuc = RouteDecorators._addRoute('patch', params);\n      fuc(target, key, descriptor);\n    };\n  }\n  static Put(params) {\n    return (target, key, descriptor) => {\n      const fuc = RouteDecorators._addRoute('put', params);\n      fuc(target, key, descriptor);\n    };\n  }\n  static Delete(params) {\n    return (target, key, descriptor) => {\n      const fuc = RouteDecorators._addRoute('delete', params);\n      fuc(target, key, descriptor);\n    };\n  }\n}\n",
@@ -2886,7 +3088,7 @@
     "lineNumber": 1
   },
   {
-    "__docId__": 132,
+    "__docId__": 135,
     "kind": "class",
     "name": "RouteDecorators",
     "memberof": "src/routes/RouteDecorators.js",
@@ -2902,7 +3104,7 @@
     "interface": false
   },
   {
-    "__docId__": 133,
+    "__docId__": 136,
     "kind": "method",
     "name": "_getRouteFromMethode",
     "memberof": "src/routes/RouteDecorators.js~RouteDecorators",
@@ -2929,7 +3131,7 @@
     }
   },
   {
-    "__docId__": 134,
+    "__docId__": 137,
     "kind": "method",
     "name": "_initData",
     "memberof": "src/routes/RouteDecorators.js~RouteDecorators",
@@ -2952,7 +3154,7 @@
     "return": null
   },
   {
-    "__docId__": 135,
+    "__docId__": 138,
     "kind": "method",
     "name": "Route",
     "memberof": "src/routes/RouteDecorators.js~RouteDecorators",
@@ -2985,7 +3187,7 @@
     }
   },
   {
-    "__docId__": 136,
+    "__docId__": 139,
     "kind": "method",
     "name": "_addRoute",
     "memberof": "src/routes/RouteDecorators.js~RouteDecorators",
@@ -3021,7 +3223,7 @@
     }
   },
   {
-    "__docId__": 137,
+    "__docId__": 140,
     "kind": "method",
     "name": "Get",
     "memberof": "src/routes/RouteDecorators.js~RouteDecorators",
@@ -3048,7 +3250,7 @@
     }
   },
   {
-    "__docId__": 138,
+    "__docId__": 141,
     "kind": "method",
     "name": "Post",
     "memberof": "src/routes/RouteDecorators.js~RouteDecorators",
@@ -3075,7 +3277,7 @@
     }
   },
   {
-    "__docId__": 139,
+    "__docId__": 142,
     "kind": "method",
     "name": "Patch",
     "memberof": "src/routes/RouteDecorators.js~RouteDecorators",
@@ -3102,7 +3304,7 @@
     }
   },
   {
-    "__docId__": 140,
+    "__docId__": 143,
     "kind": "method",
     "name": "Put",
     "memberof": "src/routes/RouteDecorators.js~RouteDecorators",
@@ -3129,7 +3331,7 @@
     }
   },
   {
-    "__docId__": 141,
+    "__docId__": 144,
     "kind": "method",
     "name": "Delete",
     "memberof": "src/routes/RouteDecorators.js~RouteDecorators",
@@ -3156,7 +3358,7 @@
     }
   },
   {
-    "__docId__": 142,
+    "__docId__": 145,
     "kind": "file",
     "name": "src/utils/ErrorApp.js",
     "content": "export default class ErrorApp extends Error {\n  constructor(status, message, toTranslate = false) {\n    super ();\n\n    /**\n     * @type {number}\n     */\n    this.status = status;\n\n    /**\n     * @type {string}\n     */\n    this.message = message;\n\n    /**\n     * @type {boolean}\n     */\n    this.toTranslate = toTranslate;\n\n    this.constructor = ErrorApp;\n  }\n}\n\nErrorApp.prototype = Error.prototype;\n",
@@ -3167,7 +3369,7 @@
     "lineNumber": 1
   },
   {
-    "__docId__": 143,
+    "__docId__": 146,
     "kind": "class",
     "name": "ErrorApp",
     "memberof": "src/utils/ErrorApp.js",
@@ -3186,7 +3388,7 @@
     ]
   },
   {
-    "__docId__": 144,
+    "__docId__": 147,
     "kind": "constructor",
     "name": "constructor",
     "memberof": "src/utils/ErrorApp.js~ErrorApp",
@@ -3200,7 +3402,7 @@
     "undocument": true
   },
   {
-    "__docId__": 145,
+    "__docId__": 148,
     "kind": "member",
     "name": "status",
     "memberof": "src/utils/ErrorApp.js~ErrorApp",
@@ -3219,7 +3421,7 @@
     }
   },
   {
-    "__docId__": 146,
+    "__docId__": 149,
     "kind": "member",
     "name": "message",
     "memberof": "src/utils/ErrorApp.js~ErrorApp",
@@ -3238,7 +3440,7 @@
     }
   },
   {
-    "__docId__": 147,
+    "__docId__": 150,
     "kind": "member",
     "name": "toTranslate",
     "memberof": "src/utils/ErrorApp.js~ErrorApp",
@@ -3257,7 +3459,7 @@
     }
   },
   {
-    "__docId__": 149,
+    "__docId__": 152,
     "kind": "file",
     "name": "src/utils/StatusCode.js",
     "content": "export default {\n  ok: 200,\n  created: 201,\n  noContent: 204,\n  badRequest: 400,\n  unauthorized: 401,\n  forbidden: 403,\n  notFound: 404,\n  internalServerError: 500,\n};",
@@ -3268,7 +3470,7 @@
     "lineNumber": 1
   },
   {
-    "__docId__": 150,
+    "__docId__": 153,
     "kind": "file",
     "name": "src/utils/index.js",
     "content": "import moment from 'moment';\nimport lodash from 'lodash';\nimport jsonwebtoken from 'jsonwebtoken';\n\nimport * as utils from './utils';\nimport * as utilsParam from './utils.param';\n\nmodule.exports = {\n  jsonwebtoken,\n  moment,\n  lodash,\n  utils,\n  utilsParam,\n};\n",
@@ -3279,10 +3481,10 @@
     "lineNumber": 1
   },
   {
-    "__docId__": 151,
+    "__docId__": 154,
     "kind": "file",
     "name": "src/utils/utils.js",
-    "content": "import moment from 'moment';\nimport Lodash from 'lodash';\n\nexport const lodash = Lodash;\n\nexport function random(from, to, fixed) {\n  return ((Math.random() * (to - from)) + from).toFixed(fixed) * 1;\n}\n\nexport function ucFirst(str) {\n  return str ? str.charAt(0).toUpperCase() + str.slice(1) : str;\n}\nexport function capitalize(str) { return ucFirst(str); }\n\nexport function dateYYYYMMDD(date) {\n  if (!date) { return undefined; }\n  return moment(date).format('YYYY-MM-DD');\n}\n\nexport function isArray(array) {\n  return Array.isArray(array);\n}\n\nexport function trim(elem) {\n  if (elem.trim) {\n    return elem.trim();\n  }\n  return null;\n}\n\nexport async function timeout(ms) {\n  return new Promise(resolve => setTimeout(resolve, ms));\n}\nexport const wait = timeout;\n\nexport function isObject(obj, force = true) {\n  if (force) {\n    return !isArray(obj) && isObject(obj, false);\n  }\n  return typeof obj === 'object';\n}\n\nexport function toLowerCase(str) {\n  return str.toLowerCase();\n}\n\nexport function isEmpty(data) {\n  if (data === null || data === undefined) {\n    return true;\n  }\n  if (typeof data === 'string') {\n    return data === '';\n  } else if (Array.isArray(data)) {\n    return data.length === 0;\n  } else if (typeof data === 'object') {\n    for (const key in data) {\n      if (data.hasOwnProperty(key)) {\n        return false;\n      }\n    }\n    return true;\n  }\n  return null;\n}\n\nexport function notEmpty(elem) {\n  return !isEmpty(elem);\n}\n\nexport function nullIfEmpty(elem) {\n  //TODO test if object, string or array\n  return isEmpty(elem) ? null : elem;\n}\n\nexport function jsonEncode(json) {\n  return JSON.stringify(json).catch(() => null);\n}\n\nexport function jsonDecode(string) {\n  return JSON.parse(string).catch(() => null);\n}\n\nexport function toNumber(elem) {\n  return Number(elem);\n}\n\nexport function deepCopy(obj) {\n  return Lodash.cloneDeep(obj);\n}\n\nexport function objValToArray(obj) {\n  return Object.keys(obj).map((k) => obj[k]);\n}\n",
+    "content": "import moment from 'moment';\nimport Lodash from 'lodash';\n\nexport const lodash = Lodash;\n\n/**\n * @desc generates a random number configurable range and floating precision\n */\nexport function random(from, to, fixed) {\n  return ((Math.random() * (to - from)) + from).toFixed(fixed) * 1;\n}\n\n/**\n * @access private\n */\nexport function ucFirst(str) {\n  return str ? str.charAt(0).toUpperCase() + str.slice(1) : str;\n}\n\n/**\n * @desc turns the first letter of every words into capital letters\n */\nexport function capitalize(str) { return ucFirst(str); }\n\n/**\n * @desc converts a javascript date to the YYYY-MM-DD format\n * @param {Date} date the date to convert\n * @return {string} the formated date\n */\nexport function dateYYYYMMDD(date) {\n  if (!date) { return undefined; }\n  return moment(date).format('YYYY-MM-DD');\n}\n\n/**\n * @desc checks if the given param is an array\n * @param {*} array the element to check\n * @return {boolean}\n */\nexport function isArray(array) {\n  return Array.isArray(array);\n}\n\n/**\n * @desc trim the given element if possible\n * @param {string | any} elem the element to trim\n * @return {string | null} the trimmed element\n */\nexport function trim(elem) {\n  if (elem.trim) {\n    return elem.trim();\n  }\n  return null;\n}\n\nexport async function timeout(ms) {\n  return new Promise(resolve => setTimeout(resolve, ms));\n}\nexport const wait = timeout;\n\n/**\n * @desc checks whether the given element is an objects\n * @param {*} obj the element to check\n * @param {boolean} [force = true] if set to true, will first check that obj is not an array.\n * @return {boolean}\n */\nexport function isObject(obj, force = true) {\n  if (force) {\n    return !isArray(obj) && isObject(obj, false);\n  }\n  return typeof obj === 'object';\n}\n\nexport function toLowerCase(str) {\n  return str.toLowerCase();\n}\n\n/**\n * @desc checks whether the given element is empty\n * @param {*} data the element to check\n * @return {boolean}\n */\nexport function isEmpty(data) {\n  if (data === null || data === undefined) {\n    return true;\n  }\n  if (typeof data === 'string') {\n    return data === '';\n  } else if (Array.isArray(data)) {\n    return data.length === 0;\n  } else if (typeof data === 'object') {\n    for (const key in data) {\n      if (data.hasOwnProperty(key)) {\n        return false;\n      }\n    }\n    return true;\n  }\n  return null;\n}\n\n/**\n * @desc checks whether the given element is NOT empty\n * @param {*} elem the element to check\n * @return {boolean}\n */\nexport function notEmpty(elem) {\n  return !isEmpty(elem);\n}\n\n/**\n * @desc checks whether the given element is empty, and return null if it is.\n * @param {*} elem the element to check\n * @return {* | null}\n */\nexport function nullIfEmpty(elem) {\n  //TODO test if object, string or array\n  return isEmpty(elem) ? null : elem;\n}\n\n/**\n * @desc transforms a JSON element intro a string\n * @param {Object} json the element to encode\n * @return {string}\n */\nexport function jsonEncode(json) {\n  return JSON.stringify(json).catch(() => null);\n}\n\n/**\n * @desc transforms JSON string into a JSON element\n * @param {string} string the element to decode\n * @return {Object}\n */\nexport function jsonDecode(string) {\n  return JSON.parse(string).catch(() => null);\n}\n\n/**\n * @desc converts the given element to a number\n * @param {*} elem the element to convert\n * @return {number}\n */\nexport function toNumber(elem) {\n  return Number(elem);\n}\n\n/**\n * @desc copy an object recursively\n * @param {Object} obj the object to clone\n * @return {Object} a deep copy of the supplied object\n */\nexport function deepCopy(obj) {\n  return Lodash.cloneDeep(obj);\n}\n\n/**\n * @desc transforms an Object into an array of key-value pairs\n * @param {Object} obj the object to transform\n * @return {[string, *][]}\n */\nexport function objValToArray(obj) {\n  return Object.keys(obj).map((k) => obj[k]);\n}\n",
     "static": true,
     "longname": "/home/elkaim_r/Project/koa-smart/src/utils/utils.js",
     "access": "public",
@@ -3290,7 +3492,7 @@
     "lineNumber": 1
   },
   {
-    "__docId__": 152,
+    "__docId__": 155,
     "kind": "variable",
     "name": "lodash",
     "memberof": "src/utils/utils.js",
@@ -3310,7 +3512,7 @@
     }
   },
   {
-    "__docId__": 153,
+    "__docId__": 156,
     "kind": "function",
     "name": "random",
     "memberof": "src/utils/utils.js",
@@ -3322,9 +3524,8 @@
     "export": true,
     "importPath": "koa-smart/src/utils/utils.js",
     "importStyle": "{random}",
-    "description": null,
-    "lineNumber": 6,
-    "undocument": true,
+    "description": "generates a random number configurable range and floating precision",
+    "lineNumber": 9,
     "params": [
       {
         "name": "from",
@@ -3352,7 +3553,7 @@
     }
   },
   {
-    "__docId__": 154,
+    "__docId__": 157,
     "kind": "function",
     "name": "ucFirst",
     "memberof": "src/utils/utils.js",
@@ -3360,106 +3561,15 @@
     "async": false,
     "static": true,
     "longname": "src/utils/utils.js~ucFirst",
-    "access": "public",
+    "access": "private",
     "export": true,
     "importPath": "koa-smart/src/utils/utils.js",
     "importStyle": "{ucFirst}",
-    "description": null,
-    "lineNumber": 10,
-    "undocument": true,
+    "description": "",
+    "lineNumber": 16,
     "params": [
       {
         "name": "str",
-        "types": [
-          "*"
-        ]
-      }
-    ],
-    "return": {
-      "types": [
-        "*"
-      ]
-    }
-  },
-  {
-    "__docId__": 155,
-    "kind": "function",
-    "name": "capitalize",
-    "memberof": "src/utils/utils.js",
-    "generator": false,
-    "async": false,
-    "static": true,
-    "longname": "src/utils/utils.js~capitalize",
-    "access": "public",
-    "export": true,
-    "importPath": "koa-smart/src/utils/utils.js",
-    "importStyle": "{capitalize}",
-    "description": null,
-    "lineNumber": 13,
-    "undocument": true,
-    "params": [
-      {
-        "name": "str",
-        "types": [
-          "*"
-        ]
-      }
-    ],
-    "return": {
-      "types": [
-        "*"
-      ]
-    }
-  },
-  {
-    "__docId__": 156,
-    "kind": "function",
-    "name": "dateYYYYMMDD",
-    "memberof": "src/utils/utils.js",
-    "generator": false,
-    "async": false,
-    "static": true,
-    "longname": "src/utils/utils.js~dateYYYYMMDD",
-    "access": "public",
-    "export": true,
-    "importPath": "koa-smart/src/utils/utils.js",
-    "importStyle": "{dateYYYYMMDD}",
-    "description": null,
-    "lineNumber": 15,
-    "undocument": true,
-    "params": [
-      {
-        "name": "date",
-        "types": [
-          "*"
-        ]
-      }
-    ],
-    "return": {
-      "types": [
-        "*"
-      ]
-    }
-  },
-  {
-    "__docId__": 157,
-    "kind": "function",
-    "name": "isArray",
-    "memberof": "src/utils/utils.js",
-    "generator": false,
-    "async": false,
-    "static": true,
-    "longname": "src/utils/utils.js~isArray",
-    "access": "public",
-    "export": true,
-    "importPath": "koa-smart/src/utils/utils.js",
-    "importStyle": "{isArray}",
-    "description": null,
-    "lineNumber": 20,
-    "undocument": true,
-    "params": [
-      {
-        "name": "array",
         "types": [
           "*"
         ]
@@ -3474,22 +3584,21 @@
   {
     "__docId__": 158,
     "kind": "function",
-    "name": "trim",
+    "name": "capitalize",
     "memberof": "src/utils/utils.js",
     "generator": false,
     "async": false,
     "static": true,
-    "longname": "src/utils/utils.js~trim",
+    "longname": "src/utils/utils.js~capitalize",
     "access": "public",
     "export": true,
     "importPath": "koa-smart/src/utils/utils.js",
-    "importStyle": "{trim}",
-    "description": null,
-    "lineNumber": 24,
-    "undocument": true,
+    "importStyle": "{capitalize}",
+    "description": "turns the first letter of every words into capital letters",
+    "lineNumber": 23,
     "params": [
       {
-        "name": "elem",
+        "name": "str",
         "types": [
           "*"
         ]
@@ -3504,6 +3613,116 @@
   {
     "__docId__": 159,
     "kind": "function",
+    "name": "dateYYYYMMDD",
+    "memberof": "src/utils/utils.js",
+    "generator": false,
+    "async": false,
+    "static": true,
+    "longname": "src/utils/utils.js~dateYYYYMMDD",
+    "access": "public",
+    "export": true,
+    "importPath": "koa-smart/src/utils/utils.js",
+    "importStyle": "{dateYYYYMMDD}",
+    "description": "converts a javascript date to the YYYY-MM-DD format",
+    "lineNumber": 30,
+    "params": [
+      {
+        "nullable": null,
+        "types": [
+          "Date"
+        ],
+        "spread": false,
+        "optional": false,
+        "name": "date",
+        "description": "the date to convert"
+      }
+    ],
+    "return": {
+      "nullable": null,
+      "types": [
+        "string"
+      ],
+      "spread": false,
+      "description": "the formated date"
+    }
+  },
+  {
+    "__docId__": 160,
+    "kind": "function",
+    "name": "isArray",
+    "memberof": "src/utils/utils.js",
+    "generator": false,
+    "async": false,
+    "static": true,
+    "longname": "src/utils/utils.js~isArray",
+    "access": "public",
+    "export": true,
+    "importPath": "koa-smart/src/utils/utils.js",
+    "importStyle": "{isArray}",
+    "description": "checks if the given param is an array",
+    "lineNumber": 40,
+    "params": [
+      {
+        "nullable": null,
+        "types": [
+          "*"
+        ],
+        "spread": false,
+        "optional": false,
+        "name": "array",
+        "description": "the element to check"
+      }
+    ],
+    "return": {
+      "nullable": null,
+      "types": [
+        "boolean"
+      ],
+      "spread": false,
+      "description": ""
+    }
+  },
+  {
+    "__docId__": 161,
+    "kind": "function",
+    "name": "trim",
+    "memberof": "src/utils/utils.js",
+    "generator": false,
+    "async": false,
+    "static": true,
+    "longname": "src/utils/utils.js~trim",
+    "access": "public",
+    "export": true,
+    "importPath": "koa-smart/src/utils/utils.js",
+    "importStyle": "{trim}",
+    "description": "trim the given element if possible",
+    "lineNumber": 49,
+    "params": [
+      {
+        "nullable": null,
+        "types": [
+          "string ",
+          " any"
+        ],
+        "spread": false,
+        "optional": false,
+        "name": "elem",
+        "description": "the element to trim"
+      }
+    ],
+    "return": {
+      "nullable": null,
+      "types": [
+        "string ",
+        " null"
+      ],
+      "spread": false,
+      "description": "the trimmed element"
+    }
+  },
+  {
+    "__docId__": 162,
+    "kind": "function",
     "name": "timeout",
     "memberof": "src/utils/utils.js",
     "generator": false,
@@ -3515,7 +3734,7 @@
     "importPath": "koa-smart/src/utils/utils.js",
     "importStyle": "{timeout}",
     "description": null,
-    "lineNumber": 31,
+    "lineNumber": 56,
     "undocument": true,
     "params": [
       {
@@ -3532,7 +3751,7 @@
     }
   },
   {
-    "__docId__": 160,
+    "__docId__": 163,
     "kind": "variable",
     "name": "wait",
     "memberof": "src/utils/utils.js",
@@ -3543,7 +3762,7 @@
     "importPath": "koa-smart/src/utils/utils.js",
     "importStyle": "{wait}",
     "description": null,
-    "lineNumber": 34,
+    "lineNumber": 59,
     "undocument": true,
     "type": {
       "types": [
@@ -3552,7 +3771,7 @@
     }
   },
   {
-    "__docId__": 161,
+    "__docId__": 164,
     "kind": "function",
     "name": "isObject",
     "memberof": "src/utils/utils.js",
@@ -3564,34 +3783,43 @@
     "export": true,
     "importPath": "koa-smart/src/utils/utils.js",
     "importStyle": "{isObject}",
-    "description": null,
-    "lineNumber": 36,
-    "undocument": true,
+    "description": "checks whether the given element is an objects",
+    "lineNumber": 67,
     "params": [
       {
-        "name": "obj",
+        "nullable": null,
         "types": [
           "*"
-        ]
+        ],
+        "spread": false,
+        "optional": false,
+        "name": "obj",
+        "description": "the element to check"
       },
       {
-        "name": "force",
-        "optional": true,
+        "nullable": null,
         "types": [
           "boolean"
         ],
+        "spread": false,
+        "optional": true,
+        "defaultValue": " true",
         "defaultRaw": true,
-        "defaultValue": "true"
+        "name": "force",
+        "description": "if set to true, will first check that obj is not an array."
       }
     ],
     "return": {
+      "nullable": null,
       "types": [
-        "*"
-      ]
+        "boolean"
+      ],
+      "spread": false,
+      "description": ""
     }
   },
   {
-    "__docId__": 162,
+    "__docId__": 165,
     "kind": "function",
     "name": "toLowerCase",
     "memberof": "src/utils/utils.js",
@@ -3604,7 +3832,7 @@
     "importPath": "koa-smart/src/utils/utils.js",
     "importStyle": "{toLowerCase}",
     "description": null,
-    "lineNumber": 43,
+    "lineNumber": 74,
     "undocument": true,
     "params": [
       {
@@ -3621,7 +3849,7 @@
     }
   },
   {
-    "__docId__": 163,
+    "__docId__": 166,
     "kind": "function",
     "name": "isEmpty",
     "memberof": "src/utils/utils.js",
@@ -3633,25 +3861,31 @@
     "export": true,
     "importPath": "koa-smart/src/utils/utils.js",
     "importStyle": "{isEmpty}",
-    "description": null,
-    "lineNumber": 47,
-    "undocument": true,
+    "description": "checks whether the given element is empty",
+    "lineNumber": 83,
     "params": [
       {
-        "name": "data",
+        "nullable": null,
         "types": [
           "*"
-        ]
+        ],
+        "spread": false,
+        "optional": false,
+        "name": "data",
+        "description": "the element to check"
       }
     ],
     "return": {
+      "nullable": null,
       "types": [
-        "*"
-      ]
+        "boolean"
+      ],
+      "spread": false,
+      "description": ""
     }
   },
   {
-    "__docId__": 164,
+    "__docId__": 167,
     "kind": "function",
     "name": "notEmpty",
     "memberof": "src/utils/utils.js",
@@ -3663,25 +3897,31 @@
     "export": true,
     "importPath": "koa-smart/src/utils/utils.js",
     "importStyle": "{notEmpty}",
-    "description": null,
-    "lineNumber": 66,
-    "undocument": true,
+    "description": "checks whether the given element is NOT empty",
+    "lineNumber": 107,
     "params": [
       {
-        "name": "elem",
+        "nullable": null,
         "types": [
           "*"
-        ]
+        ],
+        "spread": false,
+        "optional": false,
+        "name": "elem",
+        "description": "the element to check"
       }
     ],
     "return": {
+      "nullable": null,
       "types": [
-        "*"
-      ]
+        "boolean"
+      ],
+      "spread": false,
+      "description": ""
     }
   },
   {
-    "__docId__": 165,
+    "__docId__": 168,
     "kind": "function",
     "name": "nullIfEmpty",
     "memberof": "src/utils/utils.js",
@@ -3693,25 +3933,32 @@
     "export": true,
     "importPath": "koa-smart/src/utils/utils.js",
     "importStyle": "{nullIfEmpty}",
-    "description": null,
-    "lineNumber": 70,
-    "undocument": true,
+    "description": "checks whether the given element is empty, and return null if it is.",
+    "lineNumber": 116,
     "params": [
       {
-        "name": "elem",
+        "nullable": null,
         "types": [
           "*"
-        ]
+        ],
+        "spread": false,
+        "optional": false,
+        "name": "elem",
+        "description": "the element to check"
       }
     ],
     "return": {
+      "nullable": null,
       "types": [
-        "*"
-      ]
+        "* ",
+        " null"
+      ],
+      "spread": false,
+      "description": ""
     }
   },
   {
-    "__docId__": 166,
+    "__docId__": 169,
     "kind": "function",
     "name": "jsonEncode",
     "memberof": "src/utils/utils.js",
@@ -3723,25 +3970,31 @@
     "export": true,
     "importPath": "koa-smart/src/utils/utils.js",
     "importStyle": "{jsonEncode}",
-    "description": null,
-    "lineNumber": 75,
-    "undocument": true,
+    "description": "transforms a JSON element intro a string",
+    "lineNumber": 126,
     "params": [
       {
-        "name": "json",
+        "nullable": null,
         "types": [
-          "*"
-        ]
+          "Object"
+        ],
+        "spread": false,
+        "optional": false,
+        "name": "json",
+        "description": "the element to encode"
       }
     ],
     "return": {
+      "nullable": null,
       "types": [
-        "*"
-      ]
+        "string"
+      ],
+      "spread": false,
+      "description": ""
     }
   },
   {
-    "__docId__": 167,
+    "__docId__": 170,
     "kind": "function",
     "name": "jsonDecode",
     "memberof": "src/utils/utils.js",
@@ -3753,25 +4006,31 @@
     "export": true,
     "importPath": "koa-smart/src/utils/utils.js",
     "importStyle": "{jsonDecode}",
-    "description": null,
-    "lineNumber": 79,
-    "undocument": true,
+    "description": "transforms JSON string into a JSON element",
+    "lineNumber": 135,
     "params": [
       {
-        "name": "string",
+        "nullable": null,
         "types": [
-          "*"
-        ]
+          "string"
+        ],
+        "spread": false,
+        "optional": false,
+        "name": "string",
+        "description": "the element to decode"
       }
     ],
     "return": {
+      "nullable": null,
       "types": [
-        "*"
-      ]
+        "Object"
+      ],
+      "spread": false,
+      "description": ""
     }
   },
   {
-    "__docId__": 168,
+    "__docId__": 171,
     "kind": "function",
     "name": "toNumber",
     "memberof": "src/utils/utils.js",
@@ -3783,25 +4042,31 @@
     "export": true,
     "importPath": "koa-smart/src/utils/utils.js",
     "importStyle": "{toNumber}",
-    "description": null,
-    "lineNumber": 83,
-    "undocument": true,
+    "description": "converts the given element to a number",
+    "lineNumber": 144,
     "params": [
       {
-        "name": "elem",
+        "nullable": null,
         "types": [
           "*"
-        ]
+        ],
+        "spread": false,
+        "optional": false,
+        "name": "elem",
+        "description": "the element to convert"
       }
     ],
     "return": {
+      "nullable": null,
       "types": [
-        "*"
-      ]
+        "number"
+      ],
+      "spread": false,
+      "description": ""
     }
   },
   {
-    "__docId__": 169,
+    "__docId__": 172,
     "kind": "function",
     "name": "deepCopy",
     "memberof": "src/utils/utils.js",
@@ -3813,25 +4078,31 @@
     "export": true,
     "importPath": "koa-smart/src/utils/utils.js",
     "importStyle": "{deepCopy}",
-    "description": null,
-    "lineNumber": 87,
-    "undocument": true,
+    "description": "copy an object recursively",
+    "lineNumber": 153,
     "params": [
       {
-        "name": "obj",
+        "nullable": null,
         "types": [
-          "*"
-        ]
+          "Object"
+        ],
+        "spread": false,
+        "optional": false,
+        "name": "obj",
+        "description": "the object to clone"
       }
     ],
     "return": {
+      "nullable": null,
       "types": [
-        "*"
-      ]
+        "Object"
+      ],
+      "spread": false,
+      "description": "a deep copy of the supplied object"
     }
   },
   {
-    "__docId__": 170,
+    "__docId__": 173,
     "kind": "function",
     "name": "objValToArray",
     "memberof": "src/utils/utils.js",
@@ -3843,28 +4114,34 @@
     "export": true,
     "importPath": "koa-smart/src/utils/utils.js",
     "importStyle": "{objValToArray}",
-    "description": null,
-    "lineNumber": 91,
-    "undocument": true,
+    "description": "transforms an Object into an array of key-value pairs",
+    "lineNumber": 162,
     "params": [
       {
-        "name": "obj",
+        "nullable": null,
         "types": [
-          "*"
-        ]
+          "Object"
+        ],
+        "spread": false,
+        "optional": false,
+        "name": "obj",
+        "description": "the object to transform"
       }
     ],
     "return": {
+      "nullable": null,
       "types": [
-        "*"
-      ]
+        "[string, *][]"
+      ],
+      "spread": false,
+      "description": ""
     }
   },
   {
-    "__docId__": 171,
+    "__docId__": 174,
     "kind": "file",
     "name": "src/utils/utils.param.js",
-    "content": "\nimport StatusCode from './StatusCode';\n\nexport function test(func, errMsg) {\n  return (elem, route, { ctx, keyBody }) => {\n    if (!func(elem)) {\n      route.throw(StatusCode.badRequest, errMsg || `${ctx.state.__('invalide param:')} ${keyBody}`);\n    }\n    return elem;\n  };\n}\n\nexport function trasform(func) {\n  return elem => func(elem);\n}\n\nexport function regex(reg) {\n  return (elem) => {\n    if (reg instanceof RegExp) {\n      return elem.match(reg);\n    }\n    return false;\n  };\n}\n\nexport function isDateBetween(d1, d2) {\n  return (d) => {\n    if (d1.getTime() <= d.getTime() && d2.getTime() >= d.getTime()) {\n      return true;\n    }\n    if (d2.getTime() <= d.getTime() && d1.getTime() >= d.getTime()) {\n      return true;\n    }\n    return false;\n  };\n}\n",
+    "content": "\nimport StatusCode from './StatusCode';\n\n/**\n * @desc allows the user to enforce a test on an object, and throws an error should the check fail.\n * @param {function} func the predicate to check the object\n * @param {string} errMsg the error message to be returned in case the check fails.\n * @return {ParamMiddlewareFunction} a function that can be supplied to a route's param checks\n * @throws {ErrorApp} thrown if the test predicate returns false\n */\nexport function test(func, errMsg) {\n  return (elem, route, { ctx, keyBody }) => {\n    if (!func(elem)) {\n      route.throw(StatusCode.badRequest, errMsg || `${ctx.state.__('invalide param:')} ${keyBody}`);\n    }\n    return elem;\n  };\n}\n\n/**\n * @desc allows the user to apply an arbitrary function to an elem.\n * @param {function} func the function to transform the object\n * @return {function} a function that can be supplied\n */\nexport function trasform(func) {\n  return elem => func(elem);\n}\n\n/**\n * @desc allows the user to check whether an element matches the given regex.\n * @param {RegExp} reg\n * @return {function} a function taking a string, which will attempt to match it against the given regex, and returns true or false.\n */\nexport function regex(reg) {\n  return (elem) => {\n    if (reg instanceof RegExp) {\n      return elem.match(reg);\n    }\n    return false;\n  };\n}\n\n/**\n * @desc allows the user to check whether a given date is between a range of dates.\n * @param {Date} d1 the starting date\n * @param {Date} d2 the ending date\n * @return {function} a function taking a date, which will return true if it is between the first two supplied, false otherwise.\n */\nexport function isDateBetween(d1, d2) {\n  return (d) => {\n    if (d1.getTime() <= d.getTime() && d2.getTime() >= d.getTime()) {\n      return true;\n    }\n    if (d2.getTime() <= d.getTime() && d1.getTime() >= d.getTime()) {\n      return true;\n    }\n    return false;\n  };\n}\n",
     "static": true,
     "longname": "/home/elkaim_r/Project/koa-smart/src/utils/utils.param.js",
     "access": "public",
@@ -3872,7 +4149,7 @@
     "lineNumber": 1
   },
   {
-    "__docId__": 172,
+    "__docId__": 175,
     "kind": "function",
     "name": "test",
     "memberof": "src/utils/utils.param.js",
@@ -3884,31 +4161,49 @@
     "export": true,
     "importPath": "koa-smart/src/utils/utils.param.js",
     "importStyle": "{test}",
-    "description": null,
-    "lineNumber": 4,
-    "undocument": true,
+    "description": "allows the user to enforce a test on an object, and throws an error should the check fail.",
+    "lineNumber": 11,
     "params": [
       {
-        "name": "func",
+        "nullable": null,
         "types": [
-          "*"
-        ]
+          "function"
+        ],
+        "spread": false,
+        "optional": false,
+        "name": "func",
+        "description": "the predicate to check the object"
       },
       {
-        "name": "errMsg",
+        "nullable": null,
         "types": [
-          "*"
-        ]
+          "string"
+        ],
+        "spread": false,
+        "optional": false,
+        "name": "errMsg",
+        "description": "the error message to be returned in case the check fails."
       }
     ],
     "return": {
+      "nullable": null,
       "types": [
-        "*"
-      ]
-    }
+        "ParamMiddlewareFunction"
+      ],
+      "spread": false,
+      "description": "a function that can be supplied to a route's param checks"
+    },
+    "throws": [
+      {
+        "types": [
+          "ErrorApp"
+        ],
+        "description": "thrown if the test predicate returns false"
+      }
+    ]
   },
   {
-    "__docId__": 173,
+    "__docId__": 176,
     "kind": "function",
     "name": "trasform",
     "memberof": "src/utils/utils.param.js",
@@ -3920,25 +4215,31 @@
     "export": true,
     "importPath": "koa-smart/src/utils/utils.param.js",
     "importStyle": "{trasform}",
-    "description": null,
-    "lineNumber": 13,
-    "undocument": true,
+    "description": "allows the user to apply an arbitrary function to an elem.",
+    "lineNumber": 25,
     "params": [
       {
-        "name": "func",
+        "nullable": null,
         "types": [
-          "*"
-        ]
+          "function"
+        ],
+        "spread": false,
+        "optional": false,
+        "name": "func",
+        "description": "the function to transform the object"
       }
     ],
     "return": {
+      "nullable": null,
       "types": [
-        "*"
-      ]
+        "function"
+      ],
+      "spread": false,
+      "description": "a function that can be supplied"
     }
   },
   {
-    "__docId__": 174,
+    "__docId__": 177,
     "kind": "function",
     "name": "regex",
     "memberof": "src/utils/utils.param.js",
@@ -3950,25 +4251,31 @@
     "export": true,
     "importPath": "koa-smart/src/utils/utils.param.js",
     "importStyle": "{regex}",
-    "description": null,
-    "lineNumber": 17,
-    "undocument": true,
+    "description": "allows the user to check whether an element matches the given regex.",
+    "lineNumber": 34,
     "params": [
       {
-        "name": "reg",
+        "nullable": null,
         "types": [
-          "*"
-        ]
+          "RegExp"
+        ],
+        "spread": false,
+        "optional": false,
+        "name": "reg",
+        "description": ""
       }
     ],
     "return": {
+      "nullable": null,
       "types": [
-        "*"
-      ]
+        "function"
+      ],
+      "spread": false,
+      "description": "a function taking a string, which will attempt to match it against the given regex, and returns true or false."
     }
   },
   {
-    "__docId__": 175,
+    "__docId__": 178,
     "kind": "function",
     "name": "isDateBetween",
     "memberof": "src/utils/utils.param.js",
@@ -3980,27 +4287,37 @@
     "export": true,
     "importPath": "koa-smart/src/utils/utils.param.js",
     "importStyle": "{isDateBetween}",
-    "description": null,
-    "lineNumber": 26,
-    "undocument": true,
+    "description": "allows the user to check whether a given date is between a range of dates.",
+    "lineNumber": 49,
     "params": [
       {
-        "name": "d1",
+        "nullable": null,
         "types": [
-          "*"
-        ]
+          "Date"
+        ],
+        "spread": false,
+        "optional": false,
+        "name": "d1",
+        "description": "the starting date"
       },
       {
-        "name": "d2",
+        "nullable": null,
         "types": [
-          "*"
-        ]
+          "Date"
+        ],
+        "spread": false,
+        "optional": false,
+        "name": "d2",
+        "description": "the ending date"
       }
     ],
     "return": {
+      "nullable": null,
       "types": [
-        "*"
-      ]
+        "function"
+      ],
+      "spread": false,
+      "description": "a function taking a date, which will return true if it is between the first two supplied, false otherwise."
     }
   },
   {
@@ -4013,7 +4330,7 @@
   },
   {
     "kind": "packageJSON",
-    "content": "{\n  \"name\": \"koa-smart\",\n  \"version\": \"1.2.0\",\n  \"people\": {\n    \"name\": \"YSO CORP\",\n    \"email\": \"contact@ysocorp.com\",\n    \"url\": \"http://ysocorp.com\"\n  },\n  \"description\": \"A framework base on Koajs2 with Decorator, Params checker and a base of modules (cors, bodyparser, compress, I18n, etc…) to let you develop smart api easily\",\n  \"license\": \"MIT\",\n  \"main\": \"index.js\",\n  \"engines\": {\n    \"node\": \">=7.10.1\"\n  },\n  \"repository\": {\n    \"type\": \"git\",\n    \"url\": \"https://github.com/ysocorp/koa-smart\"\n  },\n  \"scripts\": {\n    \"test\": \"npm run build-prod && cross-env NODE_ENV=test mocha --opts mocha.opts\",\n    \"build-prod\": \"rimraf dist && cross-env NODE_ENV=production babel src --out-dir dist\",\n    \"lint\": \"eslint src test\"\n  },\n  \"dependencies\": {\n    \"babel-runtime\": \"^6.26.0\",\n    \"chalk\": \"^2.3.2\",\n    \"jsonwebtoken\": \"^8.2.0\",\n    \"kcors\": \"^2.2.0\",\n    \"koa\": \"^2.5.0\",\n    \"koa-bodyparser\": \"^4.2.0\",\n    \"koa-compress\": \"^2.0.0\",\n    \"koa-helmet\": \"^3.3.0\",\n    \"koa-i18n\": \"^2.1.0\",\n    \"koa-locale\": \"^1.3.0\",\n    \"koa-router\": \"^7.4.0\",\n    \"koa2-ratelimit\": \"^0.5.0\",\n    \"lodash\": \"^4.17.5\",\n    \"moment\": \"^2.21.0\",\n    \"node-gettext\": \"^2.0.0\"\n  },\n  \"devDependencies\": {\n    \"babel-cli\": \"^6.26.0\",\n    \"babel-eslint\": \"^8.2.2\",\n    \"babel-plugin-transform-class-properties\": \"^6.23.0\",\n    \"babel-plugin-transform-decorators-legacy\": \"^1.3.4\",\n    \"babel-plugin-transform-runtime\": \"^6.15.0\",\n    \"babel-preset-env\": \"^1.6.1\",\n    \"babel-preset-stage-3\": \"^6.17.0\",\n    \"nodemon\": \"^1.17.1\",\n    \"mocha\": \"^5.0.4\",\n    \"expect\": \"^22.4.0\",\n    \"eslint\": \"^4.18.2\",\n    \"esdoc-standard-plugin\": \"^1.0.0\",\n    \"esdoc-ecmascript-proposal-plugin\": \"^1.0.0\",\n    \"esdoc\": \"^1.0.4\",\n    \"cross-env\": \"^5.1.4\",\n    \"rimraf\": \"^2.6.2\",\n    \"supertest\": \"^3.0.0\"\n  },\n  \"keywords\": [\n    \"koa-smart\",\n    \"koa-boilerplate\",\n    \"koajs-boilerplate\",\n    \"koa2-boilerplate\",\n    \"boilerplate\",\n    \"koa-decorator\",\n    \"koa2-decorator\",\n    \"koajs-2-decorator\",\n    \"koajs\",\n    \"koa-es6\",\n    \"koa-es7\",\n    \"koajs-2\",\n    \"restfull\",\n    \"api\",\n    \"class\",\n    \"decorator\",\n    \"koa-essential\",\n    \"koa-router\",\n    \"framework\",\n    \"router\"\n  ]\n}\n",
+    "content": "{\n  \"name\": \"koa-smart\",\n  \"version\": \"1.2.0\",\n  \"people\": {\n    \"name\": \"YSO CORP\",\n    \"email\": \"contact@ysocorp.com\",\n    \"url\": \"http://ysocorp.com\"\n  },\n  \"description\": \"A framework base on Koajs2 with Decorator, Params checker and a base of modules (cors, bodyparser, compress, I18n, etc…) to let you develop smart api easily\",\n  \"license\": \"MIT\",\n  \"main\": \"index.js\",\n  \"engines\": {\n    \"node\": \">=7.10.1\"\n  },\n  \"repository\": {\n    \"type\": \"git\",\n    \"url\": \"https://github.com/ysocorp/koa-smart\"\n  },\n  \"scripts\": {\n    \"test\": \"npm run build-prod && cross-env NODE_ENV=test mocha --opts mocha.opts\",\n    \"build-prod\": \"rimraf dist && cross-env NODE_ENV=production babel src --out-dir dist\",\n    \"lint\": \"eslint src test\",\n    \"generate-doc\": \"npx esdoc\"\n  },\n  \"dependencies\": {\n    \"babel-runtime\": \"^6.26.0\",\n    \"chalk\": \"^2.3.2\",\n    \"jsonwebtoken\": \"^8.2.0\",\n    \"kcors\": \"^2.2.0\",\n    \"koa\": \"^2.5.0\",\n    \"koa-bodyparser\": \"^4.2.0\",\n    \"koa-compress\": \"^2.0.0\",\n    \"koa-helmet\": \"^3.3.0\",\n    \"koa-i18n\": \"^2.1.0\",\n    \"koa-locale\": \"^1.3.0\",\n    \"koa-router\": \"^7.4.0\",\n    \"koa2-ratelimit\": \"^0.5.0\",\n    \"lodash\": \"^4.17.5\",\n    \"moment\": \"^2.21.0\",\n    \"node-gettext\": \"^2.0.0\"\n  },\n  \"devDependencies\": {\n    \"babel-cli\": \"^6.26.0\",\n    \"babel-eslint\": \"^8.2.2\",\n    \"babel-plugin-transform-class-properties\": \"^6.23.0\",\n    \"babel-plugin-transform-decorators-legacy\": \"^1.3.4\",\n    \"babel-plugin-transform-runtime\": \"^6.15.0\",\n    \"babel-preset-env\": \"^1.6.1\",\n    \"babel-preset-stage-3\": \"^6.17.0\",\n    \"nodemon\": \"^1.17.1\",\n    \"mocha\": \"^5.0.4\",\n    \"expect\": \"^22.4.0\",\n    \"eslint\": \"^4.18.2\",\n    \"esdoc-standard-plugin\": \"^1.0.0\",\n    \"esdoc-ecmascript-proposal-plugin\": \"^1.0.0\",\n    \"esdoc\": \"^1.0.4\",\n    \"cross-env\": \"^5.1.4\",\n    \"rimraf\": \"^2.6.2\",\n    \"supertest\": \"^3.0.0\"\n  },\n  \"keywords\": [\n    \"koa-smart\",\n    \"koa-boilerplate\",\n    \"koajs-boilerplate\",\n    \"koa2-boilerplate\",\n    \"boilerplate\",\n    \"koa-decorator\",\n    \"koa2-decorator\",\n    \"koajs-2-decorator\",\n    \"koajs\",\n    \"koa-es6\",\n    \"koa-es7\",\n    \"koajs-2\",\n    \"restfull\",\n    \"api\",\n    \"class\",\n    \"decorator\",\n    \"koa-essential\",\n    \"koa-router\",\n    \"framework\",\n    \"router\"\n  ]\n}\n",
     "longname": "/home/elkaim_r/Project/koa-smart/package.json",
     "name": "package.json",
     "static": true,

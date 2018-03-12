@@ -1,28 +1,28 @@
 {
   "type": "File",
   "start": 0,
-  "end": 1267,
+  "end": 1340,
   "loc": {
     "start": {
       "line": 1,
       "column": 0
     },
     "end": {
-      "line": 45,
+      "line": 48,
       "column": 0
     }
   },
   "program": {
     "type": "Program",
     "start": 0,
-    "end": 1267,
+    "end": 1340,
     "loc": {
       "start": {
         "line": 1,
         "column": 0
       },
       "end": {
-        "line": 45,
+        "line": 48,
         "column": 0
       }
     },
@@ -4297,34 +4297,53 @@
               }
             }
           ],
-          "directives": []
-        }
+          "directives": [],
+          "trailingComments": null
+        },
+        "trailingComments": [
+          {
+            "type": "CommentBlock",
+            "value": "*\n * @desc middleware handling logging each time a request is made\n ",
+            "start": 1238,
+            "end": 1310,
+            "loc": {
+              "start": {
+                "line": 44,
+                "column": 0
+              },
+              "end": {
+                "line": 46,
+                "column": 3
+              }
+            }
+          }
+        ]
       },
       {
         "type": "ExportDefaultDeclaration",
-        "start": 1238,
-        "end": 1266,
+        "start": 1311,
+        "end": 1339,
         "loc": {
           "start": {
-            "line": 44,
+            "line": 47,
             "column": 0
           },
           "end": {
-            "line": 44,
+            "line": 47,
             "column": 28
           }
         },
         "declaration": {
           "type": "ArrowFunctionExpression",
-          "start": 1253,
-          "end": 1265,
+          "start": 1326,
+          "end": 1338,
           "loc": {
             "start": {
-              "line": 44,
+              "line": 47,
               "column": 15
             },
             "end": {
-              "line": 44,
+              "line": 47,
               "column": 27
             }
           },
@@ -4335,29 +4354,82 @@
           "params": [],
           "body": {
             "type": "Identifier",
-            "start": 1259,
-            "end": 1265,
+            "start": 1332,
+            "end": 1338,
             "loc": {
               "start": {
-                "line": 44,
+                "line": 47,
                 "column": 21
               },
               "end": {
-                "line": 44,
+                "line": 47,
                 "column": 27
               },
               "identifierName": "logger"
             },
-            "name": "logger"
+            "name": "logger",
+            "leadingComments": null
           },
-          "leadingComments": [],
+          "leadingComments": [
+            {
+              "type": "CommentBlock",
+              "value": "*\n * @desc middleware handling logging each time a request is made\n ",
+              "start": 1238,
+              "end": 1310,
+              "loc": {
+                "start": {
+                  "line": 44,
+                  "column": 0
+                },
+                "end": {
+                  "line": 46,
+                  "column": 3
+                }
+              }
+            }
+          ],
           "trailingComments": []
-        }
+        },
+        "leadingComments": [
+          {
+            "type": "CommentBlock",
+            "value": "*\n * @desc middleware handling logging each time a request is made\n ",
+            "start": 1238,
+            "end": 1310,
+            "loc": {
+              "start": {
+                "line": 44,
+                "column": 0
+              },
+              "end": {
+                "line": 46,
+                "column": 3
+              }
+            }
+          }
+        ]
       }
     ],
     "directives": []
   },
-  "comments": [],
+  "comments": [
+    {
+      "type": "CommentBlock",
+      "value": "*\n * @desc middleware handling logging each time a request is made\n ",
+      "start": 1238,
+      "end": 1310,
+      "loc": {
+        "start": {
+          "line": 44,
+          "column": 0
+        },
+        "end": {
+          "line": 46,
+          "column": 3
+        }
+      }
+    }
+  ],
   "tokens": [
     {
       "type": {
@@ -13521,6 +13593,22 @@
       }
     },
     {
+      "type": "CommentBlock",
+      "value": "*\n * @desc middleware handling logging each time a request is made\n ",
+      "start": 1238,
+      "end": 1310,
+      "loc": {
+        "start": {
+          "line": 44,
+          "column": 0
+        },
+        "end": {
+          "line": 46,
+          "column": 3
+        }
+      }
+    },
+    {
       "type": {
         "label": "export",
         "keyword": "export",
@@ -13535,15 +13623,15 @@
         "updateContext": null
       },
       "value": "export",
-      "start": 1238,
-      "end": 1244,
+      "start": 1311,
+      "end": 1317,
       "loc": {
         "start": {
-          "line": 44,
+          "line": 47,
           "column": 0
         },
         "end": {
-          "line": 44,
+          "line": 47,
           "column": 6
         }
       }
@@ -13563,15 +13651,15 @@
         "updateContext": null
       },
       "value": "default",
-      "start": 1245,
-      "end": 1252,
+      "start": 1318,
+      "end": 1325,
       "loc": {
         "start": {
-          "line": 44,
+          "line": 47,
           "column": 7
         },
         "end": {
-          "line": 44,
+          "line": 47,
           "column": 14
         }
       }
@@ -13588,15 +13676,15 @@
         "postfix": false,
         "binop": null
       },
-      "start": 1253,
-      "end": 1254,
+      "start": 1326,
+      "end": 1327,
       "loc": {
         "start": {
-          "line": 44,
+          "line": 47,
           "column": 15
         },
         "end": {
-          "line": 44,
+          "line": 47,
           "column": 16
         }
       }
@@ -13613,15 +13701,15 @@
         "postfix": false,
         "binop": null
       },
-      "start": 1254,
-      "end": 1255,
+      "start": 1327,
+      "end": 1328,
       "loc": {
         "start": {
-          "line": 44,
+          "line": 47,
           "column": 16
         },
         "end": {
-          "line": 44,
+          "line": 47,
           "column": 17
         }
       }
@@ -13639,15 +13727,15 @@
         "binop": null,
         "updateContext": null
       },
-      "start": 1256,
-      "end": 1258,
+      "start": 1329,
+      "end": 1331,
       "loc": {
         "start": {
-          "line": 44,
+          "line": 47,
           "column": 18
         },
         "end": {
-          "line": 44,
+          "line": 47,
           "column": 20
         }
       }
@@ -13665,15 +13753,15 @@
         "binop": null
       },
       "value": "logger",
-      "start": 1259,
-      "end": 1265,
+      "start": 1332,
+      "end": 1338,
       "loc": {
         "start": {
-          "line": 44,
+          "line": 47,
           "column": 21
         },
         "end": {
-          "line": 44,
+          "line": 47,
           "column": 27
         }
       }
@@ -13691,15 +13779,15 @@
         "binop": null,
         "updateContext": null
       },
-      "start": 1265,
-      "end": 1266,
+      "start": 1338,
+      "end": 1339,
       "loc": {
         "start": {
-          "line": 44,
+          "line": 47,
           "column": 27
         },
         "end": {
-          "line": 44,
+          "line": 47,
           "column": 28
         }
       }
@@ -13717,15 +13805,15 @@
         "binop": null,
         "updateContext": null
       },
-      "start": 1267,
-      "end": 1267,
+      "start": 1340,
+      "end": 1340,
       "loc": {
         "start": {
-          "line": 45,
+          "line": 48,
           "column": 0
         },
         "end": {
-          "line": 45,
+          "line": 48,
           "column": 0
         }
       }
