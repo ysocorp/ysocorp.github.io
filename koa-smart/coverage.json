@@ -1,7 +1,7 @@
 {
-  "coverage": "84.84%",
-  "expectCount": 66,
-  "actualCount": 56,
+  "coverage": "76.31%",
+  "expectCount": 76,
+  "actualCount": 58,
   "files": {
     "src/App.js": {
       "expectCount": 11,
@@ -23,10 +23,24 @@
     },
     "src/routes/Route.js": {
       "expectCount": 45,
-      "actualCount": 43,
+      "actualCount": 44,
       "undocumentLines": [
-        11,
-        16
+        11
+      ]
+    },
+    "src/routes/RouteDecorators.js": {
+      "expectCount": 10,
+      "actualCount": 1,
+      "undocumentLines": [
+        28,
+        34,
+        48,
+        63,
+        87,
+        93,
+        99,
+        105,
+        111
       ]
     },
     "src/utils/ErrorApp.js": {

@@ -33,14 +33,17 @@
 <li data-ice="doc"><a data-ice="dirPath" class="nav-dir-path" href="identifiers.html#middlewares">middlewares</a><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-handleError">handleError</a></span></span></li>
 <li data-ice="doc"><span data-ice="kind" class="kind-typedef">T</span><span data-ice="name"><span><a href="typedef/index.html#static-typedef-OptionErrors">OptionErrors</a></span></span></li>
 <li data-ice="doc"><a data-ice="dirPath" class="nav-dir-path" href="identifiers.html#routes">routes</a><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/routes/Route.js~Route.html">Route</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-typedef">T</span><span data-ice="name"><span><a href="typedef/index.html#static-typedef-BeforeRouteParams">BeforeRouteParams</a></span></span></li>
 <li data-ice="doc"><span data-ice="kind" class="kind-typedef">T</span><span data-ice="name"><span><a href="typedef/index.html#static-typedef-Decorator">Decorator</a></span></span></li>
 <li data-ice="doc"><span data-ice="kind" class="kind-typedef">T</span><span data-ice="name"><span><a href="typedef/index.html#static-typedef-ParamMiddlewareFunction">ParamMiddlewareFunction</a></span></span></li>
-<li data-ice="doc"><span data-ice="kind" class="kind-typedef">T</span><span data-ice="name"><span><a href="typedef/index.html#static-typedef-Params">Params</a></span></span></li>
 <li data-ice="doc"><span data-ice="kind" class="kind-typedef">T</span><span data-ice="name"><span><a href="typedef/index.html#static-typedef-PostParamsFilter">PostParamsFilter</a></span></span></li>
 <li data-ice="doc"><span data-ice="kind" class="kind-typedef">T</span><span data-ice="name"><span><a href="typedef/index.html#static-typedef-RouteParams">RouteParams</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-typedef">T</span><span data-ice="name"><span><a href="typedef/index.html#static-typedef-ParamsClassDecorator">ParamsClassDecorator</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-typedef">T</span><span data-ice="name"><span><a href="typedef/index.html#static-typedef-ParamsMethodDecorator">ParamsMethodDecorator</a></span></span></li>
 <li data-ice="doc"><span data-ice="kind" class="kind-external">E</span><span data-ice="name"><span><a href="http://koajs.com/#application">Koa</a></span></span></li>
 <li data-ice="doc"><span data-ice="kind" class="kind-external">E</span><span data-ice="name"><span><a href="http://koajs.com/#api">KoaContext</a></span></span></li>
 <li data-ice="doc"><a data-ice="dirPath" class="nav-dir-path" href="identifiers.html#utils">utils</a><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/utils/ErrorApp.js~ErrorApp.html">ErrorApp</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-typedef">T</span><span data-ice="name"><span><a href="typedef/index.html#static-typedef-StatusCode">StatusCode</a></span></span></li>
 </ul>
 </div>
 </nav>
@@ -102,7 +105,7 @@
           
           
           
-          <span class="code" data-ice="name"><span><a href="class/src/routes/Route.js~Route.html#static-member-Delete">Delete</a></span></span><span class="code" data-ice="signature">(params: <span><a href="typedef/index.html#static-typedef-Params">Params</a></span>): <span><a href="typedef/index.html#static-typedef-Decorator">Decorator</a></span>: <span>*</span></span>
+          <span class="code" data-ice="name"><span><a href="class/src/routes/Route.js~Route.html#static-member-Delete">Delete</a></span></span><span class="code" data-ice="signature">(params: <span><a href="typedef/index.html#static-typedef-ParamsMethodDecorator">ParamsMethodDecorator</a></span>): <span><a href="typedef/index.html#static-typedef-Decorator">Decorator</a></span>: <span>*</span></span>
         </p>
       </div>
       <div>
@@ -131,7 +134,7 @@
           
           
           
-          <span class="code" data-ice="name"><span><a href="class/src/routes/Route.js~Route.html#static-member-Get">Get</a></span></span><span class="code" data-ice="signature">(params: <span><a href="typedef/index.html#static-typedef-Params">Params</a></span>): <span><a href="typedef/index.html#static-typedef-Decorator">Decorator</a></span>: <span>*</span></span>
+          <span class="code" data-ice="name"><span><a href="class/src/routes/Route.js~Route.html#static-member-Get">Get</a></span></span><span class="code" data-ice="signature">(params: <span><a href="typedef/index.html#static-typedef-ParamsMethodDecorator">ParamsMethodDecorator</a></span>): <span><a href="typedef/index.html#static-typedef-Decorator">Decorator</a></span>: <span>*</span></span>
         </p>
       </div>
       <div>
@@ -160,7 +163,7 @@
           
           
           
-          <span class="code" data-ice="name"><span><a href="class/src/routes/Route.js~Route.html#static-member-Patch">Patch</a></span></span><span class="code" data-ice="signature">(params: <span><a href="typedef/index.html#static-typedef-Params">Params</a></span>): <span><a href="typedef/index.html#static-typedef-Decorator">Decorator</a></span>: <span>*</span></span>
+          <span class="code" data-ice="name"><span><a href="class/src/routes/Route.js~Route.html#static-member-Patch">Patch</a></span></span><span class="code" data-ice="signature">(params: <span><a href="typedef/index.html#static-typedef-ParamsMethodDecorator">ParamsMethodDecorator</a></span>): <span><a href="typedef/index.html#static-typedef-Decorator">Decorator</a></span>: <span>*</span></span>
         </p>
       </div>
       <div>
@@ -189,7 +192,7 @@
           
           
           
-          <span class="code" data-ice="name"><span><a href="class/src/routes/Route.js~Route.html#static-member-Post">Post</a></span></span><span class="code" data-ice="signature">(params: <span><a href="typedef/index.html#static-typedef-Params">Params</a></span>): <span><a href="typedef/index.html#static-typedef-Decorator">Decorator</a></span>: <span>*</span></span>
+          <span class="code" data-ice="name"><span><a href="class/src/routes/Route.js~Route.html#static-member-Post">Post</a></span></span><span class="code" data-ice="signature">(params: <span><a href="typedef/index.html#static-typedef-ParamsMethodDecorator">ParamsMethodDecorator</a></span>): <span><a href="typedef/index.html#static-typedef-Decorator">Decorator</a></span>: <span>*</span></span>
         </p>
       </div>
       <div>
@@ -218,7 +221,7 @@
           
           
           
-          <span class="code" data-ice="name"><span><a href="class/src/routes/Route.js~Route.html#static-member-Put">Put</a></span></span><span class="code" data-ice="signature">(params: <span><a href="typedef/index.html#static-typedef-Params">Params</a></span>): <span><a href="typedef/index.html#static-typedef-Decorator">Decorator</a></span>: <span>*</span></span>
+          <span class="code" data-ice="name"><span><a href="class/src/routes/Route.js~Route.html#static-member-Put">Put</a></span></span><span class="code" data-ice="signature">(params: <span><a href="typedef/index.html#static-typedef-ParamsMethodDecorator">ParamsMethodDecorator</a></span>): <span><a href="typedef/index.html#static-typedef-Decorator">Decorator</a></span>: <span>*</span></span>
         </p>
       </div>
       <div>
@@ -247,7 +250,7 @@
           
           
           
-          <span class="code" data-ice="name"><span><a href="class/src/routes/Route.js~Route.html#static-member-Route">Route</a></span></span><span class="code" data-ice="signature">(params: <span><a href="typedef/index.html#static-typedef-Params">Params</a></span>): <span><a href="typedef/index.html#static-typedef-Decorator">Decorator</a></span>: <span>*</span></span>
+          <span class="code" data-ice="name"><span><a href="class/src/routes/Route.js~Route.html#static-member-Route">Route</a></span></span><span class="code" data-ice="signature">(params: <span><a href="typedef/index.html#static-typedef-ParamsClassDecorator">ParamsClassDecorator</a></span>): <span><a href="typedef/index.html#static-typedef-Decorator">Decorator</a></span>: <span>*</span></span>
         </p>
       </div>
       <div>
@@ -276,7 +279,7 @@
           
           
           
-          <span class="code" data-ice="name"><span><a href="class/src/routes/Route.js~Route.html#static-member-StatusCode">StatusCode</a></span></span><span class="code" data-ice="signature">: <span>*</span></span>
+          <span class="code" data-ice="name"><span><a href="class/src/routes/Route.js~Route.html#static-member-StatusCode">StatusCode</a></span></span><span class="code" data-ice="signature">: <span><a href="class/src/routes/Route.js~Route.html#static-member-StatusCode">StatusCode</a></span></span>
         </p>
       </div>
       <div>
@@ -310,7 +313,8 @@
       <div>
         
         
-        
+        <div data-ice="description"><p>if true it will log which route are mount and which are not</p>
+</div>
       </div>
     </td>
     <td>
@@ -673,7 +677,7 @@ with a unique ID for each route in order to differentiate the various routes.</p
           
           <span data-ice="async">async</span>
           
-          <span class="code" data-ice="name"><span><a href="class/src/routes/Route.js~Route.html#instance-method-beforeRoute">beforeRoute</a></span></span><span class="code" data-ice="signature">(ctx: <span><a href="http://koajs.com/#api">KoaContext</a></span>, params: <span><a href="typedef/index.html#static-typedef-Params">Params</a></span>, next: <span>function</span>)</span>
+          <span class="code" data-ice="name"><span><a href="class/src/routes/Route.js~Route.html#instance-method-beforeRoute">beforeRoute</a></span></span><span class="code" data-ice="signature">(ctx: <span><a href="http://koajs.com/#api">KoaContext</a></span>, params: <span><a href="typedef/index.html#static-typedef-BeforeRouteParams">BeforeRouteParams</a></span>, next: <span>function</span>)</span>
         </p>
       </div>
       <div>
@@ -1140,11 +1144,11 @@ with a unique ID for each route in order to differentiate the various routes.</p
     
     
     
-    <span class="code" data-ice="name">Delete</span><span class="code" data-ice="signature">(params: <span><a href="typedef/index.html#static-typedef-Params">Params</a></span>): <span><a href="typedef/index.html#static-typedef-Decorator">Decorator</a></span>: <span>*</span></span>
+    <span class="code" data-ice="name">Delete</span><span class="code" data-ice="signature">(params: <span><a href="typedef/index.html#static-typedef-ParamsMethodDecorator">ParamsMethodDecorator</a></span>): <span><a href="typedef/index.html#static-typedef-Decorator">Decorator</a></span>: <span>*</span></span>
     <span class="right-info">
       
       
-      <span data-ice="source"><span><a href="file/src/routes/Route.js.html#lineNumber164">source</a></span></span>
+      <span data-ice="source"><span><a href="file/src/routes/Route.js.html#lineNumber162">source</a></span></span>
     </span>
   </h3>
 
@@ -1196,11 +1200,11 @@ with a unique ID for each route in order to differentiate the various routes.</p
     
     
     
-    <span class="code" data-ice="name">Get</span><span class="code" data-ice="signature">(params: <span><a href="typedef/index.html#static-typedef-Params">Params</a></span>): <span><a href="typedef/index.html#static-typedef-Decorator">Decorator</a></span>: <span>*</span></span>
+    <span class="code" data-ice="name">Get</span><span class="code" data-ice="signature">(params: <span><a href="typedef/index.html#static-typedef-ParamsMethodDecorator">ParamsMethodDecorator</a></span>): <span><a href="typedef/index.html#static-typedef-Decorator">Decorator</a></span>: <span>*</span></span>
     <span class="right-info">
       
       
-      <span data-ice="source"><span><a href="file/src/routes/Route.js.html#lineNumber132">source</a></span></span>
+      <span data-ice="source"><span><a href="file/src/routes/Route.js.html#lineNumber130">source</a></span></span>
     </span>
   </h3>
 
@@ -1252,11 +1256,11 @@ with a unique ID for each route in order to differentiate the various routes.</p
     
     
     
-    <span class="code" data-ice="name">Patch</span><span class="code" data-ice="signature">(params: <span><a href="typedef/index.html#static-typedef-Params">Params</a></span>): <span><a href="typedef/index.html#static-typedef-Decorator">Decorator</a></span>: <span>*</span></span>
+    <span class="code" data-ice="name">Patch</span><span class="code" data-ice="signature">(params: <span><a href="typedef/index.html#static-typedef-ParamsMethodDecorator">ParamsMethodDecorator</a></span>): <span><a href="typedef/index.html#static-typedef-Decorator">Decorator</a></span>: <span>*</span></span>
     <span class="right-info">
       
       
-      <span data-ice="source"><span><a href="file/src/routes/Route.js.html#lineNumber156">source</a></span></span>
+      <span data-ice="source"><span><a href="file/src/routes/Route.js.html#lineNumber154">source</a></span></span>
     </span>
   </h3>
 
@@ -1308,11 +1312,11 @@ with a unique ID for each route in order to differentiate the various routes.</p
     
     
     
-    <span class="code" data-ice="name">Post</span><span class="code" data-ice="signature">(params: <span><a href="typedef/index.html#static-typedef-Params">Params</a></span>): <span><a href="typedef/index.html#static-typedef-Decorator">Decorator</a></span>: <span>*</span></span>
+    <span class="code" data-ice="name">Post</span><span class="code" data-ice="signature">(params: <span><a href="typedef/index.html#static-typedef-ParamsMethodDecorator">ParamsMethodDecorator</a></span>): <span><a href="typedef/index.html#static-typedef-Decorator">Decorator</a></span>: <span>*</span></span>
     <span class="right-info">
       
       
-      <span data-ice="source"><span><a href="file/src/routes/Route.js.html#lineNumber140">source</a></span></span>
+      <span data-ice="source"><span><a href="file/src/routes/Route.js.html#lineNumber138">source</a></span></span>
     </span>
   </h3>
 
@@ -1364,11 +1368,11 @@ with a unique ID for each route in order to differentiate the various routes.</p
     
     
     
-    <span class="code" data-ice="name">Put</span><span class="code" data-ice="signature">(params: <span><a href="typedef/index.html#static-typedef-Params">Params</a></span>): <span><a href="typedef/index.html#static-typedef-Decorator">Decorator</a></span>: <span>*</span></span>
+    <span class="code" data-ice="name">Put</span><span class="code" data-ice="signature">(params: <span><a href="typedef/index.html#static-typedef-ParamsMethodDecorator">ParamsMethodDecorator</a></span>): <span><a href="typedef/index.html#static-typedef-Decorator">Decorator</a></span>: <span>*</span></span>
     <span class="right-info">
       
       
-      <span data-ice="source"><span><a href="file/src/routes/Route.js.html#lineNumber148">source</a></span></span>
+      <span data-ice="source"><span><a href="file/src/routes/Route.js.html#lineNumber146">source</a></span></span>
     </span>
   </h3>
 
@@ -1420,11 +1424,11 @@ with a unique ID for each route in order to differentiate the various routes.</p
     
     
     
-    <span class="code" data-ice="name">Route</span><span class="code" data-ice="signature">(params: <span><a href="typedef/index.html#static-typedef-Params">Params</a></span>): <span><a href="typedef/index.html#static-typedef-Decorator">Decorator</a></span>: <span>*</span></span>
+    <span class="code" data-ice="name">Route</span><span class="code" data-ice="signature">(params: <span><a href="typedef/index.html#static-typedef-ParamsClassDecorator">ParamsClassDecorator</a></span>): <span><a href="typedef/index.html#static-typedef-Decorator">Decorator</a></span>: <span>*</span></span>
     <span class="right-info">
       
       
-      <span data-ice="source"><span><a href="file/src/routes/Route.js.html#lineNumber172">source</a></span></span>
+      <span data-ice="source"><span><a href="file/src/routes/Route.js.html#lineNumber170">source</a></span></span>
     </span>
   </h3>
 
@@ -1476,11 +1480,11 @@ with a unique ID for each route in order to differentiate the various routes.</p
     
     
     
-    <span class="code" data-ice="name">StatusCode</span><span class="code" data-ice="signature">: <span>*</span></span>
+    <span class="code" data-ice="name">StatusCode</span><span class="code" data-ice="signature">: <span><a href="class/src/routes/Route.js~Route.html#static-member-StatusCode">StatusCode</a></span></span>
     <span class="right-info">
       
       
-      <span data-ice="source"><span><a href="file/src/routes/Route.js.html#lineNumber16">source</a></span></span>
+      <span data-ice="source"><span><a href="file/src/routes/Route.js.html#lineNumber20">source</a></span></span>
     </span>
   </h3>
 
@@ -1523,14 +1527,15 @@ with a unique ID for each route in order to differentiate the various routes.</p
     <span class="right-info">
       
       
-      <span data-ice="source"><span><a href="file/src/routes/Route.js.html#lineNumber15">source</a></span></span>
+      <span data-ice="source"><span><a href="file/src/routes/Route.js.html#lineNumber16">source</a></span></span>
     </span>
   </h3>
 
   
   
   
-  
+  <div data-ice="description"><p>if true it will log which route are mount and which are not</p>
+</div>
 
   
 
@@ -1570,7 +1575,7 @@ with a unique ID for each route in order to differentiate the various routes.</p
     <span class="right-info">
       
       
-      <span data-ice="source"><span><a href="file/src/routes/Route.js.html#lineNumber72">source</a></span></span>
+      <span data-ice="source"><span><a href="file/src/routes/Route.js.html#lineNumber70">source</a></span></span>
     </span>
   </h3>
 
@@ -1633,7 +1638,7 @@ with a unique ID for each route in order to differentiate the various routes.</p
     <span class="right-info">
       
       
-      <span data-ice="source"><span><a href="file/src/routes/Route.js.html#lineNumber87">source</a></span></span>
+      <span data-ice="source"><span><a href="file/src/routes/Route.js.html#lineNumber85">source</a></span></span>
     </span>
   </h3>
 
@@ -1677,7 +1682,7 @@ with a unique ID for each route in order to differentiate the various routes.</p
     <span class="right-info">
       
       
-      <span data-ice="source"><span><a href="file/src/routes/Route.js.html#lineNumber77">source</a></span></span>
+      <span data-ice="source"><span><a href="file/src/routes/Route.js.html#lineNumber75">source</a></span></span>
     </span>
   </h3>
 
@@ -1721,7 +1726,7 @@ with a unique ID for each route in order to differentiate the various routes.</p
     <span class="right-info">
       
       
-      <span data-ice="source"><span><a href="file/src/routes/Route.js.html#lineNumber97">source</a></span></span>
+      <span data-ice="source"><span><a href="file/src/routes/Route.js.html#lineNumber95">source</a></span></span>
     </span>
   </h3>
 
@@ -1765,7 +1770,7 @@ with a unique ID for each route in order to differentiate the various routes.</p
     <span class="right-info">
       
       
-      <span data-ice="source"><span><a href="file/src/routes/Route.js.html#lineNumber115">source</a></span></span>
+      <span data-ice="source"><span><a href="file/src/routes/Route.js.html#lineNumber113">source</a></span></span>
     </span>
   </h3>
 
@@ -1809,7 +1814,7 @@ with a unique ID for each route in order to differentiate the various routes.</p
     <span class="right-info">
       
       
-      <span data-ice="source"><span><a href="file/src/routes/Route.js.html#lineNumber102">source</a></span></span>
+      <span data-ice="source"><span><a href="file/src/routes/Route.js.html#lineNumber100">source</a></span></span>
     </span>
   </h3>
 
@@ -1853,7 +1858,7 @@ with a unique ID for each route in order to differentiate the various routes.</p
     <span class="right-info">
       
       
-      <span data-ice="source"><span><a href="file/src/routes/Route.js.html#lineNumber108">source</a></span></span>
+      <span data-ice="source"><span><a href="file/src/routes/Route.js.html#lineNumber106">source</a></span></span>
     </span>
   </h3>
 
@@ -1897,7 +1902,7 @@ with a unique ID for each route in order to differentiate the various routes.</p
     <span class="right-info">
       
       
-      <span data-ice="source"><span><a href="file/src/routes/Route.js.html#lineNumber92">source</a></span></span>
+      <span data-ice="source"><span><a href="file/src/routes/Route.js.html#lineNumber90">source</a></span></span>
     </span>
   </h3>
 
@@ -1941,7 +1946,7 @@ with a unique ID for each route in order to differentiate the various routes.</p
     <span class="right-info">
       
       
-      <span data-ice="source"><span><a href="file/src/routes/Route.js.html#lineNumber82">source</a></span></span>
+      <span data-ice="source"><span><a href="file/src/routes/Route.js.html#lineNumber80">source</a></span></span>
     </span>
   </h3>
 
@@ -1988,7 +1993,7 @@ with a unique ID for each route in order to differentiate the various routes.</p
     <span class="right-info">
       
       
-      <span data-ice="source"><span><a href="file/src/routes/Route.js.html#lineNumber248">source</a></span></span>
+      <span data-ice="source"><span><a href="file/src/routes/Route.js.html#lineNumber246">source</a></span></span>
     </span>
   </h3>
 
@@ -2058,7 +2063,7 @@ with a unique ID for each route in order to differentiate the various routes.</p
     <span class="right-info">
       
       
-      <span data-ice="source"><span><a href="file/src/routes/Route.js.html#lineNumber559">source</a></span></span>
+      <span data-ice="source"><span><a href="file/src/routes/Route.js.html#lineNumber557">source</a></span></span>
     </span>
   </h3>
 
@@ -2160,11 +2165,11 @@ with a unique ID for each route in order to differentiate the various routes.</p
     
     <span data-ice="async">async</span>
     
-    <span class="code" data-ice="name">beforeRoute</span><span class="code" data-ice="signature">(ctx: <span><a href="http://koajs.com/#api">KoaContext</a></span>, params: <span><a href="typedef/index.html#static-typedef-Params">Params</a></span>, next: <span>function</span>)</span>
+    <span class="code" data-ice="name">beforeRoute</span><span class="code" data-ice="signature">(ctx: <span><a href="http://koajs.com/#api">KoaContext</a></span>, params: <span><a href="typedef/index.html#static-typedef-BeforeRouteParams">BeforeRouteParams</a></span>, next: <span>function</span>)</span>
     <span class="right-info">
       
       
-      <span data-ice="source"><span><a href="file/src/routes/Route.js.html#lineNumber276">source</a></span></span>
+      <span data-ice="source"><span><a href="file/src/routes/Route.js.html#lineNumber274">source</a></span></span>
     </span>
   </h3>
 
@@ -2193,7 +2198,7 @@ with a unique ID for each route in order to differentiate the various routes.</p
     </tr>
 <tr data-ice="property" data-depth="0">
       <td data-ice="name" class="code" data-depth="0">params</td>
-      <td data-ice="type" class="code"><span><a href="typedef/index.html#static-typedef-Params">Params</a></span></td>
+      <td data-ice="type" class="code"><span><a href="typedef/index.html#static-typedef-BeforeRouteParams">BeforeRouteParams</a></span></td>
       <td data-ice="appendix"></td>
       <td data-ice="description"><p>an object containing all route parameters</p>
 </td>
@@ -2239,7 +2244,7 @@ with a unique ID for each route in order to differentiate the various routes.</p
     <span class="right-info">
       
       
-      <span data-ice="source"><span><a href="file/src/routes/Route.js.html#lineNumber394">source</a></span></span>
+      <span data-ice="source"><span><a href="file/src/routes/Route.js.html#lineNumber392">source</a></span></span>
     </span>
   </h3>
 
@@ -2321,7 +2326,7 @@ with a unique ID for each route in order to differentiate the various routes.</p
     <span class="right-info">
       
       
-      <span data-ice="source"><span><a href="file/src/routes/Route.js.html#lineNumber404">source</a></span></span>
+      <span data-ice="source"><span><a href="file/src/routes/Route.js.html#lineNumber402">source</a></span></span>
     </span>
   </h3>
 
@@ -2394,7 +2399,7 @@ with a unique ID for each route in order to differentiate the various routes.</p
     <span class="right-info">
       
       
-      <span data-ice="source"><span><a href="file/src/routes/Route.js.html#lineNumber179">source</a></span></span>
+      <span data-ice="source"><span><a href="file/src/routes/Route.js.html#lineNumber177">source</a></span></span>
     </span>
   </h3>
 
@@ -2461,7 +2466,7 @@ with a unique ID for each route in order to differentiate the various routes.</p
     <span class="right-info">
       
       
-      <span data-ice="source"><span><a href="file/src/routes/Route.js.html#lineNumber192">source</a></span></span>
+      <span data-ice="source"><span><a href="file/src/routes/Route.js.html#lineNumber190">source</a></span></span>
     </span>
   </h3>
 
@@ -2507,7 +2512,7 @@ with a unique ID for each route in order to differentiate the various routes.</p
     <span class="right-info">
       
       
-      <span data-ice="source"><span><a href="file/src/routes/Route.js.html#lineNumber414">source</a></span></span>
+      <span data-ice="source"><span><a href="file/src/routes/Route.js.html#lineNumber412">source</a></span></span>
     </span>
   </h3>
 
@@ -2580,7 +2585,7 @@ with a unique ID for each route in order to differentiate the various routes.</p
     <span class="right-info">
       
       
-      <span data-ice="source"><span><a href="file/src/routes/Route.js.html#lineNumber425">source</a></span></span>
+      <span data-ice="source"><span><a href="file/src/routes/Route.js.html#lineNumber423">source</a></span></span>
     </span>
   </h3>
 
@@ -2674,7 +2679,7 @@ with a unique ID for each route in order to differentiate the various routes.</p
     <span class="right-info">
       
       
-      <span data-ice="source"><span><a href="file/src/routes/Route.js.html#lineNumber484">source</a></span></span>
+      <span data-ice="source"><span><a href="file/src/routes/Route.js.html#lineNumber482">source</a></span></span>
     </span>
   </h3>
 
@@ -2761,7 +2766,7 @@ with a unique ID for each route in order to differentiate the various routes.</p
     <span class="right-info">
       
       
-      <span data-ice="source"><span><a href="file/src/routes/Route.js.html#lineNumber462">source</a></span></span>
+      <span data-ice="source"><span><a href="file/src/routes/Route.js.html#lineNumber460">source</a></span></span>
     </span>
   </h3>
 
@@ -2848,7 +2853,7 @@ with a unique ID for each route in order to differentiate the various routes.</p
     <span class="right-info">
       
       
-      <span data-ice="source"><span><a href="file/src/routes/Route.js.html#lineNumber508">source</a></span></span>
+      <span data-ice="source"><span><a href="file/src/routes/Route.js.html#lineNumber506">source</a></span></span>
     </span>
   </h3>
 
@@ -2935,7 +2940,7 @@ with a unique ID for each route in order to differentiate the various routes.</p
     <span class="right-info">
       
       
-      <span data-ice="source"><span><a href="file/src/routes/Route.js.html#lineNumber532">source</a></span></span>
+      <span data-ice="source"><span><a href="file/src/routes/Route.js.html#lineNumber530">source</a></span></span>
     </span>
   </h3>
 
@@ -3022,7 +3027,7 @@ with a unique ID for each route in order to differentiate the various routes.</p
     <span class="right-info">
       
       
-      <span data-ice="source"><span><a href="file/src/routes/Route.js.html#lineNumber472">source</a></span></span>
+      <span data-ice="source"><span><a href="file/src/routes/Route.js.html#lineNumber470">source</a></span></span>
     </span>
   </h3>
 
@@ -3095,7 +3100,7 @@ with a unique ID for each route in order to differentiate the various routes.</p
     <span class="right-info">
       
       
-      <span data-ice="source"><span><a href="file/src/routes/Route.js.html#lineNumber520">source</a></span></span>
+      <span data-ice="source"><span><a href="file/src/routes/Route.js.html#lineNumber518">source</a></span></span>
     </span>
   </h3>
 
@@ -3182,7 +3187,7 @@ with a unique ID for each route in order to differentiate the various routes.</p
     <span class="right-info">
       
       
-      <span data-ice="source"><span><a href="file/src/routes/Route.js.html#lineNumber450">source</a></span></span>
+      <span data-ice="source"><span><a href="file/src/routes/Route.js.html#lineNumber448">source</a></span></span>
     </span>
   </h3>
 
@@ -3269,7 +3274,7 @@ with a unique ID for each route in order to differentiate the various routes.</p
     <span class="right-info">
       
       
-      <span data-ice="source"><span><a href="file/src/routes/Route.js.html#lineNumber496">source</a></span></span>
+      <span data-ice="source"><span><a href="file/src/routes/Route.js.html#lineNumber494">source</a></span></span>
     </span>
   </h3>
 
@@ -3356,7 +3361,7 @@ with a unique ID for each route in order to differentiate the various routes.</p
     <span class="right-info">
       
       
-      <span data-ice="source"><span><a href="file/src/routes/Route.js.html#lineNumber545">source</a></span></span>
+      <span data-ice="source"><span><a href="file/src/routes/Route.js.html#lineNumber543">source</a></span></span>
     </span>
   </h3>
 

@@ -252,6 +252,12 @@ window.esdocSearchIndex = [
     "method"
   ],
   [
+    "src/routes/route.js~route.beforerouteparams",
+    "typedef/index.html#static-typedef-BeforeRouteParams",
+    "src/routes/Route.js~Route.BeforeRouteParams",
+    "typedef"
+  ],
+  [
     "src/routes/route.js~route.decorator",
     "typedef/index.html#static-typedef-Decorator",
     "src/routes/Route.js~Route.Decorator",
@@ -273,12 +279,6 @@ window.esdocSearchIndex = [
     "src/routes/route.js~route.parammiddlewarefunction",
     "typedef/index.html#static-typedef-ParamMiddlewareFunction",
     "src/routes/Route.js~Route.ParamMiddlewareFunction",
-    "typedef"
-  ],
-  [
-    "src/routes/route.js~route.params",
-    "typedef/index.html#static-typedef-Params",
-    "src/routes/Route.js~Route.Params",
     "typedef"
   ],
   [
@@ -330,6 +330,24 @@ window.esdocSearchIndex = [
     "member"
   ],
   [
+    "src/routes/routedecorators.js",
+    "file/src/routes/RouteDecorators.js.html",
+    "src/routes/RouteDecorators.js",
+    "file"
+  ],
+  [
+    "src/routes/routedecorators.js~paramsclassdecorator",
+    "typedef/index.html#static-typedef-ParamsClassDecorator",
+    "src/routes/RouteDecorators.js~ParamsClassDecorator",
+    "typedef"
+  ],
+  [
+    "src/routes/routedecorators.js~paramsmethoddecorator",
+    "typedef/index.html#static-typedef-ParamsMethodDecorator",
+    "src/routes/RouteDecorators.js~ParamsMethodDecorator",
+    "typedef"
+  ],
+  [
     "src/utils/errorapp.js",
     "file/src/utils/ErrorApp.js.html",
     "src/utils/ErrorApp.js",
@@ -358,5 +376,17 @@ window.esdocSearchIndex = [
     "class/src/utils/ErrorApp.js~ErrorApp.html#instance-member-toTranslate",
     "src/utils/ErrorApp.js~ErrorApp#toTranslate",
     "member"
+  ],
+  [
+    "src/utils/statuscode.js",
+    "file/src/utils/StatusCode.js.html",
+    "src/utils/StatusCode.js",
+    "file"
+  ],
+  [
+    "src/utils/statuscode.js~statuscode",
+    "typedef/index.html#static-typedef-StatusCode",
+    "src/utils/StatusCode.js~StatusCode",
+    "typedef"
   ]
 ]
