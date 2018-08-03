@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <base data-ice="baseUrl" href="../">
+  <title data-ice="title">Manual | koa-smart</title>
+  <link type="text/css" rel="stylesheet" href="css/style.css">
+  <link type="text/css" rel="stylesheet" href="css/prettify-tomorrow.css">
+  <script src="script/prettify/prettify.js"></script>
+  <script src="script/manual.js"></script>
+<meta name="description" content="A framework base on Koajs2 with Decorator, Params checker and a base of modules (cors, bodyparser, compress, I18n, etc&#x2026;) to let you develop smart api easily"><meta property="twitter:card" content="summary"><meta property="twitter:title" content="koa-smart"><meta property="twitter:description" content="A framework base on Koajs2 with Decorator, Params checker and a base of modules (cors, bodyparser, compress, I18n, etc&#x2026;) to let you develop smart api easily"></head>
+<body class="layout-container manual-root" data-ice="rootContainer">
+
+<header>
+  <a href="./">Home</a>
+  <a href="./manual/index.html" data-ice="manualHeaderLink">Manual</a>
+  <a href="identifiers.html">Reference</a>
+  <a href="source.html">Source</a>
+  
+  <div class="search-box">
+  <span>
+    <img src="./image/search.png">
+    <span class="search-input-edge"></span><input class="search-input"><span class="search-input-edge"></span>
+  </span>
+    <ul class="search-result"></ul>
+  </div>
+<a style="position:relative; top:3px;" href="https://github.com/ysocorp/koa-smart"><img width="20px" src="./image/github.png"></a></header>
+
+<nav class="navigation" data-ice="nav"><div class="manual-toc-root">
+  
+<div data-ice="manual">
+    <ul class="manual-toc">
+      
+    <li data-ice="manualNav" class="indent-h1" data-link="manual/type-system.html"><a href="manual/type-system.html" data-ice="link">Parameters validation</a></li>
+<li data-ice="manualNav" class="indent-h2" data-link="manual/type-system.html"><a href="manual/type-system.html#typeany" data-ice="link">TypeAny</a></li>
+<li data-ice="manualNav" class="indent-h3" data-link="manual/type-system.html"><a href="manual/type-system.html#required--enabled--" data-ice="link">required([enabled])</a></li>
+<li data-ice="manualNav" class="indent-h3" data-link="manual/type-system.html"><a href="manual/type-system.html#allownull--enabled--" data-ice="link">allowNull([enabled])</a></li>
+<li data-ice="manualNav" class="indent-h3" data-link="manual/type-system.html"><a href="manual/type-system.html#error" data-ice="link">error</a></li>
+<li data-ice="manualNav" class="indent-h3" data-link="manual/type-system.html"><a href="manual/type-system.html#test-param-" data-ice="link">test(param)</a></li>
+<li data-ice="manualNav" class="indent-h2" data-link="manual/type-system.html"><a href="manual/type-system.html#typearray" data-ice="link">TypeArray</a></li>
+<li data-ice="manualNav" class="indent-h3" data-link="manual/type-system.html"><a href="manual/type-system.html#single--enabled--" data-ice="link">single([enabled])</a></li>
+<li data-ice="manualNav" class="indent-h3" data-link="manual/type-system.html"><a href="manual/type-system.html#splitby-splitter-" data-ice="link">splitBy(splitter)</a></li>
+<li data-ice="manualNav" class="indent-h3" data-link="manual/type-system.html"><a href="manual/type-system.html#max-max-" data-ice="link">max(max)</a></li>
+<li data-ice="manualNav" class="indent-h3" data-link="manual/type-system.html"><a href="manual/type-system.html#min-min-" data-ice="link">min(min)</a></li>
+<li data-ice="manualNav" class="indent-h3" data-link="manual/type-system.html"><a href="manual/type-system.html#length-length-" data-ice="link">length(length)</a></li>
+<li data-ice="manualNav" class="indent-h3" data-link="manual/type-system.html"><a href="manual/type-system.html#type-itemtype-" data-ice="link">type(itemType)</a></li>
+<li data-ice="manualNav" class="indent-h2" data-link="manual/type-system.html"><a href="manual/type-system.html#typebinary" data-ice="link">TypeBinary</a></li>
+<li data-ice="manualNav" class="indent-h3" data-link="manual/type-system.html"><a href="manual/type-system.html#encoding-name-" data-ice="link">encoding(name)</a></li>
+<li data-ice="manualNav" class="indent-h3" data-link="manual/type-system.html"><a href="manual/type-system.html#max-max-" data-ice="link">max(max)</a></li>
+<li data-ice="manualNav" class="indent-h3" data-link="manual/type-system.html"><a href="manual/type-system.html#min-min-" data-ice="link">min(min)</a></li>
+<li data-ice="manualNav" class="indent-h3" data-link="manual/type-system.html"><a href="manual/type-system.html#length-length-" data-ice="link">length(length)</a></li>
+<li data-ice="manualNav" class="indent-h2" data-link="manual/type-system.html"><a href="manual/type-system.html#typeboolean" data-ice="link">TypeBoolean</a></li>
+<li data-ice="manualNav" class="indent-h3" data-link="manual/type-system.html"><a href="manual/type-system.html#truthy-value-" data-ice="link">truthy(value)</a></li>
+<li data-ice="manualNav" class="indent-h3" data-link="manual/type-system.html"><a href="manual/type-system.html#falsy-value-" data-ice="link">falsy(value)</a></li>
+<li data-ice="manualNav" class="indent-h3" data-link="manual/type-system.html"><a href="manual/type-system.html#insensitive--enabled--" data-ice="link">insensitive([enabled])</a></li>
+<li data-ice="manualNav" class="indent-h2" data-link="manual/type-system.html"><a href="manual/type-system.html#typedate" data-ice="link">TypeDate</a></li>
+<li data-ice="manualNav" class="indent-h3" data-link="manual/type-system.html"><a href="manual/type-system.html#min-min-" data-ice="link">min(min)</a></li>
+<li data-ice="manualNav" class="indent-h3" data-link="manual/type-system.html"><a href="manual/type-system.html#max-max-" data-ice="link">max(max)</a></li>
+<li data-ice="manualNav" class="indent-h3" data-link="manual/type-system.html"><a href="manual/type-system.html#between-min--max-" data-ice="link">between(min, max)</a></li>
+<li data-ice="manualNav" class="indent-h3" data-link="manual/type-system.html"><a href="manual/type-system.html#startof-period-" data-ice="link">startOf(period)</a></li>
+<li data-ice="manualNav" class="indent-h3" data-link="manual/type-system.html"><a href="manual/type-system.html#endof-period-" data-ice="link">endOf(period)</a></li>
+<li data-ice="manualNav" class="indent-h3" data-link="manual/type-system.html"><a href="manual/type-system.html#formatin-format-" data-ice="link">formatIn(format)</a></li>
+<li data-ice="manualNav" class="indent-h3" data-link="manual/type-system.html"><a href="manual/type-system.html#formatout-format-" data-ice="link">formatOut(format)</a></li>
+<li data-ice="manualNav" class="indent-h3" data-link="manual/type-system.html"><a href="manual/type-system.html#iso--" data-ice="link">iso()</a></li>
+<li data-ice="manualNav" class="indent-h2" data-link="manual/type-system.html"><a href="manual/type-system.html#enum" data-ice="link">enum</a></li>
+<li data-ice="manualNav" class="indent-h3" data-link="manual/type-system.html"><a href="manual/type-system.html#number--enabled--" data-ice="link">number([enabled])</a></li>
+<li data-ice="manualNav" class="indent-h3" data-link="manual/type-system.html"><a href="manual/type-system.html#oneof-obj1----obj2-------objn--" data-ice="link">oneOf(obj1 [, obj2, ..., objN])</a></li>
+<li data-ice="manualNav" class="indent-h3" data-link="manual/type-system.html"><a href="manual/type-system.html#insensitive--enabled--" data-ice="link">insensitive([enabled])</a></li>
+<li data-ice="manualNav" class="indent-h2" data-link="manual/type-system.html"><a href="manual/type-system.html#typenumber" data-ice="link">TypeNumber</a></li>
+<li data-ice="manualNav" class="indent-h3" data-link="manual/type-system.html"><a href="manual/type-system.html#min-min-" data-ice="link">min(min)</a></li>
+<li data-ice="manualNav" class="indent-h3" data-link="manual/type-system.html"><a href="manual/type-system.html#max-max-" data-ice="link">max(max)</a></li>
+<li data-ice="manualNav" class="indent-h3" data-link="manual/type-system.html"><a href="manual/type-system.html#between-min--max-" data-ice="link">between(min, max)</a></li>
+<li data-ice="manualNav" class="indent-h3" data-link="manual/type-system.html"><a href="manual/type-system.html#integer--enabled--" data-ice="link">integer([enabled])</a></li>
+<li data-ice="manualNav" class="indent-h3" data-link="manual/type-system.html"><a href="manual/type-system.html#multiple-base-" data-ice="link">multiple(base)</a></li>
+<li data-ice="manualNav" class="indent-h3" data-link="manual/type-system.html"><a href="manual/type-system.html#positive--enabled--" data-ice="link">positive([enabled])</a></li>
+<li data-ice="manualNav" class="indent-h3" data-link="manual/type-system.html"><a href="manual/type-system.html#negative--enabled--" data-ice="link">negative([enabled])</a></li>
+<li data-ice="manualNav" class="indent-h3" data-link="manual/type-system.html"><a href="manual/type-system.html#port--enabled--" data-ice="link">port([enabled])</a></li>
+<li data-ice="manualNav" class="indent-h3" data-link="manual/type-system.html"><a href="manual/type-system.html#precision-limit--type-" data-ice="link">precision(limit, type)</a></li>
+<li data-ice="manualNav" class="indent-h2" data-link="manual/type-system.html"><a href="manual/type-system.html#typeobject" data-ice="link">TypeObject</a></li>
+<li data-ice="manualNav" class="indent-h3" data-link="manual/type-system.html"><a href="manual/type-system.html#keys-keytypes-" data-ice="link">keys(keyTypes)</a></li>
+<li data-ice="manualNav" class="indent-h3" data-link="manual/type-system.html"><a href="manual/type-system.html#errors" data-ice="link">errors</a></li>
+<li data-ice="manualNav" class="indent-h2" data-link="manual/type-system.html"><a href="manual/type-system.html#typeoneof" data-ice="link">TypeOneOf</a></li>
+<li data-ice="manualNav" class="indent-h3" data-link="manual/type-system.html"><a href="manual/type-system.html#types-typesarray-" data-ice="link">types(typesArray)</a></li>
+<li data-ice="manualNav" class="indent-h2" data-link="manual/type-system.html"><a href="manual/type-system.html#typestring" data-ice="link">TypeString</a></li>
+<li data-ice="manualNav" class="indent-h3" data-link="manual/type-system.html"><a href="manual/type-system.html#trim--enabled--" data-ice="link">trim([enabled])</a></li>
+<li data-ice="manualNav" class="indent-h3" data-link="manual/type-system.html"><a href="manual/type-system.html#min-min-" data-ice="link">min(min)</a></li>
+<li data-ice="manualNav" class="indent-h3" data-link="manual/type-system.html"><a href="manual/type-system.html#max-max-" data-ice="link">max(max)</a></li>
+<li data-ice="manualNav" class="indent-h3" data-link="manual/type-system.html"><a href="manual/type-system.html#length-len-" data-ice="link">length(len)</a></li>
+<li data-ice="manualNav" class="indent-h3" data-link="manual/type-system.html"><a href="manual/type-system.html#between-min--max-" data-ice="link">between(min, max)</a></li>
+<li data-ice="manualNav" class="indent-h3" data-link="manual/type-system.html"><a href="manual/type-system.html#regex-regex-" data-ice="link">regex(regex)</a></li>
+<li data-ice="manualNav" class="indent-h3" data-link="manual/type-system.html"><a href="manual/type-system.html#uppercase--enabled--" data-ice="link">uppercase([enabled])</a></li>
+<li data-ice="manualNav" class="indent-h3" data-link="manual/type-system.html"><a href="manual/type-system.html#lowercase--enabled--" data-ice="link">lowercase([enabled])</a></li>
+<li data-ice="manualNav" class="indent-h3" data-link="manual/type-system.html"><a href="manual/type-system.html#truncate--enabled--" data-ice="link">truncate([enabled])</a></li>
+<li data-ice="manualNav" class="indent-h3" data-link="manual/type-system.html"><a href="manual/type-system.html#replace-pattern--replacewith-" data-ice="link">replace(pattern, replaceWith)</a></li>
+<li data-ice="manualNav" class="indent-h2" data-link="manual/type-system.html"><a href="manual/type-system.html#creating-your-own-type" data-ice="link">Creating your own type</a></li>
+</ul>
+  </div>
+<div data-ice="manual">
+    <ul class="manual-toc">
+      
+    <li data-ice="manualNav" class="indent-h1" data-link="manual/auto-doc.html"><a href="manual/auto-doc.html" data-ice="link">Automatic doc generation</a></li>
+<li data-ice="manualNav" class="indent-h2" data-link="manual/auto-doc.html"><a href="manual/auto-doc.html#disabling-doc-generation" data-ice="link">disabling doc generation</a></li>
+</ul>
+  </div>
+<div data-ice="manual">
+    <ul class="manual-toc">
+      
+    <li data-ice="manualNav" class="indent-h1" data-link="manual/upgrade-to-v2.html"><a href="manual/upgrade-to-v2.html" data-ice="link">Upgrade to V2</a></li>
+<li data-ice="manualNav" class="indent-h2" data-link="manual/upgrade-to-v2.html"><a href="manual/upgrade-to-v2.html#breaking-changes" data-ice="link">Breaking Changes</a></li>
+<li data-ice="manualNav" class="indent-h3" data-link="manual/upgrade-to-v2.html"><a href="manual/upgrade-to-v2.html#body-parametter--change--code-params--code--key-to--code-bodytype--code-" data-ice="link">Body parametter: change params key to bodyType</a></li>
+<li data-ice="manualNav" class="indent-h3" data-link="manual/upgrade-to-v2.html"><a href="manual/upgrade-to-v2.html#class-route--change-functions" data-ice="link">Class Route: change functions</a></li>
+<li data-ice="manualNav" class="indent-h2" data-link="manual/upgrade-to-v2.html"><a href="manual/upgrade-to-v2.html#new-in-v2" data-ice="link">New in v2</a></li>
+<li data-ice="manualNav" class="indent-h3" data-link="manual/upgrade-to-v2.html"><a href="manual/upgrade-to-v2.html#manage-query-parameters-with--code-querytype--code-" data-ice="link">Manage query parameters with queryType</a></li>
+<li data-ice="manualNav" class="indent-h3" data-link="manual/upgrade-to-v2.html"><a href="manual/upgrade-to-v2.html#add-new-assert-functions" data-ice="link">Add new assert functions</a></li>
+<li data-ice="manualNav" class="indent-h3" data-link="manual/upgrade-to-v2.html"><a href="manual/upgrade-to-v2.html#automatic-doc-generation" data-ice="link">Automatic doc generation</a></li>
+</ul>
+  </div>
+</div>
+</nav>
+
+<div class="content" data-ice="content"><div class="github-markdown" data-ice="content"><h1 id="automatic-doc-generation">Automatic doc generation</h1><p>Koa-smart can automatically generate your application&apos;s documention for you, without the need for any additional code.
+All you need to do is add the following option when you create your app:</p>
+<pre><code class="lang-sh"><code class="source-code prettyprint">  const app = new App({
+    port: 3001,
+    generateDoc: true, // indicates we want koa-smart to generate documentation
+  });</code>
+</code></pre>
+<p>From here, koa-smart will automatically create documentation the next time you launch your API.</p>
+<p>For instance, if you write a route such as the following:</p>
+<pre><code class="lang-sh"><code class="source-code prettyprint">@Route.Post({
+    accesses: [Route.admin],
+    bodyType: Types.object().keys({
+      myBinaryParam: Types.binary()
+        .encoding(&apos;base64&apos;)
+        .min(45)
+        .max(100),
+      myRequiredNumberParam: Types.number()
+        .required()
+        .multiple(4),
+    }),
+    doc: {
+      version: &apos;1.2.3&apos; // format &apos;x.x.x&apos;
+      description: &apos;This is my description &lt;br/&gt; Ligne 2&apos; // basic HTML can be used to format your custom route description
+      },
+  })
+  async myRoute(ctx) {
+    this.sendOk(ctx, this.body(ctx));
+  }
+}</code>
+</code></pre>
+<p>the generated doc will look as such:
+<img src="./manual/./asset/doc-example.png" alt="example doc"></p>
+<p>The parser will use the types given to the parameters in order to generate appropriate descriptions for each of them.
+It should be noted the permissions&apos;s name will be the name of the functions passed to &apos;accesses&apos;</p>
+<h2 id="disabling-doc-generation">disabling doc generation</h2><p>It is possible to exclude folders or individual routes from doc generation.</p>
+<ul>
+<li>For a folder, simply add the following option:</li>
+</ul>
+<pre><code class="lang-sh"><code class="source-code prettyprint">app.mountFolder(&apos;your/folder/path&apos;, &apos;/path&apos;, {generateDoc: false});</code>
+</code></pre>
+<ul>
+<li>in the same manner, routes can be disabled as such:</li>
+</ul>
+<pre><code class="lang-sh"><code class="source-code prettyprint">  @Route.Post({
+    bodyType,
+    doc: { disable: true }, // no doc generation
+  })
+  async disableDoc(ctx) {
+    this.sendOk(ctx, this.body(ctx));
+  }</code>
+</code></pre>
+</div>
+</div>
+
+<footer class="footer">
+  Generated by <a href="https://esdoc.org">ESDoc<span data-ice="esdocVersion">(1.0.4)</span><img src="./image/esdoc-logo-mini-black.png"></a>
+</footer>
+
+<script src="script/search_index.js"></script>
+<script src="script/search.js"></script>
+<script src="script/pretty-print.js"></script>
+<script src="script/inherited-summary.js"></script>
+<script src="script/test-summary.js"></script>
+<script src="script/inner-link.js"></script>
+<script src="script/patch-for-local.js"></script>
+</body>
+</html>

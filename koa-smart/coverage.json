@@ -8,7 +8,7 @@
       "actualCount": 9,
       "undocumentLines": [
         12,
-        23
+        22
       ]
     },
     "src/middlewares/handleError.js": {
@@ -17,13 +17,13 @@
       "undocumentLines": [
         1,
         17,
-        23,
+        24,
         35
       ]
     },
     "src/routes/Route.js": {
-      "expectCount": 45,
-      "actualCount": 44,
+      "expectCount": 44,
+      "actualCount": 43,
       "undocumentLines": [
         11
       ]
@@ -32,23 +32,23 @@
       "expectCount": 10,
       "actualCount": 1,
       "undocumentLines": [
-        28,
-        34,
-        48,
-        63,
-        87,
-        93,
-        99,
-        105,
-        111
+        29,
+        35,
+        49,
+        62,
+        88,
+        94,
+        100,
+        106,
+        112
       ]
     },
     "src/utils/ErrorApp.js": {
-      "expectCount": 5,
-      "actualCount": 3,
+      "expectCount": 6,
+      "actualCount": 4,
       "undocumentLines": [
-        1,
-        2
+        3,
+        4
       ]
     }
   }

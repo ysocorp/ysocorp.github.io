@@ -13,7 +13,7 @@
 
 <header>
   <a href="./">Home</a>
-  
+  <a href="./manual/index.html" data-ice="manualHeaderLink">Manual</a>
   <a href="identifiers.html">Reference</a>
   <a href="source.html">Source</a>
   
@@ -390,7 +390,7 @@
       </div>
     </td>
     <td>
-      
+      <span class="version" data-ice="version">version 1.0.0</span>
       
     </td>
   </tr>
@@ -419,7 +419,7 @@
       </div>
     </td>
     <td>
-      
+      <span class="version" data-ice="version">version 1.0.0</span>
       
     </td>
   </tr>
@@ -564,7 +564,7 @@
       </div>
     </td>
     <td>
-      
+      <span class="version" data-ice="version">version 1.0.0</span>
       
     </td>
   </tr>
@@ -593,7 +593,7 @@
       </div>
     </td>
     <td>
-      
+      <span class="version" data-ice="version">version 1.0.0</span>
       
     </td>
   </tr>
@@ -630,6 +630,35 @@ with a unique ID for each route in order to differentiate the various routes.</p
       </div>
     </td>
     <td>
+      <span class="version" data-ice="version">version 1.0.0</span>
+      
+    </td>
+  </tr>
+<tr data-ice="target">
+    <td>
+      <span class="access" data-ice="access">public</span>
+      
+      
+      
+      <span class="override" data-ice="override"></span>
+    </td>
+    <td>
+      <div>
+        <p>
+          
+          
+          
+          <span class="code" data-ice="name"><span><a href="class/src/routes/Route.js~Route.html#instance-method-assert">assert</a></span></span><span class="code" data-ice="signature">(condition: <span>boolean</span>, status: <span>number</span>, error: <span>string </span> | <span> object</span>, translate: <span>boolean</span>): <span> </span></span>
+        </p>
+      </div>
+      <div>
+        
+        
+        <div data-ice="description"><p>checks a condition.</p>
+</div>
+      </div>
+    </td>
+    <td>
       
       
     </td>
@@ -648,18 +677,76 @@ with a unique ID for each route in order to differentiate the various routes.</p
           
           
           
-          <span class="code" data-ice="name"><span><a href="class/src/routes/Route.js~Route.html#instance-method-assert">assert</a></span></span><span class="code" data-ice="signature">(condition: <span>boolean</span>, status: <span>number</span>, message: <span>string</span>, translate: <span>boolean</span>): <span> </span></span>
+          <span class="code" data-ice="name"><span><a href="class/src/routes/Route.js~Route.html#instance-method-assertBadRequest">assertBadRequest</a></span></span><span class="code" data-ice="signature">(condition: <span>boolean</span>, error: <span>string </span> | <span> object</span>, translate: <span>boolean</span>): <span> </span></span>
         </p>
       </div>
       <div>
         
         
-        <div data-ice="description"><p>checks a condition.</p>
+        <div data-ice="description"><p>same as <span><a href="class/src/routes/Route.js~Route.html#instance-method-assert">assert</a></span>, but automatically sets the status to 400 BAD REQUEST</p>
 </div>
       </div>
     </td>
     <td>
+      <span class="version" data-ice="version">version 2.0.0</span>
       
+    </td>
+  </tr>
+<tr data-ice="target">
+    <td>
+      <span class="access" data-ice="access">public</span>
+      
+      
+      
+      <span class="override" data-ice="override"></span>
+    </td>
+    <td>
+      <div>
+        <p>
+          
+          
+          
+          <span class="code" data-ice="name"><span><a href="class/src/routes/Route.js~Route.html#instance-method-assertForbidden">assertForbidden</a></span></span><span class="code" data-ice="signature">(condition: <span>boolean</span>, error: <span>string </span> | <span> object</span>, translate: <span>boolean</span>): <span> </span></span>
+        </p>
+      </div>
+      <div>
+        
+        
+        <div data-ice="description"><p>same as <span><a href="class/src/routes/Route.js~Route.html#instance-method-assert">assert</a></span>, but automatically sets the status to 403 FORBIDDEN</p>
+</div>
+      </div>
+    </td>
+    <td>
+      <span class="version" data-ice="version">version 2.0.0</span>
+      
+    </td>
+  </tr>
+<tr data-ice="target">
+    <td>
+      <span class="access" data-ice="access">public</span>
+      
+      
+      
+      <span class="override" data-ice="override"></span>
+    </td>
+    <td>
+      <div>
+        <p>
+          
+          
+          
+          <span class="code" data-ice="name"><span><a href="class/src/routes/Route.js~Route.html#instance-method-assertUnauthorized">assertUnauthorized</a></span></span><span class="code" data-ice="signature">(condition: <span>boolean</span>, error: <span>string </span> | <span> object</span>, translate: <span>boolean</span>): <span> </span></span>
+        </p>
+      </div>
+      <div>
+        
+        
+        <div data-ice="description"><p>same as <span><a href="class/src/routes/Route.js~Route.html#instance-method-assert">assert</a></span>, but automatically sets the status to 401 UNAUTHORIZED</p>
+</div>
+      </div>
+    </td>
+    <td>
+      <span class="version" data-ice="version">version 2.0.0</span>
       
     </td>
   </tr>
@@ -717,36 +804,7 @@ with a unique ID for each route in order to differentiate the various routes.</p
       </div>
     </td>
     <td>
-      
-      
-    </td>
-  </tr>
-<tr data-ice="target">
-    <td>
-      <span class="access" data-ice="access">public</span>
-      
-      
-      
-      <span class="override" data-ice="override"></span>
-    </td>
-    <td>
-      <div>
-        <p>
-          
-          
-          
-          <span class="code" data-ice="name"><span><a href="class/src/routes/Route.js~Route.html#instance-method-bodyGet">bodyGet</a></span></span><span class="code" data-ice="signature">(ctx: <span><a href="http://koajs.com/#api">KoaContext</a></span>): <span>Object</span>&lt;<span>string</span>, <span>*</span>&gt;</span>
-        </p>
-      </div>
-      <div>
-        
-        
-        <div data-ice="description"><p>retrieves the query params in a GET request</p>
-</div>
-      </div>
-    </td>
-    <td>
-      
+      <span class="version" data-ice="version">version 1.0.0</span>
       
     </td>
   </tr>
@@ -805,7 +863,7 @@ with a unique ID for each route in order to differentiate the various routes.</p
       </div>
     </td>
     <td>
-      
+      <span class="version" data-ice="version">version 1.0.0</span>
       
     </td>
   </tr>
@@ -823,18 +881,18 @@ with a unique ID for each route in order to differentiate the various routes.</p
           
           
           
-          <span class="code" data-ice="name"><span><a href="class/src/routes/Route.js~Route.html#instance-method-paramsGet">paramsGet</a></span></span><span class="code" data-ice="signature">(ctx: <span><a href="http://koajs.com/#api">KoaContext</a></span>): <span>Object</span>&lt;<span>string</span>, <span>*</span>&gt;</span>
+          <span class="code" data-ice="name"><span><a href="class/src/routes/Route.js~Route.html#instance-method-queryParam">queryParam</a></span></span><span class="code" data-ice="signature">(ctx: <span><a href="http://koajs.com/#api">KoaContext</a></span>): <span>Object</span>&lt;<span>string</span>, <span>*</span>&gt;</span>
         </p>
       </div>
       <div>
         
         
-        <div data-ice="description"><p>alias of <span><a href="class/src/routes/Route.js~Route.html#instance-method-bodyGet">bodyGet</a></span></p>
+        <div data-ice="description"><p>retrieves the query params in a GET request</p>
 </div>
       </div>
     </td>
     <td>
-      
+      <span class="version" data-ice="version">version 1.0.0</span>
       
     </td>
   </tr>
@@ -863,36 +921,7 @@ with a unique ID for each route in order to differentiate the various routes.</p
       </div>
     </td>
     <td>
-      
-      
-    </td>
-  </tr>
-<tr data-ice="target">
-    <td>
-      <span class="access" data-ice="access">public</span>
-      
-      
-      
-      <span class="override" data-ice="override"></span>
-    </td>
-    <td>
-      <div>
-        <p>
-          
-          
-          
-          <span class="code" data-ice="name"><span><a href="class/src/routes/Route.js~Route.html#instance-method-sendBadRequest">sendBadRequest</a></span></span><span class="code" data-ice="signature">(ctx: <span><a href="http://koajs.com/#api">KoaContext</a></span>, data: <span>*</span>, message: <span>string</span>): <span> </span></span>
-        </p>
-      </div>
-      <div>
-        
-        
-        <div data-ice="description"><p>same as <span><a href="class/src/routes/Route.js~Route.html#instance-method-send">send</a></span>, but automatically sets the status to 400 BAD REQUEST</p>
-</div>
-      </div>
-    </td>
-    <td>
-      
+      <span class="version" data-ice="version">version 1.0.0</span>
       
     </td>
   </tr>
@@ -921,65 +950,7 @@ with a unique ID for each route in order to differentiate the various routes.</p
       </div>
     </td>
     <td>
-      
-      
-    </td>
-  </tr>
-<tr data-ice="target">
-    <td>
-      <span class="access" data-ice="access">public</span>
-      
-      
-      
-      <span class="override" data-ice="override"></span>
-    </td>
-    <td>
-      <div>
-        <p>
-          
-          
-          
-          <span class="code" data-ice="name"><span><a href="class/src/routes/Route.js~Route.html#instance-method-sendForbidden">sendForbidden</a></span></span><span class="code" data-ice="signature">(ctx: <span><a href="http://koajs.com/#api">KoaContext</a></span>, data: <span>*</span>, message: <span>string</span>): <span> </span></span>
-        </p>
-      </div>
-      <div>
-        
-        
-        <div data-ice="description"><p>same as <span><a href="class/src/routes/Route.js~Route.html#instance-method-send">send</a></span>, but automatically sets the status to 403 FORBIDDEN</p>
-</div>
-      </div>
-    </td>
-    <td>
-      
-      
-    </td>
-  </tr>
-<tr data-ice="target">
-    <td>
-      <span class="access" data-ice="access">public</span>
-      
-      
-      
-      <span class="override" data-ice="override"></span>
-    </td>
-    <td>
-      <div>
-        <p>
-          
-          
-          
-          <span class="code" data-ice="name"><span><a href="class/src/routes/Route.js~Route.html#instance-method-sendInternalServerError">sendInternalServerError</a></span></span><span class="code" data-ice="signature">(ctx: <span><a href="http://koajs.com/#api">KoaContext</a></span>, data: <span>*</span>, message: <span>string</span>): <span> </span></span>
-        </p>
-      </div>
-      <div>
-        
-        
-        <div data-ice="description"><p>same as <span><a href="class/src/routes/Route.js~Route.html#instance-method-send">send</a></span>, but automatically sets the status to 500 INTERNAL SERVER ERROR</p>
-</div>
-      </div>
-    </td>
-    <td>
-      
+      <span class="version" data-ice="version">version 1.0.0</span>
       
     </td>
   </tr>
@@ -1008,36 +979,7 @@ with a unique ID for each route in order to differentiate the various routes.</p
       </div>
     </td>
     <td>
-      
-      
-    </td>
-  </tr>
-<tr data-ice="target">
-    <td>
-      <span class="access" data-ice="access">public</span>
-      
-      
-      
-      <span class="override" data-ice="override"></span>
-    </td>
-    <td>
-      <div>
-        <p>
-          
-          
-          
-          <span class="code" data-ice="name"><span><a href="class/src/routes/Route.js~Route.html#instance-method-sendNotFound">sendNotFound</a></span></span><span class="code" data-ice="signature">(ctx: <span><a href="http://koajs.com/#api">KoaContext</a></span>, data: <span>*</span>, message: <span>string</span>): <span> </span></span>
-        </p>
-      </div>
-      <div>
-        
-        
-        <div data-ice="description"><p>same as <span><a href="class/src/routes/Route.js~Route.html#instance-method-send">send</a></span>, but automatically sets the status to 404 NOT FOUND</p>
-</div>
-      </div>
-    </td>
-    <td>
-      
+      <span class="version" data-ice="version">version 1.0.0</span>
       
     </td>
   </tr>
@@ -1066,36 +1008,7 @@ with a unique ID for each route in order to differentiate the various routes.</p
       </div>
     </td>
     <td>
-      
-      
-    </td>
-  </tr>
-<tr data-ice="target">
-    <td>
-      <span class="access" data-ice="access">public</span>
-      
-      
-      
-      <span class="override" data-ice="override"></span>
-    </td>
-    <td>
-      <div>
-        <p>
-          
-          
-          
-          <span class="code" data-ice="name"><span><a href="class/src/routes/Route.js~Route.html#instance-method-sendUnauthorized">sendUnauthorized</a></span></span><span class="code" data-ice="signature">(ctx: <span><a href="http://koajs.com/#api">KoaContext</a></span>, data: <span>*</span>, message: <span>string</span>): <span> </span></span>
-        </p>
-      </div>
-      <div>
-        
-        
-        <div data-ice="description"><p>same as <span><a href="class/src/routes/Route.js~Route.html#instance-method-send">send</a></span>, but automatically sets the status to 401 UNAUTHORIZED</p>
-</div>
-      </div>
-    </td>
-    <td>
-      
+      <span class="version" data-ice="version">version 1.0.0</span>
       
     </td>
   </tr>
@@ -1113,7 +1026,7 @@ with a unique ID for each route in order to differentiate the various routes.</p
           
           
           
-          <span class="code" data-ice="name"><span><a href="class/src/routes/Route.js~Route.html#instance-method-throw">throw</a></span></span><span class="code" data-ice="signature">(status: <span>number</span>, message: <span>string</span>, translate: <span>boolean</span>): <span> </span></span>
+          <span class="code" data-ice="name"><span><a href="class/src/routes/Route.js~Route.html#instance-method-throw">throw</a></span></span><span class="code" data-ice="signature">(status: <span>number</span>, error: <span>string </span> | <span> object</span>, translate: <span>boolean</span>): <span> </span></span>
         </p>
       </div>
       <div>
@@ -1124,7 +1037,123 @@ with a unique ID for each route in order to differentiate the various routes.</p
       </div>
     </td>
     <td>
+      <span class="version" data-ice="version">version 1.0.0</span>
       
+    </td>
+  </tr>
+<tr data-ice="target">
+    <td>
+      <span class="access" data-ice="access">public</span>
+      
+      
+      
+      <span class="override" data-ice="override"></span>
+    </td>
+    <td>
+      <div>
+        <p>
+          
+          
+          
+          <span class="code" data-ice="name"><span><a href="class/src/routes/Route.js~Route.html#instance-method-throwBadRequest">throwBadRequest</a></span></span><span class="code" data-ice="signature">(error: <span>string </span> | <span> object</span>, translate: <span>boolean</span>): <span> </span></span>
+        </p>
+      </div>
+      <div>
+        
+        
+        <div data-ice="description"><p>same as <span><a href="class/src/routes/Route.js~Route.html#instance-method-throw">throw</a></span>, but automatically sets the status to 400 BAD REQUEST</p>
+</div>
+      </div>
+    </td>
+    <td>
+      <span class="version" data-ice="version">version 2.0.0</span>
+      
+    </td>
+  </tr>
+<tr data-ice="target">
+    <td>
+      <span class="access" data-ice="access">public</span>
+      
+      
+      
+      <span class="override" data-ice="override"></span>
+    </td>
+    <td>
+      <div>
+        <p>
+          
+          
+          
+          <span class="code" data-ice="name"><span><a href="class/src/routes/Route.js~Route.html#instance-method-throwForbidden">throwForbidden</a></span></span><span class="code" data-ice="signature">(error: <span>string </span> | <span> object</span>, translate: <span>boolean</span>): <span> </span></span>
+        </p>
+      </div>
+      <div>
+        
+        
+        <div data-ice="description"><p>same as <span><a href="class/src/routes/Route.js~Route.html#instance-method-throw">throw</a></span>, but automatically sets the status to 403 FORBIDDEN</p>
+</div>
+      </div>
+    </td>
+    <td>
+      <span class="version" data-ice="version">version 2.0.0</span>
+      
+    </td>
+  </tr>
+<tr data-ice="target">
+    <td>
+      <span class="access" data-ice="access">public</span>
+      
+      
+      
+      <span class="override" data-ice="override"></span>
+    </td>
+    <td>
+      <div>
+        <p>
+          
+          
+          
+          <span class="code" data-ice="name"><span><a href="class/src/routes/Route.js~Route.html#instance-method-throwNotFound">throwNotFound</a></span></span><span class="code" data-ice="signature">(error: <span>string </span> | <span> object</span>, translate: <span>boolean</span>): <span> </span></span>
+        </p>
+      </div>
+      <div>
+        
+        
+        <div data-ice="description"><p>same as <span><a href="class/src/routes/Route.js~Route.html#instance-method-throw">throw</a></span>, but automatically sets the status to 404 NOT FOUND</p>
+</div>
+      </div>
+    </td>
+    <td>
+      <span class="version" data-ice="version">version 2.0.0</span>
+      
+    </td>
+  </tr>
+<tr data-ice="target">
+    <td>
+      <span class="access" data-ice="access">public</span>
+      
+      
+      
+      <span class="override" data-ice="override"></span>
+    </td>
+    <td>
+      <div>
+        <p>
+          
+          
+          
+          <span class="code" data-ice="name"><span><a href="class/src/routes/Route.js~Route.html#instance-method-throwUnauthorized">throwUnauthorized</a></span></span><span class="code" data-ice="signature">(error: <span>string </span> | <span> object</span>, translate: <span>boolean</span>): <span> </span></span>
+        </p>
+      </div>
+      <div>
+        
+        
+        <div data-ice="description"><p>same as <span><a href="class/src/routes/Route.js~Route.html#instance-method-throw">throw</a></span>, but automatically sets the status to 401 UNAUTHORIZED</p>
+</div>
+      </div>
+    </td>
+    <td>
+      <span class="version" data-ice="version">version 2.0.0</span>
       
     </td>
   </tr>
@@ -1148,7 +1177,7 @@ with a unique ID for each route in order to differentiate the various routes.</p
     <span class="right-info">
       
       
-      <span data-ice="source"><span><a href="file/src/routes/Route.js.html#lineNumber162">source</a></span></span>
+      <span data-ice="source"><span><a href="file/src/routes/Route.js.html#lineNumber165">source</a></span></span>
     </span>
   </h3>
 
@@ -1204,7 +1233,7 @@ with a unique ID for each route in order to differentiate the various routes.</p
     <span class="right-info">
       
       
-      <span data-ice="source"><span><a href="file/src/routes/Route.js.html#lineNumber130">source</a></span></span>
+      <span data-ice="source"><span><a href="file/src/routes/Route.js.html#lineNumber133">source</a></span></span>
     </span>
   </h3>
 
@@ -1260,7 +1289,7 @@ with a unique ID for each route in order to differentiate the various routes.</p
     <span class="right-info">
       
       
-      <span data-ice="source"><span><a href="file/src/routes/Route.js.html#lineNumber154">source</a></span></span>
+      <span data-ice="source"><span><a href="file/src/routes/Route.js.html#lineNumber157">source</a></span></span>
     </span>
   </h3>
 
@@ -1316,7 +1345,7 @@ with a unique ID for each route in order to differentiate the various routes.</p
     <span class="right-info">
       
       
-      <span data-ice="source"><span><a href="file/src/routes/Route.js.html#lineNumber138">source</a></span></span>
+      <span data-ice="source"><span><a href="file/src/routes/Route.js.html#lineNumber141">source</a></span></span>
     </span>
   </h3>
 
@@ -1372,7 +1401,7 @@ with a unique ID for each route in order to differentiate the various routes.</p
     <span class="right-info">
       
       
-      <span data-ice="source"><span><a href="file/src/routes/Route.js.html#lineNumber146">source</a></span></span>
+      <span data-ice="source"><span><a href="file/src/routes/Route.js.html#lineNumber149">source</a></span></span>
     </span>
   </h3>
 
@@ -1428,7 +1457,7 @@ with a unique ID for each route in order to differentiate the various routes.</p
     <span class="right-info">
       
       
-      <span data-ice="source"><span><a href="file/src/routes/Route.js.html#lineNumber170">source</a></span></span>
+      <span data-ice="source"><span><a href="file/src/routes/Route.js.html#lineNumber173">source</a></span></span>
     </span>
   </h3>
 
@@ -1636,9 +1665,9 @@ with a unique ID for each route in order to differentiate the various routes.</p
     
     <span class="code" data-ice="name">allRoutesInstance</span><span class="code" data-ice="signature">: <span><span><a href="class/src/routes/Route.js~Route.html">Route</a></span><span>[]</span></span></span>
     <span class="right-info">
+      <span class="version" data-ice="version">version 1.0.0</span>
       
-      
-      <span data-ice="source"><span><a href="file/src/routes/Route.js.html#lineNumber85">source</a></span></span>
+      <span data-ice="source"><span><a href="file/src/routes/Route.js.html#lineNumber88">source</a></span></span>
     </span>
   </h3>
 
@@ -1680,9 +1709,9 @@ with a unique ID for each route in order to differentiate the various routes.</p
     
     <span class="code" data-ice="name">app</span><span class="code" data-ice="signature">: <span><a href="http://koajs.com/#application">Koa</a></span></span>
     <span class="right-info">
+      <span class="version" data-ice="version">version 1.0.0</span>
       
-      
-      <span data-ice="source"><span><a href="file/src/routes/Route.js.html#lineNumber75">source</a></span></span>
+      <span data-ice="source"><span><a href="file/src/routes/Route.js.html#lineNumber76">source</a></span></span>
     </span>
   </h3>
 
@@ -1726,7 +1755,7 @@ with a unique ID for each route in order to differentiate the various routes.</p
     <span class="right-info">
       
       
-      <span data-ice="source"><span><a href="file/src/routes/Route.js.html#lineNumber95">source</a></span></span>
+      <span data-ice="source"><span><a href="file/src/routes/Route.js.html#lineNumber99">source</a></span></span>
     </span>
   </h3>
 
@@ -1770,7 +1799,7 @@ with a unique ID for each route in order to differentiate the various routes.</p
     <span class="right-info">
       
       
-      <span data-ice="source"><span><a href="file/src/routes/Route.js.html#lineNumber113">source</a></span></span>
+      <span data-ice="source"><span><a href="file/src/routes/Route.js.html#lineNumber117">source</a></span></span>
     </span>
   </h3>
 
@@ -1814,7 +1843,7 @@ with a unique ID for each route in order to differentiate the various routes.</p
     <span class="right-info">
       
       
-      <span data-ice="source"><span><a href="file/src/routes/Route.js.html#lineNumber100">source</a></span></span>
+      <span data-ice="source"><span><a href="file/src/routes/Route.js.html#lineNumber104">source</a></span></span>
     </span>
   </h3>
 
@@ -1858,7 +1887,7 @@ with a unique ID for each route in order to differentiate the various routes.</p
     <span class="right-info">
       
       
-      <span data-ice="source"><span><a href="file/src/routes/Route.js.html#lineNumber106">source</a></span></span>
+      <span data-ice="source"><span><a href="file/src/routes/Route.js.html#lineNumber110">source</a></span></span>
     </span>
   </h3>
 
@@ -1900,9 +1929,9 @@ with a unique ID for each route in order to differentiate the various routes.</p
     
     <span class="code" data-ice="name">models</span><span class="code" data-ice="signature">: <span><span>Model</span><span>[]</span></span></span>
     <span class="right-info">
+      <span class="version" data-ice="version">version 1.0.0</span>
       
-      
-      <span data-ice="source"><span><a href="file/src/routes/Route.js.html#lineNumber90">source</a></span></span>
+      <span data-ice="source"><span><a href="file/src/routes/Route.js.html#lineNumber94">source</a></span></span>
     </span>
   </h3>
 
@@ -1944,9 +1973,9 @@ with a unique ID for each route in order to differentiate the various routes.</p
     
     <span class="code" data-ice="name">prefix</span><span class="code" data-ice="signature">: <span>string</span></span>
     <span class="right-info">
+      <span class="version" data-ice="version">version 1.0.0</span>
       
-      
-      <span data-ice="source"><span><a href="file/src/routes/Route.js.html#lineNumber80">source</a></span></span>
+      <span data-ice="source"><span><a href="file/src/routes/Route.js.html#lineNumber82">source</a></span></span>
     </span>
   </h3>
 
@@ -1991,9 +2020,9 @@ with a unique ID for each route in order to differentiate the various routes.</p
     
     <span class="code" data-ice="name">addRateLimit</span><span class="code" data-ice="signature">(middlewares: <span><span>function</span><span>[]</span></span>, params: {options: {rateLimit: <span>Object</span>, routePath: <span>string</span>, type: <span>string</span>}})</span>
     <span class="right-info">
+      <span class="version" data-ice="version">version 1.0.0</span>
       
-      
-      <span data-ice="source"><span><a href="file/src/routes/Route.js.html#lineNumber246">source</a></span></span>
+      <span data-ice="source"><span><a href="file/src/routes/Route.js.html#lineNumber256">source</a></span></span>
     </span>
   </h3>
 
@@ -2059,11 +2088,11 @@ with a unique ID for each route in order to differentiate the various routes.</p
     
     
     
-    <span class="code" data-ice="name">assert</span><span class="code" data-ice="signature">(condition: <span>boolean</span>, status: <span>number</span>, message: <span>string</span>, translate: <span>boolean</span>): <span> </span></span>
+    <span class="code" data-ice="name">assert</span><span class="code" data-ice="signature">(condition: <span>boolean</span>, status: <span>number</span>, error: <span>string </span> | <span> object</span>, translate: <span>boolean</span>): <span> </span></span>
     <span class="right-info">
       
       
-      <span data-ice="source"><span><a href="file/src/routes/Route.js.html#lineNumber557">source</a></span></span>
+      <span data-ice="source"><span><a href="file/src/routes/Route.js.html#lineNumber499">source</a></span></span>
     </span>
   </h3>
 
@@ -2098,10 +2127,307 @@ with a unique ID for each route in order to differentiate the various routes.</p
 </td>
     </tr>
 <tr data-ice="property" data-depth="0">
-      <td data-ice="name" class="code" data-depth="0">message</td>
-      <td data-ice="type" class="code"><span>string</span></td>
+      <td data-ice="name" class="code" data-depth="0">error</td>
+      <td data-ice="type" class="code"><span>string </span> | <span> object</span></td>
+      <td data-ice="appendix"><ul><li>optional</li></ul></td>
+      <td data-ice="description"><p>the error(s) to be yielded by the request</p>
+</td>
+    </tr>
+<tr data-ice="property" data-depth="0">
+      <td data-ice="name" class="code" data-depth="0">translate</td>
+      <td data-ice="type" class="code"><span>boolean</span></td>
       <td data-ice="appendix"></td>
-      <td data-ice="description"><p>a message describing the error</p>
+      <td data-ice="description"><p>indicates whether the message should be translated or not</p>
+</td>
+    </tr>
+</tbody>
+  </table>
+</div>
+</div>
+
+  <div class="return-params" data-ice="returnParams">
+    <h4>Return:</h4>
+    <table>
+      <tbody>
+        <tr>
+          <td class="return-type code" data-ice="returnType"><span> </span></td>
+          
+        </tr>
+      </tbody>
+    </table>
+    <div data-ice="returnProperties">
+</div>
+  </div>
+
+  
+
+  
+
+  <div data-ice="throwWrap">
+    <h4>Throw:</h4>
+    <table>
+      <tbody>
+      
+      <tr class="throw" data-ice="throw">
+        <td><p data-ice="throwName"><span><a href="class/src/utils/ErrorApp.js~ErrorApp.html">ErrorApp</a></span></p></td>
+        <td data-ice="throwDesc"><p>thrown error, should the assert fail.</p>
+</td>
+      </tr>
+</tbody>
+    </table>
+  </div>
+
+  
+
+  
+
+  
+
+  
+  
+</div>
+<div class="detail" data-ice="detail">
+  <h3 data-ice="anchor" id="instance-method-assertBadRequest">
+    <span class="access" data-ice="access">public</span>
+    
+    
+    
+    
+    
+    <span class="code" data-ice="name">assertBadRequest</span><span class="code" data-ice="signature">(condition: <span>boolean</span>, error: <span>string </span> | <span> object</span>, translate: <span>boolean</span>): <span> </span></span>
+    <span class="right-info">
+      <span class="version" data-ice="version">version 2.0.0</span>
+      
+      <span data-ice="source"><span><a href="file/src/routes/Route.js.html#lineNumber515">source</a></span></span>
+    </span>
+  </h3>
+
+  
+  
+  
+  <div data-ice="description"><p>same as <span><a href="class/src/routes/Route.js~Route.html#instance-method-assert">assert</a></span>, but automatically sets the status to 400 BAD REQUEST</p>
+</div>
+
+  
+
+  <div data-ice="properties"><div data-ice="properties">
+  <h4 data-ice="title">Params:</h4>
+  <table class="params">
+    <thead>
+    <tr><td>Name</td><td>Type</td><td>Attribute</td><td>Description</td></tr>
+    </thead>
+    <tbody>
+    
+    <tr data-ice="property" data-depth="0">
+      <td data-ice="name" class="code" data-depth="0">condition</td>
+      <td data-ice="type" class="code"><span>boolean</span></td>
+      <td data-ice="appendix"></td>
+      <td data-ice="description"><p>if set to false; assert will fail and throw.</p>
+</td>
+    </tr>
+<tr data-ice="property" data-depth="0">
+      <td data-ice="name" class="code" data-depth="0">error</td>
+      <td data-ice="type" class="code"><span>string </span> | <span> object</span></td>
+      <td data-ice="appendix"><ul><li>optional</li></ul></td>
+      <td data-ice="description"><p>the error(s) to be yielded by the request, default to &quot;Bad request&quot;</p>
+</td>
+    </tr>
+<tr data-ice="property" data-depth="0">
+      <td data-ice="name" class="code" data-depth="0">translate</td>
+      <td data-ice="type" class="code"><span>boolean</span></td>
+      <td data-ice="appendix"></td>
+      <td data-ice="description"><p>indicates whether the message should be translated or not</p>
+</td>
+    </tr>
+</tbody>
+  </table>
+</div>
+</div>
+
+  <div class="return-params" data-ice="returnParams">
+    <h4>Return:</h4>
+    <table>
+      <tbody>
+        <tr>
+          <td class="return-type code" data-ice="returnType"><span> </span></td>
+          
+        </tr>
+      </tbody>
+    </table>
+    <div data-ice="returnProperties">
+</div>
+  </div>
+
+  
+
+  
+
+  <div data-ice="throwWrap">
+    <h4>Throw:</h4>
+    <table>
+      <tbody>
+      
+      <tr class="throw" data-ice="throw">
+        <td><p data-ice="throwName"><span><a href="class/src/utils/ErrorApp.js~ErrorApp.html">ErrorApp</a></span></p></td>
+        <td data-ice="throwDesc"><p>thrown error, should the assert fail.</p>
+</td>
+      </tr>
+</tbody>
+    </table>
+  </div>
+
+  
+
+  
+
+  
+
+  
+  
+</div>
+<div class="detail" data-ice="detail">
+  <h3 data-ice="anchor" id="instance-method-assertForbidden">
+    <span class="access" data-ice="access">public</span>
+    
+    
+    
+    
+    
+    <span class="code" data-ice="name">assertForbidden</span><span class="code" data-ice="signature">(condition: <span>boolean</span>, error: <span>string </span> | <span> object</span>, translate: <span>boolean</span>): <span> </span></span>
+    <span class="right-info">
+      <span class="version" data-ice="version">version 2.0.0</span>
+      
+      <span data-ice="source"><span><a href="file/src/routes/Route.js.html#lineNumber543">source</a></span></span>
+    </span>
+  </h3>
+
+  
+  
+  
+  <div data-ice="description"><p>same as <span><a href="class/src/routes/Route.js~Route.html#instance-method-assert">assert</a></span>, but automatically sets the status to 403 FORBIDDEN</p>
+</div>
+
+  
+
+  <div data-ice="properties"><div data-ice="properties">
+  <h4 data-ice="title">Params:</h4>
+  <table class="params">
+    <thead>
+    <tr><td>Name</td><td>Type</td><td>Attribute</td><td>Description</td></tr>
+    </thead>
+    <tbody>
+    
+    <tr data-ice="property" data-depth="0">
+      <td data-ice="name" class="code" data-depth="0">condition</td>
+      <td data-ice="type" class="code"><span>boolean</span></td>
+      <td data-ice="appendix"></td>
+      <td data-ice="description"><p>if set to false; assert will fail and throw.</p>
+</td>
+    </tr>
+<tr data-ice="property" data-depth="0">
+      <td data-ice="name" class="code" data-depth="0">error</td>
+      <td data-ice="type" class="code"><span>string </span> | <span> object</span></td>
+      <td data-ice="appendix"><ul><li>optional</li></ul></td>
+      <td data-ice="description"><p>the error(s) to be yielded by the request, default to &quot;Forbidden&quot;</p>
+</td>
+    </tr>
+<tr data-ice="property" data-depth="0">
+      <td data-ice="name" class="code" data-depth="0">translate</td>
+      <td data-ice="type" class="code"><span>boolean</span></td>
+      <td data-ice="appendix"></td>
+      <td data-ice="description"><p>indicates whether the message should be translated or not</p>
+</td>
+    </tr>
+</tbody>
+  </table>
+</div>
+</div>
+
+  <div class="return-params" data-ice="returnParams">
+    <h4>Return:</h4>
+    <table>
+      <tbody>
+        <tr>
+          <td class="return-type code" data-ice="returnType"><span> </span></td>
+          
+        </tr>
+      </tbody>
+    </table>
+    <div data-ice="returnProperties">
+</div>
+  </div>
+
+  
+
+  
+
+  <div data-ice="throwWrap">
+    <h4>Throw:</h4>
+    <table>
+      <tbody>
+      
+      <tr class="throw" data-ice="throw">
+        <td><p data-ice="throwName"><span><a href="class/src/utils/ErrorApp.js~ErrorApp.html">ErrorApp</a></span></p></td>
+        <td data-ice="throwDesc"><p>thrown error, should the assert fail.</p>
+</td>
+      </tr>
+</tbody>
+    </table>
+  </div>
+
+  
+
+  
+
+  
+
+  
+  
+</div>
+<div class="detail" data-ice="detail">
+  <h3 data-ice="anchor" id="instance-method-assertUnauthorized">
+    <span class="access" data-ice="access">public</span>
+    
+    
+    
+    
+    
+    <span class="code" data-ice="name">assertUnauthorized</span><span class="code" data-ice="signature">(condition: <span>boolean</span>, error: <span>string </span> | <span> object</span>, translate: <span>boolean</span>): <span> </span></span>
+    <span class="right-info">
+      <span class="version" data-ice="version">version 2.0.0</span>
+      
+      <span data-ice="source"><span><a href="file/src/routes/Route.js.html#lineNumber529">source</a></span></span>
+    </span>
+  </h3>
+
+  
+  
+  
+  <div data-ice="description"><p>same as <span><a href="class/src/routes/Route.js~Route.html#instance-method-assert">assert</a></span>, but automatically sets the status to 401 UNAUTHORIZED</p>
+</div>
+
+  
+
+  <div data-ice="properties"><div data-ice="properties">
+  <h4 data-ice="title">Params:</h4>
+  <table class="params">
+    <thead>
+    <tr><td>Name</td><td>Type</td><td>Attribute</td><td>Description</td></tr>
+    </thead>
+    <tbody>
+    
+    <tr data-ice="property" data-depth="0">
+      <td data-ice="name" class="code" data-depth="0">condition</td>
+      <td data-ice="type" class="code"><span>boolean</span></td>
+      <td data-ice="appendix"></td>
+      <td data-ice="description"><p>if set to false; assert will fail and throw.</p>
+</td>
+    </tr>
+<tr data-ice="property" data-depth="0">
+      <td data-ice="name" class="code" data-depth="0">error</td>
+      <td data-ice="type" class="code"><span>string </span> | <span> object</span></td>
+      <td data-ice="appendix"><ul><li>optional</li></ul></td>
+      <td data-ice="description"><p>the error(s) to be yielded by the request, default to &quot;Unauthorized&quot;</p>
 </td>
     </tr>
 <tr data-ice="property" data-depth="0">
@@ -2169,7 +2495,7 @@ with a unique ID for each route in order to differentiate the various routes.</p
     <span class="right-info">
       
       
-      <span data-ice="source"><span><a href="file/src/routes/Route.js.html#lineNumber274">source</a></span></span>
+      <span data-ice="source"><span><a href="file/src/routes/Route.js.html#lineNumber284">source</a></span></span>
     </span>
   </h3>
 
@@ -2242,9 +2568,9 @@ with a unique ID for each route in order to differentiate the various routes.</p
     
     <span class="code" data-ice="name">body</span><span class="code" data-ice="signature">(ctx: <span><a href="http://koajs.com/#api">KoaContext</a></span>, original: <span>boolean</span>): <span>*</span></span>
     <span class="right-info">
+      <span class="version" data-ice="version">version 1.0.0</span>
       
-      
-      <span data-ice="source"><span><a href="file/src/routes/Route.js.html#lineNumber392">source</a></span></span>
+      <span data-ice="source"><span><a href="file/src/routes/Route.js.html#lineNumber348">source</a></span></span>
     </span>
   </h3>
 
@@ -2315,79 +2641,6 @@ with a unique ID for each route in order to differentiate the various routes.</p
   
 </div>
 <div class="detail" data-ice="detail">
-  <h3 data-ice="anchor" id="instance-method-bodyGet">
-    <span class="access" data-ice="access">public</span>
-    
-    
-    
-    
-    
-    <span class="code" data-ice="name">bodyGet</span><span class="code" data-ice="signature">(ctx: <span><a href="http://koajs.com/#api">KoaContext</a></span>): <span>Object</span>&lt;<span>string</span>, <span>*</span>&gt;</span>
-    <span class="right-info">
-      
-      
-      <span data-ice="source"><span><a href="file/src/routes/Route.js.html#lineNumber402">source</a></span></span>
-    </span>
-  </h3>
-
-  
-  
-  
-  <div data-ice="description"><p>retrieves the query params in a GET request</p>
-</div>
-
-  
-
-  <div data-ice="properties"><div data-ice="properties">
-  <h4 data-ice="title">Params:</h4>
-  <table class="params">
-    <thead>
-    <tr><td>Name</td><td>Type</td><td>Attribute</td><td>Description</td></tr>
-    </thead>
-    <tbody>
-    
-    <tr data-ice="property" data-depth="0">
-      <td data-ice="name" class="code" data-depth="0">ctx</td>
-      <td data-ice="type" class="code"><span><a href="http://koajs.com/#api">KoaContext</a></span></td>
-      <td data-ice="appendix"></td>
-      <td data-ice="description"><p>koa&apos;s context object</p>
-</td>
-    </tr>
-</tbody>
-  </table>
-</div>
-</div>
-
-  <div class="return-params" data-ice="returnParams">
-    <h4>Return:</h4>
-    <table>
-      <tbody>
-        <tr>
-          <td class="return-type code" data-ice="returnType"><span>Object</span>&lt;<span>string</span>, <span>*</span>&gt;</td>
-          
-        </tr>
-      </tbody>
-    </table>
-    <div data-ice="returnProperties">
-</div>
-  </div>
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-  
-</div>
-<div class="detail" data-ice="detail">
   <h3 data-ice="anchor" id="instance-method-log">
     <span class="access" data-ice="access">public</span>
     
@@ -2399,7 +2652,7 @@ with a unique ID for each route in order to differentiate the various routes.</p
     <span class="right-info">
       
       
-      <span data-ice="source"><span><a href="file/src/routes/Route.js.html#lineNumber177">source</a></span></span>
+      <span data-ice="source"><span><a href="file/src/routes/Route.js.html#lineNumber180">source</a></span></span>
     </span>
   </h3>
 
@@ -2464,9 +2717,9 @@ with a unique ID for each route in order to differentiate the various routes.</p
     
     <span class="code" data-ice="name">mount</span><span class="code" data-ice="signature">()</span>
     <span class="right-info">
+      <span class="version" data-ice="version">version 1.0.0</span>
       
-      
-      <span data-ice="source"><span><a href="file/src/routes/Route.js.html#lineNumber190">source</a></span></span>
+      <span data-ice="source"><span><a href="file/src/routes/Route.js.html#lineNumber195">source</a></span></span>
     </span>
   </h3>
 
@@ -2501,25 +2754,25 @@ with a unique ID for each route in order to differentiate the various routes.</p
   
 </div>
 <div class="detail" data-ice="detail">
-  <h3 data-ice="anchor" id="instance-method-paramsGet">
+  <h3 data-ice="anchor" id="instance-method-queryParam">
     <span class="access" data-ice="access">public</span>
     
     
     
     
     
-    <span class="code" data-ice="name">paramsGet</span><span class="code" data-ice="signature">(ctx: <span><a href="http://koajs.com/#api">KoaContext</a></span>): <span>Object</span>&lt;<span>string</span>, <span>*</span>&gt;</span>
+    <span class="code" data-ice="name">queryParam</span><span class="code" data-ice="signature">(ctx: <span><a href="http://koajs.com/#api">KoaContext</a></span>): <span>Object</span>&lt;<span>string</span>, <span>*</span>&gt;</span>
     <span class="right-info">
+      <span class="version" data-ice="version">version 1.0.0</span>
       
-      
-      <span data-ice="source"><span><a href="file/src/routes/Route.js.html#lineNumber412">source</a></span></span>
+      <span data-ice="source"><span><a href="file/src/routes/Route.js.html#lineNumber359">source</a></span></span>
     </span>
   </h3>
 
   
   
   
-  <div data-ice="description"><p>alias of <span><a href="class/src/routes/Route.js~Route.html#instance-method-bodyGet">bodyGet</a></span></p>
+  <div data-ice="description"><p>retrieves the query params in a GET request</p>
 </div>
 
   
@@ -2583,9 +2836,9 @@ with a unique ID for each route in order to differentiate the various routes.</p
     
     <span class="code" data-ice="name">send</span><span class="code" data-ice="signature">(ctx: <span><a href="http://koajs.com/#api">KoaContext</a></span>, status: <span>number</span>, data: <span>*</span>, message: <span>string</span>): <span> </span></span>
     <span class="right-info">
+      <span class="version" data-ice="version">version 1.0.0</span>
       
-      
-      <span data-ice="source"><span><a href="file/src/routes/Route.js.html#lineNumber423">source</a></span></span>
+      <span data-ice="source"><span><a href="file/src/routes/Route.js.html#lineNumber373">source</a></span></span>
     </span>
   </h3>
 
@@ -2668,93 +2921,6 @@ with a unique ID for each route in order to differentiate the various routes.</p
   
 </div>
 <div class="detail" data-ice="detail">
-  <h3 data-ice="anchor" id="instance-method-sendBadRequest">
-    <span class="access" data-ice="access">public</span>
-    
-    
-    
-    
-    
-    <span class="code" data-ice="name">sendBadRequest</span><span class="code" data-ice="signature">(ctx: <span><a href="http://koajs.com/#api">KoaContext</a></span>, data: <span>*</span>, message: <span>string</span>): <span> </span></span>
-    <span class="right-info">
-      
-      
-      <span data-ice="source"><span><a href="file/src/routes/Route.js.html#lineNumber482">source</a></span></span>
-    </span>
-  </h3>
-
-  
-  
-  
-  <div data-ice="description"><p>same as <span><a href="class/src/routes/Route.js~Route.html#instance-method-send">send</a></span>, but automatically sets the status to 400 BAD REQUEST</p>
-</div>
-
-  
-
-  <div data-ice="properties"><div data-ice="properties">
-  <h4 data-ice="title">Params:</h4>
-  <table class="params">
-    <thead>
-    <tr><td>Name</td><td>Type</td><td>Attribute</td><td>Description</td></tr>
-    </thead>
-    <tbody>
-    
-    <tr data-ice="property" data-depth="0">
-      <td data-ice="name" class="code" data-depth="0">ctx</td>
-      <td data-ice="type" class="code"><span><a href="http://koajs.com/#api">KoaContext</a></span></td>
-      <td data-ice="appendix"></td>
-      <td data-ice="description"><p>koa&apos;s context object</p>
-</td>
-    </tr>
-<tr data-ice="property" data-depth="0">
-      <td data-ice="name" class="code" data-depth="0">data</td>
-      <td data-ice="type" class="code"><span>*</span></td>
-      <td data-ice="appendix"><ul><li>optional</li></ul></td>
-      <td data-ice="description"><p>the data to be yielded by the requests</p>
-</td>
-    </tr>
-<tr data-ice="property" data-depth="0">
-      <td data-ice="name" class="code" data-depth="0">message</td>
-      <td data-ice="type" class="code"><span>string</span></td>
-      <td data-ice="appendix"><ul><li>optional</li></ul></td>
-      <td data-ice="description"><p>the message to be yielded by the request</p>
-</td>
-    </tr>
-</tbody>
-  </table>
-</div>
-</div>
-
-  <div class="return-params" data-ice="returnParams">
-    <h4>Return:</h4>
-    <table>
-      <tbody>
-        <tr>
-          <td class="return-type code" data-ice="returnType"><span> </span></td>
-          
-        </tr>
-      </tbody>
-    </table>
-    <div data-ice="returnProperties">
-</div>
-  </div>
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-  
-</div>
-<div class="detail" data-ice="detail">
   <h3 data-ice="anchor" id="instance-method-sendCreated">
     <span class="access" data-ice="access">public</span>
     
@@ -2764,9 +2930,9 @@ with a unique ID for each route in order to differentiate the various routes.</p
     
     <span class="code" data-ice="name">sendCreated</span><span class="code" data-ice="signature">(ctx: <span><a href="http://koajs.com/#api">KoaContext</a></span>, data: <span>*</span>, message: <span>string</span>): <span> </span></span>
     <span class="right-info">
+      <span class="version" data-ice="version">version 1.0.0</span>
       
-      
-      <span data-ice="source"><span><a href="file/src/routes/Route.js.html#lineNumber460">source</a></span></span>
+      <span data-ice="source"><span><a href="file/src/routes/Route.js.html#lineNumber412">source</a></span></span>
     </span>
   </h3>
 
@@ -2774,180 +2940,6 @@ with a unique ID for each route in order to differentiate the various routes.</p
   
   
   <div data-ice="description"><p>same as <span><a href="class/src/routes/Route.js~Route.html#instance-method-send">send</a></span>, but automatically sets the status to 201 CREATED</p>
-</div>
-
-  
-
-  <div data-ice="properties"><div data-ice="properties">
-  <h4 data-ice="title">Params:</h4>
-  <table class="params">
-    <thead>
-    <tr><td>Name</td><td>Type</td><td>Attribute</td><td>Description</td></tr>
-    </thead>
-    <tbody>
-    
-    <tr data-ice="property" data-depth="0">
-      <td data-ice="name" class="code" data-depth="0">ctx</td>
-      <td data-ice="type" class="code"><span><a href="http://koajs.com/#api">KoaContext</a></span></td>
-      <td data-ice="appendix"></td>
-      <td data-ice="description"><p>koa&apos;s context object</p>
-</td>
-    </tr>
-<tr data-ice="property" data-depth="0">
-      <td data-ice="name" class="code" data-depth="0">data</td>
-      <td data-ice="type" class="code"><span>*</span></td>
-      <td data-ice="appendix"><ul><li>optional</li></ul></td>
-      <td data-ice="description"><p>the data to be yielded by the requests</p>
-</td>
-    </tr>
-<tr data-ice="property" data-depth="0">
-      <td data-ice="name" class="code" data-depth="0">message</td>
-      <td data-ice="type" class="code"><span>string</span></td>
-      <td data-ice="appendix"><ul><li>optional</li></ul></td>
-      <td data-ice="description"><p>the message to be yielded by the request</p>
-</td>
-    </tr>
-</tbody>
-  </table>
-</div>
-</div>
-
-  <div class="return-params" data-ice="returnParams">
-    <h4>Return:</h4>
-    <table>
-      <tbody>
-        <tr>
-          <td class="return-type code" data-ice="returnType"><span> </span></td>
-          
-        </tr>
-      </tbody>
-    </table>
-    <div data-ice="returnProperties">
-</div>
-  </div>
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-  
-</div>
-<div class="detail" data-ice="detail">
-  <h3 data-ice="anchor" id="instance-method-sendForbidden">
-    <span class="access" data-ice="access">public</span>
-    
-    
-    
-    
-    
-    <span class="code" data-ice="name">sendForbidden</span><span class="code" data-ice="signature">(ctx: <span><a href="http://koajs.com/#api">KoaContext</a></span>, data: <span>*</span>, message: <span>string</span>): <span> </span></span>
-    <span class="right-info">
-      
-      
-      <span data-ice="source"><span><a href="file/src/routes/Route.js.html#lineNumber506">source</a></span></span>
-    </span>
-  </h3>
-
-  
-  
-  
-  <div data-ice="description"><p>same as <span><a href="class/src/routes/Route.js~Route.html#instance-method-send">send</a></span>, but automatically sets the status to 403 FORBIDDEN</p>
-</div>
-
-  
-
-  <div data-ice="properties"><div data-ice="properties">
-  <h4 data-ice="title">Params:</h4>
-  <table class="params">
-    <thead>
-    <tr><td>Name</td><td>Type</td><td>Attribute</td><td>Description</td></tr>
-    </thead>
-    <tbody>
-    
-    <tr data-ice="property" data-depth="0">
-      <td data-ice="name" class="code" data-depth="0">ctx</td>
-      <td data-ice="type" class="code"><span><a href="http://koajs.com/#api">KoaContext</a></span></td>
-      <td data-ice="appendix"></td>
-      <td data-ice="description"><p>koa&apos;s context object</p>
-</td>
-    </tr>
-<tr data-ice="property" data-depth="0">
-      <td data-ice="name" class="code" data-depth="0">data</td>
-      <td data-ice="type" class="code"><span>*</span></td>
-      <td data-ice="appendix"><ul><li>optional</li></ul></td>
-      <td data-ice="description"><p>the data to be yielded by the requests</p>
-</td>
-    </tr>
-<tr data-ice="property" data-depth="0">
-      <td data-ice="name" class="code" data-depth="0">message</td>
-      <td data-ice="type" class="code"><span>string</span></td>
-      <td data-ice="appendix"><ul><li>optional</li></ul></td>
-      <td data-ice="description"><p>the message to be yielded by the request</p>
-</td>
-    </tr>
-</tbody>
-  </table>
-</div>
-</div>
-
-  <div class="return-params" data-ice="returnParams">
-    <h4>Return:</h4>
-    <table>
-      <tbody>
-        <tr>
-          <td class="return-type code" data-ice="returnType"><span> </span></td>
-          
-        </tr>
-      </tbody>
-    </table>
-    <div data-ice="returnProperties">
-</div>
-  </div>
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-  
-</div>
-<div class="detail" data-ice="detail">
-  <h3 data-ice="anchor" id="instance-method-sendInternalServerError">
-    <span class="access" data-ice="access">public</span>
-    
-    
-    
-    
-    
-    <span class="code" data-ice="name">sendInternalServerError</span><span class="code" data-ice="signature">(ctx: <span><a href="http://koajs.com/#api">KoaContext</a></span>, data: <span>*</span>, message: <span>string</span>): <span> </span></span>
-    <span class="right-info">
-      
-      
-      <span data-ice="source"><span><a href="file/src/routes/Route.js.html#lineNumber530">source</a></span></span>
-    </span>
-  </h3>
-
-  
-  
-  
-  <div data-ice="description"><p>same as <span><a href="class/src/routes/Route.js~Route.html#instance-method-send">send</a></span>, but automatically sets the status to 500 INTERNAL SERVER ERROR</p>
 </div>
 
   
@@ -3025,9 +3017,9 @@ with a unique ID for each route in order to differentiate the various routes.</p
     
     <span class="code" data-ice="name">sendNoContent</span><span class="code" data-ice="signature">(ctx: <span><a href="http://koajs.com/#api">KoaContext</a></span>): <span> </span></span>
     <span class="right-info">
+      <span class="version" data-ice="version">version 1.0.0</span>
       
-      
-      <span data-ice="source"><span><a href="file/src/routes/Route.js.html#lineNumber470">source</a></span></span>
+      <span data-ice="source"><span><a href="file/src/routes/Route.js.html#lineNumber423">source</a></span></span>
     </span>
   </h3>
 
@@ -3089,93 +3081,6 @@ with a unique ID for each route in order to differentiate the various routes.</p
   
 </div>
 <div class="detail" data-ice="detail">
-  <h3 data-ice="anchor" id="instance-method-sendNotFound">
-    <span class="access" data-ice="access">public</span>
-    
-    
-    
-    
-    
-    <span class="code" data-ice="name">sendNotFound</span><span class="code" data-ice="signature">(ctx: <span><a href="http://koajs.com/#api">KoaContext</a></span>, data: <span>*</span>, message: <span>string</span>): <span> </span></span>
-    <span class="right-info">
-      
-      
-      <span data-ice="source"><span><a href="file/src/routes/Route.js.html#lineNumber518">source</a></span></span>
-    </span>
-  </h3>
-
-  
-  
-  
-  <div data-ice="description"><p>same as <span><a href="class/src/routes/Route.js~Route.html#instance-method-send">send</a></span>, but automatically sets the status to 404 NOT FOUND</p>
-</div>
-
-  
-
-  <div data-ice="properties"><div data-ice="properties">
-  <h4 data-ice="title">Params:</h4>
-  <table class="params">
-    <thead>
-    <tr><td>Name</td><td>Type</td><td>Attribute</td><td>Description</td></tr>
-    </thead>
-    <tbody>
-    
-    <tr data-ice="property" data-depth="0">
-      <td data-ice="name" class="code" data-depth="0">ctx</td>
-      <td data-ice="type" class="code"><span><a href="http://koajs.com/#api">KoaContext</a></span></td>
-      <td data-ice="appendix"></td>
-      <td data-ice="description"><p>koa&apos;s context object</p>
-</td>
-    </tr>
-<tr data-ice="property" data-depth="0">
-      <td data-ice="name" class="code" data-depth="0">data</td>
-      <td data-ice="type" class="code"><span>*</span></td>
-      <td data-ice="appendix"><ul><li>optional</li></ul></td>
-      <td data-ice="description"><p>the data to be yielded by the requests</p>
-</td>
-    </tr>
-<tr data-ice="property" data-depth="0">
-      <td data-ice="name" class="code" data-depth="0">message</td>
-      <td data-ice="type" class="code"><span>string</span></td>
-      <td data-ice="appendix"><ul><li>optional</li></ul></td>
-      <td data-ice="description"><p>the message to be yielded by the request</p>
-</td>
-    </tr>
-</tbody>
-  </table>
-</div>
-</div>
-
-  <div class="return-params" data-ice="returnParams">
-    <h4>Return:</h4>
-    <table>
-      <tbody>
-        <tr>
-          <td class="return-type code" data-ice="returnType"><span> </span></td>
-          
-        </tr>
-      </tbody>
-    </table>
-    <div data-ice="returnProperties">
-</div>
-  </div>
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-  
-</div>
-<div class="detail" data-ice="detail">
   <h3 data-ice="anchor" id="instance-method-sendOk">
     <span class="access" data-ice="access">public</span>
     
@@ -3185,9 +3090,9 @@ with a unique ID for each route in order to differentiate the various routes.</p
     
     <span class="code" data-ice="name">sendOk</span><span class="code" data-ice="signature">(ctx: <span><a href="http://koajs.com/#api">KoaContext</a></span>, data: <span>*</span>, message: <span>string</span>): <span> </span></span>
     <span class="right-info">
+      <span class="version" data-ice="version">version 1.0.0</span>
       
-      
-      <span data-ice="source"><span><a href="file/src/routes/Route.js.html#lineNumber448">source</a></span></span>
+      <span data-ice="source"><span><a href="file/src/routes/Route.js.html#lineNumber399">source</a></span></span>
     </span>
   </h3>
 
@@ -3263,93 +3168,6 @@ with a unique ID for each route in order to differentiate the various routes.</p
   
 </div>
 <div class="detail" data-ice="detail">
-  <h3 data-ice="anchor" id="instance-method-sendUnauthorized">
-    <span class="access" data-ice="access">public</span>
-    
-    
-    
-    
-    
-    <span class="code" data-ice="name">sendUnauthorized</span><span class="code" data-ice="signature">(ctx: <span><a href="http://koajs.com/#api">KoaContext</a></span>, data: <span>*</span>, message: <span>string</span>): <span> </span></span>
-    <span class="right-info">
-      
-      
-      <span data-ice="source"><span><a href="file/src/routes/Route.js.html#lineNumber494">source</a></span></span>
-    </span>
-  </h3>
-
-  
-  
-  
-  <div data-ice="description"><p>same as <span><a href="class/src/routes/Route.js~Route.html#instance-method-send">send</a></span>, but automatically sets the status to 401 UNAUTHORIZED</p>
-</div>
-
-  
-
-  <div data-ice="properties"><div data-ice="properties">
-  <h4 data-ice="title">Params:</h4>
-  <table class="params">
-    <thead>
-    <tr><td>Name</td><td>Type</td><td>Attribute</td><td>Description</td></tr>
-    </thead>
-    <tbody>
-    
-    <tr data-ice="property" data-depth="0">
-      <td data-ice="name" class="code" data-depth="0">ctx</td>
-      <td data-ice="type" class="code"><span><a href="http://koajs.com/#api">KoaContext</a></span></td>
-      <td data-ice="appendix"></td>
-      <td data-ice="description"><p>koa&apos;s context object</p>
-</td>
-    </tr>
-<tr data-ice="property" data-depth="0">
-      <td data-ice="name" class="code" data-depth="0">data</td>
-      <td data-ice="type" class="code"><span>*</span></td>
-      <td data-ice="appendix"><ul><li>optional</li></ul></td>
-      <td data-ice="description"><p>the data to be yielded by the requests</p>
-</td>
-    </tr>
-<tr data-ice="property" data-depth="0">
-      <td data-ice="name" class="code" data-depth="0">message</td>
-      <td data-ice="type" class="code"><span>string</span></td>
-      <td data-ice="appendix"><ul><li>optional</li></ul></td>
-      <td data-ice="description"><p>the message to be yielded by the request</p>
-</td>
-    </tr>
-</tbody>
-  </table>
-</div>
-</div>
-
-  <div class="return-params" data-ice="returnParams">
-    <h4>Return:</h4>
-    <table>
-      <tbody>
-        <tr>
-          <td class="return-type code" data-ice="returnType"><span> </span></td>
-          
-        </tr>
-      </tbody>
-    </table>
-    <div data-ice="returnProperties">
-</div>
-  </div>
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-  
-</div>
-<div class="detail" data-ice="detail">
   <h3 data-ice="anchor" id="instance-method-throw">
     <span class="access" data-ice="access">public</span>
     
@@ -3357,11 +3175,11 @@ with a unique ID for each route in order to differentiate the various routes.</p
     
     
     
-    <span class="code" data-ice="name">throw</span><span class="code" data-ice="signature">(status: <span>number</span>, message: <span>string</span>, translate: <span>boolean</span>): <span> </span></span>
+    <span class="code" data-ice="name">throw</span><span class="code" data-ice="signature">(status: <span>number</span>, error: <span>string </span> | <span> object</span>, translate: <span>boolean</span>): <span> </span></span>
     <span class="right-info">
+      <span class="version" data-ice="version">version 1.0.0</span>
       
-      
-      <span data-ice="source"><span><a href="file/src/routes/Route.js.html#lineNumber543">source</a></span></span>
+      <span data-ice="source"><span><a href="file/src/routes/Route.js.html#lineNumber437">source</a></span></span>
     </span>
   </h3>
 
@@ -3389,10 +3207,10 @@ with a unique ID for each route in order to differentiate the various routes.</p
 </td>
     </tr>
 <tr data-ice="property" data-depth="0">
-      <td data-ice="name" class="code" data-depth="0">message</td>
-      <td data-ice="type" class="code"><span>string</span></td>
-      <td data-ice="appendix"></td>
-      <td data-ice="description"><p>a message describing the error</p>
+      <td data-ice="name" class="code" data-depth="0">error</td>
+      <td data-ice="type" class="code"><span>string </span> | <span> object</span></td>
+      <td data-ice="appendix"><ul><li>optional</li></ul></td>
+      <td data-ice="description"><p>the error(s) to be yielded by the request</p>
 </td>
     </tr>
 <tr data-ice="property" data-depth="0">
@@ -3438,6 +3256,326 @@ with a unique ID for each route in order to differentiate the various routes.</p
 </tbody>
     </table>
   </div>
+
+  
+
+  
+
+  
+
+  
+  
+</div>
+<div class="detail" data-ice="detail">
+  <h3 data-ice="anchor" id="instance-method-throwBadRequest">
+    <span class="access" data-ice="access">public</span>
+    
+    
+    
+    
+    
+    <span class="code" data-ice="name">throwBadRequest</span><span class="code" data-ice="signature">(error: <span>string </span> | <span> object</span>, translate: <span>boolean</span>): <span> </span></span>
+    <span class="right-info">
+      <span class="version" data-ice="version">version 2.0.0</span>
+      
+      <span data-ice="source"><span><a href="file/src/routes/Route.js.html#lineNumber449">source</a></span></span>
+    </span>
+  </h3>
+
+  
+  
+  
+  <div data-ice="description"><p>same as <span><a href="class/src/routes/Route.js~Route.html#instance-method-throw">throw</a></span>, but automatically sets the status to 400 BAD REQUEST</p>
+</div>
+
+  
+
+  <div data-ice="properties"><div data-ice="properties">
+  <h4 data-ice="title">Params:</h4>
+  <table class="params">
+    <thead>
+    <tr><td>Name</td><td>Type</td><td>Attribute</td><td>Description</td></tr>
+    </thead>
+    <tbody>
+    
+    <tr data-ice="property" data-depth="0">
+      <td data-ice="name" class="code" data-depth="0">error</td>
+      <td data-ice="type" class="code"><span>string </span> | <span> object</span></td>
+      <td data-ice="appendix"><ul><li>optional</li></ul></td>
+      <td data-ice="description"><p>the error(s) to be yielded by the request, default to &quot;Bad request&quot;</p>
+</td>
+    </tr>
+<tr data-ice="property" data-depth="0">
+      <td data-ice="name" class="code" data-depth="0">translate</td>
+      <td data-ice="type" class="code"><span>boolean</span></td>
+      <td data-ice="appendix"></td>
+      <td data-ice="description"><p>indicates whether the message should be translated or not</p>
+</td>
+    </tr>
+</tbody>
+  </table>
+</div>
+</div>
+
+  <div class="return-params" data-ice="returnParams">
+    <h4>Return:</h4>
+    <table>
+      <tbody>
+        <tr>
+          <td class="return-type code" data-ice="returnType"><span> </span></td>
+          
+        </tr>
+      </tbody>
+    </table>
+    <div data-ice="returnProperties">
+</div>
+  </div>
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+  
+</div>
+<div class="detail" data-ice="detail">
+  <h3 data-ice="anchor" id="instance-method-throwForbidden">
+    <span class="access" data-ice="access">public</span>
+    
+    
+    
+    
+    
+    <span class="code" data-ice="name">throwForbidden</span><span class="code" data-ice="signature">(error: <span>string </span> | <span> object</span>, translate: <span>boolean</span>): <span> </span></span>
+    <span class="right-info">
+      <span class="version" data-ice="version">version 2.0.0</span>
+      
+      <span data-ice="source"><span><a href="file/src/routes/Route.js.html#lineNumber473">source</a></span></span>
+    </span>
+  </h3>
+
+  
+  
+  
+  <div data-ice="description"><p>same as <span><a href="class/src/routes/Route.js~Route.html#instance-method-throw">throw</a></span>, but automatically sets the status to 403 FORBIDDEN</p>
+</div>
+
+  
+
+  <div data-ice="properties"><div data-ice="properties">
+  <h4 data-ice="title">Params:</h4>
+  <table class="params">
+    <thead>
+    <tr><td>Name</td><td>Type</td><td>Attribute</td><td>Description</td></tr>
+    </thead>
+    <tbody>
+    
+    <tr data-ice="property" data-depth="0">
+      <td data-ice="name" class="code" data-depth="0">error</td>
+      <td data-ice="type" class="code"><span>string </span> | <span> object</span></td>
+      <td data-ice="appendix"><ul><li>optional</li></ul></td>
+      <td data-ice="description"><p>the error(s) to be yielded by the request, default to &quot;Forbidden&quot;</p>
+</td>
+    </tr>
+<tr data-ice="property" data-depth="0">
+      <td data-ice="name" class="code" data-depth="0">translate</td>
+      <td data-ice="type" class="code"><span>boolean</span></td>
+      <td data-ice="appendix"></td>
+      <td data-ice="description"><p>indicates whether the message should be translated or not</p>
+</td>
+    </tr>
+</tbody>
+  </table>
+</div>
+</div>
+
+  <div class="return-params" data-ice="returnParams">
+    <h4>Return:</h4>
+    <table>
+      <tbody>
+        <tr>
+          <td class="return-type code" data-ice="returnType"><span> </span></td>
+          
+        </tr>
+      </tbody>
+    </table>
+    <div data-ice="returnProperties">
+</div>
+  </div>
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+  
+</div>
+<div class="detail" data-ice="detail">
+  <h3 data-ice="anchor" id="instance-method-throwNotFound">
+    <span class="access" data-ice="access">public</span>
+    
+    
+    
+    
+    
+    <span class="code" data-ice="name">throwNotFound</span><span class="code" data-ice="signature">(error: <span>string </span> | <span> object</span>, translate: <span>boolean</span>): <span> </span></span>
+    <span class="right-info">
+      <span class="version" data-ice="version">version 2.0.0</span>
+      
+      <span data-ice="source"><span><a href="file/src/routes/Route.js.html#lineNumber485">source</a></span></span>
+    </span>
+  </h3>
+
+  
+  
+  
+  <div data-ice="description"><p>same as <span><a href="class/src/routes/Route.js~Route.html#instance-method-throw">throw</a></span>, but automatically sets the status to 404 NOT FOUND</p>
+</div>
+
+  
+
+  <div data-ice="properties"><div data-ice="properties">
+  <h4 data-ice="title">Params:</h4>
+  <table class="params">
+    <thead>
+    <tr><td>Name</td><td>Type</td><td>Attribute</td><td>Description</td></tr>
+    </thead>
+    <tbody>
+    
+    <tr data-ice="property" data-depth="0">
+      <td data-ice="name" class="code" data-depth="0">error</td>
+      <td data-ice="type" class="code"><span>string </span> | <span> object</span></td>
+      <td data-ice="appendix"><ul><li>optional</li></ul></td>
+      <td data-ice="description"><p>the error(s) to be yielded by the request, default to &quot;Not found&quot;</p>
+</td>
+    </tr>
+<tr data-ice="property" data-depth="0">
+      <td data-ice="name" class="code" data-depth="0">translate</td>
+      <td data-ice="type" class="code"><span>boolean</span></td>
+      <td data-ice="appendix"></td>
+      <td data-ice="description"><p>indicates whether the message should be translated or not</p>
+</td>
+    </tr>
+</tbody>
+  </table>
+</div>
+</div>
+
+  <div class="return-params" data-ice="returnParams">
+    <h4>Return:</h4>
+    <table>
+      <tbody>
+        <tr>
+          <td class="return-type code" data-ice="returnType"><span> </span></td>
+          
+        </tr>
+      </tbody>
+    </table>
+    <div data-ice="returnProperties">
+</div>
+  </div>
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+  
+</div>
+<div class="detail" data-ice="detail">
+  <h3 data-ice="anchor" id="instance-method-throwUnauthorized">
+    <span class="access" data-ice="access">public</span>
+    
+    
+    
+    
+    
+    <span class="code" data-ice="name">throwUnauthorized</span><span class="code" data-ice="signature">(error: <span>string </span> | <span> object</span>, translate: <span>boolean</span>): <span> </span></span>
+    <span class="right-info">
+      <span class="version" data-ice="version">version 2.0.0</span>
+      
+      <span data-ice="source"><span><a href="file/src/routes/Route.js.html#lineNumber461">source</a></span></span>
+    </span>
+  </h3>
+
+  
+  
+  
+  <div data-ice="description"><p>same as <span><a href="class/src/routes/Route.js~Route.html#instance-method-throw">throw</a></span>, but automatically sets the status to 401 UNAUTHORIZED</p>
+</div>
+
+  
+
+  <div data-ice="properties"><div data-ice="properties">
+  <h4 data-ice="title">Params:</h4>
+  <table class="params">
+    <thead>
+    <tr><td>Name</td><td>Type</td><td>Attribute</td><td>Description</td></tr>
+    </thead>
+    <tbody>
+    
+    <tr data-ice="property" data-depth="0">
+      <td data-ice="name" class="code" data-depth="0">error</td>
+      <td data-ice="type" class="code"><span>string </span> | <span> object</span></td>
+      <td data-ice="appendix"><ul><li>optional</li></ul></td>
+      <td data-ice="description"><p>the error(s) to be yielded by the request, default to &quot;Unauthorized&quot;</p>
+</td>
+    </tr>
+<tr data-ice="property" data-depth="0">
+      <td data-ice="name" class="code" data-depth="0">translate</td>
+      <td data-ice="type" class="code"><span>boolean</span></td>
+      <td data-ice="appendix"></td>
+      <td data-ice="description"><p>indicates whether the message should be translated or not</p>
+</td>
+    </tr>
+</tbody>
+  </table>
+</div>
+</div>
+
+  <div class="return-params" data-ice="returnParams">
+    <h4>Return:</h4>
+    <table>
+      <tbody>
+        <tr>
+          <td class="return-type code" data-ice="returnType"><span> </span></td>
+          
+        </tr>
+      </tbody>
+    </table>
+    <div data-ice="returnProperties">
+</div>
+  </div>
+
+  
+
+  
+
+  
 
   
 

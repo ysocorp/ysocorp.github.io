@@ -13,7 +13,7 @@
 
 <header>
   <a href="./">Home</a>
-  
+  <a href="./manual/index.html" data-ice="manualHeaderLink">Manual</a>
   <a href="identifiers.html">Reference</a>
   <a href="source.html">Source</a>
   
@@ -49,8 +49,7 @@
 </nav>
 
 <div class="content" data-ice="content"><h1 data-ice="title">src/routes/RouteDecorators.js</h1>
-<pre class="source-code line-number raw-source-code"><code class="prettyprint linenums" data-ice="content">
-/**
+<pre class="source-code line-number raw-source-code"><code class="prettyprint linenums" data-ice="content">/**
  * @typedef {Object} ParamsMethodDecorator
  * @property {Object.&lt;string, boolean | PostParamsFilter&gt;} params the params describing the route&apos;s middlewares,
  *                                                                with the key being the param&apos;s name,
@@ -62,6 +61,7 @@
  * @property {boolean} disabled if set to true, the route will be ignored
  * @property {function[]} middlewares an array of Koa Middlewares, which will be mounted for the given route
  * @property {Object} rateLimit a rateLimit object, which lets the user describe the max rate at which a user can access the route
+ * @property {function[]} accesses an array of async function, which will be call with ctx, if one of them return true, the current client will access the route. This will overwrite the accesses pass to {ParamsClassDecorator}
  */
 
 /**
@@ -69,11 +69,12 @@
  * @property {string} routeBase a prefix which will be preppended all to the route&apos;s path
  * @property {boolean} disabled if set to true, all route in the class will be ignored
  * @property {function[]} middlewares an array of Koa Middlewares, which will be mounted for the given route
+ * @property {function[]} accesses an array of async function, which will be call (for all routes in the class) with ctx, if one of them return true, the current client will access the route
  */
 
 /**
  *@ignore
-*/
+ */
 export default class RouteDecorators {
   // replace A-Z to lowercase and add - ex myFunc =&gt; my-func
   static _getRouteFromMethode(str) {
@@ -96,17 +97,15 @@ export default class RouteDecorators {
     }
   }
 
-  static Route({ routeBase, disable = false, middlewares = null }) {
-    return (target, key, descriptor) =&gt; { // eslint-disable-line no-unused-vars
-      if (routeBase != null) { // null or undefined
-        target.prototype.routeBase = routeBase;
+  static Route(options = {}) {
+    return (target /*, key, descriptor*/) =&gt; {
+      const opt = { ...options, disable: !!options.disable };
+      for (const key in opt) {
+        if (opt[key] != null) {
+          target.prototype[key] = opt[key];
+        }
       }
-      if (disable != null) {
-        target.prototype.disable = disable;
-      }
-      if (Array.isArray(middlewares)) {
-        target.prototype.middlewares = middlewares;
-      }
+
       RouteDecorators._initData(target);
     };
   }
@@ -117,14 +116,16 @@ export default class RouteDecorators {
       options = {
         path: undefined,
         accesses: [],
-        params: {},
+        bodyType: null,
+        queryType: null,
         routeBase: target.routeBase,
+        doc: {},
         ...options,
       };
       Object.defineProperty(target, functionName, descriptor);
 
-      const routeName = options.path === undefined ?
-        RouteDecorators._getRouteFromMethode(functionName) : options.path;
+      const routeName =
+        options.path === undefined ? RouteDecorators._getRouteFromMethode(functionName) : options.path;
 
       target.routeBase = options.routeBase;
       target.routes[type].push({

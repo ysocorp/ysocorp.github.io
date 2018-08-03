@@ -1,0 +1,402 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <base data-ice="baseUrl" href="../">
+  <title data-ice="title">Manual | koa-smart</title>
+  <link type="text/css" rel="stylesheet" href="css/style.css">
+  <link type="text/css" rel="stylesheet" href="css/prettify-tomorrow.css">
+  <script src="script/prettify/prettify.js"></script>
+  <script src="script/manual.js"></script>
+<meta name="description" content="A framework base on Koajs2 with Decorator, Params checker and a base of modules (cors, bodyparser, compress, I18n, etc&#x2026;) to let you develop smart api easily"><meta property="twitter:card" content="summary"><meta property="twitter:title" content="koa-smart"><meta property="twitter:description" content="A framework base on Koajs2 with Decorator, Params checker and a base of modules (cors, bodyparser, compress, I18n, etc&#x2026;) to let you develop smart api easily"></head>
+<body class="layout-container manual-root" data-ice="rootContainer">
+
+<header>
+  <a href="./">Home</a>
+  <a href="./manual/index.html" data-ice="manualHeaderLink">Manual</a>
+  <a href="identifiers.html">Reference</a>
+  <a href="source.html">Source</a>
+  
+  <div class="search-box">
+  <span>
+    <img src="./image/search.png">
+    <span class="search-input-edge"></span><input class="search-input"><span class="search-input-edge"></span>
+  </span>
+    <ul class="search-result"></ul>
+  </div>
+<a style="position:relative; top:3px;" href="https://github.com/ysocorp/koa-smart"><img width="20px" src="./image/github.png"></a></header>
+
+<nav class="navigation" data-ice="nav"><div class="manual-toc-root">
+  
+<div data-ice="manual">
+    <ul class="manual-toc">
+      
+    <li data-ice="manualNav" class="indent-h1" data-link="manual/type-system.html"><a href="manual/type-system.html" data-ice="link">Parameters validation</a></li>
+<li data-ice="manualNav" class="indent-h2" data-link="manual/type-system.html"><a href="manual/type-system.html#typeany" data-ice="link">TypeAny</a></li>
+<li data-ice="manualNav" class="indent-h3" data-link="manual/type-system.html"><a href="manual/type-system.html#required--enabled--" data-ice="link">required([enabled])</a></li>
+<li data-ice="manualNav" class="indent-h3" data-link="manual/type-system.html"><a href="manual/type-system.html#allownull--enabled--" data-ice="link">allowNull([enabled])</a></li>
+<li data-ice="manualNav" class="indent-h3" data-link="manual/type-system.html"><a href="manual/type-system.html#error" data-ice="link">error</a></li>
+<li data-ice="manualNav" class="indent-h3" data-link="manual/type-system.html"><a href="manual/type-system.html#test-param-" data-ice="link">test(param)</a></li>
+<li data-ice="manualNav" class="indent-h2" data-link="manual/type-system.html"><a href="manual/type-system.html#typearray" data-ice="link">TypeArray</a></li>
+<li data-ice="manualNav" class="indent-h3" data-link="manual/type-system.html"><a href="manual/type-system.html#single--enabled--" data-ice="link">single([enabled])</a></li>
+<li data-ice="manualNav" class="indent-h3" data-link="manual/type-system.html"><a href="manual/type-system.html#splitby-splitter-" data-ice="link">splitBy(splitter)</a></li>
+<li data-ice="manualNav" class="indent-h3" data-link="manual/type-system.html"><a href="manual/type-system.html#max-max-" data-ice="link">max(max)</a></li>
+<li data-ice="manualNav" class="indent-h3" data-link="manual/type-system.html"><a href="manual/type-system.html#min-min-" data-ice="link">min(min)</a></li>
+<li data-ice="manualNav" class="indent-h3" data-link="manual/type-system.html"><a href="manual/type-system.html#length-length-" data-ice="link">length(length)</a></li>
+<li data-ice="manualNav" class="indent-h3" data-link="manual/type-system.html"><a href="manual/type-system.html#type-itemtype-" data-ice="link">type(itemType)</a></li>
+<li data-ice="manualNav" class="indent-h2" data-link="manual/type-system.html"><a href="manual/type-system.html#typebinary" data-ice="link">TypeBinary</a></li>
+<li data-ice="manualNav" class="indent-h3" data-link="manual/type-system.html"><a href="manual/type-system.html#encoding-name-" data-ice="link">encoding(name)</a></li>
+<li data-ice="manualNav" class="indent-h3" data-link="manual/type-system.html"><a href="manual/type-system.html#max-max-" data-ice="link">max(max)</a></li>
+<li data-ice="manualNav" class="indent-h3" data-link="manual/type-system.html"><a href="manual/type-system.html#min-min-" data-ice="link">min(min)</a></li>
+<li data-ice="manualNav" class="indent-h3" data-link="manual/type-system.html"><a href="manual/type-system.html#length-length-" data-ice="link">length(length)</a></li>
+<li data-ice="manualNav" class="indent-h2" data-link="manual/type-system.html"><a href="manual/type-system.html#typeboolean" data-ice="link">TypeBoolean</a></li>
+<li data-ice="manualNav" class="indent-h3" data-link="manual/type-system.html"><a href="manual/type-system.html#truthy-value-" data-ice="link">truthy(value)</a></li>
+<li data-ice="manualNav" class="indent-h3" data-link="manual/type-system.html"><a href="manual/type-system.html#falsy-value-" data-ice="link">falsy(value)</a></li>
+<li data-ice="manualNav" class="indent-h3" data-link="manual/type-system.html"><a href="manual/type-system.html#insensitive--enabled--" data-ice="link">insensitive([enabled])</a></li>
+<li data-ice="manualNav" class="indent-h2" data-link="manual/type-system.html"><a href="manual/type-system.html#typedate" data-ice="link">TypeDate</a></li>
+<li data-ice="manualNav" class="indent-h3" data-link="manual/type-system.html"><a href="manual/type-system.html#min-min-" data-ice="link">min(min)</a></li>
+<li data-ice="manualNav" class="indent-h3" data-link="manual/type-system.html"><a href="manual/type-system.html#max-max-" data-ice="link">max(max)</a></li>
+<li data-ice="manualNav" class="indent-h3" data-link="manual/type-system.html"><a href="manual/type-system.html#between-min--max-" data-ice="link">between(min, max)</a></li>
+<li data-ice="manualNav" class="indent-h3" data-link="manual/type-system.html"><a href="manual/type-system.html#startof-period-" data-ice="link">startOf(period)</a></li>
+<li data-ice="manualNav" class="indent-h3" data-link="manual/type-system.html"><a href="manual/type-system.html#endof-period-" data-ice="link">endOf(period)</a></li>
+<li data-ice="manualNav" class="indent-h3" data-link="manual/type-system.html"><a href="manual/type-system.html#formatin-format-" data-ice="link">formatIn(format)</a></li>
+<li data-ice="manualNav" class="indent-h3" data-link="manual/type-system.html"><a href="manual/type-system.html#formatout-format-" data-ice="link">formatOut(format)</a></li>
+<li data-ice="manualNav" class="indent-h3" data-link="manual/type-system.html"><a href="manual/type-system.html#iso--" data-ice="link">iso()</a></li>
+<li data-ice="manualNav" class="indent-h2" data-link="manual/type-system.html"><a href="manual/type-system.html#enum" data-ice="link">enum</a></li>
+<li data-ice="manualNav" class="indent-h3" data-link="manual/type-system.html"><a href="manual/type-system.html#number--enabled--" data-ice="link">number([enabled])</a></li>
+<li data-ice="manualNav" class="indent-h3" data-link="manual/type-system.html"><a href="manual/type-system.html#oneof-obj1----obj2-------objn--" data-ice="link">oneOf(obj1 [, obj2, ..., objN])</a></li>
+<li data-ice="manualNav" class="indent-h3" data-link="manual/type-system.html"><a href="manual/type-system.html#insensitive--enabled--" data-ice="link">insensitive([enabled])</a></li>
+<li data-ice="manualNav" class="indent-h2" data-link="manual/type-system.html"><a href="manual/type-system.html#typenumber" data-ice="link">TypeNumber</a></li>
+<li data-ice="manualNav" class="indent-h3" data-link="manual/type-system.html"><a href="manual/type-system.html#min-min-" data-ice="link">min(min)</a></li>
+<li data-ice="manualNav" class="indent-h3" data-link="manual/type-system.html"><a href="manual/type-system.html#max-max-" data-ice="link">max(max)</a></li>
+<li data-ice="manualNav" class="indent-h3" data-link="manual/type-system.html"><a href="manual/type-system.html#between-min--max-" data-ice="link">between(min, max)</a></li>
+<li data-ice="manualNav" class="indent-h3" data-link="manual/type-system.html"><a href="manual/type-system.html#integer--enabled--" data-ice="link">integer([enabled])</a></li>
+<li data-ice="manualNav" class="indent-h3" data-link="manual/type-system.html"><a href="manual/type-system.html#multiple-base-" data-ice="link">multiple(base)</a></li>
+<li data-ice="manualNav" class="indent-h3" data-link="manual/type-system.html"><a href="manual/type-system.html#positive--enabled--" data-ice="link">positive([enabled])</a></li>
+<li data-ice="manualNav" class="indent-h3" data-link="manual/type-system.html"><a href="manual/type-system.html#negative--enabled--" data-ice="link">negative([enabled])</a></li>
+<li data-ice="manualNav" class="indent-h3" data-link="manual/type-system.html"><a href="manual/type-system.html#port--enabled--" data-ice="link">port([enabled])</a></li>
+<li data-ice="manualNav" class="indent-h3" data-link="manual/type-system.html"><a href="manual/type-system.html#precision-limit--type-" data-ice="link">precision(limit, type)</a></li>
+<li data-ice="manualNav" class="indent-h2" data-link="manual/type-system.html"><a href="manual/type-system.html#typeobject" data-ice="link">TypeObject</a></li>
+<li data-ice="manualNav" class="indent-h3" data-link="manual/type-system.html"><a href="manual/type-system.html#keys-keytypes-" data-ice="link">keys(keyTypes)</a></li>
+<li data-ice="manualNav" class="indent-h3" data-link="manual/type-system.html"><a href="manual/type-system.html#errors" data-ice="link">errors</a></li>
+<li data-ice="manualNav" class="indent-h2" data-link="manual/type-system.html"><a href="manual/type-system.html#typeoneof" data-ice="link">TypeOneOf</a></li>
+<li data-ice="manualNav" class="indent-h3" data-link="manual/type-system.html"><a href="manual/type-system.html#types-typesarray-" data-ice="link">types(typesArray)</a></li>
+<li data-ice="manualNav" class="indent-h2" data-link="manual/type-system.html"><a href="manual/type-system.html#typestring" data-ice="link">TypeString</a></li>
+<li data-ice="manualNav" class="indent-h3" data-link="manual/type-system.html"><a href="manual/type-system.html#trim--enabled--" data-ice="link">trim([enabled])</a></li>
+<li data-ice="manualNav" class="indent-h3" data-link="manual/type-system.html"><a href="manual/type-system.html#min-min-" data-ice="link">min(min)</a></li>
+<li data-ice="manualNav" class="indent-h3" data-link="manual/type-system.html"><a href="manual/type-system.html#max-max-" data-ice="link">max(max)</a></li>
+<li data-ice="manualNav" class="indent-h3" data-link="manual/type-system.html"><a href="manual/type-system.html#length-len-" data-ice="link">length(len)</a></li>
+<li data-ice="manualNav" class="indent-h3" data-link="manual/type-system.html"><a href="manual/type-system.html#between-min--max-" data-ice="link">between(min, max)</a></li>
+<li data-ice="manualNav" class="indent-h3" data-link="manual/type-system.html"><a href="manual/type-system.html#regex-regex-" data-ice="link">regex(regex)</a></li>
+<li data-ice="manualNav" class="indent-h3" data-link="manual/type-system.html"><a href="manual/type-system.html#uppercase--enabled--" data-ice="link">uppercase([enabled])</a></li>
+<li data-ice="manualNav" class="indent-h3" data-link="manual/type-system.html"><a href="manual/type-system.html#lowercase--enabled--" data-ice="link">lowercase([enabled])</a></li>
+<li data-ice="manualNav" class="indent-h3" data-link="manual/type-system.html"><a href="manual/type-system.html#truncate--enabled--" data-ice="link">truncate([enabled])</a></li>
+<li data-ice="manualNav" class="indent-h3" data-link="manual/type-system.html"><a href="manual/type-system.html#replace-pattern--replacewith-" data-ice="link">replace(pattern, replaceWith)</a></li>
+<li data-ice="manualNav" class="indent-h2" data-link="manual/type-system.html"><a href="manual/type-system.html#creating-your-own-type" data-ice="link">Creating your own type</a></li>
+</ul>
+  </div>
+<div data-ice="manual">
+    <ul class="manual-toc">
+      
+    <li data-ice="manualNav" class="indent-h1" data-link="manual/auto-doc.html"><a href="manual/auto-doc.html" data-ice="link">Automatic doc generation</a></li>
+<li data-ice="manualNav" class="indent-h2" data-link="manual/auto-doc.html"><a href="manual/auto-doc.html#disabling-doc-generation" data-ice="link">disabling doc generation</a></li>
+</ul>
+  </div>
+<div data-ice="manual">
+    <ul class="manual-toc">
+      
+    <li data-ice="manualNav" class="indent-h1" data-link="manual/upgrade-to-v2.html"><a href="manual/upgrade-to-v2.html" data-ice="link">Upgrade to V2</a></li>
+<li data-ice="manualNav" class="indent-h2" data-link="manual/upgrade-to-v2.html"><a href="manual/upgrade-to-v2.html#breaking-changes" data-ice="link">Breaking Changes</a></li>
+<li data-ice="manualNav" class="indent-h3" data-link="manual/upgrade-to-v2.html"><a href="manual/upgrade-to-v2.html#body-parametter--change--code-params--code--key-to--code-bodytype--code-" data-ice="link">Body parametter: change params key to bodyType</a></li>
+<li data-ice="manualNav" class="indent-h3" data-link="manual/upgrade-to-v2.html"><a href="manual/upgrade-to-v2.html#class-route--change-functions" data-ice="link">Class Route: change functions</a></li>
+<li data-ice="manualNav" class="indent-h2" data-link="manual/upgrade-to-v2.html"><a href="manual/upgrade-to-v2.html#new-in-v2" data-ice="link">New in v2</a></li>
+<li data-ice="manualNav" class="indent-h3" data-link="manual/upgrade-to-v2.html"><a href="manual/upgrade-to-v2.html#manage-query-parameters-with--code-querytype--code-" data-ice="link">Manage query parameters with queryType</a></li>
+<li data-ice="manualNav" class="indent-h3" data-link="manual/upgrade-to-v2.html"><a href="manual/upgrade-to-v2.html#add-new-assert-functions" data-ice="link">Add new assert functions</a></li>
+<li data-ice="manualNav" class="indent-h3" data-link="manual/upgrade-to-v2.html"><a href="manual/upgrade-to-v2.html#automatic-doc-generation" data-ice="link">Automatic doc generation</a></li>
+</ul>
+  </div>
+</div>
+</nav>
+
+<div class="content" data-ice="content"><div class="github-markdown" data-ice="content"><h1 id="parameters-validation">Parameters validation</h1><p>Koa SMART allows you to check the parameters passed to your route in an instinctive and efficient manner.
+Indeed, a simple piece of code such as the following:</p>
+<pre><code class="lang-sh"><code class="source-code prettyprint">import { Route, Types } from &apos;koa-smart&apos;
+
+@Route.Get({
+    queryType: Types.object().keys({
+      email: Types.string().required(),
+      password: Types.string(),
+    }),
+  })
+  async myRoute(ctx) {
+    const myGetParams = this.queryParam(ctx)
+    //work with the data...
+  }
+})</code>
+</code></pre>
+<pre><code class="lang-sh"><code class="source-code prettyprint">import { Route, Types } from &apos;koa-smart&apos;
+
+@Route.Post({
+    bodyType: Types.object().keys({
+      email: Types.string().required(),
+      password: Types.string(),
+    }),
+  })
+  async myRoute(ctx) {
+    const myPostParams = this.body(ctx)
+    //work with the data...
+  }
+})</code>
+</code></pre>
+<p>is enough to tell koa-smart that you are expecting to receive an object containing a parameter email and a parameter name, both of type string. Furthermore, you can see that email is required, whereas password isn&apos;t.</p>
+<p>The type definition format is always of the form <code>Types.typeName()[.typeParam()]*</code>, as such, you can define a variety of different structures, as described below.</p>
+<h2 id="typeany">TypeAny</h2><p><code>Types.any()</code></p>
+<p>Any represents any possible type of value, It is the most basic type used in Koa-smart.
+It should be noted that every other types descend from <code>Any</code>, and as such, any method applicable to any is, by extension, applicable to the other types as well.</p>
+<h3 id="required--enabled--">required([enabled])</h3><p>Denotes whether the parameter is required or not. As such, absence of said parameter will generate an error.</p>
+<p>If used without argument, defaults to <code>true</code>.</p>
+<h3 id="allownull--enabled--">allowNull([enabled])</h3><p>Denotes whether <code>null</code> is considered as a valid value for that parameter.</p>
+<p>If used without argument, defaults to <code>true</code>.</p>
+<h3 id="error">error</h3><p>If an error occured during the validation, returns it. otherwise returns null.</p>
+<h3 id="test-param-">test(param)</h3><p>Manually runs a validation on the specified value.</p>
+<p>If the validation occured without errors, the possibly transformed value can be retrieved in through <code>&#x300;type.value</code>. Otherwise, the error can be found in <code>type.error</code></p>
+<h2 id="typearray">TypeArray</h2><p><code>Types.array()</code></p>
+<p>Array represents a javascript array. It will, by default, only accept an array or a string, which will converted into an array of characters.</p>
+<h3 id="single--enabled--">single([enabled])</h3><p>If enabled, Array will also accept single values such as numbers or objects, and cast them into a size 1 array containing the passed value.</p>
+<p>If used without argument, defaults to <code>true</code>.</p>
+<pre><code class="lang-sh"><code class="source-code prettyprint">const schema = Types.array().single();
+schema.test(42);
+schema.value // [42];</code>
+</code></pre>
+<h3 id="splitby-splitter-">splitBy(splitter)</h3><p>Defines that a string parameter should be split into an array of strings, according to the given splitter.</p>
+<pre><code class="lang-sh"><code class="source-code prettyprint">const schema = Types.array().splitBy(&apos;,&apos;);
+schema.test(&quot;hello,world,how,are,you&quot;);
+schema.value // [&quot;hello&quot;, &quot;world&quot;, &quot;how&quot;, &quot;are&quot;, &quot;you&quot;];</code>
+</code></pre>
+<h3 id="max-max-">max(max)</h3><p>The maximum amount of items the array is allowed to have.</p>
+<h3 id="min-min-">min(min)</h3><p>The minimum amount of items the array is allowed to have.</p>
+<h3 id="length-length-">length(length)</h3><p>The exact amount of items the array is allowed to have.</p>
+<h3 id="type-itemtype-">type(itemType)</h3><p>Describes the type of the items within the array.</p>
+<pre><code class="lang-sh"><code class="source-code prettyprint">Types.array().types(Types.number().min(10))</code>
+</code></pre>
+<p>will only validate an array composed stricly of numbers greater than 10.</p>
+<h2 id="typebinary">TypeBinary</h2><p><code>Types.binary()</code></p>
+<p>Represents a <code>Buffer</code> type. By default, this type will accept strings and arrays, and will convert them into Buffer objects.</p>
+<h3 id="encoding-name-">encoding(name)</h3><p>Sets the string encoding format that should be used to read the buffer.</p>
+<p>Only works when given a string value.</p>
+<h3 id="max-max-">max(max)</h3><p>Defines The maximum size the buffer is allowed to have.</p>
+<h3 id="min-min-">min(min)</h3><p>Defines The minimum size the buffer is allowed to have.</p>
+<h3 id="length-length-">length(length)</h3><p>Defines The exact size the buffer is allowed to have.</p>
+<h2 id="typeboolean">TypeBoolean</h2><p><code>Types.boolean()</code></p>
+<h3 id="truthy-value-">truthy(value)</h3><p>Allows for additional values to be considered valid booleans by converting them to true during validation.
+Accepts a value or an array of values.</p>
+<h3 id="falsy-value-">falsy(value)</h3><p>Allows for additional values to be considered valid booleans by converting them to false during validation.
+Accepts a value or an array of values.</p>
+<h3 id="insensitive--enabled--">insensitive([enabled])</h3><p>Allows the values provided to truthy and falsy as well as well as &quot;true&quot; and &quot;false&quot; to be matched in a case insensitive manner.</p>
+<p>Enabled by default.</p>
+<h2 id="typedate">TypeDate</h2><p><code>Types.date()</code></p>
+<p>Represents a native javascript date. accepts ISO formated strings by default.</p>
+<h3 id="min-min-">min(min)</h3><p>Defines the oldest allowed date.</p>
+<h3 id="max-max-">max(max)</h3><p>Defines the latest allowed date.</p>
+<h3 id="between-min--max-">between(min, max)</h3><p>Defines a range of allowed dates.
+Equivalent to the following:</p>
+<pre><code class="lang-sh"><code class="source-code prettyprint">const schema = Types.date().min(dateFrom).max(dateTo);</code>
+</code></pre>
+<h3 id="startof-period-">startOf(period)</h3><p>If set, the date will be set to the start of the given period.</p>
+<p><code>year</code>, <code>month</code>, <code>quarter</code>, <code>week</code>, <code>isoWeek</code>, <code>day</code>, <code>date</code>, <code>hour</code>, <code>minute</code>, <code>second</code> are valid values.</p>
+<pre><code class="lang-sh"><code class="source-code prettyprint">const schema = Types.date().startOf(&apos;month&apos;);
+schema.test(&apos;5-21-2018&apos;);
+schema.value // new Date(&apos;5-1-2018&apos;);</code>
+</code></pre>
+<h3 id="endof-period-">endOf(period)</h3><p>If set, the date will be set to the end of the given period.</p>
+<p>The accepted values are the same as <a href="###startof-period-">startOf</a></p>
+<h3 id="formatin-format-">formatIn(format)</h3><p>Defines the input format for the date.</p>
+<p>This function uses momentjs as its underlying library, and as such, uses the <a href="https://momentjs.com/docs/#/displaying/format/">same formatting</a></p>
+<pre><code class="lang-sh"><code class="source-code prettyprint">const schema = Types.date().formatIn(&apos;DD/MM/YYYY&apos;);
+schema.test(&apos;26/05/2018&apos;);
+schema.value // new Date(&apos;5-26-2018&apos;);</code>
+</code></pre>
+<h3 id="formatout-format-">formatOut(format)</h3><p>Defines an output format for the date. if this parameter is used, date will return a string instead of a Date object.</p>
+<p>The formatting is the same as <a href="#formatin-format-">formatIn</a>&apos;s</p>
+<pre><code class="lang-sh"><code class="source-code prettyprint">const schema = Types.date().formatOut(&apos;DD/MM/YYYY&apos;);
+schema.test(&apos;5-26-2018&apos;);
+schema.value // &apos;26/05/2018&apos;;</code>
+</code></pre>
+<h3 id="iso--">iso()</h3><p>Defines the input format as the ISO_8601 format.</p>
+<h2 id="enum">enum</h2><p>Enum is used to validate a value against a predetermined set.</p>
+<h3 id="number--enabled--">number([enabled])</h3><p>Defines that the expected value is a number, and should be checked against a set of numeric values.</p>
+<p>If used without argument, defaults to <code>true</code>.</p>
+<h3 id="oneof-obj1----obj2-------objn--">oneOf(obj1 [, obj2, ..., objN])</h3><p>Defines the set of values to be checked against the parameter.</p>
+<pre><code class="lang-sh"><code class="source-code prettyprint">const schema = Types.enum().oneOf(&apos;yes&apos;, &apos;no&apos;);
+schema.test(&apos;yes&apos;);
+schema.value // &apos;yes&apos;;</code>
+</code></pre>
+<h3 id="insensitive--enabled--">insensitive([enabled])</h3><p>Defines that the parameter must be checked against the value set in a case insensitive manner. Only works with strings.</p>
+<p>If used without argument, defaults to <code>true</code>.</p>
+<h2 id="typenumber">TypeNumber</h2><p><code>Types.number()</code></p>
+<p>Represents a javascript number. Accepts numbers and strings by default. Strings will be converted into numbers.</p>
+<h3 id="min-min-">min(min)</h3><p>Defines the minimum value the parameter is allowed to have.</p>
+<h3 id="max-max-">max(max)</h3><p>Defines the maximum value the parameter is allowed to have.</p>
+<h3 id="between-min--max-">between(min, max)</h3><p>Defines a range of value the parameter is allowed to have.</p>
+<p>Equivalent to the following:</p>
+<pre><code class="lang-sh"><code class="source-code prettyprint">const schema = Types.number().min(4).max(8);</code>
+</code></pre>
+<h3 id="integer--enabled--">integer([enabled])</h3><p>Defines that the parameter should be an integer. If this option is enabled, any float number received will be truncated.</p>
+<h3 id="multiple-base-">multiple(base)</h3><p>Defines that the parameter should be a multiple of base.</p>
+<pre><code class="lang-sh"><code class="source-code prettyprint">const schema = Types.number().multiple(2);
+schema.test(4);
+schema.value // 4;
+schema.test(3);
+schema._hasError // true</code>
+</code></pre>
+<h3 id="positive--enabled--">positive([enabled])</h3><p>Defines that the parameter should be a positive number.</p>
+<h3 id="negative--enabled--">negative([enabled])</h3><p>Defines that the parameter should be a negative number.</p>
+<h3 id="port--enabled--">port([enabled])</h3><p>Defines that the parameter should be a valid port number, which is equivalent to:</p>
+<pre><code class="lang-sh"><code class="source-code prettyprint">const schema = Types.number().between(0, 65535);</code>
+</code></pre>
+<h3 id="precision-limit--type-">precision(limit, type)</h3><p>Defines the precision of the parameter, as well as the function that should be used to modify it.
+The accepted values for type are: <code>trunc</code>, <code>floor</code>, <code>ceil</code> and <code>round</code>.</p>
+<p>If no value is provided, will default to <code>trunc</code>.</p>
+<h2 id="typeobject">TypeObject</h2><p><code>Types.object()</code></p>
+<p>Represents a javascript object.</p>
+<h3 id="keys-keytypes-">keys(keyTypes)</h3><p>defines the keys allowed within the object. This function takes an object where the object&apos;s keys represent the fields allowed within the parameter, and the object&apos;s values represent the types of the parameters&apos; fields.</p>
+<pre><code class="lang-sh"><code class="source-code prettyprint">const schema = Types.object().keys({
+  field1: Types.string().min(4),
+  field2: Types.boolean().truthy(&apos;Y&apos;),
+  field3: Types.array().types(Types.number().max(20)).required()
+});
+
+schema.test({
+  field1: &quot;hello&quot;,
+  field2: true,
+  field3: [4, 6]
+})
+
+schema._hasError // false, the object passes the given schema
+
+schema.test({
+  field1: &quot;hello&quot;,
+  field3: [4, 6]
+})
+
+schema._hasError // false, the object passes the given schema, and field2 is optional
+
+schema.test({
+  field1: &quot;hello&quot;,
+  field2: true,
+})
+
+schema._hasError // true, field3 is required
+
+schema.test({
+  field1: &quot;hi&quot;,
+  field2: true,
+  field3: [4, 6]
+})
+
+schema._hasError // true, field1 should be a string with at least 4 characters.</code>
+</code></pre>
+<h3 id="errors">errors</h3><p>Unlike most other types, Object possesses an additional &quot;errors&quot; field, which allows the user to retrieve the error that happened on each field and subfield of the object.</p>
+<pre><code class="lang-sh"><code class="source-code prettyprint">const schema = Types.object().keys({
+  field1: Types.string().min(4),
+  field2: Types.boolean().truthy(&apos;Y&apos;),
+  field3: Types.array().types(Types.number().max(20)).required()
+});
+
+schema.test({
+  field1: &quot;hello&quot;,
+  field2: true,
+})
+
+schema.errors // {field3: &quot;Is required&quot;}</code>
+</code></pre>
+<p>In the case object contains other objects who themselves contain erroenous fields, errors will be set as follow:</p>
+<pre><code class="lang-sh"><code class="source-code prettyprint">const schema = Types.object().keys({
+  field: Types.object().keys({
+    subfield1: Types.string(),
+    subfield2: Types.number()
+  })
+});
+
+schema.test({
+  field: {
+    subfield1: &quot;hello&quot;,
+    subfield2: &quot;not a number&quot;
+  }
+})
+
+schema.errors // {&apos;field.subfield2&apos;: &quot;Expect type number&quot;}</code>
+</code></pre>
+<h2 id="typeoneof">TypeOneOf</h2><p><code>Types.oneOf()</code></p>
+<p>Represents a selection of types.</p>
+<h3 id="types-typesarray-">types(typesArray)</h3><p>Defines the types allowed by the oneOf.</p>
+<pre><code class="lang-sh"><code class="source-code prettyprint">const schema = Types.oneOf().types([Types.number(), Types.string()])
+
+schema.test(4)
+schema._hasError // false
+
+schema.test(&quot;hello&quot;)
+schema._hasError // false
+
+schema.test(new Date())
+schema._hasError // true</code>
+</code></pre>
+<h2 id="typestring">TypeString</h2><p><code>Types.string()</code></p>
+<p>Represents a javascript string.</p>
+<h3 id="trim--enabled--">trim([enabled])</h3><p>Defines whether the given string should be <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/Trim">trimmed</a>.</p>
+<h3 id="min-min-">min(min)</h3><p>Defines the minimum length the string is allowed to have.</p>
+<h3 id="max-max-">max(max)</h3><p>Defines the maximum length the string is allowed to have.</p>
+<h3 id="length-len-">length(len)</h3><p>Defines the minimum value the parameter is allowed to have.</p>
+<h3 id="between-min--max-">between(min, max)</h3><p>Defines the range in which the string&apos;s length must be.</p>
+<h3 id="regex-regex-">regex(regex)</h3><p>Defines the the regular expression the string must match in order to be validated</p>
+<h3 id="uppercase--enabled--">uppercase([enabled])</h3><p>If enabled, the string&apos;s alphabetic characters will be converted entirely into uppercase.</p>
+<h3 id="lowercase--enabled--">lowercase([enabled])</h3><p>If enabled, the string&apos;s alphabetic characters will be converted entirely into lowercase.</p>
+<h3 id="truncate--enabled--">truncate([enabled])</h3><p>if truncate is enabled, and either <code>max</code> or <code>length</code> have been defined, then instead of rejecting a string with a longer size than allowed maximum, the string in question will be truncated to fit the right size.</p>
+<pre><code class="lang-sh"><code class="source-code prettyprint">const schema = Types.string().max(5).truncate()
+
+schema.test(&quot;hello world&quot;)
+schema.value // &apos;hello&apos;</code>
+</code></pre>
+<h3 id="replace-pattern--replacewith-">replace(pattern, replaceWith)</h3><p>If set, the occurence defined by <code>pattern</code> in the string will be replaced with the <code>replaceWith</code> parameter</p>
+<h2 id="creating-your-own-type">Creating your own type</h2><p>it is possible to create your own type with koa-smart.</p>
+<p>In order to do it, you&apos;ll have to extend the <a href="#typeany">any</a> type presented above, as well as implement the <code>_testType</code>, <code>_transform</code> and <code>_test</code> methods.</p>
+<pre><code class="lang-sh"><code class="source-code prettyprint">import { TypeAny, Types } from &apos;koa-smart&apos;;
+
+class TypeTest extends TypeAny {
+
+  _testType() { // test that you are given a correctly typed value here.
+    if (typeof this._value !== &quot;string&quot;) {
+      this._setError(this._errorCodes.INVALID_TYPE) // you can use a predefined error code, or a custom string
+    }
+  }
+
+  _transform() { // this is where you perform any needed transformation on your type, such as trimming a string
+    this._value = `hello, ${this._value}`;
+  }
+
+  _test() {// this is where you test most of the conditions you have set up
+    if (true) { // any condition here...
+      this._setError(this._errorCodes.INVALID_VALUE);
+    }
+
+  }
+
+  Type.yourType = () =&gt; new TypeTest() // this allows you to add your type to the `Types` object.
+}</code>
+</code></pre>
+</div>
+</div>
+
+<footer class="footer">
+  Generated by <a href="https://esdoc.org">ESDoc<span data-ice="esdocVersion">(1.0.4)</span><img src="./image/esdoc-logo-mini-black.png"></a>
+</footer>
+
+<script src="script/search_index.js"></script>
+<script src="script/search.js"></script>
+<script src="script/pretty-print.js"></script>
+<script src="script/inherited-summary.js"></script>
+<script src="script/test-summary.js"></script>
+<script src="script/inner-link.js"></script>
+<script src="script/patch-for-local.js"></script>
+</body>
+</html>

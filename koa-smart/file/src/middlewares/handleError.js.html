@@ -13,7 +13,7 @@
 
 <header>
   <a href="./">Home</a>
-  
+  <a href="./manual/index.html" data-ice="manualHeaderLink">Manual</a>
   <a href="identifiers.html">Reference</a>
   <a href="source.html">Source</a>
   
@@ -63,10 +63,11 @@ let options = {
   logErrorUnknown: false,
   logErrorSequelize: false,
   logErrorApp: false,
-}
+};
 
 function displayLog(error, type) {
   if (options.logAll || options[type]) {
+    // eslint-disable-next-line
     console.error(error);
   }
 }
@@ -82,22 +83,29 @@ function getMessageTranslate(ctx, msg, toTranslate) {
   return msg;
 }
 
-
 async function handleError(ctx, next) {
   try {
     await next();
   } catch (err) {
     const arraySequelize = [&apos;SequelizeValidationError&apos;, &apos;SequelizeUniqueConstraintError&apos;];
 
-    if (err.constructor.name === &apos;ErrorApp&apos;) { // expected error
+    if (err.constructor.name === &apos;ErrorApp&apos;) {
+      // expected error
       ctx.status = err.status;
-      ctx.body = { message: getMessageTranslate(ctx, err.message, err.toTranslate) };
+      ctx.body = {};
+      if (err.messages) {
+        ctx.body.messages = err.messages;
+      } else {
+        ctx.body.message = getMessageTranslate(ctx, err.message, err.toTranslate);
+      }
       displayLog(err, &apos;logErrorApp&apos;);
-    } else if (arraySequelize.includes(err.name)) { // sequilize expected error by validattor or other
+    } else if (arraySequelize.includes(err.name)) {
+      // sequilize expected error by validattor or other
       ctx.status = 400;
       ctx.body = { message: getMessageTranslate(ctx, err.message.split(&apos;:&apos;).pop(), true) };
       displayLog(err, &apos;logErrorSequelize&apos;);
-    } else { // unexpected error
+    } else {
+      // unexpected error
       ctx.status = 500;
       ctx.body = { message: getMessageTranslate(ctx, __(&apos;Please contact the support&apos;), true) };
       displayLog(err, &apos;logErrorUnknown&apos;);
@@ -115,7 +123,7 @@ export default (opt = {}) =&gt; {
   options = {
     ...options,
     ...opt,
-  }
+  };
   return handleError;
 };
 </code></pre>

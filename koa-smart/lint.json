@@ -1,1 +1,98 @@
-[]
+[
+  {
+    "name": "App#mountFolder",
+    "filePath": "src/App.js",
+    "lines": [
+      {
+        "lineNumber": 88,
+        "line": "  /**"
+      },
+      {
+        "lineNumber": 89,
+        "line": "   * @access public"
+      },
+      {
+        "lineNumber": 90,
+        "line": "   * @desc \"mounts\" a folder, scanning it for route files, then adding the discovered routes to the app."
+      },
+      {
+        "lineNumber": 91,
+        "line": "   *       a route is a class which extends {@link Route}"
+      },
+      {
+        "lineNumber": 92,
+        "line": "   * @param {string} pathFolder the path of the folder to mount"
+      },
+      {
+        "lineNumber": 93,
+        "line": "   * @param {string} [prefix='/'] an optional prefix to prepend to all of the folder's routes"
+      },
+      {
+        "lineNumber": 94,
+        "line": "   * @return { }"
+      },
+      {
+        "lineNumber": 95,
+        "line": "   */"
+      },
+      {
+        "lineNumber": 96,
+        "line": "  mountFolder(pathFolder, prefix = '/', opt = {}) {"
+      }
+    ],
+    "codeParams": [
+      "pathFolder",
+      "prefix",
+      "opt"
+    ],
+    "docParams": [
+      "pathFolder",
+      "prefix"
+    ]
+  },
+  {
+    "name": "Route#queryParam",
+    "filePath": "src/routes/Route.js",
+    "lines": [
+      {
+        "lineNumber": 351,
+        "line": "  /**"
+      },
+      {
+        "lineNumber": 352,
+        "line": "   * @access public"
+      },
+      {
+        "lineNumber": 353,
+        "line": "   * @version 1.0.0"
+      },
+      {
+        "lineNumber": 354,
+        "line": "   * @desc retrieves the query params in a GET request"
+      },
+      {
+        "lineNumber": 355,
+        "line": "   * @param {KoaContext} ctx koa's context object"
+      },
+      {
+        "lineNumber": 356,
+        "line": "   * @return {Object.<string, *>}"
+      },
+      {
+        "lineNumber": 357,
+        "line": "   */"
+      },
+      {
+        "lineNumber": 358,
+        "line": "  queryParam(ctx, original = false) {"
+      }
+    ],
+    "codeParams": [
+      "ctx",
+      "original"
+    ],
+    "docParams": [
+      "ctx"
+    ]
+  }
+]

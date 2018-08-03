@@ -13,7 +13,7 @@
 
 <header>
   <a href="./">Home</a>
-  
+  <a href="./manual/index.html" data-ice="manualHeaderLink">Manual</a>
   <a href="identifiers.html">Reference</a>
   <a href="source.html">Source</a>
   
@@ -662,6 +662,13 @@
       <td data-ice="description"><p>an array of Koa Middlewares, which will be mounted for the given route</p>
 </td>
     </tr>
+<tr data-ice="property" data-depth="0">
+      <td data-ice="name" class="code" data-depth="0">accesses</td>
+      <td data-ice="type" class="code"><span><span>function</span><span>[]</span></span></td>
+      <td data-ice="appendix"></td>
+      <td data-ice="description"><p>an array of async function, which will be call (for all routes in the class) with ctx, if one of them return true, the current client will access the route</p>
+</td>
+    </tr>
 </tbody>
   </table>
 </div>
@@ -753,6 +760,13 @@ ex: a function name addUser will be mount with /add-user</p>
       <td data-ice="type" class="code"><span>Object</span></td>
       <td data-ice="appendix"></td>
       <td data-ice="description"><p>a rateLimit object, which lets the user describe the max rate at which a user can access the route</p>
+</td>
+    </tr>
+<tr data-ice="property" data-depth="0">
+      <td data-ice="name" class="code" data-depth="0">accesses</td>
+      <td data-ice="type" class="code"><span><span>function</span><span>[]</span></span></td>
+      <td data-ice="appendix"></td>
+      <td data-ice="description"><p>an array of async function, which will be call with ctx, if one of them return true, the current client will access the route. This will overwrite the accesses pass to {ParamsClassDecorator}</p>
 </td>
     </tr>
 </tbody>
@@ -951,7 +965,7 @@ ex: a function name addUser will be mount with /add-user</p>
     <span class="right-info">
       
       
-      <span data-ice="source"><span><a href="file/src/utils/StatusCode.js.html#lineNumber15">source</a></span></span>
+      <span data-ice="source"><span><a href="file/src/utils/StatusCode.js.html#lineNumber13">source</a></span></span>
     </span>
   </h3>
 

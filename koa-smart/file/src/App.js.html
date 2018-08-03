@@ -13,7 +13,7 @@
 
 <header>
   <a href="./">Home</a>
-  
+  <a href="./manual/index.html" data-ice="manualHeaderLink">Manual</a>
   <a href="identifiers.html">Reference</a>
   <a href="source.html">Source</a>
   
@@ -58,10 +58,9 @@ import Route from &apos;./routes/Route&apos;;
 import notFound from &apos;./middlewares/notFound&apos;;
 
 import { objValToArray } from &apos;./utils/utils&apos;;
-
+import * as docGenerator from &apos;./utils/docGenerator&apos;;
 
 export default class App {
-
   /**
    * @ignore
    */
@@ -75,6 +74,8 @@ export default class App {
     const {
       routeParam = {},
       port = process.env.PORT || 3000,
+      docPath = pathJoin(__dirname, &apos;..&apos;, &apos;apidoc&apos;),
+      generateDoc = false,
     } = opt;
     this.routeParam = routeParam;
     /**
@@ -88,7 +89,9 @@ export default class App {
      */
     this.app = new Koa();
 
-    locale(this.app)
+    locale(this.app);
+
+    docGenerator.init(docPath, generateDoc);
   }
 
   /**
@@ -99,7 +102,7 @@ export default class App {
 
     readdirSync(path)
       .filter(file =&gt; file.endsWith(&apos;.js&apos;) || file.endsWith(&apos;.ts&apos;))
-      .forEach((file) =&gt; {
+      .forEach(file =&gt; {
         const RouteClass = require(pathJoin(path, file)).default;
         if (RouteClass &amp;&amp; RouteClass.prototype instanceof Route) {
           const route = new RouteClass({
@@ -142,9 +145,11 @@ export default class App {
    * @param {string} [prefix=&apos;/&apos;] an optional prefix to prepend to all of the folder&apos;s routes
    * @return { }
    */
-  mountFolder(pathFolder, prefix = &apos;/&apos;) {
+  mountFolder(pathFolder, prefix = &apos;/&apos;, opt = {}) {
+    const { generateDoc = true } = opt;
     const routes = this._getAllRoutes(pathFolder, prefix);
     for (const route of routes) {
+      route.generateDoc = generateDoc;
       route.mount();
       this.app.use(route.koaRouter.middleware());
     }
@@ -157,6 +162,9 @@ export default class App {
    */
   async start() {
     this.app.use(notFound());
+
+    docGenerator.end();
+
     return this.app.listen(this.port);
   }
 }

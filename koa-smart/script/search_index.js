@@ -114,6 +114,24 @@ window.esdocSearchIndex = [
     "method"
   ],
   [
+    "src/routes/route.js~route#assertbadrequest",
+    "class/src/routes/Route.js~Route.html#instance-method-assertBadRequest",
+    "src/routes/Route.js~Route#assertBadRequest",
+    "method"
+  ],
+  [
+    "src/routes/route.js~route#assertforbidden",
+    "class/src/routes/Route.js~Route.html#instance-method-assertForbidden",
+    "src/routes/Route.js~Route#assertForbidden",
+    "method"
+  ],
+  [
+    "src/routes/route.js~route#assertunauthorized",
+    "class/src/routes/Route.js~Route.html#instance-method-assertUnauthorized",
+    "src/routes/Route.js~Route#assertUnauthorized",
+    "method"
+  ],
+  [
     "src/routes/route.js~route#beforeroute",
     "class/src/routes/Route.js~Route.html#instance-method-beforeRoute",
     "src/routes/Route.js~Route#beforeRoute",
@@ -123,12 +141,6 @@ window.esdocSearchIndex = [
     "src/routes/route.js~route#body",
     "class/src/routes/Route.js~Route.html#instance-method-body",
     "src/routes/Route.js~Route#body",
-    "method"
-  ],
-  [
-    "src/routes/route.js~route#bodyget",
-    "class/src/routes/Route.js~Route.html#instance-method-bodyGet",
-    "src/routes/Route.js~Route#bodyGet",
     "method"
   ],
   [
@@ -180,27 +192,21 @@ window.esdocSearchIndex = [
     "method"
   ],
   [
-    "src/routes/route.js~route#paramsget",
-    "class/src/routes/Route.js~Route.html#instance-method-paramsGet",
-    "src/routes/Route.js~Route#paramsGet",
-    "method"
-  ],
-  [
     "src/routes/route.js~route#prefix",
     "class/src/routes/Route.js~Route.html#instance-member-prefix",
     "src/routes/Route.js~Route#prefix",
     "member"
   ],
   [
-    "src/routes/route.js~route#send",
-    "class/src/routes/Route.js~Route.html#instance-method-send",
-    "src/routes/Route.js~Route#send",
+    "src/routes/route.js~route#queryparam",
+    "class/src/routes/Route.js~Route.html#instance-method-queryParam",
+    "src/routes/Route.js~Route#queryParam",
     "method"
   ],
   [
-    "src/routes/route.js~route#sendbadrequest",
-    "class/src/routes/Route.js~Route.html#instance-method-sendBadRequest",
-    "src/routes/Route.js~Route#sendBadRequest",
+    "src/routes/route.js~route#send",
+    "class/src/routes/Route.js~Route.html#instance-method-send",
+    "src/routes/Route.js~Route#send",
     "method"
   ],
   [
@@ -210,27 +216,9 @@ window.esdocSearchIndex = [
     "method"
   ],
   [
-    "src/routes/route.js~route#sendforbidden",
-    "class/src/routes/Route.js~Route.html#instance-method-sendForbidden",
-    "src/routes/Route.js~Route#sendForbidden",
-    "method"
-  ],
-  [
-    "src/routes/route.js~route#sendinternalservererror",
-    "class/src/routes/Route.js~Route.html#instance-method-sendInternalServerError",
-    "src/routes/Route.js~Route#sendInternalServerError",
-    "method"
-  ],
-  [
     "src/routes/route.js~route#sendnocontent",
     "class/src/routes/Route.js~Route.html#instance-method-sendNoContent",
     "src/routes/Route.js~Route#sendNoContent",
-    "method"
-  ],
-  [
-    "src/routes/route.js~route#sendnotfound",
-    "class/src/routes/Route.js~Route.html#instance-method-sendNotFound",
-    "src/routes/Route.js~Route#sendNotFound",
     "method"
   ],
   [
@@ -240,15 +228,33 @@ window.esdocSearchIndex = [
     "method"
   ],
   [
-    "src/routes/route.js~route#sendunauthorized",
-    "class/src/routes/Route.js~Route.html#instance-method-sendUnauthorized",
-    "src/routes/Route.js~Route#sendUnauthorized",
-    "method"
-  ],
-  [
     "src/routes/route.js~route#throw",
     "class/src/routes/Route.js~Route.html#instance-method-throw",
     "src/routes/Route.js~Route#throw",
+    "method"
+  ],
+  [
+    "src/routes/route.js~route#throwbadrequest",
+    "class/src/routes/Route.js~Route.html#instance-method-throwBadRequest",
+    "src/routes/Route.js~Route#throwBadRequest",
+    "method"
+  ],
+  [
+    "src/routes/route.js~route#throwforbidden",
+    "class/src/routes/Route.js~Route.html#instance-method-throwForbidden",
+    "src/routes/Route.js~Route#throwForbidden",
+    "method"
+  ],
+  [
+    "src/routes/route.js~route#thrownotfound",
+    "class/src/routes/Route.js~Route.html#instance-method-throwNotFound",
+    "src/routes/Route.js~Route#throwNotFound",
+    "method"
+  ],
+  [
+    "src/routes/route.js~route#throwunauthorized",
+    "class/src/routes/Route.js~Route.html#instance-method-throwUnauthorized",
+    "src/routes/Route.js~Route#throwUnauthorized",
     "method"
   ],
   [
@@ -363,6 +369,12 @@ window.esdocSearchIndex = [
     "src/utils/errorapp.js~errorapp#message",
     "class/src/utils/ErrorApp.js~ErrorApp.html#instance-member-message",
     "src/utils/ErrorApp.js~ErrorApp#message",
+    "member"
+  ],
+  [
+    "src/utils/errorapp.js~errorapp#messages",
+    "class/src/utils/ErrorApp.js~ErrorApp.html#instance-member-messages",
+    "src/utils/ErrorApp.js~ErrorApp#messages",
     "member"
   ],
   [

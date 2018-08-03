@@ -13,7 +13,7 @@
 
 <header>
   <a href="./">Home</a>
-  
+  <a href="./manual/index.html" data-ice="manualHeaderLink">Manual</a>
   <a href="identifiers.html">Reference</a>
   <a href="source.html">Source</a>
   
@@ -49,8 +49,7 @@
 </nav>
 
 <div class="content" data-ice="content"><h1 data-ice="title">src/utils/StatusCode.js</h1>
-<pre class="source-code line-number raw-source-code"><code class="prettyprint linenums" data-ice="content">
-/**
+<pre class="source-code line-number raw-source-code"><code class="prettyprint linenums" data-ice="content">/**
  * @typedef {Object} StatusCode
  * @property {Number} ok HTTP response 200
  * @property {Number} created HTTP response 201
@@ -62,7 +61,6 @@
  * @property {Number} internalServerError HTTP response 500
  */
 
-
 export default {
   ok: 200,
   created: 201,
@@ -72,7 +70,8 @@ export default {
   forbidden: 403,
   notFound: 404,
   internalServerError: 500,
-};</code></pre>
+};
+</code></pre>
 
 </div>
 

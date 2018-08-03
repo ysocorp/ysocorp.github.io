@@ -13,7 +13,7 @@
 
 <header>
   <a href="./">Home</a>
-  
+  <a href="./manual/index.html" data-ice="manualHeaderLink">Manual</a>
   <a href="identifiers.html">Reference</a>
   <a href="source.html">Source</a>
   
@@ -49,9 +49,11 @@
 </nav>
 
 <div class="content" data-ice="content"><h1 data-ice="title">src/utils/ErrorApp.js</h1>
-<pre class="source-code line-number raw-source-code"><code class="prettyprint linenums" data-ice="content">export default class ErrorApp extends Error {
+<pre class="source-code line-number raw-source-code"><code class="prettyprint linenums" data-ice="content">import { isArray, isObject } from &apos;../utils/utils&apos;;
+
+export default class ErrorApp extends Error {
   constructor(status, message, toTranslate = false) {
-    super ();
+    super();
 
     /**
      * @type {number}
@@ -61,7 +63,18 @@
     /**
      * @type {string}
      */
-    this.message = message;
+    this.message = null;
+
+    /**
+     * @type {Object | Array}
+     */
+    this.messages = null;
+
+    if (isArray(message) || isObject(message)) {
+      this.messages = message;
+    } else {
+      this.message = message;
+    }
 
     /**
      * @type {boolean}
